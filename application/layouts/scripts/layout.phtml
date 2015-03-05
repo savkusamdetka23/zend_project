@@ -1,0 +1,185 @@
+﻿<!-- application/layouts/scripts/layout.phtml -->
+<?php echo $this->doctype() ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+	<title>CV_Guide</title>
+
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+		<!-- Stylesheets -->
+
+    <?php// echo $this->headLink()->appendStylesheet('/css/style.css') 
+	// echo $this->headLink()->appendStylesheet('/css/bootstrap.min.css')
+	?>
+</head>
+<body>
+<div id="container">
+    <!-------------------------------------------------------------------------------------------------------------------->
+    <div id="header">
+<header>
+	<nav class="navbar navbar-default  navbar-fixed" role="navigation">
+	  <div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" href="index.html">Chernivtsi city guide</a>
+		</div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		  <ul class="nav navbar-nav navbar-right">
+			<form><div class="btn-group form-inline">
+					<input type="text"class="btn btn-default btn-sm" class="form-control" placeholder="Search">
+					<button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-search"></span></button>
+					</div>
+						<li class="dropdown">
+						   <div class="btn-group">
+									   <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModalreg"><span class="glyphicon glyphicon-user"></span></button>
+									   
+						</li></form>
+		  </ul>
+		</div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+
+	<div class="col-lg-12 nav_menu">
+			<ul class="nav nav-pills">
+			  <li><a href="index_accomodation.html">Accomodation</a></li>
+			  <li><a href="index_culture.html">Culture</a></li>
+			  <li><a href="index_freetime.html">Free time</a></li>
+			  <li><a href="index_nutrition.html">Nutrition</a></li>
+			  <li><a href="index_transport.html">Transport</a></li>
+			</ul>
+			
+ </div>
+        <div id="main_div">
+            <a href="<?php echo $this->url(
+                array('controller' => 'index'),
+                'default',
+                true) ?>" title="back to homepage"></a>
+        </div>
+
+    </div>
+
+ </header>
+ </div>
+ <!-- MAIN CONTENT -->
+		<section>
+		<div class="col-md-12 col-lg-12 text-center"><h3>Welcome</h3>
+
+</div>
+<div class="col-lg-2">
+			 <form action="<?php echo $this->url(array('controller' => 'Addresses'),'default',true)?>"> <button class="btn btn-default">Addresses</button></form>
+			 <form action="<?php echo $this->url(array('controller' => 'Establishmenttype'),'default',true)?>"> <button class="btn btn-default">Establishment type</button></form>
+			 <form action="<?php echo $this->url(array('controller' => 'Establishments'),'default',true)?>"> <button class="btn btn-default">Establishments</button></form>
+			 </div>
+		<div class="col-lg-6 ">
+		
+			   
+             
+			<?php echo $this->layout()->content ?>
+		  </div>
+		<div class="col-lg-4"> </div>
+		
+		</section>
+   
+
+
+    <!-------------------------------------------------------------------------------------------------------------------->
+   <!-- FOOTER -->
+		<footer>
+			
+          <div class="foot inform_foot">
+		  <span> Made by BEDBOU 2015<span>
+		  </div>
+		</footer>
+				 <!-- Modal -->
+				<div class="modal fade" id="myModalreg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				  <div class="modal-dialog">
+					<div class="modal-content">
+					  <div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                         <h3 id="myModalLabel">Ласкаво просимо!</h3>
+					  </div>
+					  <div class="modal-body">
+							<ul class="nav nav-tabs" id="login-or-register">
+							  <li ><a href="#register" data-toggle="tab">Реєстрація</a></li>
+							  <li class="active"><a href="#profile" data-toggle="tab">Авторизація</a></li>
+							</ul>
+							<div class="tab-content">
+							  <div class="tab-pane" id="register">
+									<form action="#">
+										<div class="row">
+											<h3>Зареструйтесь, будь ласка</h3>
+										</div>
+										<div class="row">
+											<label for="login">Введіть Ваш логін</label>
+											<input id="login" name="login" value="" />
+											<span class="required">*</span>
+										</div>
+										<div class="row">
+											<label for="password">Введіть Ваш пароль</label>
+											<input id="password" name="password" value="" />
+											<span class="required">*</span>
+										</div>
+										<div class="row">
+											<label for="password_repeat">Повторіть Ваш пароль</label>
+											<input id="password_repeat" name="password_repeat" value="" />
+											<span class="required">*</span>
+										</div>
+										<div class="row">
+											Поля, позначені <span class="required">*</span>, обов'язкові для заповнення.
+										</div>
+										<div class="row">
+											<input type="submit" id="register_button" class="register_button" value="Зареєструватись" />
+										</div>
+									</form>
+							  </div>
+							  <div class="tab-pane active" id="profile">
+									<form action="#">
+									<div class="row">
+											<h3>Авторизуйтесь, будь ласка.</h3>
+										</div>
+										<div class="row">
+											<label for="user_login">Введіть Ваш логiн</label>
+											<input id="user_login" name="login" value="" />
+										</div>
+										<div class="row">
+											<label for="user_password">Введіть Ваш пароль</label>
+											<input id="user_password" name="password" value="" />
+										</div>
+										<div class="row">
+									   <input type="checkbox" id="remember-me" /><label for="remember-me">Запам'ятати мене?</label>
+									   </div>
+										<div class="row">
+											<input type="submit" id="login_button" class="login_button" value="Вхід" />
+										</div>
+									</form>
+							  </div>
+							</div>
+						  </div>
+					  </div>
+					  <div class="modal-footer">
+						 <button class="btn" data-dismiss="modal" aria-hidden="true">Закрити</button>
+					  </div>
+					</div>
+				  </div>
+    <!-------------------------------------------------------------------------------------------------------------------->
+
+<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/carusell.js"></script>
+</body>
+</html>

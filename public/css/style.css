@@ -1,0 +1,196 @@
+﻿
+html {overflow-x:hidden;
+    position: relative;
+    min-height: 100%;
+}
+
+body{
+    background-image:url(../images/page-bg-1.jpg);
+    min-width:500px;
+    margin-bottom: 60px;
+}
+section{
+   /*-- margin:0px 30px 0 30px;--*/
+ 
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10px;
+}
+
+form .btn-default{
+margin:0px 0px 10px 10px;}
+
+.thumbnail img{
+max-height:400px;
+}
+.nav_menu {
+   background:#EADDED;
+   padding:10px 0 10px 0;
+   display:flex; 
+ }
+ .nav{
+ margin:auto;}
+ .nav-tabs{
+ padding-top:20px;}
+ .col-lg-1{
+ background:#DEC7F5;}
+/*-------ЗАГОЛОВКИ-----------*/
+
+.name_hotel{
+padding-top:10px;}
+/*-------НАВІГАЦІЯ---------*/
+.navbar .btn-default {
+   height:28px;
+}
+.navbar-right{
+    margin:19px auto 0px auto;
+}
+.navbar{
+   border-radius:0px;
+   margin-bottom:0;}
+.dropdown {
+   float: right;}
+ .menu{
+ background-image:url(../images/hedfoot.png);
+ background-repeat: repeat-x;
+ }
+ 
+	
+/*--------КНОПКИ ТА ІКОНКИ------*/
+.glyphicon-user{
+    padding-right:15px;}
+.btn .caret {
+    margin-left:5px;
+	}
+.glyphicon-pencil{
+    padding:0px 0px 0px 10px;
+}
+.pen{
+    padding:0px 30px 0px 10px;
+    font-size: 20px;}
+
+.btn-group{
+    padding-right:10px;}
+
+.input{
+    padding-left:50px;
+    padding-top:10px;}
+.bn .btn-default{
+margin-bottom:10px;
+
+}	
+	
+
+/*------МОДАЛЬНІ ВІКНА-----*/
+
+#myModaldel .row {
+    text-align:center;}
+
+#myModalsend{
+    display: none;
+}
+#myModalsend .row {
+    margin: 3px 0;
+    width: 100%;
+    padding: 0;
+    float: none;
+    clear: both;
+    display: block;
+}
+#myModalsend .row label {
+    display: block;
+    float: left;
+    cursor: pointer;
+    width: 200px;
+}
+
+#myModalsend h3{color:#807070;}
+
+#myModalcreat{
+    display: none;
+}
+#myModalcreat .row {
+    margin: 3px 0;
+    width: 100%;
+    padding: 0;
+    float: none;
+    clear: both;
+    display: block;
+}
+#myModalcreat .row label {
+    display: block;
+    float: left;
+    cursor: pointer;
+    width: 200px;
+}
+.del{
+    text-align:center;
+}
+
+#myModalcreat h3{color:#807070;}
+#myModalreg{
+    display: none;
+}
+#myModalreg .tab-pane .row {
+    margin: 3px 0;
+    width: 100%;
+    padding: 0;
+    float: none;
+    clear: both;
+    display: block;
+}
+#myModalreg .tab-pane .row label {
+    display: block;
+    float: left;
+    cursor: pointer;
+    width: 200px;
+}
+#myModalreg h3{color:#807070;}
+
+.required{
+    color:#F00;}
+.carousel-inner .active.left { left: -25%; }
+.carousel-inner .next        { left:  25%; }
+.carousel-inner .prev		 { left: -25%; }
+
+
+.carousel-control
+{ 
+    width:  5%;
+	height:91%;
+}
+.carousel-control.left,
+.carousel-control.right 
+{
+  margin-left:15px;
+  margin-right:15px;
+}
+
+.carousel-control {
+    position: absolute;
+    
+    color: #fff;
+    text-align: center;
+    text-shadow: none;
+}
+
+.carousel-control.left:hover {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0px, transparent 100%);
+    background-repeat: repeat-x;
+	
+}
+.carousel-control.right:hover {
+    background-image: linear-gradient(to right, transparent 0px, rgba(0, 0, 0, 0.5) 100%);
+    background-repeat: repeat-x;
+	
+}
+.carousel-control.left{
+   
+    background-image: none;
+}
+.carousel-control.right{
+    background-image: none;
+}
