@@ -35,7 +35,7 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		  </button>
-		  <a class="navbar-brand" href="index.html">Chernivtsi city guide</a>
+		  <a class="navbar-brand" href="/">Chernivtsi city guide</a>
 		</div>
 <!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -84,6 +84,7 @@
 			 <form action="<?php echo $this->url(array('controller' => 'Addresses'),'default',true)?>"> <button class="btn btn-default">Addresses</button></form>
 			 <form action="<?php echo $this->url(array('controller' => 'Establishmenttype'),'default',true)?>"> <button class="btn btn-default">Establishment type</button></form>
 			 <form action="<?php echo $this->url(array('controller' => 'Establishments'),'default',true)?>"> <button class="btn btn-default">Establishments</button></form>
+			 <form action="<?php echo $this->url(array('controller' => 'worktime'),'default',true)?>"> <button class="btn btn-default">Work time</button></form>
 			 </div>
 		<div class="col-lg-6 ">
 		
@@ -111,36 +112,36 @@
 					<div class="modal-content">
 					  <div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-                         <h3 id="myModalLabel">Ласкаво просимо!</h3>
+                         <h3 id="myModalLabel">Hello Bro!</h3>
 					  </div>
 					  <div class="modal-body">
 							<ul class="nav nav-tabs" id="login-or-register">
-							  <li ><a href="#register" data-toggle="tab">Реєстрація</a></li>
-							  <li class="active"><a href="#profile" data-toggle="tab">Авторизація</a></li>
+							  <li ><a href="#register" data-toggle="tab">Register</a></li>
+							  <li class="active"><a href="#profile" data-toggle="tab">Authorization</a></li>
 							</ul>
 							<div class="tab-content">
 							  <div class="tab-pane" id="register">
 									<form action="#">
 										<div class="row">
-											<h3>Зареструйтесь, будь ласка</h3>
+											<h3>Register, please.</h3>
 										</div>
 										<div class="row">
-											<label for="login">Введіть Ваш логін</label>
+											<label for="login">Enter Your login</label>
 											<input id="login" name="login" value="" />
 											<span class="required">*</span>
 										</div>
 										<div class="row">
-											<label for="password">Введіть Ваш пароль</label>
+											<label for="password">Enter your password</label>
 											<input id="password" name="password" value="" />
 											<span class="required">*</span>
 										</div>
 										<div class="row">
-											<label for="password_repeat">Повторіть Ваш пароль</label>
+											<label for="password_repeat">Repeat Your password again, please.</label>
 											<input id="password_repeat" name="password_repeat" value="" />
 											<span class="required">*</span>
 										</div>
 										<div class="row">
-											Поля, позначені <span class="required">*</span>, обов'язкові для заповнення.
+											Fields that marked<span class="required">*</span>, are required.
 										</div>
 										<div class="row">
 											<input type="submit" id="register_button" class="register_button" value="Зареєструватись" />
@@ -150,18 +151,18 @@
 							  <div class="tab-pane active" id="profile">
 									<form action="#">
 									<div class="row">
-											<h3>Авторизуйтесь, будь ласка.</h3>
+											<h3>Authorize, please.</h3>
 										</div>
 										<div class="row">
-											<label for="user_login">Введіть Ваш логiн</label>
+											<label for="user_login">Enter Your login</label>
 											<input id="user_login" name="login" value="" />
 										</div>
 										<div class="row">
-											<label for="user_password">Введіть Ваш пароль</label>
+											<label for="user_password">Enter Your password</label>
 											<input id="user_password" name="password" value="" />
 										</div>
 										<div class="row">
-									   <input type="checkbox" id="remember-me" /><label for="remember-me">Запам'ятати мене?</label>
+									   <input type="checkbox" id="remember-me" /><label for="remember-me">Remember me?</label>
 									   </div>
 										<div class="row">
 											<input type="submit" id="login_button" class="login_button" value="Вхід" />
@@ -172,7 +173,7 @@
 						  </div>
 					  </div>
 					  <div class="modal-footer">
-						 <button class="btn" data-dismiss="modal" aria-hidden="true">Закрити</button>
+						 <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
 					  </div>
 					</div>
 				  </div>
