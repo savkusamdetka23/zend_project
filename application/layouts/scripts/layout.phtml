@@ -9,8 +9,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 		<!-- Stylesheets -->
-	<link rel="stylesheet" href="css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="css/style.css"/>
+		<?php
+		echo $this->headLink()->appendStylesheet('/css/bootstrap.min.css');
+		echo $this->headLink()->appendStylesheet('/css/style.css');
+		?>
+	
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
