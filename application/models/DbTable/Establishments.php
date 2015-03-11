@@ -46,17 +46,21 @@ class Application_Model_DbTable_Establishments extends Zend_Db_Table_Abstract
        /* $select =  $this->getAdapter()->select()->from($this)->join('street', 'establishments.address_id = addresses.id')->where('street = ?',$street);
 		return $this->fetchAll($select);
 	}*/
-    public function getListEstablshments(){
+    public function getListEstablishments(){
     /*	$select = $this->getAdapter()->select()->from(array('establishments', 'establishments.id', 'establishments.address_id'))->join(array('addresses', 'addresses.id=establishments.address_id')->where('street');
     
     	return $this->getAdapter()->fetchAll($select);*/
 		/*$select =  $this->getAdapter()->select()->from($this)->join('addresses', 'addresses.id = establishments.address_id')->where('street = ?',$street);
 		return $this->fetchAll($select);
-	*/	
+	*/
+        $select = $this->_db->select()
+            ->from($this->_name,
+                array('key' => 'id', 'value' => 'title'));
+        $result = $this->getAdapter()->fetchAll($select);
+        return $result;
     }
 	
-    public function getEstablishmentsList()
-    {
+
 		/*$results = $this->fetchAll($select);
 		$item['address_id'] = $addresses[0]['id'];
 //put other item's data here in item
@@ -68,22 +72,32 @@ class Application_Model_DbTable_Establishments extends Zend_Db_Table_Abstract
 		$i++;
 		}
 		$item['establishments'] = $establishments;
-		*/
+		
+		
+		->where('addresses.id = ?', $address_id*/
 		
 
-        $select = $this->getAdapter()->select()
-		->from(array('est' => 'establishments'), 
-				array('id', 
-					  'title',
-					  'address_id',
-					  'gps',
-					  'telephone',
-					  'description'));
-					foreach($resultSet as $item){
-	$select = $this->getAdapter()->select()->joinLeft('addresses', 'addresses.id = establishments.address_id')->where('addresses.id = ?', $address_id);
-					}
+       /* $select = $this->getAdapter()->select()
+		->from('establishments',
+            array('establishments.id', 'establishments.title', 'establishments.address_id', 'establishments.gps', 'establishments.telephone', 'establishments.description'));
+		foreach($this->$select as $item){
+			$select = $this->getAdapter()->select()->joinLeft('addresses', 'addresses.id = establishments.address_id');
+			}
     			
-    	return $this->getAdapter()->fetchAll($select);
+    	return $this->getAdapter()->fetchAll($select);*/
+    public function getEstablishmentsList()
+    {
+        $select = $this->getAdapter()->select()
+            ->from('establishments',
+                array(
+                    'id',
+                    'address_id',
+                    'gps',
+                    'telephone',
+                    'description'
+                ))
+            ->joinLeft(array('addresses'), 'addresses.id=establishments.address_id', array('address_id' =>'street'));
+        return $this->getAdapter()->fetchAll($select);
     }
    
 

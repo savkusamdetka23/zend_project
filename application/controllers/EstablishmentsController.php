@@ -11,10 +11,8 @@ class EstablishmentsController extends Zend_Controller_Action
 		$establishments = new Application_Model_DbTable_Establishments();
 		$establishmentsList = $establishments->getEstablishmentsList();
 		$this->view->establishments = $establishmentsList;
-		//$addresses_id = $this->_getParam('id', 0);
-		//$addresses_id = new Application_Model_DbTable_Addresses();
-	//	$this->view->addresses = $addresses->fetchAll();
 		
+	
 	/*	$street_list = new Application_Model_DbTable_Incentive();
 		$this->view->street_list = $street_list->getIncentivesList();*/
 			//$establishmentsList = $establishments->getListEstablishments();

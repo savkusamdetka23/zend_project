@@ -24,6 +24,7 @@ class WorktimeController extends Zend_Controller_Action
         $this->view->form = $form;
         if ($this->getRequest()->isPost()) {
             $formData = $this->getRequest()->getPost();
+
             if ($form->isValid($formData)) {
                 $establishment_id = $form->getValue('establishment_id');
                 $opening = $form->getValue('opening');
@@ -31,8 +32,9 @@ class WorktimeController extends Zend_Controller_Action
                 $break_to = $form->getValue('break_to');
                 $closing = $form->getValue('closing');
                 $weekend = $form->getValue('weekend');
-                $worktime = new Application_Model_DbTable_Worktime();
+               $worktime= new Application_Model_DbTable_Worktime();
                 $worktime->addWorktime($establishment_id, $opening, $break_from, $break_to, $closing, $weekend);
+
                 $this->_helper->redirector('index');
             } else {
                 $form->populate($formData);
