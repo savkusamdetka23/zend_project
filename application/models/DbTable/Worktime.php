@@ -1,10 +1,11 @@
 <?php
 
-class Application_Model_DbTable_Addresses extends Zend_Db_Table_Abstract
+class Application_Model_DbTable_Worktime extends Zend_Db_Table_Abstract
 {
 
-    protected $_name = 'addresses';
-	public function getAddresses($id)
+    protected $_name = 'worktime';
+	
+	public function getWorktime($id)
     {      
         $id = (int)$id;
 
@@ -15,15 +16,15 @@ class Application_Model_DbTable_Addresses extends Zend_Db_Table_Abstract
         }
           return $row->toArray();
     }
-    public function getAddressesList()
+    public function getWorktimeList()
     {
         $select = $this->_db->select()
 						->from($this->_name,
-                array('key' => 'id', 'value' => 'street'));
+                array('key' => 'id', 'value' => 'establishment_id'));
         $result = $this->getAdapter()->fetchAll($select);
         return $result;
     }
-    public function getAddressesToDel($id)
+    public function getWorktimeToDel($id)
     {
         $id = (int)$id;
         $row = $this->fetchRow('id = ' . $id);
@@ -32,23 +33,31 @@ class Application_Model_DbTable_Addresses extends Zend_Db_Table_Abstract
         }
         return $row->toArray();
     }
-    public function addAddresses($city, $street)
+    public function addWorktime($establishment_id, $opening, $break_from, $break_to, $closing, $weekend)
     {
         $data = array(
-            'city' => $city,
-            'street' => $street,
+            'establishment_id' => $establishment_id,
+            'opening' => $opening,
+			'break_from' => $break_from,
+			'break_to' => $break_to,
+			'closing' => $closing,
+			'weekend' => $weekend,
         );
         $this->insert($data);
     }
-	 public function updateAddresses($id, $city, $street)
+	 public function updateWorktime($id, $establishment_id, $opening, $break_from, $break_to, $closing, $weekend)
     {
         $data = array(
-			'city' => $city,
-            'street' => $street,
+			'establishment_id' => $establishment_id,
+            'opening' => $opening,
+			'break_from' => $break_from,
+			'break_to' => $break_to,
+			'closing' => $closing,
+			'weekend' => $weekend,
         );
        	$this->update($data, 'id = '.(int)$id);
     }
-    public function deleteAddresses($id)
+    public function deleteWorktime($id)
     {
         $this->delete('id = ' . (int)$id);
     }
@@ -56,7 +65,7 @@ class Application_Model_DbTable_Addresses extends Zend_Db_Table_Abstract
     {
         $data = $this->select()
             ->from($this->_name)
-            ->where("addresses LIKE '%$search_what%'");
+            ->where("worktime LIKE '%$search_what%'");
         return $data->query()->fetchAll();
     }
 

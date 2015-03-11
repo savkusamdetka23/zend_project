@@ -20,11 +20,16 @@
         <controllerFile controllerName="Establishments">
           <actionMethod actionName="index"/>
         </controllerFile>
+        <controllerFile controllerName="Worktime">
+          <actionMethod actionName="index"/>
+        </controllerFile>
       </controllersDirectory>
       <formsDirectory>
         <formFile formName="Addreses"/>
         <formFile formName="Establishmenttype"/>
         <formFile formName="Establishments"/>
+        <formFile formName="Worktime"/>
+        <formFile formName="Addresses"/>
       </formsDirectory>
       <layoutsDirectory>
         <layoutScriptsDirectory>
@@ -36,6 +41,7 @@
           <dbTableFile dbTableName="Addresses"/>
           <dbTableFile dbTableName="EstablishmentType"/>
           <dbTableFile dbTableName="Establishments"/>
+          <dbTableFile dbTableName="Worktime"/>
         </dbTableDirectory>
       </modelsDirectory>
       <modulesDirectory enabled="false"/>
@@ -55,6 +61,9 @@
             <viewScriptFile forActionName="index"/>
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Establishments">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Worktime">
             <viewScriptFile forActionName="index"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>

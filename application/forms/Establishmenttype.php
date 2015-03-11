@@ -1,4 +1,4 @@
-<?php
+<?php			
 
 class Application_Form_Establishmenttype extends Zend_Form
 {
@@ -9,7 +9,8 @@ class Application_Form_Establishmenttype extends Zend_Form
         $this->setName('establishmenttype');
         $id = new Zend_Form_Element_Hidden('id');
         $id->addFilter('Int');
-        $type = new Zend_Form_Element_Text('type');
+       
+	   $type = new Zend_Form_Element_Text('type');
         $type->setLabel('Type')
             ->setRequired(true)
             ->addFilter('StripTags')
@@ -20,7 +21,8 @@ class Application_Form_Establishmenttype extends Zend_Form
         $establishment->setLabel('Establishment')
             ->setRequired(true)
             ->addValidator('NotEmpty');
-        $submit = new Zend_Form_Element_Submit('submit');
+       
+	   $submit = new Zend_Form_Element_Submit('submit');
         $submit->setAttrib('id', 'submitbutton');
         $this->addElements(array($id, $type, $establishment, $submit));
     }

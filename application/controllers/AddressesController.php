@@ -27,8 +27,8 @@ class AddressesController extends Zend_Controller_Action
             if ($form->isValid($formData)) {
                 $city = $form->getValue('city');
                 $street = $form->getValue('street');
-                $addresses = new Application_Model_DbTable_Addresses();
-                $addresses->addAddresses($city, $street);
+                $address = new Application_Model_DbTable_Addresses();
+                $address->addAddresses($city, $street);
                 $this->_helper->redirector('index');
             } else {
                 $form->populate($formData);
@@ -53,17 +53,18 @@ class AddressesController extends Zend_Controller_Action
                 $form->populate($formData);
             }
         }else {
-        // Если мы выводим форму, то получаем id фильма, который хотим обновить
+        // Отримання id потрібного елемента
         $id = $this->_getParam('id', 0);
         if ($id > 0) {
-            // Создаём объект модели
-            $addresses = new Application_Model_DbTable_Addresses();
+            // Створюємо об'єкт моделі
+            $address = new Application_Model_DbTable_Addresses();
             
-            // Заполняем форму информацией при помощи метода populate
-            $form->populate($addresses->getAddresses($id));
+            // Заповнюємо форму за допомогою метода populate
+            $form->populate($address->getAddresses($id));
         }
     }
 	}
+	
     public function deleteAction()
     {
         $this->view->title = "Delete address";

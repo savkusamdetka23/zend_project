@@ -19,9 +19,7 @@
 	<![endif]-->
 		<!-- Stylesheets -->
 
-    <?php// echo $this->headLink()->appendStylesheet('/css/style.css') 
-	// echo $this->headLink()->appendStylesheet('/css/bootstrap.min.css')
-	?>
+   
 </head>
 <body>
 <div id="container">
@@ -115,42 +113,14 @@
 					<div class="modal-content">
 					  <div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-                         <h3 id="myModalLabel">Hello Bro!</h3>
+                         <h3 id="myModalLabel">Hello, friend!</h3>
 					  </div>
 					  <div class="modal-body">
 							<ul class="nav nav-tabs" id="login-or-register">
-							  <li ><a href="#register" data-toggle="tab">Register</a></li>
 							  <li class="active"><a href="#profile" data-toggle="tab">Authorization</a></li>
 							</ul>
 							<div class="tab-content">
-							  <div class="tab-pane" id="register">
-									<form action="#">
-										<div class="row">
-											<h3>Register, please.</h3>
-										</div>
-										<div class="row">
-											<label for="login">Enter Your login</label>
-											<input id="login" name="login" value="" />
-											<span class="required">*</span>
-										</div>
-										<div class="row">
-											<label for="password">Enter your password</label>
-											<input id="password" name="password" value="" />
-											<span class="required">*</span>
-										</div>
-										<div class="row">
-											<label for="password_repeat">Repeat Your password again, please.</label>
-											<input id="password_repeat" name="password_repeat" value="" />
-											<span class="required">*</span>
-										</div>
-										<div class="row">
-											Fields that marked<span class="required">*</span>, are required.
-										</div>
-										<div class="row">
-											<input type="submit" id="register_button" class="register_button" value="Зареєструватись" />
-										</div>
-									</form>
-							  </div>
+							  
 							  <div class="tab-pane active" id="profile">
 									<form action="#">
 									<div class="row">

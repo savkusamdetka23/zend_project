@@ -1,0 +1,38 @@
+<p><a href="<?php echo $this->url(array('controller' => 'worktime', 'action' => 'add')) ?>">Add new establishment work time</a></p>
+<table>
+    <tr>
+        <th>Establishment</th>
+        <th>      </th>
+        <th>Opening</th>
+		<th>      </th>
+        <th>Break_from</th>
+		<th>      </th>
+        <th>Break_to</th>
+		<th>      </th>
+        <th>Closing</th>
+		<th>      </th>
+        <th>Weekend</th>
+    </tr>
+    <?php foreach($this->worktime as $worktime) : ?>
+        <tr>
+		<td><?php echo $this->escape($worktime->establishment_id) ?></td>
+ 		<td>      </td>
+		<td><?php echo $this->escape($worktime->opening) ?></td>
+		<td>      </td>
+		<td><?php echo $this->escape($worktime->break_from ?></td>
+		<td>      </td>
+		<td><?php echo $this->escape($worktime->break_to) ?></td>
+		<td>      </td>
+		<td><?php echo $this->escape($worktime->closing) ?></td>
+		<td>      </td>
+		<td><?php echo $this->escape($worktime->weekend) ?></td>
+
+			<td>
+                <a href="<?php echo $this->url(array('controller' => 'worktime', 'action' => 'edit', 'id' => $worktime->id)); ?>">edit</a>
+            </td>            
+		   <td>
+                <a href="<?php echo $this->url(array('controller' => 'worktime', 'action' => 'delete', 'id' => $worktime->id)) ?>">delete</a>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+</table>
