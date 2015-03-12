@@ -17,11 +17,14 @@ class Application_Model_DbTable_Establishmenttype extends Zend_Db_Table_Abstract
     }
     public function getEstablishmenttypeList()
     {
-        $select = $this->_db->select()
-						->from($this->_name,
-                array('key' => 'id', 'value' => 'establishment'));
-        $result = $this->getAdapter()->fetchAll($select);
-        return $result;
+        $select = $this->getAdapter()->select()
+            ->from('establishmenttype',
+                array(
+                    'establishmenttype.type',
+                    'establishmenttype.establishment'
+                ));
+
+        return $this->getAdapter()->fetchAll($select);
     }
     public function getEstablishmenttypeToDel($id)
     {

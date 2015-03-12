@@ -17,11 +17,14 @@ class Application_Model_DbTable_Addresses extends Zend_Db_Table_Abstract
     }
     public function getAddressesList()
     {
-        $select = $this->_db->select()
-						->from($this->_name,
-                array('key' => 'id', 'value' => 'street'));
-        $result = $this->getAdapter()->fetchAll($select);
-        return $result;
+        $select = $this->getAdapter()->select()
+            ->from('addresses',
+                array(
+                    'addresses.city',
+                    'addresses.street'
+                ));
+
+        return $this->getAdapter()->fetchAll($select);
     }
     public function getAddressesToDel($id)
     {

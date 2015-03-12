@@ -90,15 +90,20 @@ class Application_Model_DbTable_Establishments extends Zend_Db_Table_Abstract
         $select = $this->getAdapter()->select()
             ->from('establishments',
                 array(
-                    'id',
-                    'address_id',
-                    'gps',
-                    'telephone',
-                    'worktime_id',
-                    'description',
-                    'establishmenttype_id'
+                    'establishments.title',
+                    'establishments.address_id',
+                    'establishments.gps',
+                    'establishments.telephone',
+                    'establishments.worktime_id',
+                    'establishments.description',
+                    'establishments.establishmenttype_id'
                 ))
-            ->joinLeft(array('addresses'), 'addresses.id=establishments.address_id', array('address_id' =>'street'));
+            ->joinLeft(array('addresses'), 'addresses.id=establishments.address_id', array('address' => 'street'))
+            ->joinLeft(array('worktime'), 'worktime.id=establishments.worktime_id', array('open' =>'opening', 'break_f' =>'break_from', 'break_t' =>'break_to', 'close' =>'closing', 'weekends' =>'weekend'))
+
+        ->joinLeft(array('establishmenttype'), 'establishmenttype.id=establishments.establishmenttype_id', array('type' => 'establishment'));
+//print($select);
+
         return $this->getAdapter()->fetchAll($select);
     }
    
@@ -128,7 +133,8 @@ class Application_Model_DbTable_Establishments extends Zend_Db_Table_Abstract
 	 public function updateEstablishments($id, $title, $address_id, $gps, $telephone, $worktime_id, $description, $description, $establishmenttype_id)
     {
         $data = array(
-			 'title' => $title,
+			'id' => $id,
+			'title' => $title,
             'address_id' => $address_id,
 			'gps' => $gps,
             'telephone' => $telephone,

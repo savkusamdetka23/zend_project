@@ -10,11 +10,11 @@ class EstablishmentsController extends Zend_Controller_Action
        
 		$establishments = new Application_Model_DbTable_Establishments();
 		$establishmentsList = $establishments->getEstablishmentsList();
-		$this->view->establishments = $establishmentsList;
+        $this->view->establishments = $establishmentsList;
 		
 	
 	/*	$street_list = new Application_Model_DbTable_Incentive();
-		$this->view->street_list = $street_list->getIncentivesList();*/
+		$this->view->street_list = $street_list->getIncentivesList();
 			//$establishmentsList = $establishments->getListEstablishments();
        // $this->view->establishments = $establishments->getAddress();
 	//	$this->view->establishments = $establishmentsList;
@@ -22,11 +22,11 @@ class EstablishmentsController extends Zend_Controller_Action
        // $addresses = new Application_Model_DbTable_Establishments();
         //$establishments = new Application_Model_DbTable_Addresses;
 		//$this->view->addresses = $establishments->getAddressesList();
-		//$addresses_id = $this->_getParam('id', 0);
+
 	//	$address_id = new Application_Model_DbTable_Establishments();
 		//$this->view->addresses_id = $address_id->getEstablishmentsAddress();
 		
-	/*	$street_list = new Application_Model_DbTable_Incentive();
+		$street_list = new Application_Model_DbTable_Incentive();
 		$this->view->street_list = $street_list->getIncentivesList();*/
     }
  function addAction()
@@ -40,6 +40,7 @@ class EstablishmentsController extends Zend_Controller_Action
             $formData = $this->getRequest()->getPost();
 			
             if ($form->isValid($formData)) {
+                $id = $form->getValue('id');
                 $title = $form->getValue('title');
 				$address_id = $form->getValue('address_id');
 				$gps = $form->getValue('gps');
@@ -48,7 +49,7 @@ class EstablishmentsController extends Zend_Controller_Action
 				$description = $form->getValue('description');
 				$establishmenttype_id= $form->getValue('establishmenttype_id');
 				$establishments = new Application_Model_DbTable_Establishments();
-                $establishments->addEstablishments($title, $address_id, $gps, $telephone, $worktime_id, $description, $establishmenttype_id);
+                $establishments->addEstablishments($id, $title, $address_id, $gps, $telephone, $worktime_id, $description, $establishmenttype_id);
 				
                 $this->_helper->redirector('index');
             } else {
@@ -73,7 +74,7 @@ class EstablishmentsController extends Zend_Controller_Action
                 $description = $form->getValue('description');
                 $establishmenttype_id= $form->getValue('establishmenttype_id');
                 $establishments = new Application_Model_DbTable_Establishments();
-                $establishments->updateEstablishments($id, $title, $address_id, $gps, $telephone, $worktime_id, $description, $establishmenttype_id);
+                $establishments->updateEstablishments( $title, $address_id, $gps, $telephone, $worktime_id, $description, $establishmenttype_id);
                 $this->_helper->redirector('index');
             } else {
                 $form->populate($formData);

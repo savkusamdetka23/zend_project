@@ -13,7 +13,7 @@ class EstablishmenttypeController extends Zend_Controller_Action
         $this->view->title = "Establishment type";
         $this->view->headTitle($this->view->title);
         $establishmenttype = new Application_Model_DbTable_Establishmenttype();
-        $this->view->establishmenttype = $establishmenttype->fetchAll();
+        $this->view->establishmenttype = $establishmenttype->getEstablishmenttypeList();
     }
     function addAction()
     {

@@ -18,11 +18,20 @@ class Application_Model_DbTable_Worktime extends Zend_Db_Table_Abstract
     }
     public function getWorktimeList()
     {
-        $select = $this->_db->select()
-						->from($this->_name,
-                array('key' => 'id', 'value' => 'establishment_id'));
-        $result = $this->getAdapter()->fetchAll($select);
-        return $result;
+        $select = $this->getAdapter()->select()
+            ->from('worktime',
+                array(
+                    'worktime.establishment_id',
+                    'worktime.opening',
+                    'worktime.break_from',
+                    'worktime.break_to',
+                    'worktime.closing',
+                    'worktime.weekend'
+                ))
+            ->joinLeft(array('establishments'), 'establishments.id = worktime.establishment_id', array('establishment' =>'title'));
+
+
+        return $this->getAdapter()->fetchAll($select);
     }
     public function getWorktimeToDel($id)
     {

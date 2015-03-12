@@ -13,7 +13,7 @@ class WorktimeController extends Zend_Controller_Action
         $this->view->title = "Establishment work time";
         $this->view->headTitle($this->view->title);
         $worktime = new Application_Model_DbTable_Worktime();
-        $this->view->worktime = $worktime->fetchAll();
+        $this->view->worktime = $worktime->getWorktimeList();
     }
     function addAction()
     {

@@ -13,7 +13,7 @@ class AddressesController extends Zend_Controller_Action
         $this->view->title = "Addresses";
         $this->view->headTitle($this->view->title);
         $addresses = new Application_Model_DbTable_Addresses();
-        $this->view->addresses = $addresses->fetchAll();
+        $this->view->addresses = $addresses->getAddressesList();
     }
     function addAction()
     {

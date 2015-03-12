@@ -9,30 +9,48 @@
 		<th>      </th>
         <th>Telephone</th>
 		<th>      </th>
-        <th>Work time</th>
+        <th>Opening</th>
+        <th>      </th>
+        <th>Break from</th>
+        <th>      </th>
+        <th>Break to</th>
+        <th>      </th>
+        <th>Closing</th>
+        <th>      </th>
+        <th>Weekend</th>
         <th>      </th>
         <th>Description</th>
         <th>      </th>
         <th>Establishment type</th>
     </tr>
-    <?php 
+    <?php
+    if (is_array($this->establishments) && count($this->establishments)) :
 	foreach($this->establishments as $establishments) :
-	
+	//  print_r($establishments);
 	?>
         <tr>
-            <td><?php echo $this->escape($establishments->title) ?></td>
+            <td><?php echo $this->escape($establishments['title']); ?></td>
             <td>      </td>
-			  <td><?php echo $this->escape($establishments->street) ?></td>
+			  <td><?php echo $this->escape($establishments['address']) ?></td>
 			  <td>      </td>
-			  <td><?php echo $this->escape($establishments->gps) ?></td>
+			  <td><?php echo $this->escape($establishments['gps']) ?></td>
 			   <td>      </td>
-			  <td><?php echo $this->escape($establishments->telephone) ?></td>
+			  <td><?php echo $this->escape($establishments['telephone']) ?></td>
 			     <td>      </td>
-            <td><?php echo $this->escape($establishments->worktime_id) ?></td>
+            <td><?php echo $this->escape($establishments['open']) ?></td>
 			     <td>      </td>
-            <td><?php echo $this->escape($establishments->telephone) ?></td>
+            <td><?php echo $this->escape($establishments['break_f']) ?></td>
 			     <td>      </td>
-			  <td><?php echo $this->escape($establishments->establishmenttype_id) ?></td>
+            <td><?php echo $this->escape($establishments['break_t']) ?></td>
+			     <td>      </td>
+            <td><?php echo $this->escape($establishments['close']) ?></td>
+			     <td>      </td>
+            <td><?php echo $this->escape($establishments['weekends']) ?></td>
+			     <td>      </td>
+
+            <td><?php echo $this->escape($establishments['description']) ?></td>
+			     <td>      </td>
+			  <td><?php echo $this->escape($establishments['type']) ?></td>
 			<td>
                 <a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'edit', 'id' => $establishments->id)); ?>">edit</a>
             </td>           
@@ -43,4 +61,5 @@
 		</tr>
 	
     <?php endforeach; ?>
+    <?php endif; ?>
 </table>
