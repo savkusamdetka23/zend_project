@@ -15,7 +15,7 @@
 			  <td><?php echo $this->escape($addresses['street']) ?></td>
 <td>
 
-                <a href="<?php echo $this->url(array('controller' => 'addresses', 'action' => 'edit', 'id' => $addresses->id)); ?>">edit</a>
+                <a href="<?php echo $this->url(array('controller' => 'addresses', 'action' => 'edit', 'id' => $addresses['id'])); ?>">edit</a>
             </td>            
 		   <td>
                 <a href="<?php echo $this->url(array('controller' => 'addresses', 'action' => 'delete', 'id' => $addresses->id)); ?>">delete</a>

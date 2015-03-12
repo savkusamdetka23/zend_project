@@ -5,14 +5,12 @@ class Application_Model_DbTable_Addresses extends Zend_Db_Table_Abstract
 
     protected $_name = 'addresses';
 	public function getAddresses($id)
-    {      
+    {
         $id = (int)$id;
 
-      
+
         $row = $this->fetchRow('id = ' . $id);
-        if(!$row) {
-            throw new Exception("There is no record with id - $id");
-        }
+       
           return $row->toArray();
     }
     public function getAddressesList()
