@@ -15,11 +15,11 @@ class Application_Model_DbTable_Establishmenttype extends Zend_Db_Table_Abstract
         }
           return $row->toArray();
     }
-    public function getEstablishmenttypeListForSearch()
+    public function getEstablishmenttypeList()
     {
         $select = $this->_db->select()
 						->from($this->_name,
-                array('key' => 'establishment', 'value' => 'establishment'));
+                array('key' => 'id', 'value' => 'establishment'));
         $result = $this->getAdapter()->fetchAll($select);
         return $result;
     }

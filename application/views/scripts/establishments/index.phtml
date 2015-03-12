@@ -9,7 +9,11 @@
 		<th>      </th>
         <th>Telephone</th>
 		<th>      </th>
+        <th>Work time</th>
+        <th>      </th>
         <th>Description</th>
+        <th>      </th>
+        <th>Establishment type</th>
     </tr>
     <?php 
 	foreach($this->establishments as $establishments) :
@@ -24,7 +28,11 @@
 			   <td>      </td>
 			  <td><?php echo $this->escape($establishments->telephone) ?></td>
 			     <td>      </td>
-			  <td><?php echo $this->escape($establishments->description) ?></td>
+            <td><?php echo $this->escape($establishments->worktime_id) ?></td>
+			     <td>      </td>
+            <td><?php echo $this->escape($establishments->telephone) ?></td>
+			     <td>      </td>
+			  <td><?php echo $this->escape($establishments->establishmenttype_id) ?></td>
 			<td>
                 <a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'edit', 'id' => $establishments->id)); ?>">edit</a>
             </td>           

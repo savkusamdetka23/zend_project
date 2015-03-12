@@ -94,7 +94,9 @@ class Application_Model_DbTable_Establishments extends Zend_Db_Table_Abstract
                     'address_id',
                     'gps',
                     'telephone',
-                    'description'
+                    'worktime_id',
+                    'description',
+                    'establishmenttype_id'
                 ))
             ->joinLeft(array('addresses'), 'addresses.id=establishments.address_id', array('address_id' =>'street'));
         return $this->getAdapter()->fetchAll($select);
@@ -110,28 +112,29 @@ class Application_Model_DbTable_Establishments extends Zend_Db_Table_Abstract
         }
         return $row->toArray();
     }
-    public function addEstablishments($title, $address_id, $gps, $telephone, $description/*, $id_work_time, $description, $id_establishment_type*/)
+    public function addEstablishments($title, $address_id, $gps, $telephone, $description, $worktime_id, $description, $establishmenttype_id)
     {
         $data = array(
             'title' => $title,
             'address_id' => $address_id,
 			'gps' => $gps,
             'telephone' => $telephone,
-			 'description' => $description,
-			/*'id_work_time' => $id_work_time,
+			'worktime_id' => $worktime_id,
             'description' => $description,
-			'id_establishment_type' => $id_establishment_type,*/
+			'establishmenttype_id' => $establishmenttype_id
             );
         $this->insert($data);
     }
-	 public function updateEstablishments($id, $title, $address_id, $gps, $telephone, $description)
+	 public function updateEstablishments($id, $title, $address_id, $gps, $telephone, $worktime_id, $description, $description, $establishmenttype_id)
     {
         $data = array(
 			 'title' => $title,
             'address_id' => $address_id,
 			'gps' => $gps,
-			'telephone' => $telephone,
-			'description' => $description,
+            'telephone' => $telephone,
+            'worktime_id' => $worktime_id,
+            'description' => $description,
+            'establishmenttype_id' => $establishmenttype_id
         );
        	$this->update($data, 'id = '.(int)$id);
     }

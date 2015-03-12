@@ -41,6 +41,14 @@ class Application_Form_Establishments extends Zend_Form
             ->addFilter('StripTags')
             ->addFilter('StringTrim')
             ->addValidator('NotEmpty');
+
+        $worktime= new Application_Model_DbTable_Worktime();
+        $worktime_list = $worktime->getWorktimeList();
+        $worktime_select = new Zend_Form_Element_Select('worktime_id');
+        $worktime_select->setLabel('Work time')
+            ->setMultiOptions($worktime_list)
+            ->setRequired(true)
+            ->addValidator('NotEmpty');
 			
 			$description = new Zend_Form_Element_Textarea('description');
 			$description->setLabel('Description')
@@ -51,10 +59,18 @@ class Application_Form_Establishments extends Zend_Form
             ->addValidator('StringLength', false, array(40, 250))
 			 ->setErrorMessages(array('Text must be between 40 and 250 characters'));
 
+        $establishmenttype = new Application_Model_DbTable_Establishmenttype();
+        $establishmenttype_list = $establishmenttype->getEstablishmenttypeList();
+        $establishmenttype_select = new Zend_Form_Element_Select('establishmenttype_id');
+        $establishmenttype_select->setLabel('Establishment type')
+            ->setMultiOptions($establishmenttype_list)
+            ->setRequired(true)
+            ->addValidator('NotEmpty');
+
 
         $submit = new Zend_Form_Element_Submit('submit');
         $submit->setAttrib('id', 'submitbutton');
-        $this->addElements(array($id, $title, $street_select, $gps, $telephone, $description, $submit));
+        $this->addElements(array($id, $title, $street_select, $gps, $telephone, $worktime_select, $description, $establishmenttype_select, $submit));
     }
 
 }

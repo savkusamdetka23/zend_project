@@ -44,9 +44,11 @@ class EstablishmentsController extends Zend_Controller_Action
 				$address_id = $form->getValue('address_id');
 				$gps = $form->getValue('gps');
 				$telephone = $form->getValue('telephone');
+				$worktime_id= $form->getValue('worktime_id');
 				$description = $form->getValue('description');
+				$establishmenttype_id= $form->getValue('establishmenttype_id');
 				$establishments = new Application_Model_DbTable_Establishments();
-                $establishments->addEstablishments($title, $address_id, $gps, $telephone, $description);
+                $establishments->addEstablishments($title, $address_id, $gps, $telephone, $worktime_id, $description, $establishmenttype_id);
 				
                 $this->_helper->redirector('index');
             } else {
@@ -67,9 +69,11 @@ class EstablishmentsController extends Zend_Controller_Action
                 $address_id = $form->getValue('address_id');
 				$gps = $form->getValue('gps');
 				$telephone = $form->getValue('telephone');
-				$description = $form->getValue('description');
+                $worktime_id= $form->getValue('worktime_id');
+                $description = $form->getValue('description');
+                $establishmenttype_id= $form->getValue('establishmenttype_id');
                 $establishments = new Application_Model_DbTable_Establishments();
-                $establishments->updateEstablishments($id, $title, $address_id, $gps, $telephone, $description);
+                $establishments->updateEstablishments($id, $title, $address_id, $gps, $telephone, $worktime_id, $description, $establishmenttype_id);
                 $this->_helper->redirector('index');
             } else {
                 $form->populate($formData);
