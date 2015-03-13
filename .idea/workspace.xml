@@ -4,9 +4,7 @@
     <list default="true" id="0758dce3-24a4-46d3-b1ac-7a3cc3968bc7" name="Default" comment="">
       <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\views\scripts\partials\addresses.phtml" afterPath="" />
       <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\views\scripts\partials\establishments.phtml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/DbTable/Addresses.php" afterPath="$PROJECT_DIR$/application/models/DbTable/Addresses.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/addresses/index.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/addresses/index.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cv_guide.sql" afterPath="$PROJECT_DIR$/cv_guide.sql" />
     </list>
     <ignored path="cv_guide.iws" />
     <ignored path=".idea/workspace.xml" />

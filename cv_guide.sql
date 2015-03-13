@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Мар 11 2015 г., 17:16
+-- Время создания: Мар 13 2015 г., 12:50
 -- Версия сервера: 5.5.25
 -- Версия PHP: 5.3.13
 
@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `addresses` (
   `city` varchar(30) NOT NULL,
   `street` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=18 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=25 ;
 
 --
 -- Дамп данных таблицы `addresses`
@@ -42,7 +42,14 @@ INSERT INTO `addresses` (`id`, `city`, `street`) VALUES
 (3, 'Chernivtsi', 'Ruska'),
 (6, 'Chernivtsi', 'Heroiv Maidany'),
 (7, 'Chernivtsi', 'Prospekt Nezalezhnosti'),
-(17, 'Chernivtsi', 'Soborna');
+(17, 'Chernivtsi', 'Soborna'),
+(18, 'Chernivtsi', 'Bozhenka'),
+(19, 'Chernivtsi', 'Pivdenno kiltseva'),
+(20, 'Chernivtsi', 'Fastivska'),
+(21, 'Chernivtsi', 'Khotynska'),
+(22, 'Chernivtsi', 'Ivana Franka'),
+(23, 'Chernivtsi', 'Universytetska'),
+(24, 'Chernivtsi', 'Haharina');
 
 -- --------------------------------------------------------
 
@@ -56,9 +63,9 @@ CREATE TABLE IF NOT EXISTS `establishments` (
   `address_id` int(3) NOT NULL,
   `gps` varchar(30) NOT NULL,
   `telephone` varchar(30) NOT NULL,
-  `id_work_time` int(3) NOT NULL,
+  `worktime_id` int(3) NOT NULL,
   `description` varchar(500) NOT NULL,
-  `id_establishment_type` int(3) NOT NULL,
+  `establishmenttype_id` int(3) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `address_id` (`address_id`),
   KEY `address_id_2` (`address_id`),
@@ -69,19 +76,19 @@ CREATE TABLE IF NOT EXISTS `establishments` (
 -- Дамп данных таблицы `establishments`
 --
 
-INSERT INTO `establishments` (`id`, `title`, `address_id`, `gps`, `telephone`, `id_work_time`, `description`, `id_establishment_type`) VALUES
-(1, 'Ekator', 1, '1233 4566', '555 111', 0, 'It is a description of a place, where you can go/eat/sleep/etc', 0),
-(2, 'Appeti', 3, '5448 7896', '5544 221', 0, 'It is a description of a place, where you can go/eat/sleep/etc', 0),
-(4, 'Freshline', 1, '5645 2333', '123 321', 0, 'It is a description of a place, where you can go/eat/sleep/etc', 0),
-(5, 'Paradizo', 3, '1245 2365', '1222 4455', 0, 'It is a description of a place, where you can go/eat/sleep/etc', 0),
-(7, 'Sushiya', 7, '2314 5648', '1122 124', 0, 'It is a description of a place, where you can go/eat/sleep/etc', 0),
-(8, 'Tourist', 6, '48.285836, 25.932317', '4869 654', 0, 'It is a description of a place, where you can go/eat/sleep/etc', 0),
-(9, 'Kyiv', 3, '3225325 23532', '333333', 0, 'It is a description of a place, where you can go/eat/sleep/etc', 0),
-(10, 'Pizza park', 3, '2141212', '5111111', 0, 'It is a description of a place, where you can go/eat/sleep/etc', 0),
-(11, 'Depo''t', 1, '5665 65488', '5444 555', 0, 'It is a description of a place, where you can go/eat/sleep/etc', 0),
-(12, 'Taxi', 6, '651561', '646512', 0, 'It is a description of a place, where you can go/eat/sleep/etc', 0),
-(13, 'Bulochna', 3, '76568', '65846', 0, 'It is a description of a place, where you can go/eat/sleep/etc', 0),
-(16, 'Central square', 3, '212', '215', 0, 'It is a description of a place, where you can go/eat/sleep/etc', 0);
+INSERT INTO `establishments` (`id`, `title`, `address_id`, `gps`, `telephone`, `worktime_id`, `description`, `establishmenttype_id`) VALUES
+(1, 'Ekvator', 1, '1233 4566', '555 111', 2, 'It is a description of a place, where you can go/eat/sleep/etc', 5),
+(2, 'Appeti', 3, '5448 7896', '5544 221', 2, 'It is a description of a place, where you can go/eat/sleep/etc', 15),
+(4, 'Freshline', 1, '5645 2333', '123 321', 1, 'It is a description of a place, where you can go/eat/sleep/etc', 6),
+(5, 'Paradizo', 3, '1245 2365', '1222 4455', 2, 'It is a description of a place, where you can go/eat/sleep/etc', 6),
+(7, 'Sushiya', 7, '2314 5648', '1122 124', 1, 'It is a description of a place, where you can go/eat/sleep/etc', 4),
+(8, 'Tourist', 6, '48.285836, 25.932317', '4869 654', 1, 'It is a description of a place, where you can go/eat/sleep/etc', 4),
+(9, 'Kyiv', 3, '3225325 23532', '333333', 1, 'It is a description of a place, where you can go/eat/sleep/etc', 17),
+(10, 'Pizza park', 3, '2141212', '5111111', 2, 'It is a description of a place, where you can go/eat/sleep/etc', 16),
+(11, 'Depo''t', 1, '5665 65488', '5444 555', 1, 'It is a description of a place, where you can go/eat/sleep/etc', 17),
+(12, 'Taxi', 6, '651561', '646512', 1, 'It is a description of a place, where you can go/eat/sleep/etc', 15),
+(13, 'Bulochna', 3, '76568', '65846', 2, 'It is a description of a place, where you can go/eat/sleep/etc', 17),
+(16, 'Central square', 3, '212', '215', 2, 'It is a description of a place, where you can go/eat/sleep/etc', 16);
 
 -- --------------------------------------------------------
 
