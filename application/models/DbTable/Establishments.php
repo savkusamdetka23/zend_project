@@ -90,6 +90,7 @@ class Application_Model_DbTable_Establishments extends Zend_Db_Table_Abstract
         $select = $this->getAdapter()->select()
             ->from('establishments',
                 array(
+                    'establishments.id',
                     'establishments.title',
                     'establishments.address_id',
                     'establishments.gps',

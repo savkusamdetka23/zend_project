@@ -11,7 +11,7 @@ class Application_Form_Worktime extends Zend_Form
        
 		$establishments = new Application_Model_DbTable_Establishments();
 		$establishments_list = $establishments->getListEstablishments();
-        $establishment_id = new Zend_Form_Element_Select('establishment_id');
+        $establishment_id = new Zend_Form_Element_Select('establishment');
         $establishment_id->setLabel('Establishment')
 			->setMultiOptions($establishments_list)
             ->setRequired(true)

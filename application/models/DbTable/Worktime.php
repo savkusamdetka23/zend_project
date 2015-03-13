@@ -21,6 +21,7 @@ class Application_Model_DbTable_Worktime extends Zend_Db_Table_Abstract
         $select = $this->getAdapter()->select()
             ->from('worktime',
                 array(
+                    'worktime.id',
                     'worktime.establishment_id',
                     'worktime.opening',
                     'worktime.break_from',
@@ -33,6 +34,20 @@ class Application_Model_DbTable_Worktime extends Zend_Db_Table_Abstract
 
         return $this->getAdapter()->fetchAll($select);
     }
+    public function getListWorktime(){
+        /*	$select = $this->getAdapter()->select()->from(array('establishments', 'establishments.id', 'establishments.address_id'))->join(array('addresses', 'addresses.id=establishments.address_id')->where('street');
+
+            return $this->getAdapter()->fetchAll($select);*/
+        /*$select =  $this->getAdapter()->select()->from($this)->join('addresses', 'addresses.id = establishments.address_id')->where('street = ?',$street);
+        return $this->fetchAll($select);
+    */
+        $select = $this->_db->select()
+            ->from($this->_name,
+                array('key' => 'id', 'value' => 'establishment_id'));
+        $result = $this->getAdapter()->fetchAll($select);
+        return $result;
+    }
+
     public function getWorktimeToDel($id)
     {
         $id = (int)$id;

@@ -20,12 +20,28 @@ class Application_Model_DbTable_Establishmenttype extends Zend_Db_Table_Abstract
         $select = $this->getAdapter()->select()
             ->from('establishmenttype',
                 array(
+                    'establishmenttype.id',
                     'establishmenttype.type',
                     'establishmenttype.establishment'
                 ));
 
         return $this->getAdapter()->fetchAll($select);
     }
+
+    public function getListEstablishmenttype(){
+        /*	$select = $this->getAdapter()->select()->from(array('establishments', 'establishments.id', 'establishments.address_id'))->join(array('addresses', 'addresses.id=establishments.address_id')->where('street');
+
+            return $this->getAdapter()->fetchAll($select);*/
+        /*$select =  $this->getAdapter()->select()->from($this)->join('addresses', 'addresses.id = establishments.address_id')->where('street = ?',$street);
+        return $this->fetchAll($select);
+    */
+        $select = $this->_db->select()
+            ->from($this->_name,
+                array('key' => 'id', 'value' => 'establishment'));
+        $result = $this->getAdapter()->fetchAll($select);
+        return $result;
+    }
+
     public function getEstablishmenttypeToDel($id)
     {
         $id = (int)$id;

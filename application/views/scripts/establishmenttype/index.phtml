@@ -14,11 +14,11 @@
 			<td><?php echo $this->escape($establishmenttype['establishment']) ?></td>
 
             <td>
-                <a href="<?php echo $this->url(array('controller' => 'establishmenttype', 'action' => 'edit', 'id' => $establishmenttype->id)); ?>">edit</a>
-            </td>            
+                <a href="<?php echo $this->url(array('controller' => 'establishmenttype', 'action' => 'edit', 'id' => $establishmenttype['id'])); ?>">edit</a>
+            </td>
 
             <td>
-                <a href="<?php echo $this->url(array('controller' => 'establishmenttype', 'action' => 'delete', 'id' => $establishmenttype->id)) ?>">delete</a>
+                <a href="<?php echo $this->url(array('controller' => 'establishmenttype', 'action' => 'delete',  'id' => $this->escape($establishmenttype['id']))); ?>">delete</a>
             </td>
         </tr>
     <?php endforeach; ?>
