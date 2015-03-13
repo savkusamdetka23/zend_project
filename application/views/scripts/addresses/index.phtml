@@ -1,24 +1,27 @@
 <p><a href="<?php echo $this->url(array('controller' => 'addresses', 'action' => 'add')) ?>">Add new address</a></p>
 <table>
     <tr>
+
         <th>City</th>
         <th>      </th>
         <th>Street</th>
     </tr>
     <?php
-   if (count($this->addresses)) :
+    if (is_array($this->addresses) && count($this->addresses)) :
 
     foreach($this->addresses as $addresses) : ?>
         <tr>
+
             <td><?php echo $this->escape($addresses['city']) ?></td>
             <td>      </td>
 			  <td><?php echo $this->escape($addresses['street']) ?></td>
 <td>
 
                 <a href="<?php echo $this->url(array('controller' => 'addresses', 'action' => 'edit', 'id' => $addresses['id'])); ?>">edit</a>
-            </td>            
+
+            </td>
 		   <td>
-                <a href="<?php echo $this->url(array('controller' => 'addresses', 'action' => 'delete', 'id' => $addresses['id'])); ?>">delete</a>
+                <a href="<?php echo $this->url(array('controller' => 'addresses', 'action' => 'delete',  'id' => $this->escape($addresses['id']))); ?>">delete</a>
             </td>
         </tr>
     <?php endforeach; ?>

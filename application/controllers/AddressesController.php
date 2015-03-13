@@ -40,6 +40,7 @@ class AddressesController extends Zend_Controller_Action
 		$form = new Application_Form_Addresses();
 		$form->submit->setLabel('Edit');
 		$this->view->form = $form;
+
         if ($this->getRequest()->isPost()) {
             $formData = $this->getRequest()->getPost();
             if ($form->isValid($formData)) {
@@ -57,13 +58,15 @@ class AddressesController extends Zend_Controller_Action
         $id = $this->_getParam('id', 0);
         if ($id > 0) {
             // Створюємо об'єкт моделі
-            $address = new Application_Model_DbTable_Addresses();
-            
+            $addresses = new Application_Model_DbTable_Addresses();
+
             // Заповнюємо форму за допомогою метода populate
-            $form->populate($address->getAddresses($id));
+            $form->populate($addresses->getAddress($id));
+
+        }
         }
     }
-	}
+
 	
     public function deleteAction()
     {
@@ -82,8 +85,9 @@ class AddressesController extends Zend_Controller_Action
             $addresses = new Application_Model_DbTable_Addresses();
             $this->view->addresses = $addresses->getAddressesToDel($id);
         }
-    }
 
 
+
+}
 }
 
