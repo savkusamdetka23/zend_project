@@ -33,10 +33,8 @@
       <file leaf-file-name="index.phtml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/scripts/addresses/index.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="120" selection-start="639" selection-end="639" vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="527">
-              <folding>
-                <marker date="1426177513778" expanded="true" signature="700:754" placeholder="..." />
-              </folding>
+            <state line="10" column="42" selection-start="271" selection-end="301" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="527">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -44,7 +42,7 @@
       <file leaf-file-name="AddressesController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/AddressesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="31" selection-start="2209" selection-end="2209" vertical-scroll-proportion="-18.615385" vertical-offset="570" max-vertical-offset="1615">
+            <state line="62" column="50" selection-start="2228" selection-end="2228" vertical-scroll-proportion="-3.7058823" vertical-offset="865" max-vertical-offset="1615">
               <folding />
             </state>
           </provider>
@@ -53,16 +51,7 @@
       <file leaf-file-name="Addresses.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/models/DbTable/Addresses.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="7" selection-start="240" selection-end="240" vertical-scroll-proportion="0.34343433" vertical-offset="0" max-vertical-offset="1207">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/scripts/addresses/edit.phtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="272">
+            <state line="14" column="0" selection-start="358" selection-end="358" vertical-scroll-proportion="0.4006734" vertical-offset="0" max-vertical-offset="1275">
               <folding />
             </state>
           </provider>
@@ -82,7 +71,6 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/application/forms/Worktime.php" />
-        <option value="$PROJECT_DIR$/application/controllers/AddressesController.php" />
         <option value="$PROJECT_DIR$/application/models/DbTable/Establishmenttype.php" />
         <option value="$PROJECT_DIR$/application/controllers/EstablishmenttypeController.php" />
         <option value="$PROJECT_DIR$/application/views/scripts/establishmenttype/index.phtml" />
@@ -94,6 +82,7 @@
         <option value="$PROJECT_DIR$/application/models/DbTable/Establishments.php" />
         <option value="$PROJECT_DIR$/application/views/scripts/establishments/index.phtml" />
         <option value="$PROJECT_DIR$/application/views/scripts/addresses/index.phtml" />
+        <option value="$PROJECT_DIR$/application/controllers/AddressesController.php" />
         <option value="$PROJECT_DIR$/application/models/DbTable/Addresses.php" />
       </list>
     </option>
@@ -354,7 +343,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -370,12 +359,12 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -395,6 +384,34 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/addresses/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="120" selection-start="639" selection-end="639" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/AddressesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="31" selection-start="2209" selection-end="2209" vertical-scroll-proportion="0.0" vertical-offset="1054" max-vertical-offset="1615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/DbTable/Addresses.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1207">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/addresses/edit.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/DbTable/Establishments.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="98" column="53" selection-start="3728" selection-end="3728" vertical-scroll-proportion="0.0" vertical-offset="1299" max-vertical-offset="2635" />
@@ -402,9 +419,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/EstablishmentsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="57" selection-start="371" selection-end="390" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1904">
-          <folding />
-        </state>
+        <state line="12" column="57" selection-start="371" selection-end="390" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1904" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/establishments/index.phtml">
@@ -419,9 +434,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/EstablishmentsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="57" selection-start="371" selection-end="390" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1904">
-          <folding />
-        </state>
+        <state line="12" column="57" selection-start="371" selection-end="390" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1904" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/establishments/index.phtml">
@@ -431,9 +444,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/EstablishmentsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/DbTable/Establishments.php">
@@ -448,9 +459,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/EstablishmentsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/DbTable/Establishments.php">
@@ -465,9 +474,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/EstablishmentsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/DbTable/Establishments.php">
@@ -482,9 +489,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/EstablishmentsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/DbTable/Establishments.php">
@@ -572,6 +577,11 @@
         <state line="52" column="64" selection-start="1890" selection-end="1894" vertical-scroll-proportion="0.7314974" vertical-offset="459" max-vertical-offset="1190" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/EstablishmentsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="52" selection-start="3446" selection-end="3446" vertical-scroll-proportion="-11.884615" vertical-offset="1000" max-vertical-offset="1989" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/addresses/edit.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="620">
@@ -579,32 +589,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/EstablishmentsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="52" selection-start="3446" selection-end="3446" vertical-scroll-proportion="-11.884615" vertical-offset="1000" max-vertical-offset="1989">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/addresses/index.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="120" selection-start="639" selection-end="639" vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="527">
-          <folding>
-            <marker date="1426177513778" expanded="true" signature="700:754" placeholder="..." />
-          </folding>
+        <state line="10" column="42" selection-start="271" selection-end="301" vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="527">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/AddressesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="31" selection-start="2209" selection-end="2209" vertical-scroll-proportion="-18.615385" vertical-offset="570" max-vertical-offset="1615">
+        <state line="62" column="50" selection-start="2228" selection-end="2228" vertical-scroll-proportion="-3.7058823" vertical-offset="865" max-vertical-offset="1615">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/DbTable/Addresses.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="7" selection-start="240" selection-end="240" vertical-scroll-proportion="0.34343433" vertical-offset="0" max-vertical-offset="1207">
+        <state line="14" column="0" selection-start="358" selection-end="358" vertical-scroll-proportion="0.4006734" vertical-offset="0" max-vertical-offset="1275">
           <folding />
         </state>
       </provider>

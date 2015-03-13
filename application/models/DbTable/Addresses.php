@@ -4,14 +4,18 @@ class Application_Model_DbTable_Addresses extends Zend_Db_Table_Abstract
 {
 
     protected $_name = 'addresses';
-	public function getAddresses($id)
+	public function getAddress($id)
     {
-        $id = (int)$id;
+        $select = $this->getAdapter()->select()
+            ->from('addresses',
+                array(
+                    'addresses.city',
+                    'addresses.street'
+                ));
+
+        return $this->getAdapter()->fetchRow($select);
 
 
-        $row = $this->fetchRow('id = ' . $id);
-       
-          return $row->toArray();
     }
     public function getAddressesList()
     {
@@ -43,11 +47,11 @@ class Application_Model_DbTable_Addresses extends Zend_Db_Table_Abstract
     }
 	 public function updateAddresses($id, $city, $street)
     {
-        $data = array(
-			'city' => $city,
-            'street' => $street,
-        );
-       	$this->update($data, 'id = '.(int)$id);
+        $select = $this->_db->select()
+            ->from($this->_name,
+                array('key' => 'id', 'value' => 'street'));
+        $result = $this->getAdapter()->fetchRow($select);
+        return $result;
     }
     public function deleteAddresses($id)
     {

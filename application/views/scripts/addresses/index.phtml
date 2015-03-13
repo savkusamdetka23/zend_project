@@ -6,7 +6,7 @@
         <th>Street</th>
     </tr>
     <?php
-    if (is_array($this->addresses) && count($this->addresses)) :
+   if (count($this->addresses)) :
 
     foreach($this->addresses as $addresses) : ?>
         <tr>
@@ -18,7 +18,7 @@
                 <a href="<?php echo $this->url(array('controller' => 'addresses', 'action' => 'edit', 'id' => $addresses['id'])); ?>">edit</a>
             </td>            
 		   <td>
-                <a href="<?php echo $this->url(array('controller' => 'addresses', 'action' => 'delete', 'id' => $addresses->id)); ?>">delete</a>
+                <a href="<?php echo $this->url(array('controller' => 'addresses', 'action' => 'delete', 'id' => $addresses['id'])); ?>">delete</a>
             </td>
         </tr>
     <?php endforeach; ?>
