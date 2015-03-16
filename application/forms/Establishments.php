@@ -29,15 +29,15 @@ class Application_Form_Establishments extends Zend_Form
 			->setMultiOptions($addresses_list)
             ->setRequired(true)
             ->addValidator('NotEmpty');
-			
-			
+
+
 			$gps = new Zend_Form_Element_Text('gps');
 			$gps->setLabel('GPS')
             ->setRequired(true)
             ->addFilter('StripTags')
             ->addFilter('StringTrim')
             ->addValidator('NotEmpty');
-			
+
 				$telephone = new Zend_Form_Element_Text('telephone');
 			$telephone->setLabel('Telephone')
             ->setRequired(true)

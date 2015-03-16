@@ -40,6 +40,7 @@ class EstablishmentsController extends Zend_Controller_Action
             $formData = $this->getRequest()->getPost();
 			
             if ($form->isValid($formData)) {
+
                 $title = $form->getValue('title');
 				$address_id = $form->getValue('address_id');
 				$gps = $form->getValue('gps');
@@ -52,14 +53,15 @@ class EstablishmentsController extends Zend_Controller_Action
                 $establishments->addEstablishments($title, $address_id, $gps, $telephone, $description, $establishmenttype_id);
 
 
-                $establishment_id = $form->getValue('id');
+
+                $establishment_id = $form->getValue('establishment_id');
                 $opening = $form->getValue('opening');
                 $break_from = $form->getValue('break_from');
                 $break_to = $form->getValue('break_to');
                 $closing = $form->getValue('closing');
                 $weekend = $form->getValue('weekend');
                 $worktime= new Application_Model_DbTable_Worktime();
-                $worktime->addWorktime($establishment_id, $opening, $break_from, $break_to, $closing, $weekend);
+                $worktime->addWorktime( $establishment_id, $opening, $break_from, $break_to, $closing, $weekend);
 
 
 
@@ -89,14 +91,15 @@ class EstablishmentsController extends Zend_Controller_Action
                 $establishments = new Application_Model_DbTable_Establishments();
                 $establishments->updateEstablishments($id, $title, $address_id, $gps, $telephone, $description, $establishmenttype_id);
 
-                $establishment_id = $form->getValue('id');
+                $id= $form->getValue('id');
+                $establishment_id = $form->getValue('establishment_id');
                 $opening = $form->getValue('opening');
                 $break_from = $form->getValue('break_from');
                 $break_to = $form->getValue('break_to');
                 $closing = $form->getValue('closing');
                 $weekend = $form->getValue('weekend');
                 $worktime= new Application_Model_DbTable_Worktime();
-                $worktime->addWorktime($establishment_id, $opening, $break_from, $break_to, $closing, $weekend);
+                $worktime->updateWorktime($id, $establishment_id, $opening, $break_from, $break_to, $closing, $weekend);
 
                 $this->_helper->redirector('index');
             } else {
@@ -112,6 +115,7 @@ class EstablishmentsController extends Zend_Controller_Action
             // Заполняем форму информацией при помощи метода populate
             $form->populate($establishments->getEstablishment($id));
         }
+
     }
 	}
     public function deleteAction()

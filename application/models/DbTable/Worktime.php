@@ -57,7 +57,7 @@ class Application_Model_DbTable_Worktime extends Zend_Db_Table_Abstract
         }
         return $row->toArray();
     }
-    public function addWorktime($establishment_id, $opening, $break_from, $break_to, $closing, $weekend)
+    public function addWorktime( $establishment_id, $opening, $break_from, $break_to, $closing, $weekend)
     {
         $data = array(
             'establishment_id' => $establishment_id,
