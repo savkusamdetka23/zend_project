@@ -7,11 +7,13 @@ class Application_Form_Establishments extends Zend_Form
     {
         parent::__construct($options);
         $this->setName('establishments');
-        $this->setName('worktime');
+      //  $this->setName('worktime');
 	/*	$this->setMethod('post');
 		$this->setAction('user/process');*/
         $id = new Zend_Form_Element_Hidden('id');
         $id->addFilter('Int');
+
+
         $title = new Zend_Form_Element_Text('title');
         $title->setLabel('Title')
             ->setRequired(true)
@@ -65,7 +67,7 @@ class Application_Form_Establishments extends Zend_Form
 
 
 
-        $establishment_id = new Zend_Form_Element_Hidden('id');
+        $establishment_id = new Zend_Form_Element_Hidden('establishment_id');
         $establishment_id ->addFilter('Int');
 
 

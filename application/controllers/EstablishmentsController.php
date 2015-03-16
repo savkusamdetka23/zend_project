@@ -48,21 +48,21 @@ class EstablishmentsController extends Zend_Controller_Action
                 $description = $form->getValue('description');
                 $establishmenttype_id= $form->getValue('establishmenttype_id');
               //  $worktime_id= $form->getValue('id');
-                // $establishment_id = $form->getValue('id');
+              //  $establishment_id = $form->getValue('id');
                 $establishments = new Application_Model_DbTable_Establishments();
                 $establishments->addEstablishments($title, $address_id, $gps, $telephone, $description, $establishmenttype_id);
 
 
 
-                $establishment_id = $form->getValue('establishment_id');
+
+                $establishment_id = $form->getValue('id');
                 $opening = $form->getValue('opening');
                 $break_from = $form->getValue('break_from');
                 $break_to = $form->getValue('break_to');
                 $closing = $form->getValue('closing');
                 $weekend = $form->getValue('weekend');
                 $worktime= new Application_Model_DbTable_Worktime();
-                $worktime->addWorktime( $establishment_id, $opening, $break_from, $break_to, $closing, $weekend);
-
+                $worktime->addWorktime($establishment_id, $opening, $break_from, $break_to, $closing, $weekend);
 
 
                 $this->_helper->redirector('index');
