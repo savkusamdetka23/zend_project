@@ -7,6 +7,7 @@ class Application_Form_Establishments extends Zend_Form
     {
         parent::__construct($options);
         $this->setName('establishments');
+        $this->setName('worktime');
 	/*	$this->setMethod('post');
 		$this->setAction('user/process');*/
         $id = new Zend_Form_Element_Hidden('id');
@@ -44,22 +45,15 @@ class Application_Form_Establishments extends Zend_Form
             ->addFilter('StringTrim')
             ->addValidator('NotEmpty');
 
-        $worktime= new Application_Model_DbTable_Worktime();
-        $worktime_list = $worktime->getListWorktime();
-        $worktime_id = new Zend_Form_Element_Select('worktime_id');
-        $worktime_id->setLabel('Work time')
-            ->setMultiOptions($worktime_list)
-            ->setRequired(true)
-            ->addValidator('NotEmpty');
-			
+
 			$description = new Zend_Form_Element_Textarea('description');
 			$description->setLabel('Description')
             ->setRequired(true)
 			->setAttrib('cols', 50)
             ->setAttrib('rows', 4)
             ->addFilter('StripTags')
-            ->addValidator('StringLength', false, array(40, 250))
-			 ->setErrorMessages(array('Text must be between 40 and 250 characters'));
+            ->addValidator('StringLength', false, array(2, 250))
+			 ->setErrorMessages(array('Text must be between 2 and 250 characters'));
 
         $establishmenttype = new Application_Model_DbTable_Establishmenttype();
         $establishmenttype_list = $establishmenttype->getListEstablishmenttype();
@@ -70,9 +64,38 @@ class Application_Form_Establishments extends Zend_Form
             ->addValidator('NotEmpty');
 
 
+
+        $establishment_id = new Zend_Form_Element_Hidden('id');
+        $establishment_id ->addFilter('Int');
+
+
+        $opening = new Zend_Form_Element_Select('opening');
+        $opening->setLabel('Opening')
+            ->setMultiOptions(array(''=>'','6:00'=>'6:00', '7:00'=>'7:00', '8:00'=>'8:00', '9:00'=>'9:00', '10:00'=>'10:00', '11:00'=>'11:00', '12:00'=>'12:00', '24h'=>'24h'))
+            ->setRequired(true)
+            ->addValidator('NotEmpty');
+
+        $break_from = new Zend_Form_Element_Select('break_from');
+        $break_from->setLabel('Break from')
+            ->setMultiOptions(array(''=>'', '11:00'=>'11:00', '12:00'=>'12:00', '13:00'=>'13:00', '14:00'=>'14:00', '15:00'=>'15:00', '16:00'=>'16:00'));
+
+        $break_to = new Zend_Form_Element_Select('break_to');
+        $break_to->setLabel('Break to')
+            ->setMultiOptions(array(''=>'', '12:00'=>'12:00', '13:00'=>'13:00', '14:00'=>'14:00', '15:00'=>'15:00', '16:00'=>'16:00', '17:00'=>'17:00'));
+
+        $closing = new Zend_Form_Element_Select('closing');
+        $closing->setLabel('Closing')
+            ->setMultiOptions(array(''=>'', '18:00'=>'18:00', '19:00'=>'19:00', '20:00'=>'20:00', '21:00'=>'21:00', '22:00'=>'22:00', '23:00'=>'23:00', '00:00'=>'00:00', '01:00'=>'01:00', '02:00'=>'02:00', '03:00'=>'03:00', '04:00'=>'04:00', '05:00'=>'05:00' ));
+
+        $weekend = new Zend_Form_Element_Select('weekend');
+        $weekend->setLabel('Weekend')
+            ->setMultiOptions(array(''=>'', 'Sunday'=>'Sunday', 'Saturday'=>'Saturday', 'Friday'=>'Friday', 'Saturday-Sunday'=>'Saturday-Sunday', 'Sunday-Monday'=>'Sunday-Monday'));
+
+
+
         $submit = new Zend_Form_Element_Submit('submit');
         $submit->setAttrib('id', 'submitbutton');
-        $this->addElements(array($id, $title, $address_id, $gps, $telephone, $worktime_id, $description, $establishmenttype_id, $submit));
+        $this->addElements(array($id, $title, $address_id, $gps, $telephone, $description, $establishmenttype_id, $establishment_id, $opening, $break_from, $break_to, $closing, $weekend, $submit));
     }
 
 }

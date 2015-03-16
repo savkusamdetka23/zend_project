@@ -29,7 +29,7 @@ class Application_Model_DbTable_Worktime extends Zend_Db_Table_Abstract
                     'worktime.closing',
                     'worktime.weekend'
                 ))
-            ->joinLeft(array('establishments'), 'establishments.id = worktime.establishment_id', array('establishment' =>'title'));
+            ->joinLeft(array('establishments'), 'establishments.id = worktime.establishment_id', array('establishment' => 'title'));
 
 
         return $this->getAdapter()->fetchAll($select);
@@ -65,19 +65,20 @@ class Application_Model_DbTable_Worktime extends Zend_Db_Table_Abstract
 			'break_from' => $break_from,
 			'break_to' => $break_to,
 			'closing' => $closing,
-			'weekend' => $weekend,
+			'weekend' => $weekend
         );
         $this->insert($data);
     }
 	 public function updateWorktime($id, $establishment_id, $opening, $break_from, $break_to, $closing, $weekend)
     {
         $data = array(
+			'id' => $id,
 			'establishment_id' => $establishment_id,
             'opening' => $opening,
 			'break_from' => $break_from,
 			'break_to' => $break_to,
 			'closing' => $closing,
-			'weekend' => $weekend,
+			'weekend' => $weekend
         );
        	$this->update($data, 'id = '.(int)$id);
     }

@@ -2,8 +2,6 @@
 class Application_Model_DbTable_Establishments extends Zend_Db_Table_Abstract
 {
     protected $_name = 'establishments';
-	//	protected $_primary = 'addresses';
-	//protected $_dependentTables = array('Application_Model_DbTable_Addresses');
 
 	
 	
@@ -16,43 +14,10 @@ class Application_Model_DbTable_Establishments extends Zend_Db_Table_Abstract
         }
         return $row->toArray();
     }
-	public function getAddress()
-    {
-	/*	$addresses = new Application_Model_DbTable_Addresses();
-		$addresses_id = $addresses->getAddresses($street);*//*
-        $select =  $this->getAdapter()->select()->from($this)->join('street', 'establishments.address_id = addresses.id')->where('street = ?',$street);
-    return $this->fetchAll($select);*/
-    }
-	/*public function getAddress()
-    {
-		$address = new Application_Model_DbTable_Addresses();
-	$row->findDependentRow($address, 'id');
-	return $row;
-/*	$select = $this->establishments->getAdapter()->select()->from($this)->join('addresses', 'address.id=establishments.address_id')->where('address_id'=>'id'));
 
-		$resultSet = $this->addresses->fetchAll($select);
 
-		return $resultSet;
-
-	*/	
-		/*$addresses = new Application_Model_DbTable_Addresses();
-		$addresses_id = $addresses->getAddresses($id);
-		
-		$select = $this->_db->select()
-						->from($this->_name,
-                array('key' => 'id', 'value' => 'street'));
-        $result = $this->getAdapter()->fetchAll($select);
-        return $result;
-       /* $select =  $this->getAdapter()->select()->from($this)->join('street', 'establishments.address_id = addresses.id')->where('street = ?',$street);
-		return $this->fetchAll($select);
-	}*/
     public function getListEstablishments(){
-    /*	$select = $this->getAdapter()->select()->from(array('establishments', 'establishments.id', 'establishments.address_id'))->join(array('addresses', 'addresses.id=establishments.address_id')->where('street');
-    
-    	return $this->getAdapter()->fetchAll($select);*/
-		/*$select =  $this->getAdapter()->select()->from($this)->join('addresses', 'addresses.id = establishments.address_id')->where('street = ?',$street);
-		return $this->fetchAll($select);
-	*/
+
         $select = $this->_db->select()
             ->from($this->_name,
                 array('key' => 'id', 'value' => 'title'));
@@ -61,30 +26,7 @@ class Application_Model_DbTable_Establishments extends Zend_Db_Table_Abstract
     }
 	
 
-		/*$results = $this->fetchAll($select);
-		$item['address_id'] = $addresses[0]['id'];
-//put other item's data here in item
-		$addresses = array();
-		$i = 0;
-		foreach($results as $addresses){
-		$establishments[$i]['address_id'] = $addresses['id']
-  //put other image's data here in $images[$i]
-		$i++;
-		}
-		$item['establishments'] = $establishments;
-		
-		
-		->where('addresses.id = ?', $address_id*/
-		
 
-       /* $select = $this->getAdapter()->select()
-		->from('establishments',
-            array('establishments.id', 'establishments.title', 'establishments.address_id', 'establishments.gps', 'establishments.telephone', 'establishments.description'));
-		foreach($this->$select as $item){
-			$select = $this->getAdapter()->select()->joinLeft('addresses', 'addresses.id = establishments.address_id');
-			}
-    			
-    	return $this->getAdapter()->fetchAll($select);*/
     public function getEstablishmentsList()
     {
         $select = $this->getAdapter()->select()
@@ -95,14 +37,13 @@ class Application_Model_DbTable_Establishments extends Zend_Db_Table_Abstract
                     'establishments.address_id',
                     'establishments.gps',
                     'establishments.telephone',
-                    'establishments.worktime_id',
+                  //  'establishments.worktime_id',
                     'establishments.description',
                     'establishments.establishmenttype_id'
                 ))
             ->joinLeft(array('addresses'), 'addresses.id=establishments.address_id', array('address' => 'street'))
-            ->joinLeft(array('worktime'), 'worktime.id=establishments.worktime_id', array('open' =>'opening', 'break_f' =>'break_from', 'break_t' =>'break_to', 'close' =>'closing', 'weekends' =>'weekend'))
-
-        ->joinLeft(array('establishmenttype'), 'establishmenttype.id=establishments.establishmenttype_id', array('type' => 'establishment'));
+            ->joinLeft(array('worktime'), 'worktime.establishment_id=establishments.id', array('open' =>'opening', 'break_f' =>'break_from', 'break_t' =>'break_to', 'close' =>'closing', 'weekends' =>'weekend'))
+            ->joinLeft(array('establishmenttype'), 'establishmenttype.id=establishments.establishmenttype_id', array('type' => 'establishment'));
 //print($select);
 
         return $this->getAdapter()->fetchAll($select);
@@ -118,28 +59,29 @@ class Application_Model_DbTable_Establishments extends Zend_Db_Table_Abstract
         }
         return $row->toArray();
     }
-    public function addEstablishments($title, $address_id, $gps, $telephone, $description, $worktime_id, $description, $establishmenttype_id)
+    public function addEstablishments($title, $address_id, $gps, $telephone, $description, $establishmenttype_id)
     {
         $data = array(
             'title' => $title,
             'address_id' => $address_id,
 			'gps' => $gps,
             'telephone' => $telephone,
-			'worktime_id' => $worktime_id,
+          //  'worktime_id' => $worktime_id,
             'description' => $description,
 			'establishmenttype_id' => $establishmenttype_id
-            );
+
+        );
         $this->insert($data);
     }
-	 public function updateEstablishments($id, $title, $address_id, $gps, $telephone, $worktime_id, $description, $description, $establishmenttype_id)
+	 public function updateEstablishments($id, $title, $address_id, $gps, $telephone,  $description, $establishmenttype_id)
     {
         $data = array(
 			'id' => $id,
-			'title' => $title,
+            'title' => $title,
             'address_id' => $address_id,
-			'gps' => $gps,
+            'gps' => $gps,
             'telephone' => $telephone,
-            'worktime_id' => $worktime_id,
+//            'worktime_id' => $worktime_id,
             'description' => $description,
             'establishmenttype_id' => $establishmenttype_id
         );

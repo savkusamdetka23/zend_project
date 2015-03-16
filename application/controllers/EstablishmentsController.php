@@ -40,22 +40,35 @@ class EstablishmentsController extends Zend_Controller_Action
             $formData = $this->getRequest()->getPost();
 			
             if ($form->isValid($formData)) {
-                $id = $form->getValue('id');
                 $title = $form->getValue('title');
 				$address_id = $form->getValue('address_id');
 				$gps = $form->getValue('gps');
 				$telephone = $form->getValue('telephone');
-				$worktime_id= $form->getValue('worktime_id');
-				$description = $form->getValue('description');
-				$establishmenttype_id= $form->getValue('establishmenttype_id');
-				$establishments = new Application_Model_DbTable_Establishments();
-                $establishments->addEstablishments($id, $title, $address_id, $gps, $telephone, $worktime_id, $description, $establishmenttype_id);
-				
+                $description = $form->getValue('description');
+                $establishmenttype_id= $form->getValue('establishmenttype_id');
+              //  $worktime_id= $form->getValue('id');
+                // $establishment_id = $form->getValue('id');
+                $establishments = new Application_Model_DbTable_Establishments();
+                $establishments->addEstablishments($title, $address_id, $gps, $telephone, $description, $establishmenttype_id);
+
+
+                $establishment_id = $form->getValue('id');
+                $opening = $form->getValue('opening');
+                $break_from = $form->getValue('break_from');
+                $break_to = $form->getValue('break_to');
+                $closing = $form->getValue('closing');
+                $weekend = $form->getValue('weekend');
+                $worktime= new Application_Model_DbTable_Worktime();
+                $worktime->addWorktime($establishment_id, $opening, $break_from, $break_to, $closing, $weekend);
+
+
+
                 $this->_helper->redirector('index');
             } else {
                 $form->populate($formData);
             }
         }
+
     }
 	public function editAction()
 	{
@@ -70,11 +83,21 @@ class EstablishmentsController extends Zend_Controller_Action
                 $address_id = $form->getValue('address_id');
 				$gps = $form->getValue('gps');
 				$telephone = $form->getValue('telephone');
-                $worktime_id= $form->getValue('worktime_id');
+               // $worktime_id= $form->getValue('worktime_id');
                 $description = $form->getValue('description');
                 $establishmenttype_id= $form->getValue('establishmenttype_id');
                 $establishments = new Application_Model_DbTable_Establishments();
-                $establishments->updateEstablishments( $title, $address_id, $gps, $telephone, $worktime_id, $description, $establishmenttype_id);
+                $establishments->updateEstablishments($id, $title, $address_id, $gps, $telephone, $description, $establishmenttype_id);
+
+                $establishment_id = $form->getValue('id');
+                $opening = $form->getValue('opening');
+                $break_from = $form->getValue('break_from');
+                $break_to = $form->getValue('break_to');
+                $closing = $form->getValue('closing');
+                $weekend = $form->getValue('weekend');
+                $worktime= new Application_Model_DbTable_Worktime();
+                $worktime->addWorktime($establishment_id, $opening, $break_from, $break_to, $closing, $weekend);
+
                 $this->_helper->redirector('index');
             } else {
                 $form->populate($formData);
