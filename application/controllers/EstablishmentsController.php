@@ -100,20 +100,19 @@ class EstablishmentsController extends Zend_Controller_Action
                 $establishments->updateEstablishments($id, $title, $build, $address_id, $gps, $telephone, $description, $establishmenttype_id);
 
 
-                $query = $establishments->getAdapter()->select()
-                    ->from('establishments')->where('establishments.telephone = ?', $telephone);
-                $establishment_id = $establishments->getAdapter()->fetchAll($query);
+               // $establishment_id = $establishments->getAdapter()->fetchAll($establishment_id);
                 //die($establishment_id[0]['telephone']);
                 //die(print_r($establishment_id));
 
                 //   $establishment_id = $form->getValue('id');
+                $establishment_id = $form->getValue('establishment_id');
                 $opening = $form->getValue('opening');
                 $break_from = $form->getValue('break_from');
                 $break_to = $form->getValue('break_to');
                 $closing = $form->getValue('closing');
                 $weekend = $form->getValue('weekend');
                 $worktime= new Application_Model_DbTable_Worktime();
-                $worktime->updateWorktime($id, $establishment_id[0]['id'], $opening, $break_from, $break_to, $closing, $weekend);
+                $worktime->updateWorktime($id, $establishment_id, $opening, $break_from, $break_to, $closing, $weekend);
 
 
                 $this->_helper->redirector('index');
@@ -131,7 +130,17 @@ class EstablishmentsController extends Zend_Controller_Action
             $form->populate($establishments->getEstablishment($id));
         }
 
+        $establishment_id = $this->_getParam('establishment_id', 0);
+            if ($establishment_id > 0) {
+                // Создаём объект модели
+                $worktime = new Application_Model_DbTable_Worktime();
+
+                // Заполняем форму информацией при помощи метода populate
+                $form->populate($worktime->getWorktime($id));
+            }
+
     }
+
 	}
     public function deleteAction()
     {

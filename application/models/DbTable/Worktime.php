@@ -6,7 +6,7 @@ class Application_Model_DbTable_Worktime extends Zend_Db_Table_Abstract
     protected $_name = 'worktime';
 	
 	public function getWorktime($id)
-    {      
+    {
         $id = (int)$id;
 
       
