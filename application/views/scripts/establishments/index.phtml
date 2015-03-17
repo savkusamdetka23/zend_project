@@ -12,7 +12,7 @@
     foreach($this->establishments as $establishments) :
     //  print_r($establishments);
     ?>
-    <tr class="clickable success" data-toggle="collapse" id="row1" data-target=".row1">
+    <tr class="clickable success" data-toggle="collapse" id="row<?php  echo $this->escape($establishments['id']) ?>" data-target=".row<?php echo $this->escape($establishments['id'])?>">
         <td><i class="glyphicon glyphicon-plus"></i></td>
 
         <td><?php echo $this->escape($establishments['title']) ?></td>
@@ -25,7 +25,7 @@
             <a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'delete',  'id' => $this->escape($establishments['id']))); ?>">delete</a>
         </td>
     </tr>
-    <tr class="collapse row1"><td colspan="4"><?php echo $this->escape($establishments['gps']) ?></td>
+    <tr class="collapse row<?php echo $this->escape($establishments['id']) ?>"><td colspan="4"><?php echo $this->escape($establishments['gps']) ?></td>
   </tr>
 
 
