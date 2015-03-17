@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0758dce3-24a4-46d3-b1ac-7a3cc3968bc7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/34.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/8.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/bgr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/ch.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/chnu_chernivtsi-90x70.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/f.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/imgres.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/p1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/p2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/p3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/EstablishmentsController.php" afterPath="$PROJECT_DIR$/application/controllers/EstablishmentsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/addresses/index.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/addresses/index.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/establishments/index.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/index.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/establishmenttype/index.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/establishmenttype/index.phtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/index/index.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/index/index.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/worktime/index.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/worktime/index.phtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/layouts/scripts/layout.phtml" afterPath="$PROJECT_DIR$/application/layouts/scripts/layout.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cv_guide.iws" />
@@ -44,16 +35,25 @@
       <file leaf-file-name="layout.phtml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/layouts/scripts/layout.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="81" selection-start="2874" selection-end="2874" vertical-scroll-proportion="-11.115385" vertical-offset="1071" max-vertical-offset="2788">
+            <state line="86" column="6" selection-start="2852" selection-end="3008" vertical-scroll-proportion="-7.9615383" vertical-offset="1255" max-vertical-offset="4267">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EstablishmentsController.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/controllers/EstablishmentsController.php">
+      <file leaf-file-name="index.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/scripts/worktime/index.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="9" selection-start="3419" selection-end="3419" vertical-scroll-proportion="0.8771044" vertical-offset="788" max-vertical-offset="2550">
+            <state line="29" column="2" selection-start="1402" selection-end="1421" vertical-scroll-proportion="-17.76923" vertical-offset="31" max-vertical-offset="612">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.phtml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/scripts/establishments/index.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="9" selection-start="1394" selection-end="1394" vertical-scroll-proportion="0.7314974" vertical-offset="0" max-vertical-offset="833">
               <folding />
             </state>
           </provider>
@@ -62,7 +62,7 @@
       <file leaf-file-name="index.phtml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/scripts/index/index.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="53" selection-start="85" selection-end="85" vertical-scroll-proportion="-0.65384614" vertical-offset="17" max-vertical-offset="2652">
+            <state line="142" column="17" selection-start="8469" selection-end="8469" vertical-scroll-proportion="-92.84615" vertical-offset="0" max-vertical-offset="2652">
               <folding />
             </state>
           </provider>
@@ -86,20 +86,20 @@
         <option value="$PROJECT_DIR$/application/views/scripts/addresses/edit.phtml" />
         <option value="$PROJECT_DIR$/application/controllers/AddressesController.php" />
         <option value="$PROJECT_DIR$/application/forms/Addresses.php" />
-        <option value="$PROJECT_DIR$/application/views/scripts/addresses/index.phtml" />
         <option value="$PROJECT_DIR$/application/models/DbTable/Addresses.php" />
         <option value="$PROJECT_DIR$/application/models/DbTable/Establishmenttype.php" />
         <option value="$PROJECT_DIR$/application/forms/Worktime.php" />
-        <option value="$PROJECT_DIR$/application/views/scripts/worktime/index.phtml" />
         <option value="$PROJECT_DIR$/application/views/scripts/establishments/add.phtml" />
-        <option value="$PROJECT_DIR$/application/views/scripts/establishments/index.phtml" />
         <option value="$PROJECT_DIR$/application/models/DbTable/Establishments.php" />
-        <option value="$PROJECT_DIR$/application/views/scripts/establishmenttype/index.phtml" />
         <option value="$PROJECT_DIR$/application/models/DbTable/Worktime.php" />
         <option value="$PROJECT_DIR$/application/forms/Establishments.php" />
+        <option value="$PROJECT_DIR$/application/controllers/EstablishmentsController.php" />
         <option value="$PROJECT_DIR$/application/views/scripts/index/index.phtml" />
         <option value="$PROJECT_DIR$/application/layouts/scripts/layout.phtml" />
-        <option value="$PROJECT_DIR$/application/controllers/EstablishmentsController.php" />
+        <option value="$PROJECT_DIR$/application/views/scripts/addresses/index.phtml" />
+        <option value="$PROJECT_DIR$/application/views/scripts/establishmenttype/index.phtml" />
+        <option value="$PROJECT_DIR$/application/views/scripts/worktime/index.phtml" />
+        <option value="$PROJECT_DIR$/application/views/scripts/establishments/index.phtml" />
       </list>
     </option>
   </component>
@@ -211,6 +211,10 @@
               <option name="myItemId" value="scripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="worktime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -235,6 +239,106 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cv_guide" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cv_guide" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="establishmenttype" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cv_guide" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cv_guide" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="establishments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cv_guide" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cv_guide" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cv_guide" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cv_guide" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="addresses" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -576,29 +680,9 @@
         <state line="39" column="62" selection-start="1465" selection-end="1465" vertical-scroll-proportion="1.0826162" vertical-offset="34" max-vertical-offset="1513" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/addresses/index.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="3" selection-start="696" selection-end="859" vertical-scroll-proportion="0.70223755" vertical-offset="0" max-vertical-offset="581" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/establishments/add.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="16" selection-start="23" selection-end="23" vertical-scroll-proportion="0.028619528" vertical-offset="0" max-vertical-offset="594" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/establishments/index.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="69" selection-start="1297" selection-end="1308" vertical-scroll-proportion="0.9070568" vertical-offset="153" max-vertical-offset="1207" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/establishmenttype/index.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="143" selection-start="752" selection-end="752" vertical-scroll-proportion="0.4857143" vertical-offset="0" max-vertical-offset="560" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/worktime/index.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="125" selection-start="1071" selection-end="1149" vertical-scroll-proportion="0.6375" vertical-offset="187" max-vertical-offset="782" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/establishments/edit.phtml">
@@ -636,23 +720,51 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="620" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/EstablishmentsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="9" selection-start="3419" selection-end="3419" vertical-scroll-proportion="1.2205387" vertical-offset="584" max-vertical-offset="2550">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/index/index.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="53" selection-start="85" selection-end="85" vertical-scroll-proportion="-0.65384614" vertical-offset="17" max-vertical-offset="2652">
+        <state line="142" column="17" selection-start="8469" selection-end="8469" vertical-scroll-proportion="-92.84615" vertical-offset="0" max-vertical-offset="2652">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/layouts/scripts/layout.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="81" selection-start="2874" selection-end="2874" vertical-scroll-proportion="-11.115385" vertical-offset="1071" max-vertical-offset="2788">
+        <state line="86" column="6" selection-start="2852" selection-end="3008" vertical-scroll-proportion="-7.9615383" vertical-offset="1255" max-vertical-offset="4267">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/EstablishmentsController.php">
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/addresses/index.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="9" selection-start="3419" selection-end="3419" vertical-scroll-proportion="0.8771044" vertical-offset="788" max-vertical-offset="2550">
+        <state line="2" column="0" selection-start="160" selection-end="1137" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/establishmenttype/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="1260" selection-end="1281" vertical-scroll-proportion="-18.961538" vertical-offset="0" max-vertical-offset="612">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/worktime/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="2" selection-start="1402" selection-end="1421" vertical-scroll-proportion="-17.76923" vertical-offset="31" max-vertical-offset="612">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/establishments/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="9" selection-start="1394" selection-end="1394" vertical-scroll-proportion="0.7314974" vertical-offset="0" max-vertical-offset="833">
           <folding />
         </state>
       </provider>

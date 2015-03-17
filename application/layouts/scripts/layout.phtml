@@ -1,4 +1,5 @@
 ﻿<!-- application/layouts/scripts/layout.phtml -->
+
 <?php echo $this->doctype() ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -77,29 +78,115 @@
  </header>
  </div>
  <!-- MAIN CONTENT -->
-		<section>
-		<div class="col-md-12 col-lg-12 text-center"><h3>Welcome to my ZF project</h3>
+<section>
 
+<div class="row">
+    <div class="col-lg-2">
+
+        <form action="<?php echo $this->url(array('controller' => 'Addresses'),'default',true)?>"> <button class="btn btn-default">Addresses</button></form>
+        <form action="<?php echo $this->url(array('controller' => 'Establishmenttype'),'default',true)?>"> <button class="btn btn-default">Establishment type</button></form>
+        <form action="<?php echo $this->url(array('controller' => 'Establishments'),'default',true)?>"> <button class="btn btn-default">Establishments</button></form>
+        <form action="<?php echo $this->url(array('controller' => 'Worktime'),'default',true)?>"> <button class="btn btn-default">Work time</button></form>
+
+
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">Walk the city
+                    </a>
+                </li>
+                <li>
+                    <a href="#">City map</a>
+                </li>
+                <li>
+                    <a href="#">Routes</a>
+                </li>
+                <li>
+                    <a href="#">Popular places</a>
+                </li>
+                <li>
+                    <a href="#">Useful information</a>
+                </li>
+
+                <li>
+                    <a href="#">Contacts</a>
+                </li>
+            </ul>
+        </div>
+
+
+    </div>
+    <div class="col-lg-7">
+
+        <?php
+        echo $this->layout()->content
+        ?>
+
+    </div>
+
+
+
+
+
+    <div class="col-lg-3">
+        <div class="popular">
+            <a href="#">POPULAR </a>
+            <a href="#"> RECENT </a>
+            <a href="#"> RANDOM</a>
+        </div>
+        <ul class="media-list">
+            <li class="media">
+                <a href="" class="pull-left"><img src="images/8.jpg" alt="Upcoming" class="media-object "></a>
+                <div class="media-body">
+                    <h5 class="media-heading">Yuriy Fedkovych Chernivtsi National University</h5>
+                    <p class="text-muted"><small>Published 23.12.2014</small></p>
+
+
+                </div>
+            </li>
+            <li class="media">
+                <a href="" class="pull-left"><img src="images/9.jpg" alt="Upcoming" class="media-object "></a>
+                <div class="media-body">
+                    <h5 class="media-heading">Central square</h5>
+                    <p class="text-muted"><small>Published 23.12.2014</small></p>
+
+
+                </div>
+            </li>
+            <li class="media">
+                <a href="" class="pull-left"><img src="images/34.jpg" alt="Upcoming" class="media-object "></a>
+                <div class="media-body">
+                    <h5 class="media-heading">Turkish square</h5>
+                    <p class="text-muted"><small>Published 23.12.2014</small></p>
+
+
+                </div>
+            </li>
+            <li class="media">
+                <a href="" class="pull-left"><img src="images/34.jpg" alt="Upcoming" class="media-object "></a>
+                <div class="media-body">
+                    <h5 class="media-heading">Turkish square</h5>
+                    <p class="text-muted"><small>Published 23.12.2014</small></p>
+
+
+                </div>
+            </li>
+            <li class="media">
+                <a href="" class="pull-left"><img src="images/9.jpg" alt="Upcoming" class="media-object "></a>
+                <div class="media-body">
+                    <h5 class="media-heading">Central square</h5>
+                    <p class="text-muted"><small>Published 23.12.2014</small></p>
+
+
+                </div>
+            </li>
+        </ul>
+    </div>
 </div>
-<div class="col-lg-2">
-			 <form action="<?php echo $this->url(array('controller' => 'Addresses'),'default',true)?>"> <button class="btn btn-default">Addresses</button></form>
-			 <form action="<?php echo $this->url(array('controller' => 'Establishmenttype'),'default',true)?>"> <button class="btn btn-default">Establishment type</button></form>
-			 <form action="<?php echo $this->url(array('controller' => 'Establishments'),'default',true)?>"> <button class="btn btn-default">Establishments</button></form>
-			 <form action="<?php echo $this->url(array('controller' => 'worktime'),'default',true)?>"> <button class="btn btn-default">Work time</button></form>
-			 </div>
-		<div class="col-lg-6 ">
+</section>
 
 
-
-			<?php echo $this->layout()->content ?>
-		  </div>
-		<div class="col-lg-4"> </div>
-
-		</section>
-
-
-
-    <!-------------------------------------------------------------------------------------------------------------------->
+<!-------------------------------------------------------------------------------------------------------------------->
    <!-- FOOTER -->
 		<footer>
 

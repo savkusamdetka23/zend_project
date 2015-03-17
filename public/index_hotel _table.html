@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+    <html id="ie6" class="ie"lang="en-US">
+    <![endif]-->
+    <!--[if IE 7]>
+    <html id="ie7"  class="ie"lang="en-US">
+    <![endif]-->
+    <!--[if IE 8]>
+    <html id="ie8"  class="ie"lang="en-US">
+    <![endif]-->
+    <!--[if IE 9]>
+    <html id="ie9"  class="ie"lang="en-US">
+    <![endif]-->
+    <!--[if gt IE 9]>
+    <html class="ie"lang="en-US">
+    <![endif]-->
+
+    <!-- This doesn't work but i prefer to leave it here... maybe in the future the MS will support it... i hope... -->
+    <!--[if IE 10]>
+    <html id="ie10"  class="ie"lang="en-US">
+    <![endif]-->
+
+
+    <!--[if !IE]>
+    <html lang="en-US">
+    <![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<title>Travel</title>
+
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+<header>
+	<nav class="navbar navbar-default  navbar-fixed" role="navigation">
+	  <div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" href="index.html">Travel</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		  <ul class="nav navbar-nav navbar-right">
+			<form><div class="btn-group form-inline">
+					<input type="text"class="btn btn-default btn-sm" class="form-control" placeholder="Search">
+					<button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-search"></span></button>
+					</div>
+						<li class="dropdown">
+						   <div class="btn-group">
+									   <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModalreg"><span class="glyphicon glyphicon-user"></span></button>
+									   
+						</li></form>
+		  </ul>
+		</div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+
+	<div class="row">
+	<div class="col-lg-12 nav_menu">
+			<ul class="nav nav-pills">
+			  <li><a href="index_hotel.html">Accomodation</a></li>
+			  <li><a href="#">Culture</a></li>
+			  <li><a href="#">Free time</a></li>
+			  <li><a href="#">Nutrition</a></li>
+			  <li><a href="#">Transport</a></li>
+			</ul>
+			
+ </div>
+	</div>
+	
+ </header>
+ <!-- MAIN CONTENT -->
+		<section>
+		<div class="row row_1">
+		
+<div class="col-lg-2">
+		<div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Прогулянка містом
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Карта міста</a>
+                </li>
+                <li>
+                    <a href="#">Маршрути</a>
+                </li>
+                <li>
+                    <a href="#">Популярні місця</a>
+                </li>
+                <li>
+                    <a href="#">Корисна інформація</a>
+                </li>
+                
+                <li>
+                    <a href="#">Контакти</a>
+                </li>
+            </ul>
+        </div>
+		</div>
+		<div class="col-lg-7">
+			<div class="row" >	
+		   <ul class="nav nav-tabs pull-left">
+			  <li class="active"><a href="index_hotel.html">Hotel</a></li>
+			  <li><a href="#">Motel</a></li>
+			  <li><a href="#">Apartment</a></li>
+			  <li ><a href="#">Hostel</a></li>
+		  </ul>
+		  </div>
+		  <div>
+		   <h3 ><span class="glyphicon glyphicon-home text-muted"></span>Готелі</h3>
+		  
+		 	<table class="table table-responsive table-hover">
+  <thead>
+        </th><th>Назва</th><th>Розташування</th><th>Телефон</th></tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Готель «Георг Палац»</td>
+          	<td>вул. Комарова,13-а</td>  
+            <td><span class="glyphicon glyphicon-earphone text-muted"></span >(0372) 58-55-88</td>
+        </tr><tr>
+            <td>Готель «Георг Палац»</td>
+          	<td>вул. Комарова,13-а</td>  
+            <td><span class="glyphicon glyphicon-earphone text-muted"></span >(0372) 58-55-88</td>
+        </tr><tr>
+            <td>Готель «Георг Палац»</td>
+          	<td>вул. Комарова,13-а</td>  
+            <td><span class="glyphicon glyphicon-earphone text-muted"></span >(0372) 58-55-88</td>
+        </tr>
+        
+    </tbody>
+</table>
+
+		<table class="table table-responsive table-hover">
+  <thead>
+        <tr><th></th><th>Назва</th><th>Розташування</th><th>Телефон</th></tr>
+    </thead>
+    <tbody>
+        <tr class="clickable success" data-toggle="collapse" id="row1" data-target=".row1">
+            <td><i class="glyphicon glyphicon-plus"></i></td>
+            <td>Готель «Георг Палац»</td>
+          	<td>вул. Комарова,13-а</td>  
+            <td><span class="glyphicon glyphicon-earphone text-muted"></span >(0372) 58-55-88</td>
+        </tr>
+        <tr class="collapse row1">
+            <td colspan="4">Знаходиться у старому місті поруч із колишньою Резиденцією буковинських митрополитів. Готель має 19 двомісних «напівлюксів», 3 чотиримісних та 8 двомісних номерів категорії «люкс». У всіх номерах є окремий санвузол з душовою кабінкою, телевізор, холодильник, кондиціонер, WI-FI.
+До послуг гостей: ресторан, бар, сауна, автостоянка, прання і прасування одягу, екскурсійні послуги.</td>
+        </tr>
+        <tr class="collapse row1">
+            <td colspan="2">Напівлюкс (19 номерів)
+Ціна – 350 грн. за добу</td>
+			<td colspan="2">Комфортабельні двомісні номери з двома окремими ліжками. У номері: кондиціонер, холодильник, плазмовий телевізор із супутниковими каналами, WI-FI Інтернет, телефон, санвузол з душовою кабінкою, фен, необхідні гігієнічні приналежності.</td>
+        </tr>
+		<tr class="collapse row1">
+            <td colspan="2">Люкс (8 номерів)
+Ціна – 550 грн. за добу
+</td>
+			<td colspan="2">Просторі вишукані номери з балконами. У номері: кондиціонер, холодильник, плазмовий телевізор із супутниковими каналами, WI-FI Інтернет, телефон, санвузол з душовою кабінкою, фен, необхідні гігієнічні приналежності.</td>
+        </tr>
+		<tr class="collapse row1">
+            <td colspan="2">Сімейний люкс (3 номери)
+Ціна – 550 грн. за добу
+</td>
+			<td colspan="2">Просторі номери розділені на дві частини – спальню й гостьову. У номері: кондиціонер, холодильник, плазмовий телевізор із супутниковими каналами, WI-FI Інтернет, телефон, санвузол з душовою кабінкою, фен, необхідні гігієнічні приналежності.</td>
+        </tr>
+         <tr class="clickable success" data-toggle="collapse" id="row2" data-target=".row2">
+            <td><i class="glyphicon glyphicon-plus"></i></td>
+            <td>Готель «Георг Палац»</td>
+          	<td>вул. Комарова,13-а</td>  
+            <td><span class="glyphicon glyphicon-earphone text-muted"></span >(0372) 58-55-88</td>
+        </tr>
+        <tr class="collapse row2">
+            <td colspan="4">Знаходиться у старому місті поруч із колишньою Резиденцією буковинських митрополитів. Готель має 19 двомісних «напівлюксів», 3 чотиримісних та 8 двомісних номерів категорії «люкс». У всіх номерах є окремий санвузол з душовою кабінкою, телевізор, холодильник, кондиціонер, WI-FI.
+До послуг гостей: ресторан, бар, сауна, автостоянка, прання і прасування одягу, екскурсійні послуги.</td>
+        </tr>
+        <tr class="collapse row2">
+            <td colspan="2">Напівлюкс (19 номерів)
+Ціна – 350 грн. за добу</td>
+			<td colspan="2">Комфортабельні двомісні номери з двома окремими ліжками. У номері: кондиціонер, холодильник, плазмовий телевізор із супутниковими каналами, WI-FI Інтернет, телефон, санвузол з душовою кабінкою, фен, необхідні гігієнічні приналежності.</td>
+        </tr>
+		<tr class="collapse row2">
+            <td colspan="2">Люкс (8 номерів)
+Ціна – 550 грн. за добу
+</td>
+			<td colspan="2">Просторі вишукані номери з балконами. У номері: кондиціонер, холодильник, плазмовий телевізор із супутниковими каналами, WI-FI Інтернет, телефон, санвузол з душовою кабінкою, фен, необхідні гігієнічні приналежності.</td>
+        </tr>
+		<tr class="collapse row2">
+            <td colspan="2">Сімейний люкс (3 номери)
+Ціна – 550 грн. за добу
+</td>
+			<td colspan="2">Просторі номери розділені на дві частини – спальню й гостьову. У номері: кондиціонер, холодильник, плазмовий телевізор із супутниковими каналами, WI-FI Інтернет, телефон, санвузол з душовою кабінкою, фен, необхідні гігієнічні приналежності.</td>
+        </tr>
+    </tbody>
+</table>
+					</div>
+		</div>
+		<div class="col-lg-3">
+		<div class="popular">
+		<a href="#">POPULAR </a>
+		<a href="#"> RECENT </a>
+		<a href="#"> RANDOM</a>
+		</div>
+		<ul class="media-list">
+							<li class="media">
+								<a href="" class="pull-left"><img src="images/8.jpg" alt="Upcoming" class="media-object "></a>
+								<div class="media-body">
+									<h5 class="media-heading">Університет ім. Ю.Федьковича</h5>
+									<p class="text-muted"><small>Опубліковано 23.12.2014</small></p>
+									
+									
+								</div>
+							</li>
+							<li class="media">
+								<a href="" class="pull-left"><img src="images/9.jpg" alt="Upcoming" class="media-object "></a>
+								<div class="media-body">
+									<h5 class="media-heading">Центральна площа</h5>
+									<p class="text-muted"><small>Опубліковано 23.12.2014</small></p>
+									
+									
+								</div>
+							</li>
+							<li class="media">
+								<a href="" class="pull-left"><img src="images/34.jpg" alt="Upcoming" class="media-object "></a>
+								<div class="media-body">
+									<h5 class="media-heading">Турeцька площа</h5>
+									<p class="text-muted"><small>Опубліковано 23.12.2014</small></p>
+									
+									
+								</div>
+							</li>
+							<li class="media">
+								<a href="" class="pull-left"><img src="images/34.jpg" alt="Upcoming" class="media-object "></a>
+								<div class="media-body">
+									<h5 class="media-heading">Турeцька площа</h5>
+									<p class="text-muted"><small>Опубліковано 23.12.2014</small></p>
+									
+									
+								</div>
+							</li>
+							<li class="media">
+								<a href="" class="pull-left"><img src="images/9.jpg" alt="Upcoming" class="media-object "></a>
+								<div class="media-body">
+									<h5 class="media-heading">Центральна площа</h5>
+									<p class="text-muted"><small>Опубліковано 23.12.2014</small></p>
+									
+									
+								</div>
+							</li>
+						</ul>
+		</div>
+       </div>
+		</section>
+<!-- FOOTER -->
+		<footer>
+			
+          <div class="foot inform_foot">
+		  <span>© Practice 2015<span>
+		  </div>
+		</footer>
+				 <!-- Modal -->
+				<div class="modal fade" id="myModalreg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				  <div class="modal-dialog">
+					<div class="modal-content">
+					  <div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                         <h3 id="myModalLabel">Ласкаво просимо!</h3>
+					  </div>
+					  <div class="modal-body">
+							<ul class="nav nav-tabs" id="login-or-register">
+							  <li ><a href="#register" data-toggle="tab">Реєстрація</a></li>
+							  <li class="active"><a href="#profile" data-toggle="tab">Авторизація</a></li>
+							</ul>
+							<div class="tab-content">
+							  <div class="tab-pane" id="register">
+									<form action="#">
+										<div class="row">
+											<h3>Зареструйтесь, будь ласка</h3>
+										</div>
+										<div class="row">
+											<label for="login">Введіть Ваш логін</label>
+											<input id="login" name="login" value="" />
+											<span class="required">*</span>
+										</div>
+										<div class="row">
+											<label for="password">Введіть Ваш пароль</label>
+											<input id="password" name="password" value="" />
+											<span class="required">*</span>
+										</div>
+										<div class="row">
+											<label for="password_repeat">Повторіть Ваш пароль</label>
+											<input id="password_repeat" name="password_repeat" value="" />
+											<span class="required">*</span>
+										</div>
+										<div class="row">
+											Поля, позначені <span class="required">*</span>, обов'язкові для заповнення.
+										</div>
+										<div class="row">
+											<input type="submit" id="register_button" class="register_button" value="Зареєструватись" />
+										</div>
+									</form>
+							  </div>
+							  <div class="tab-pane active" id="profile">
+									<form action="#">
+									<div class="row">
+											<h3>Авторизуйтесь, будь ласка.</h3>
+										</div>
+										<div class="row">
+											<label for="user_login">Введіть Ваш логiн</label>
+											<input id="user_login" name="login" value="" />
+										</div>
+										<div class="row">
+											<label for="user_password">Введіть Ваш пароль</label>
+											<input id="user_password" name="password" value="" />
+										</div>
+										<div class="row">
+									   <input type="checkbox" id="remember-me" /><label for="remember-me">Запам'ятати мене?</label>
+									   </div>
+										<div class="row">
+											<input type="submit" id="login_button" class="login_button" value="Вхід" />
+										</div>
+									</form>
+							  </div>
+							</div>
+						  </div>
+					  </div>
+					  <div class="modal-footer">
+						 <button class="btn" data-dismiss="modal" aria-hidden="true">Закрити</button>
+					  </div>
+					</div>
+				  </div>
+				  <!-- SCRIPTS -->
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/carusell.js"></script>
+	
+	
+</body>
+</html>
