@@ -7,12 +7,12 @@ class EstablishmentsController extends Zend_Controller_Action
     }
     public function indexAction()
     {
-       
+
 		$establishments = new Application_Model_DbTable_Establishments();
 		$establishmentsList = $establishments->getEstablishmentsList();
         $this->view->establishments = $establishmentsList;
-		
-	
+
+
 	/*	$street_list = new Application_Model_DbTable_Incentive();
 		$this->view->street_list = $street_list->getIncentivesList();
 			//$establishmentsList = $establishments->getListEstablishments();
@@ -25,7 +25,7 @@ class EstablishmentsController extends Zend_Controller_Action
 
 	//	$address_id = new Application_Model_DbTable_Establishments();
 		//$this->view->addresses_id = $address_id->getEstablishmentsAddress();
-		
+
 		$street_list = new Application_Model_DbTable_Incentive();
 		$this->view->street_list = $street_list->getIncentivesList();*/
     }
@@ -42,6 +42,7 @@ class EstablishmentsController extends Zend_Controller_Action
             if ($form->isValid($formData)) {
 
                 $title = $form->getValue('title');
+                $build = $form->getValue('build');
                 $address_id = $form->getValue('address_id');
                 $gps = $form->getValue('gps');
                 $telephone = $form->getValue('telephone');
@@ -50,7 +51,7 @@ class EstablishmentsController extends Zend_Controller_Action
                 //  $worktime_id= $form->getValue('id');
                 //  $establishment_id = $form->getValue('id');
                 $establishments = new Application_Model_DbTable_Establishments();
-                $establishments->addEstablishments($title, $address_id, $gps, $telephone, $description, $establishmenttype_id);
+                $establishments->addEstablishments($title, $build, $address_id, $gps, $telephone, $description, $establishmenttype_id);
 
 
 
@@ -88,6 +89,7 @@ class EstablishmentsController extends Zend_Controller_Action
             if ($form->isValid($formData)) {
 				$id = $form->getValue('id');
 				$title = $form->getValue('title');
+                $build = $form->getValue('build');
                 $address_id = $form->getValue('address_id');
 				$gps = $form->getValue('gps');
 				$telephone = $form->getValue('telephone');
@@ -95,17 +97,24 @@ class EstablishmentsController extends Zend_Controller_Action
                 $description = $form->getValue('description');
                 $establishmenttype_id= $form->getValue('establishmenttype_id');
                 $establishments = new Application_Model_DbTable_Establishments();
-                $establishments->updateEstablishments($id, $title, $address_id, $gps, $telephone, $description, $establishmenttype_id);
+                $establishments->updateEstablishments($id, $title, $build, $address_id, $gps, $telephone, $description, $establishmenttype_id);
 
-                $id= $form->getValue('id');
-                $establishment_id = $form->getValue('establishment_id');
+
+                $query = $establishments->getAdapter()->select()
+                    ->from('establishments')->where('establishments.telephone = ?', $telephone);
+                $establishment_id = $establishments->getAdapter()->fetchAll($query);
+                //die($establishment_id[0]['telephone']);
+                //die(print_r($establishment_id));
+
+                //   $establishment_id = $form->getValue('id');
                 $opening = $form->getValue('opening');
                 $break_from = $form->getValue('break_from');
                 $break_to = $form->getValue('break_to');
                 $closing = $form->getValue('closing');
                 $weekend = $form->getValue('weekend');
                 $worktime= new Application_Model_DbTable_Worktime();
-                $worktime->updateWorktime($id, $establishment_id, $opening, $break_from, $break_to, $closing, $weekend);
+                $worktime->updateWorktime($id, $establishment_id[0]['id'], $opening, $break_from, $break_to, $closing, $weekend);
+
 
                 $this->_helper->redirector('index');
             } else {
@@ -117,7 +126,7 @@ class EstablishmentsController extends Zend_Controller_Action
         if ($id > 0) {
             // Создаём объект модели
             $establishments = new Application_Model_DbTable_Establishments();
-            
+
             // Заполняем форму информацией при помощи метода populate
             $form->populate($establishments->getEstablishment($id));
         }

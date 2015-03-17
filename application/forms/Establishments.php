@@ -21,7 +21,10 @@ class Application_Form_Establishments extends Zend_Form
             ->addFilter('StringTrim')
             ->addValidator('NotEmpty');
 
-
+        $build = new Zend_Form_Element_Text('build');
+        $build->setLabel('Building №')
+            ->setRequired(true)
+            ->addValidator('NotEmpty');
 
 
 		$addresses = new Application_Model_DbTable_Addresses();
@@ -97,7 +100,7 @@ class Application_Form_Establishments extends Zend_Form
 
         $submit = new Zend_Form_Element_Submit('submit');
         $submit->setAttrib('id', 'submitbutton');
-        $this->addElements(array($id, $title, $address_id, $gps, $telephone, $description, $establishmenttype_id, $establishment_id, $opening, $break_from, $break_to, $closing, $weekend, $submit));
+        $this->addElements(array($id, $title, $build, $address_id, $gps, $telephone, $description, $establishmenttype_id, $establishment_id, $opening, $break_from, $break_to, $closing, $weekend, $submit));
     }
 
 }

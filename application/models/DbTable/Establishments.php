@@ -3,8 +3,8 @@ class Application_Model_DbTable_Establishments extends Zend_Db_Table_Abstract
 {
     protected $_name = 'establishments';
 
-	
-	
+
+
 	public function getEstablishment($id)
     {
         $id = (int)$id;
@@ -24,7 +24,7 @@ class Application_Model_DbTable_Establishments extends Zend_Db_Table_Abstract
         $result = $this->getAdapter()->fetchAll($select);
         return $result;
     }
-	
+
 
 
     public function getEstablishmentsList()
@@ -34,10 +34,10 @@ class Application_Model_DbTable_Establishments extends Zend_Db_Table_Abstract
                 array(
                     'establishments.id',
                     'establishments.title',
+                    'establishments.build',
                     'establishments.address_id',
                     'establishments.gps',
                     'establishments.telephone',
-                  //  'establishments.worktime_id',
                     'establishments.description',
                     'establishments.establishmenttype_id'
                 ))
@@ -48,7 +48,7 @@ class Application_Model_DbTable_Establishments extends Zend_Db_Table_Abstract
 
         return $this->getAdapter()->fetchAll($select);
     }
-   
+
 
    public function getEstablishmentsToDel($id)
     {
@@ -59,29 +59,29 @@ class Application_Model_DbTable_Establishments extends Zend_Db_Table_Abstract
         }
         return $row->toArray();
     }
-    public function addEstablishments($title, $address_id, $gps, $telephone, $description, $establishmenttype_id)
+    public function addEstablishments($title, $build, $address_id, $gps, $telephone, $description, $establishmenttype_id)
     {
         $data = array(
             'title' => $title,
+            'build' => $build,
             'address_id' => $address_id,
-			'gps' => $gps,
+            'gps' => $gps,
             'telephone' => $telephone,
-          //  'worktime_id' => $worktime_id,
             'description' => $description,
 			'establishmenttype_id' => $establishmenttype_id
 
         );
         $this->insert($data);
     }
-	 public function updateEstablishments($id, $title, $address_id, $gps, $telephone,  $description, $establishmenttype_id)
+	 public function updateEstablishments($id, $title, $build, $address_id, $gps, $telephone,  $description, $establishmenttype_id)
     {
         $data = array(
 			'id' => $id,
             'title' => $title,
+            'build' => $build,
             'address_id' => $address_id,
             'gps' => $gps,
             'telephone' => $telephone,
-//            'worktime_id' => $worktime_id,
             'description' => $description,
             'establishmenttype_id' => $establishmenttype_id
         );
