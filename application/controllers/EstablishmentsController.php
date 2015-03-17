@@ -38,37 +38,43 @@ class EstablishmentsController extends Zend_Controller_Action
         $this->view->form = $form;
         if ($this->getRequest()->isPost()) {
             $formData = $this->getRequest()->getPost();
-			
+
             if ($form->isValid($formData)) {
 
                 $title = $form->getValue('title');
-				$address_id = $form->getValue('address_id');
-				$gps = $form->getValue('gps');
-				$telephone = $form->getValue('telephone');
+                $address_id = $form->getValue('address_id');
+                $gps = $form->getValue('gps');
+                $telephone = $form->getValue('telephone');
                 $description = $form->getValue('description');
                 $establishmenttype_id= $form->getValue('establishmenttype_id');
-              //  $worktime_id= $form->getValue('id');
-              //  $establishment_id = $form->getValue('id');
+                //  $worktime_id= $form->getValue('id');
+                //  $establishment_id = $form->getValue('id');
                 $establishments = new Application_Model_DbTable_Establishments();
                 $establishments->addEstablishments($title, $address_id, $gps, $telephone, $description, $establishmenttype_id);
 
 
 
+                $query = $establishments->getAdapter()->select()
+                    ->from('establishments')->where('establishments.telephone = ?', $telephone);
+                $establishment_id = $establishments->getAdapter()->fetchAll($query);
+                //die($establishment_id[0]['telephone']);
+                //die(print_r($establishment_id));
 
-                $establishment_id = $form->getValue('id');
+                //   $establishment_id = $form->getValue('id');
                 $opening = $form->getValue('opening');
                 $break_from = $form->getValue('break_from');
                 $break_to = $form->getValue('break_to');
                 $closing = $form->getValue('closing');
                 $weekend = $form->getValue('weekend');
                 $worktime= new Application_Model_DbTable_Worktime();
-                $worktime->addWorktime($establishment_id, $opening, $break_from, $break_to, $closing, $weekend);
+                $worktime->addWorktime($establishment_id[0]['id'], $opening, $break_from, $break_to, $closing, $weekend);
 
 
                 $this->_helper->redirector('index');
             } else {
                 $form->populate($formData);
             }
+
         }
 
     }

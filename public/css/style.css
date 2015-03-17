@@ -1,4 +1,4 @@
-﻿
+
 html {overflow-x:hidden;
     position: relative;
     min-height: 100%;
@@ -19,9 +19,61 @@ footer {
     width: 100%;
     height: 10px;
 }
-
+.row_1{
+margin-top:10px;}
 form .btn-default{
 margin:0px 0px 10px 10px;}
+.media-list{
+margin-top:15px;}
+.popular a{
+color:#fff;
+background:#836292;
+padding: 10px 16px;}
+.popular {
+margin-top: 7px;
+}
+#sidebar-wrapper{
+margin-left: 30px;
+}
+
+#sidebar-wrapper .sidebar-nav{
+list-style:none;
+background-color:#E7D6E9;
+padding: 10px 16px;
+
+}
+.k{
+border-top:2px solid;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #4C365C;
+	padding-top:10px;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+
+
+.sidebar-nav > .sidebar-brand a {
+    color: #2E064A;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
 
 .thumbnail img{
 max-height:400px;
@@ -33,8 +85,8 @@ max-height:400px;
  }
  .nav{
  margin:auto;}
- .nav-tabs{
- padding-top:20px;}
+ .nav-tabs_1{
+ position:absolute;}
  .col-lg-1{
  background:#DEC7F5;}
 /*-------ЗАГОЛОВКИ-----------*/
@@ -57,7 +109,8 @@ padding-top:10px;}
  background-image:url(../images/hedfoot.png);
  background-repeat: repeat-x;
  }
- 
+ .call{
+ margin-left:10px;}
 	
 /*--------КНОПКИ ТА ІКОНКИ------*/
 .glyphicon-user{
@@ -82,7 +135,12 @@ padding-top:10px;}
 margin-bottom:10px;
 
 }	
-	
+.glyphicon-home {
+margin-right:10px;
+}
+.glyphicon-earphone{
+margin:5px;
+padding-right:10px;}
 
 /*------МОДАЛЬНІ ВІКНА-----*/
 
