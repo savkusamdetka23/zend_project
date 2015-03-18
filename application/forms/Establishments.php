@@ -7,9 +7,7 @@ class Application_Form_Establishments extends Zend_Form
     {
         parent::__construct($options);
         $this->setName('establishments');
-      //  $this->setName('worktime');
-	/*	$this->setMethod('post');
-		$this->setAction('user/process');*/
+
         $id = new Zend_Form_Element_Hidden('id');
         $id->addFilter('Int');
 

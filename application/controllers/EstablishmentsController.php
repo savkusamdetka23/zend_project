@@ -13,21 +13,6 @@ class EstablishmentsController extends Zend_Controller_Action
         $this->view->establishments = $establishmentsList;
 
 
-	/*	$street_list = new Application_Model_DbTable_Incentive();
-		$this->view->street_list = $street_list->getIncentivesList();
-			//$establishmentsList = $establishments->getListEstablishments();
-       // $this->view->establishments = $establishments->getAddress();
-	//	$this->view->establishments = $establishmentsList;
-	//$establishments = new Application_Model_DbTable_Establishments();
-       // $addresses = new Application_Model_DbTable_Establishments();
-        //$establishments = new Application_Model_DbTable_Addresses;
-		//$this->view->addresses = $establishments->getAddressesList();
-
-	//	$address_id = new Application_Model_DbTable_Establishments();
-		//$this->view->addresses_id = $address_id->getEstablishmentsAddress();
-
-		$street_list = new Application_Model_DbTable_Incentive();
-		$this->view->street_list = $street_list->getIncentivesList();*/
     }
  function addAction()
     {
@@ -48,8 +33,6 @@ class EstablishmentsController extends Zend_Controller_Action
                 $telephone = $form->getValue('telephone');
                 $description = $form->getValue('description');
                 $establishmenttype_id= $form->getValue('establishmenttype_id');
-                //  $worktime_id= $form->getValue('id');
-                //  $establishment_id = $form->getValue('id');
                 $establishments = new Application_Model_DbTable_Establishments();
                 $establishments->addEstablishments($title, $build, $address_id, $gps, $telephone, $description, $establishmenttype_id);
 
