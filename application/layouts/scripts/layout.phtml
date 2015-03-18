@@ -74,9 +74,39 @@
         </div>
 
     </div>
-
+    <div class="carousel slide" id="carouselshowmanymoveone">
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3"><a href="#" class="thumbnail"><img src="images/6.jpg" class="img-responsive"></a></div>
+            </div>
+            <div class="item">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3"><a href="#"class="thumbnail"><img src="images/4.jpg" class="img-responsive"></a></div>
+            </div>
+            <div class="item">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3"><a href="#"class="thumbnail"><img src="images/5.jpg" class="img-responsive"></a></div>
+            </div>
+            <div class="item">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3"><a href="#"class="thumbnail"><img src="images/6.jpg" class="img-responsive"></a></div>
+            </div>
+            <div class="item">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3"><a href="#"class="thumbnail"><img src="images/4.jpg" class="img-responsive"></a></div>
+            </div>
+            <div class="item">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3"><a href="#"class="thumbnail"><img src="images/5.jpg" class="img-responsive"></a></div>
+            </div>
+            <div class="item">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3"><a href="#"class="thumbnail"><img src="images/6.jpg" class="img-responsive"></a></div>
+            </div>
+            <div class="item">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3"><a href="#"class="thumbnail"><img src="images/4.jpg" class="img-responsive"></a></div>
+            </div>
+        </div>
+        <a class="left carousel-control" href="#carouselshowmanymoveone" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+        <a class="right carousel-control" href="#carouselshowmanymoveone" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+    </div>
  </header>
  </div>
+
  <!-- MAIN CONTENT -->
 <section>
 
@@ -118,9 +148,10 @@
     </div>
     <div class="col-lg-7">
 
-        <?php
-        echo $this->layout()->content
-        ?>
+            <?php
+            echo $this->layout ()->content;
+            // echo $this->(array('controller' => 'index', 'action' => 'index'));
+            ?>
 
     </div>
 
@@ -138,8 +169,8 @@
             <li class="media">
                 <a href="" class="pull-left"><img src="images/8.jpg" alt="Upcoming" class="media-object "></a>
                 <div class="media-body">
-                    <h5 class="media-heading">Yuriy Fedkovych Chernivtsi National University</h5>
-                    <p class="text-muted"><small>Published 23.12.2014</small></p>
+                    <h5 class="media-heading">Університет ім. Ю.Федьковича</h5>
+                    <p class="text-muted"><small>Опубліковано 23.12.2014</small></p>
 
 
                 </div>
@@ -147,8 +178,8 @@
             <li class="media">
                 <a href="" class="pull-left"><img src="images/9.jpg" alt="Upcoming" class="media-object "></a>
                 <div class="media-body">
-                    <h5 class="media-heading">Central square</h5>
-                    <p class="text-muted"><small>Published 23.12.2014</small></p>
+                    <h5 class="media-heading">Центральна площа</h5>
+                    <p class="text-muted"><small>Опубліковано 23.12.2014</small></p>
 
 
                 </div>
@@ -156,8 +187,8 @@
             <li class="media">
                 <a href="" class="pull-left"><img src="images/34.jpg" alt="Upcoming" class="media-object "></a>
                 <div class="media-body">
-                    <h5 class="media-heading">Turkish square</h5>
-                    <p class="text-muted"><small>Published 23.12.2014</small></p>
+                    <h5 class="media-heading">Турeцька площа</h5>
+                    <p class="text-muted"><small>Опубліковано 23.12.2014</small></p>
 
 
                 </div>
@@ -165,8 +196,8 @@
             <li class="media">
                 <a href="" class="pull-left"><img src="images/34.jpg" alt="Upcoming" class="media-object "></a>
                 <div class="media-body">
-                    <h5 class="media-heading">Turkish square</h5>
-                    <p class="text-muted"><small>Published 23.12.2014</small></p>
+                    <h5 class="media-heading">Турeцька площа</h5>
+                    <p class="text-muted"><small>Опубліковано 23.12.2014</small></p>
 
 
                 </div>
@@ -174,8 +205,8 @@
             <li class="media">
                 <a href="" class="pull-left"><img src="images/9.jpg" alt="Upcoming" class="media-object "></a>
                 <div class="media-body">
-                    <h5 class="media-heading">Central square</h5>
-                    <p class="text-muted"><small>Published 23.12.2014</small></p>
+                    <h5 class="media-heading">Центральна площа</h5>
+                    <p class="text-muted"><small>Опубліковано 23.12.2014</small></p>
 
 
                 </div>
@@ -183,6 +214,7 @@
         </ul>
     </div>
 </div>
+
 </section>
 
 
