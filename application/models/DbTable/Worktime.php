@@ -5,14 +5,14 @@ class Application_Model_DbTable_Worktime extends Zend_Db_Table_Abstract
 
     protected $_name = 'worktime';
 	
-	public function getWorktime($id)
+	public function getWorktime($establishment_id)
     {
-        $id = (int)$id;
+        $establishment_id = (int)$establishment_id;
 
-      
-        $row = $this->fetchRow('id = ' . $id);
+
+        $row = $this->fetchRow('id = ' . $establishment_id);
         if(!$row) {
-            throw new Exception("There is no record with id - $id");
+            throw new Exception("There is no record with id - $establishment_id");
         }
           return $row->toArray();
     }

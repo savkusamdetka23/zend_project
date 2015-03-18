@@ -64,13 +64,13 @@ class WorktimeController extends Zend_Controller_Action
             }
         }else {
         // Отримання id потрібного елемента
-        $id = $this->_getParam('id', 0);
-        if ($id > 0) {
+            $establishment_id = $this->_getParam('id', 0);
+        if ($establishment_id > 0) {
             // Створюємо об'єкт моделі
             $worktime = new Application_Model_DbTable_Worktime();
             
             // ЗАповнюємо форму за допомогою метода populate
-            $form->populate($worktime->getWorktime($id));
+            $form->populate($worktime->getWorktime($establishment_id));
         }
     }
 	}

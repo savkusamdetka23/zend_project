@@ -1,4 +1,4 @@
-
+﻿
 html {overflow-x:hidden;
     position: relative;
     min-height: 100%;
@@ -252,3 +252,5 @@ padding-right:10px;}
 .carousel-control.right{
     background-image: none;
 }
+.suc{
+background-color:#EFF6C2;}

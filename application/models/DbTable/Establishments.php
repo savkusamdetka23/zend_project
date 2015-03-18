@@ -41,7 +41,7 @@ class Application_Model_DbTable_Establishments extends Zend_Db_Table_Abstract
                     'establishments.description',
                     'establishments.establishmenttype_id'
                 ))
-            ->joinLeft(array('addresses'), 'addresses.id=establishments.address_id', array('address' => 'street'))
+            ->joinLeft(array('addresses'), 'addresses.id=establishments.address_id', array('address' => 'street', 'town' => 'city'))
             ->joinLeft(array('worktime'), 'worktime.establishment_id=establishments.id', array('open' =>'opening', 'break_f' =>'break_from', 'break_t' =>'break_to', 'close' =>'closing', 'weekends' =>'weekend'))
             ->joinLeft(array('establishmenttype'), 'establishmenttype.id=establishments.establishmenttype_id', array('type' => 'establishment'));
 //print($select);

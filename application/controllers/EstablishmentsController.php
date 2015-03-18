@@ -105,7 +105,7 @@ class EstablishmentsController extends Zend_Controller_Action
                 //die(print_r($establishment_id));
 
                 //   $establishment_id = $form->getValue('id');
-                $establishment_id = $form->getValue('establishment_id');
+                $establishment_id = $form->getValue('id');
                 $opening = $form->getValue('opening');
                 $break_from = $form->getValue('break_from');
                 $break_to = $form->getValue('break_to');
@@ -130,15 +130,20 @@ class EstablishmentsController extends Zend_Controller_Action
             $form->populate($establishments->getEstablishment($id));
         }
 
-        $establishment_id = $this->_getParam('establishment_id', 0);
+         /*   $query = $establishments->getAdapter()->select()
+                ->from('establishments', array('establishments.id'))
+                ->where('establishments.establishment_id = ?', $id)
+                ->joinLeft(array('worktime'), 'worktime.establishment_id=establishments.id', array('open' =>'opening', 'break_f' =>'break_from', 'break_t' =>'break_to', 'close' =>'closing', 'weekends' =>'weekend'));
+            $establishments->getAdapter()->fetchAll($query);
+            $establishment_id = $this->_getParam('id', 0);
             if ($establishment_id > 0) {
                 // Создаём объект модели
                 $worktime = new Application_Model_DbTable_Worktime();
 
                 // Заполняем форму информацией при помощи метода populate
-                $form->populate($worktime->getWorktime($id));
+                $form->populate($worktime->getWorktime($establishment_id));
             }
-
+*/
     }
 
 	}
