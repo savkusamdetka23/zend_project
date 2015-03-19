@@ -13,6 +13,20 @@ class IndexController extends Zend_Controller_Action
         // action body
     }
 
+    public function loginauthAction()
+    {
+        // action body
+    }
+
+    public function logoutauthAction()
+    {
+        // action body
+    }
+
 
 }
+
+
+
+
 

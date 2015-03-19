@@ -6,6 +6,8 @@ class EstablishmenttypeController extends Zend_Controller_Action
     public function init()
     {
         /* Initialize action controller here */
+        $layout = Zend_Layout::getMvcInstance();
+        $layout->setLayout('admin');
     }
 
     function indexAction()

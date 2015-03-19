@@ -4,6 +4,8 @@ class EstablishmentsController extends Zend_Controller_Action
     public function init()
     {
         /* Initialize action controller here */
+        $layout = Zend_Layout::getMvcInstance();
+        $layout->setLayout('admin');
     }
     public function indexAction()
     {
@@ -111,22 +113,20 @@ class EstablishmentsController extends Zend_Controller_Action
 
             // Заполняем форму информацией при помощи метода populate
             $form->populate($establishments->getEstablishment($id));
+			
         }
 
-         /*   $query = $establishments->getAdapter()->select()
-                ->from('establishments', array('establishments.id'))
-                ->where('establishments.establishment_id = ?', $id)
-                ->joinLeft(array('worktime'), 'worktime.establishment_id=establishments.id', array('open' =>'opening', 'break_f' =>'break_from', 'break_t' =>'break_to', 'close' =>'closing', 'weekends' =>'weekend'));
-            $establishments->getAdapter()->fetchAll($query);
-            $establishment_id = $this->_getParam('id', 0);
-            if ($establishment_id > 0) {
+          
+            $id = $this->_getParam('id', 0);
+            if ($id > 0) {
                 // Создаём объект модели
                 $worktime = new Application_Model_DbTable_Worktime();
-
+		//die(print_r($worktime->getWorktime($id)));
                 // Заполняем форму информацией при помощи метода populate
-                $form->populate($worktime->getWorktime($establishment_id));
+                $form->populate($worktime->getWorktime($id));
+				
             }
-*/
+
     }
 
 	}

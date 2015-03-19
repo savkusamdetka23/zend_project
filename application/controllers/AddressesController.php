@@ -5,6 +5,8 @@ class AddressesController extends Zend_Controller_Action
 
     public function init()
     {
+        $layout = Zend_Layout::getMvcInstance();
+        $layout->setLayout('admin');
         /* Initialize action controller here */
     }
 
@@ -14,6 +16,8 @@ class AddressesController extends Zend_Controller_Action
         $this->view->headTitle($this->view->title);
         $addresses = new Application_Model_DbTable_Addresses();
         $this->view->addresses = $addresses->getAddressesList();
+
+     //   $layout->setLayoutPath(APPLICATION_PATH . '/layouts/scripts');
     }
     function addAction()
     {

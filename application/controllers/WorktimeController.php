@@ -6,6 +6,8 @@ class WorktimeController extends Zend_Controller_Action
     public function init()
     {
         /* Initialize action controller here */
+        $layout = Zend_Layout::getMvcInstance();
+        $layout->setLayout('admin');
     }
 
    function indexAction()
@@ -32,8 +34,9 @@ class WorktimeController extends Zend_Controller_Action
                 $break_to = $form->getValue('break_to');
                 $closing = $form->getValue('closing');
                 $weekend = $form->getValue('weekend');
-               $worktime= new Application_Model_DbTable_Worktime();
+                $worktime= new Application_Model_DbTable_Worktime();
                 $worktime->addWorktime($establishment_id, $opening, $break_from, $break_to, $closing, $weekend);
+
 
                 $this->_helper->redirector('index');
             } else {
