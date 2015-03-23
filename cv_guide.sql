@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Мар 18 2015 г., 12:11
+-- Время создания: Мар 23 2015 г., 18:34
 -- Версия сервера: 5.5.25
 -- Версия PHP: 5.3.13
 
@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `addresses` (
   `city` varchar(30) NOT NULL,
   `street` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=25 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
 
 --
 -- Дамп данных таблицы `addresses`
@@ -39,17 +39,18 @@ CREATE TABLE IF NOT EXISTS `addresses` (
 
 INSERT INTO `addresses` (`id`, `city`, `street`) VALUES
 (1, 'Chernivtsi', 'Holovna'),
-(3, 'Chernivtsi', 'Ruska'),
-(6, 'Chernivtsi', 'Heroiv Maidany'),
-(7, 'Chernivtsi', 'Prospekt Nezalezhnosti'),
-(17, 'Chernivtsi', 'Soborna'),
-(18, 'Chernivtsi', 'Bozhenka'),
-(19, 'Chernivtsi', 'Pivdenno kiltseva'),
-(20, 'Chernivtsi', 'Fastivska'),
-(21, 'Chernivtsi', 'Khotynska'),
-(22, 'Chernivtsi', 'Ivana Franka'),
-(23, 'Chernivtsi', 'Universytetska'),
-(24, 'Chernivtsi', 'Haharina');
+(2, 'Chernivtsi', 'Ruska'),
+(3, 'Chernivtsi', 'Heroiv Maidany'),
+(4, 'Chernivtsi', 'Prospekt Nezalezhnosti'),
+(5, 'Chernivtsi', 'Soborna'),
+(6, 'Chernivtsi', 'Bozhenka'),
+(7, 'Chernivtsi', 'Pivdenno kiltseva'),
+(8, 'Chernivtsi', 'Fastivska'),
+(9, 'Chernivtsi', 'Khotynska'),
+(10, 'Chernivtsi', 'Ivana Franka'),
+(11, 'Chernivtsi', 'Universytetska'),
+(12, 'Chernivtsi', 'Haharina'),
+(13, 'Chernivtsi', 'Komarova');
 
 -- --------------------------------------------------------
 
@@ -66,41 +67,9 @@ CREATE TABLE IF NOT EXISTS `establishments` (
   `telephone` varchar(30) NOT NULL,
   `description` varchar(500) NOT NULL,
   `establishmenttype_id` int(3) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `address_id` (`address_id`),
-  KEY `address_id_2` (`address_id`),
-  KEY `address_id_3` (`address_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=65 ;
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
---
--- Дамп данных таблицы `establishments`
---
-
-INSERT INTO `establishments` (`id`, `title`, `build`, `address_id`, `gps`, `telephone`, `description`, `establishmenttype_id`) VALUES
-(2, 'Appeti', '2', 3, '5448 7896', '5544 221', 'It is a description of a place, where you can go/eat/sleep/etc', 15),
-(4, 'Freshline', '1', 1, '5645 2333', '123 321', 'It is a description of a place, where you can go/eat/sleep/etc', 6),
-(5, 'Paradizo', '2', 3, '1245 2365', '1222 4455', 'It is a description of a place, where you can go/eat/sleep/etc', 6),
-(7, 'Sushiya', '1', 7, '2314 5648', '1122 124', 'It is a description of a place, where you can go/eat/sleep/etc', 4),
-(8, 'Tourist', '1', 6, '48.285836, 25.932317', '4869 654', 'It is a description of a place, where you can go/eat/sleep/etc', 4),
-(9, 'Kyiv', '1', 3, '3225325 23532', '333333', 'It is a description of a place, where you can go/eat/sleep/etc', 17),
-(10, 'Pizza park', '2', 3, '2141212', '5111111', 'It is a description of a place, where you can go/eat/sleep/etc', 16),
-(11, 'Depo''t', '1', 1, '5665 65488', '5444 555', 'It is a description of a place, where you can go/eat/sleep/etc', 17),
-(12, 'Taxi', '1', 6, '651561', '646512', 'It is a description of a place, where you can go/eat/sleep/etc', 15),
-(13, 'Bulochna', '2', 3, '76568', '65846', 'It is a description of a place, where you can go/eat/sleep/etc', 17),
-(16, 'Central square', '2', 3, '212', '215', 'It is a description of a place, where you can go/eat/sleep/etc', 16),
-(37, 'wasd', '0', 3, '5421', '48512', '.,mnbvcgfdghjnm', 3),
-(54, 'asdfgh', '0', 17, '1222', '11', 'asdasddd', 9),
-(55, 'qwqwqw', '0', 1, '2121', '2121', 'dffds', 4),
-(56, 'aaaaaaaaaaaaaa', '0', 19, '111111', '22222222', 'aaaaaaaaaaaaaaa', 10),
-(58, 'gggggggg', '0', 1, '4545', '4555', 'ssssss', 1),
-(59, 'qwww', '0', 1, '11', '22', 'ss', 3),
-(60, 'vvvvvvv', '0', 17, '323', '3223', 'sassasasa', 23),
-(61, 'lllllllll', '0', 7, '56231', '4512', 'saf', 3),
-(62, 'zxcvbnm', '0', 23, '212121', '212121', 'ssdsdf', 5),
-(63, 'fghj', '0', 1, '3456', '00000097', '6523csac', 3),
-(64, 'Mazhor', '15', 18, '1233 3211', '3 12 30', 'it''s good place for mens', 11);
-
--- --------------------------------------------------------
 
 --
 -- Структура таблицы `establishmenttype`
@@ -111,7 +80,7 @@ CREATE TABLE IF NOT EXISTS `establishmenttype` (
   `type` varchar(30) NOT NULL,
   `establishment` varchar(30) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=32 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=30 ;
 
 --
 -- Дамп данных таблицы `establishmenttype`
@@ -145,8 +114,30 @@ INSERT INTO `establishmenttype` (`id`, `type`, `establishment`) VALUES
 (25, 'Transport', 'Railway station'),
 (26, 'Transport', 'Bus station'),
 (27, 'Transport', 'Airport'),
-(30, 'Transport', 'Public transportation'),
-(31, 'Transport', 'Rent a car');
+(28, 'Transport', 'Public transportation'),
+(29, 'Transport', 'Rent a car');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(1) NOT NULL AUTO_INCREMENT,
+  `username` varchar(25) NOT NULL,
+  `password` varchar(25) NOT NULL,
+  `role` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Дамп данных таблицы `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password`, `role`) VALUES
+(1, 'admin', 'admin', 'admin'),
+(2, 'guest', '', 'guest');
 
 -- --------------------------------------------------------
 
@@ -164,35 +155,9 @@ CREATE TABLE IF NOT EXISTS `worktime` (
   `weekend` varchar(30) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `establishment_id` (`establishment_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=44 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
---
--- Дамп данных таблицы `worktime`
---
 
-INSERT INTO `worktime` (`id`, `establishment_id`, `opening`, `break_from`, `break_to`, `closing`, `weekend`) VALUES
-(12, 1, '9:00', '11:00', '', '', ''),
-(14, 37, '8:00', '11:00', '12:00', '18:00', 'Sunday'),
-(24, 0, '6:00', '11:00', '12:00', '18:00', 'Sunday'),
-(25, 4, '6:00', '11:00', '12:00', '18:00', 'Sunday-Monday'),
-(26, 0, '9:00', '', '', '23:00', 'Friday'),
-(27, 5, '9:00', '11:00', '12:00', '18:00', 'Sunday'),
-(28, 0, '6:00', '11:00', '12:00', '18:00', 'Sunday'),
-(29, 0, '7:00', '11:00', '12:00', '18:00', 'Sunday'),
-(32, 0, '6:00', '11:00', '12:00', '18:00', 'Saturday'),
-(33, 0, '6:00', '12:00', '13:00', '19:00', 'Saturday-Sunday'),
-(34, 55, '6:00', '11:00', '12:00', '23:00', 'Sunday'),
-(35, 0, '24h', '13:00', '13:00', '18:00', 'Friday'),
-(36, 0, '12:00', '13:00', '', '', 'Sunday-Monday'),
-(38, 0, '7:00', '11:00', '12:00', '18:00', 'Saturday'),
-(39, 63, '6:00', '11:00', '12:00', '18:00', 'Sunday'),
-(40, 1, '1', '7:00', '', '', ''),
-(41, 12, '12', '24h', '', '', '05:00'),
-(43, 64, '9:00', '', '', '22:00', 'Friday');
-
---
--- Ограничения внешнего ключа сохраненных таблиц
---
 
 --
 -- Ограничения внешнего ключа таблицы `establishments`

@@ -98,4 +98,36 @@ class Application_Model_DbTable_Establishments extends Zend_Db_Table_Abstract
             ->where("title LIKE '%$search_what%'");
         return $data->query()->fetchAll();
     }
+
+ /*   public function populate($data)
+    {
+        foreach($data as $field => $value)
+        {
+
+            $formData = $this->getRequest()->getPost();
+
+            if ($data->isValid($formData)) {
+
+                $this->$id->setValue('id');
+                $this->$title->setValue('title');
+                $this->$build->setValue('build');
+                $this->$address_id->setValue('address_id');
+                $this->$gps->setValue('gps');
+                $this->$telephone->setValue('telephone');
+
+
+                $this->$establishment_id->setValue('establishment_id');
+                $this->$opening->setValue('opening');
+                $this->$break_from->setValue('break_from');
+                $this->$break_to->setValue('break_to');
+                $this->$closing->setValue('closing');
+                $this->$weekend->setValue('weekend');
+
+
+            }
+        return $this;
+    }
+
+
+}*/
 }

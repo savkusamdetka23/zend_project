@@ -6,13 +6,21 @@ class Application_Model_DbTable_Worktime extends Zend_Db_Table_Abstract
 	
 	public function getWorktime($establishment_id)
     {
-       $select = $this->getAdapter()->select()
-            ->from('worktime')->where('worktime.establishment_id = ?', $establishment_id);
+       /*$select = $this->getAdapter()->select()
+            ->from('worktime')->where('worktime.establishment_id = ?', $id);
         $result = $this->getAdapter()->fetchAll($select);
         return $result;
 		
-		
-		
+		*/
+
+        $establishment_id = (int)$establishment_id;
+        $row = $this->fetchRow('establishment_id = ' . $establishment_id);
+        if(!$row) {
+            throw new Exception("There is no record with id - $establishment_id");
+        }
+        return $row->toArray();
+
+
     }
     public function getWorktimeList()
     {

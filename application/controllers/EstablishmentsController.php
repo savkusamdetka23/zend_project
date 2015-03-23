@@ -78,8 +78,7 @@ class EstablishmentsController extends Zend_Controller_Action
                 $address_id = $form->getValue('address_id');
 				$gps = $form->getValue('gps');
 				$telephone = $form->getValue('telephone');
-               // $worktime_id= $form->getValue('worktime_id');
-                $description = $form->getValue('description');
+               $description = $form->getValue('description');
                 $establishmenttype_id= $form->getValue('establishmenttype_id');
                 $establishments = new Application_Model_DbTable_Establishments();
                 $establishments->updateEstablishments($id, $title, $build, $address_id, $gps, $telephone, $description, $establishmenttype_id);
@@ -87,22 +86,23 @@ class EstablishmentsController extends Zend_Controller_Action
 
                // $establishment_id = $establishments->getAdapter()->fetchAll($establishment_id);
                 //die($establishment_id[0]['telephone']);
-                //die(print_r($establishment_id));
 
-                //   $establishment_id = $form->getValue('id');
-                $establishment_id = $form->getValue('id');
+
+                // $id = $form->getValue('id');
+               $establishment_id = $form->getValue('establishment_id');
                 $opening = $form->getValue('opening');
                 $break_from = $form->getValue('break_from');
                 $break_to = $form->getValue('break_to');
                 $closing = $form->getValue('closing');
                 $weekend = $form->getValue('weekend');
-                $worktime= new Application_Model_DbTable_Worktime();
+               $worktime= new Application_Model_DbTable_Worktime();
                 $worktime->updateWorktime($id, $establishment_id, $opening, $break_from, $break_to, $closing, $weekend);
 
 
                 $this->_helper->redirector('index');
             } else {
                 $form->populate($formData);
+
             }
         }else {
         // Если мы выводим форму, то получаем id фильма, который хотим обновить
@@ -113,18 +113,15 @@ class EstablishmentsController extends Zend_Controller_Action
 
             // Заполняем форму информацией при помощи метода populate
             $form->populate($establishments->getEstablishment($id));
-			
-        }
 
-          
-            $id = $this->_getParam('id', 0);
-            if ($id > 0) {
+        }
+            $establishment_id = $this->_getParam('id', 0);
+            if ($establishment_id > 0) {
                 // Создаём объект модели
                 $worktime = new Application_Model_DbTable_Worktime();
-		//die(print_r($worktime->getWorktime($id)));
-                // Заполняем форму информацией при помощи метода populate
-                $form->populate($worktime->getWorktime($id));
-				
+		          // Заполняем форму информацией при помощи метода populate
+                $form->populate($worktime->getWorktime($establishment_id));
+
             }
 
     }
