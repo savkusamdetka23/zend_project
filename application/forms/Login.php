@@ -2,9 +2,8 @@
 
 class Application_Form_Login extends Zend_Form
 {
-    public function __construct($options = null)
+    public function init()
     {
-		parent ::__construct($options);
         // указываем имя формы
         $this->setName('login');
 
@@ -16,7 +15,7 @@ class Application_Form_Login extends Zend_Form
 
         // задаём ему label и отмечаем как обязательное поле;
         // также добавляем фильтры и валидатор с переводом
-        $username->setLabel('User name:')
+        $username->setLabel('Name:')
             ->setRequired(true)
             ->addFilter('StripTags')
             ->addFilter('StringTrim')
@@ -38,15 +37,13 @@ class Application_Form_Login extends Zend_Form
             );
 
         // создаём кнопку submit
-        $login = new Zend_Form_Element_Submit('login');
-        $login->setLabel('Login');
+        $submit = new Zend_Form_Element_Submit('enter');
+        $submit->setLabel('enter the matrix');
 
         // добавляем элементы в форму
         $this->addElements(array($username, $password, $submit));
 
         // указываем метод передачи данных
         $this->setMethod('post');
-        $this->setAction(Zend_Controller_Front::getInstance()->getBaseUrl());
-		
     }
 }

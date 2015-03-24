@@ -193,6 +193,4 @@ class EstablishmentsController extends Zend_Controller_Action
         $this->view->establishments = $establishmentsList;
 
     }
-
-
 }

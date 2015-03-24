@@ -2,46 +2,102 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0758dce3-24a4-46d3-b1ac-7a3cc3968bc7" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\controllers\AddressesController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\controllers\AuthController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\controllers\ErrorController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\controllers\EstablishmentsController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\controllers\EstablishmenttypeController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\controllers\IndexController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\controllers\WorktimeController.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\forms\Addresses.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\forms\Establishments.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\forms\Establishmenttype.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\forms\Login.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\forms\Worktime.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\models\DbTable\Addresses.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\models\DbTable\Establishments.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\models\DbTable\Establishmenttype.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\models\DbTable\Worktime.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\views\scripts\addresses\add.phtml" afterPath="" />
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\views\scripts\addresses\delete.phtml" afterPath="" />
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\views\scripts\addresses\edit.phtml" afterPath="" />
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\views\scripts\addresses\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\views\scripts\auth\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\views\scripts\auth\login.phtml" afterPath="" />
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\views\scripts\auth\logout.phtml" afterPath="" />
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\views\scripts\error\error.phtml" afterPath="" />
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\views\scripts\establishments\add.phtml" afterPath="" />
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\views\scripts\establishments\delete.phtml" afterPath="" />
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\views\scripts\establishments\edit.phtml" afterPath="" />
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\views\scripts\establishments\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\views\scripts\establishmenttype\add.phtml" afterPath="" />
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\views\scripts\establishmenttype\delete.phtml" afterPath="" />
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\views\scripts\establishmenttype\edit.phtml" afterPath="" />
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\views\scripts\establishmenttype\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\views\scripts\index\index.phtml" afterPath="" />
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\views\scripts\worktime\add.phtml" afterPath="" />
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\views\scripts\worktime\delete.phtml" afterPath="" />
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\views\scripts\worktime\edit.phtml" afterPath="" />
-      <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\views\scripts\worktime\index.phtml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.zfproject.xml" afterPath="$PROJECT_DIR$/.zfproject.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/configs/application.ini" afterPath="$PROJECT_DIR$/application/configs/application.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/layouts/scripts/layout.phtml" afterPath="$PROJECT_DIR$/application/layouts/scripts/layout.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/34.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/5.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/8.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/9.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/bgr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/ch.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/chnu_chernivtsi-90x70.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/f.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/imgres.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/p1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/p2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/p3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/.htaccess" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.zfproject.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/forms/Addresses.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/DbTable/Addresses.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/AddressesController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/AuthController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/Bootstrap.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/ErrorController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/forms/Establishments.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/DbTable/Establishments.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/EstablishmentsController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/forms/Establishmenttype.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/DbTable/Establishmenttype.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/EstablishmenttypeController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/IndexController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/application/controllers/IndexControllerTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/add/Layoutloader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/forms/Login.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/README.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/forms/Worktime.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/DbTable/Worktime.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/WorktimeController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/addresses/add.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/add.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/establishmenttype/add.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/worktime/add.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/layouts/scripts/admin.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/configs/application.ini" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/bootstrap-theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/bootstrap-theme.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/bootstrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/bootstrap.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/carusell.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/cv_guide.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cv_guide.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/addresses/delete.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/delete.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/establishmenttype/delete.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/worktime/delete.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/dropdown.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/addresses/edit.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/edit.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/establishmenttype/edit.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/worktime/edit.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/error/error.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/addresses/index.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/auth/index.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/index.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/establishmenttype/index.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/index/index.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/worktime/index.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/index_accomodation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/index_admin.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/index_culture.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/index_freetime.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/index_hotel _table.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/index_nutrition.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/index_transport.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/jquery-1.10.2.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/layouts/scripts/layout.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/auth/login.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/auth/logout.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/phpunit.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cv_guide.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,7 +120,17 @@
     <favorites_list name="cv_guide" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="EstablishmentsController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/controllers/EstablishmentsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="186" column="42" selection-start="7417" selection-end="7417" vertical-scroll-proportion="0.5707071" vertical-offset="2823" max-vertical-offset="3417">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -85,6 +151,7 @@
         <option value="$PROJECT_DIR$/application/views/scripts/establishments/add.phtml" />
         <option value="$PROJECT_DIR$/application/views/scripts/establishmenttype/index.phtml" />
         <option value="$PROJECT_DIR$/application/views/scripts/worktime/index.phtml" />
+        <option value="$PROJECT_DIR$/application/views/scripts/establishments/index.phtml" />
         <option value="$PROJECT_DIR$/application/views/scripts/addresses/add.phtml" />
         <option value="$PROJECT_DIR$/application/forms/Establishments.php" />
         <option value="$PROJECT_DIR$/application/views/scripts/addresses/index.phtml" />
@@ -99,14 +166,12 @@
         <option value="$PROJECT_DIR$/application/controllers/AuthController.php" />
         <option value="$PROJECT_DIR$/application/layouts/scripts/admin.phtml" />
         <option value="$PROJECT_DIR$/application/plugins/AccessCheck.php" />
-        <option value="$PROJECT_DIR$/application/Bootstrap.php" />
-        <option value="$PROJECT_DIR$/application/models/DbTable/Worktime.php" />
-        <option value="$PROJECT_DIR$/application/controllers/WorktimeController.php" />
         <option value="$PROJECT_DIR$/application/layouts/scripts/layout.phtml" />
-        <option value="$PROJECT_DIR$/application/views/scripts/establishments/index.phtml" />
+        <option value="$PROJECT_DIR$/application/Bootstrap.php" />
         <option value="$PROJECT_DIR$/application/models/DbTable/Establishments.php" />
+        <option value="$PROJECT_DIR$/application/controllers/WorktimeController.php" />
+        <option value="$PROJECT_DIR$/application/models/DbTable/Worktime.php" />
         <option value="$PROJECT_DIR$/application/controllers/EstablishmentsController.php" />
-        <option value="$PROJECT_DIR$/application/views/scripts/establishments/establishmenta.phtml" />
       </list>
     </option>
   </component>
@@ -165,6 +230,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -193,7 +259,165 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="add" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cv_guide" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cv_guide" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cv_guide" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cv_guide" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cv_guide" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cv_guide" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cv_guide" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cv_guide" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="auth" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cv_guide" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cv_guide" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="addresses" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cv_guide" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cv_guide" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cv_guide" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cv_guide" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DbTable" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -233,13 +457,48 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="forms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cv_guide" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cv_guide" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cv_guide" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cv_guide" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="configs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -292,14 +551,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15153733" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13909224" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -334,6 +593,13 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/application/models/DbTable/Worktime.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="23" selection-start="391" selection-end="391" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="1734">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/EstablishmentsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
@@ -439,6 +705,11 @@
         <state line="1" column="16" selection-start="23" selection-end="23" vertical-scroll-proportion="0.029668411" vertical-offset="0" max-vertical-offset="573" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/establishments/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="0" selection-start="2901" selection-end="2901" vertical-scroll-proportion="0.7900172" vertical-offset="442" max-vertical-offset="1275" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/ErrorController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1088" />
@@ -464,19 +735,9 @@
         <state line="1" column="62" selection-start="104" selection-end="104" vertical-scroll-proportion="0.028619528" vertical-offset="0" max-vertical-offset="594" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="599" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/auth/index.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="599" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/DbTable/Addresses.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="59" selection-start="1368" selection-end="1368" vertical-scroll-proportion="-0.425" vertical-offset="867" max-vertical-offset="1496" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/index/index.phtml">
@@ -487,6 +748,11 @@
     <entry file="file://$PROJECT_DIR$/application/views/scripts/auth/logout.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="599" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/addresses/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="150" selection-start="897" selection-end="1022" vertical-scroll-proportion="0.7589286" vertical-offset="0" max-vertical-offset="629" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/addresses/add.phtml">
@@ -509,14 +775,14 @@
         <state line="9" column="36" selection-start="241" selection-end="241" vertical-scroll-proportion="0.25757575" vertical-offset="0" max-vertical-offset="1649" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/AddressesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="8" selection-start="108" selection-end="185" vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="1751" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="48" selection-start="143" selection-end="143" vertical-scroll-proportion="0.20767888" vertical-offset="0" max-vertical-offset="1717" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/forms/Establishments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="201" selection-end="201" vertical-scroll-proportion="0.26333907" vertical-offset="0" max-vertical-offset="1887" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/forms/Login.php">
@@ -524,89 +790,66 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="935" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/configs/application.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="38" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0" vertical-offset="26" max-vertical-offset="646" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/layouts/scripts/layout.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="6" selection-start="619" selection-end="619" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="4624" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/layouts/scripts/admin.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="33" selection-start="922" selection-end="922" vertical-scroll-proportion="0.8192771" vertical-offset="34" max-vertical-offset="3162" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/forms/Worktime.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="34" selection-start="1367" selection-end="1367" vertical-scroll-proportion="0.29776248" vertical-offset="354" max-vertical-offset="935" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/WorktimeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="34" selection-start="1755" selection-end="1755" vertical-scroll-proportion="0.17171717" vertical-offset="748" max-vertical-offset="1819">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/Bootstrap.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="73" selection-end="73" vertical-scroll-proportion="0.17171717" vertical-offset="0" max-vertical-offset="594">
-          <folding />
-        </state>
+        <state line="6" column="0" selection-start="73" selection-end="73" vertical-scroll-proportion="0.11643836" vertical-offset="0" max-vertical-offset="876" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/configs/application.ini">
+    <entry file="file://$PROJECT_DIR$/application/models/DbTable/Addresses.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="38" selection-start="51" selection-end="51" vertical-scroll-proportion="-0.014516129" vertical-offset="26" max-vertical-offset="646">
-          <folding />
-        </state>
+        <state line="37" column="59" selection-start="1368" selection-end="1368" vertical-scroll-proportion="0.025492469" vertical-offset="607" max-vertical-offset="1496" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/DbTable/Worktime.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/AddressesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="23" selection-start="559" selection-end="559" vertical-scroll-proportion="-0.23407917" vertical-offset="442" max-vertical-offset="1870">
-          <folding />
-        </state>
+        <state line="57" column="41" selection-start="2010" selection-end="2019" vertical-scroll-proportion="0.8150685" vertical-offset="255" max-vertical-offset="1751" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/forms/Establishments.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="201" selection-end="201" vertical-scroll-proportion="0.26333907" vertical-offset="0" max-vertical-offset="1887">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/addresses/index.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="150" selection-start="897" selection-end="1022" vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="629">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="646" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/DbTable/Establishments.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="154" selection-start="1652" selection-end="1652" vertical-scroll-proportion="1.1703959" vertical-offset="0" max-vertical-offset="2703">
+        <state line="101" column="21" selection-start="3344" selection-end="3344" vertical-scroll-proportion="1.9895712" vertical-offset="0" max-vertical-offset="2363" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/WorktimeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="52" selection-start="2712" selection-end="2714" vertical-scroll-proportion="0.61187214" vertical-offset="637" max-vertical-offset="1819" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/DbTable/Worktime.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="7" selection-start="668" selection-end="668" vertical-scroll-proportion="0.41367322" vertical-offset="0" max-vertical-offset="1870">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/establishments/index.phtml">
+    <entry file="file://$PROJECT_DIR$/application/forms/Worktime.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="60" selection-start="483" selection-end="483" vertical-scroll-proportion="0.29259896" vertical-offset="0" max-vertical-offset="1275">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/layouts/scripts/layout.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="8" selection-start="2693" selection-end="3357" vertical-scroll-proportion="0.9070568" vertical-offset="748" max-vertical-offset="4624">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/establishments/establishmenta.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="1375" selection-end="1375" vertical-scroll-proportion="0.55593807" vertical-offset="0" max-vertical-offset="1258">
-          <folding />
-        </state>
+        <state line="31" column="34" selection-start="1367" selection-end="1367" vertical-scroll-proportion="0.6106605" vertical-offset="0" max-vertical-offset="935" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/EstablishmentsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="0" selection-start="6117" selection-end="6117" vertical-scroll-proportion="2.175084" vertical-offset="1292" max-vertical-offset="3451">
+        <state line="186" column="42" selection-start="7417" selection-end="7417" vertical-scroll-proportion="0.5707071" vertical-offset="2823" max-vertical-offset="3417">
           <folding />
         </state>
       </provider>
