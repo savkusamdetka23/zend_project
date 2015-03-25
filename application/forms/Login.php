@@ -2,8 +2,10 @@
 
 class Application_Form_Login extends Zend_Form
 {
-    public function init()
+    public function __construct($option = null)
     {
+
+        parent::__construct($option);
         // указываем имя формы
         $this->setName('login');
 
@@ -37,13 +39,14 @@ class Application_Form_Login extends Zend_Form
             );
 
         // создаём кнопку submit
-        $submit = new Zend_Form_Element_Submit('enter');
-        $submit->setLabel('enter the matrix');
+        $login = new Zend_Form_Element_Submit('login');
+        $login->setLabel('Login');
 
         // добавляем элементы в форму
-        $this->addElements(array($username, $password, $submit));
+        $this->addElements(array($username, $password, $login));
 
         // указываем метод передачи данных
         $this->setMethod('post');
+        $this->setAction(Zend_Controller_Front::getInstance()->getBaseUrl().'/auth/login');
     }
 }

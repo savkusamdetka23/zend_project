@@ -18,8 +18,41 @@ class AuthController extends Zend_Controller_Action
 
     public function loginAction()
     {
-        // проверяем, авторизирован ли пользователь
         if (Zend_Auth::getInstance()->hasIdentity()) {
+            // если да, то делаем редирект, чтобы исключить многократную авторизацию
+            $this->_helper->redirector('index', 'index');
+        }
+        $request = $this->getRequest();
+        $form = new Application_Form_Login();
+        if($request->isPost()){
+                if($form->isValid($this->_request->getPost())){
+                    $authAdapter = $this->getAuthAdapter();
+                    $username = $form->getValue('username');
+                    $password = $form->getValue('password');
+                    $authAdapter ->setIdentity($username)
+                        ->setCredential($password);
+
+                    $auth = Zend_Auth::getInstance();
+                    $result = $auth->authenticate($authAdapter);
+
+                    if($result->isValid()){
+                        $identity = $authAdapter->getResultRowObject();
+
+                        $authStorage = $auth->getStorage();
+                        $authStorage->write($identity);
+                        $this->_helper->redirector('index');
+                        // echo 'valid';
+                    }else{
+                        $this->view->errMessage = 'Yoy have entered wrong name or password';
+                    }
+                }
+        }
+
+
+        $this->view->form = $form;
+
+        // проверяем, авторизирован ли пользователь
+       /* if (Zend_Auth::getInstance()->hasIdentity()) {
             // если да, то делаем редирект, чтобы исключить многократную авторизацию
             $this->_helper->redirector('index', 'index');
         }
@@ -78,7 +111,7 @@ class AuthController extends Zend_Controller_Action
                     $this->view->errMessage = 'Yoy have entered wrong name or password';
                 }
             }
-        }
+        }*/
     }
 
     public function logoutAction()
@@ -90,6 +123,14 @@ class AuthController extends Zend_Controller_Action
         $this->_helper->redirector('index', 'index');
     }
 
+    private function getAuthAdapter(){
+
+        $authApadter = new Zend_Auth_Adapter_DbTable(Zend_Db_Table::getDefaultAdapter());
+        $authApadter ->setTableName('users')
+                     ->setIdentityColumn('username')
+                      ->setCredentialColumn('password');
+        return $authApadter;
+    }
 
 }
 

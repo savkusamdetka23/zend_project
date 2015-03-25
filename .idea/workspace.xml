@@ -2,102 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0758dce3-24a4-46d3-b1ac-7a3cc3968bc7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/34.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/5.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/8.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/bgr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/ch.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/chnu_chernivtsi-90x70.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/f.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/imgres.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/p1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/p2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/p3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/.htaccess" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.zfproject.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/forms/Addresses.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/DbTable/Addresses.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/AddressesController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/AuthController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/Bootstrap.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/ErrorController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/forms/Establishments.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/DbTable/Establishments.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/EstablishmentsController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/forms/Establishmenttype.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/DbTable/Establishmenttype.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/EstablishmenttypeController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/IndexController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/application/controllers/IndexControllerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/add/Layoutloader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/forms/Login.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/README.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/forms/Worktime.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/DbTable/Worktime.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/WorktimeController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/addresses/add.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/add.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/establishmenttype/add.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/worktime/add.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/layouts/scripts/admin.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/configs/application.ini" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/bootstrap-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/bootstrap-theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/bootstrap.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/carusell.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/cv_guide.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cv_guide.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/addresses/delete.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/delete.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/establishmenttype/delete.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/worktime/delete.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/dropdown.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/addresses/edit.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/edit.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/establishmenttype/edit.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/worktime/edit.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/error/error.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/addresses/index.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/auth/index.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/index.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/establishmenttype/index.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/index/index.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/worktime/index.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/index_accomodation.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/index_admin.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/index_culture.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/index_freetime.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/index_hotel _table.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/index_nutrition.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/index_transport.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/jquery-1.10.2.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/layouts/scripts/layout.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/auth/login.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/scripts/auth/logout.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/phpunit.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/AuthController.php" afterPath="$PROJECT_DIR$/application/controllers/AuthController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/Bootstrap.php" afterPath="$PROJECT_DIR$/application/Bootstrap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/forms/Login.php" afterPath="$PROJECT_DIR$/application/forms/Login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cv_guide.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -121,10 +29,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="EstablishmentsController.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/controllers/EstablishmentsController.php">
+      <file leaf-file-name="AuthController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/controllers/AuthController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="186" column="42" selection-start="7417" selection-end="7417" vertical-scroll-proportion="0.5707071" vertical-offset="2823" max-vertical-offset="3417">
+            <state line="46" column="20" selection-start="1647" selection-end="1647" vertical-scroll-proportion="0.3989899" vertical-offset="545" max-vertical-offset="2414">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/scripts/auth/login.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="36" selection-start="31" selection-end="47" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="204">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Login.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/forms/Login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="49" column="76" selection-start="1695" selection-end="1695" vertical-scroll-proportion="-16.961538" vertical-offset="392" max-vertical-offset="986">
               <folding />
             </state>
           </provider>
@@ -156,22 +82,22 @@
         <option value="$PROJECT_DIR$/application/forms/Establishments.php" />
         <option value="$PROJECT_DIR$/application/views/scripts/addresses/index.phtml" />
         <option value="$PROJECT_DIR$/application/views/scripts/index/index.phtml" />
-        <option value="$PROJECT_DIR$/application/forms/Login.php" />
         <option value="$PROJECT_DIR$/application/views/scripts/auth/login.phtml" />
         <option value="$PROJECT_DIR$/application/views/scripts/auth/logout.phtml" />
         <option value="$PROJECT_DIR$/library/add/Layoutloader.php" />
         <option value="$PROJECT_DIR$/application/controllers/AddressesController.php" />
         <option value="$PROJECT_DIR$/application/controllers/EstablishmenttypeController.php" />
         <option value="$PROJECT_DIR$/application/configs/application.ini" />
-        <option value="$PROJECT_DIR$/application/controllers/AuthController.php" />
         <option value="$PROJECT_DIR$/application/layouts/scripts/admin.phtml" />
         <option value="$PROJECT_DIR$/application/plugins/AccessCheck.php" />
         <option value="$PROJECT_DIR$/application/layouts/scripts/layout.phtml" />
-        <option value="$PROJECT_DIR$/application/Bootstrap.php" />
         <option value="$PROJECT_DIR$/application/models/DbTable/Establishments.php" />
         <option value="$PROJECT_DIR$/application/controllers/WorktimeController.php" />
         <option value="$PROJECT_DIR$/application/models/DbTable/Worktime.php" />
         <option value="$PROJECT_DIR$/application/controllers/EstablishmentsController.php" />
+        <option value="$PROJECT_DIR$/application/Bootstrap.php" />
+        <option value="$PROJECT_DIR$/application/forms/Login.php" />
+        <option value="$PROJECT_DIR$/application/controllers/AuthController.php" />
       </list>
     </option>
   </component>
@@ -566,12 +492,12 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -760,11 +686,6 @@
         <state line="4" column="19" selection-start="190" selection-end="190" vertical-scroll-proportion="0.118673645" vertical-offset="0" max-vertical-offset="573" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/auth/login.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/library/add/Layoutloader.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="18" selection-start="232" selection-end="232" vertical-scroll-proportion="0.22895622" vertical-offset="0" max-vertical-offset="594" />
@@ -775,19 +696,9 @@
         <state line="9" column="36" selection-start="241" selection-end="241" vertical-scroll-proportion="0.25757575" vertical-offset="0" max-vertical-offset="1649" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="48" selection-start="143" selection-end="143" vertical-scroll-proportion="0.20767888" vertical-offset="0" max-vertical-offset="1717" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/forms/Establishments.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="0" selection-start="201" selection-end="201" vertical-scroll-proportion="0.26333907" vertical-offset="0" max-vertical-offset="1887" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/forms/Login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="935" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/configs/application.ini">
@@ -803,11 +714,6 @@
     <entry file="file://$PROJECT_DIR$/application/layouts/scripts/admin.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="33" selection-start="922" selection-end="922" vertical-scroll-proportion="0.8192771" vertical-offset="34" max-vertical-offset="3162" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/Bootstrap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="73" selection-end="73" vertical-scroll-proportion="0.11643836" vertical-offset="0" max-vertical-offset="876" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/DbTable/Addresses.php">
@@ -847,9 +753,35 @@
         <state line="31" column="34" selection-start="1367" selection-end="1367" vertical-scroll-proportion="0.6106605" vertical-offset="0" max-vertical-offset="935" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/Bootstrap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="28" selection-start="286" selection-end="286" vertical-scroll-proportion="0.22895622" vertical-offset="0" max-vertical-offset="594" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/EstablishmentsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="186" column="42" selection-start="7417" selection-end="7417" vertical-scroll-proportion="0.5707071" vertical-offset="2823" max-vertical-offset="3417">
+        <state line="101" column="52" selection-start="4273" selection-end="4309" vertical-scroll-proportion="2.8905723" vertical-offset="0" max-vertical-offset="3417">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/auth/login.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="36" selection-start="31" selection-end="47" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="204">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/forms/Login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="76" selection-start="1695" selection-end="1695" vertical-scroll-proportion="-16.961538" vertical-offset="392" max-vertical-offset="986">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="20" selection-start="1647" selection-end="1647" vertical-scroll-proportion="0.3989899" vertical-offset="545" max-vertical-offset="2414">
           <folding />
         </state>
       </provider>
