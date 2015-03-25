@@ -50,6 +50,7 @@
           <dbTableFile dbTableName="Worktime"/>
           <dbTableFile dbTableName="Auth"/>
         </dbTableDirectory>
+        <modelFile modelName="Establishmentacl"/>
       </modelsDirectory>
       <modulesDirectory>
         <moduleDirectory moduleName="admin">

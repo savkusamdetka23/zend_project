@@ -84,14 +84,23 @@ if (Zend_Auth::getInstance()->hasIdentity()) {
 <div class="row">
     <div class="col-lg-2">
 
-        <form action="<?php echo $this->url(array('controller' => 'Addresses'),'default',true)?>"> <button class="btn btn-default">Addresses</button></form>
-        <form action="<?php echo $this->url(array('controller' => 'Establishmenttype'),'default',true)?>"> <button class="btn btn-default">Establishment type</button></form>
-        <form action="<?php echo $this->url(array('controller' => 'Establishments'),'default',true)?>"> <button class="btn btn-default">Establishments</button></form>
-        <form action="<?php echo $this->url(array('controller' => 'Worktime'),'default',true)?>"> <button class="btn btn-default">Work time</button></form>
-
-
-
-
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                <li>
+                    <a href="<?php echo $this->url(array('controller' => 'addresses', 'action' =>'index'))?>">Addresses</a>
+                </li>
+                <li>
+                    <a href="<?php echo $this->url(array('controller' => 'establishmenttype', 'action' =>'index'))?>">Establishment type</a>
+                </li>
+                <li>
+                    <a href="<?php echo $this->url(array('controller' => 'addresses', 'action' =>'index'))?>">Establishments</a>
+                </li>
+                <li>
+                    <a href="<?php echo $this->url(array('controller' => 'worktime', 'action' =>'index'))?>">Work time</a>
+                </li>
+                </ul>
+        </div>
 
     </div>
     <div class="col-lg-7">

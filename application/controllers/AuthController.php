@@ -6,7 +6,7 @@ class AuthController extends Zend_Controller_Action
     public function init()
     {
         $layout = Zend_Layout::getMvcInstance();
-        $layout->setLayout('admin');
+        $layout->setLayout('layout');
         /* Initialize action controller here */
     }
 
@@ -43,8 +43,7 @@ class AuthController extends Zend_Controller_Action
                         $this->_helper->redirector('index');
                         // echo 'valid';
                     }else{
-                        $this->view->errMessage = 'Yoy have entered wrong name or password';
-                    }
+                        $this->view->errMessage = 'Yoy have entered wrong name or password';                    }
                 }
         }
 
