@@ -4,6 +4,8 @@ class Application_Model_DbTable_Establishmenttype extends Zend_Db_Table_Abstract
 {
 
     protected $_name = 'establishmenttype';
+
+
 	public function getEstablishmenttype($id)
     {      
         $id = (int)$id;
