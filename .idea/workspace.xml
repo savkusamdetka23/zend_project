@@ -4,23 +4,6 @@
     <list default="true" id="0758dce3-24a4-46d3-b1ac-7a3cc3968bc7" name="Default" comment="">
       <change type="DELETED" beforePath="C:\webserver\home\cv_guide\public\css\dropdown.css" afterPath="" />
       <change type="DELETED" beforePath="C:\webserver\home\cv_guide\public\js\carusell.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/plugins/AccessCheck.php" afterPath="$PROJECT_DIR$/application/plugins/AccessCheck.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/EstablishmentsController.php" afterPath="$PROJECT_DIR$/application/controllers/EstablishmentsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/forms/Login.php" afterPath="$PROJECT_DIR$/application/forms/Login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/layouts/scripts/admin.phtml" afterPath="$PROJECT_DIR$/application/layouts/scripts/admin.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/establishments/establishmenta.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/establishmenta.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/establishments/establishmentc.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/establishmentc.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/establishments/establishmentf.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/establishmentf.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/establishments/establishmentn.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/establishmentn.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/establishments/establishmentt.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/establishmentt.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/index/index.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/index/index.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index_admin.html" afterPath="$PROJECT_DIR$/public/index_admin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index_hotel _table.html" afterPath="$PROJECT_DIR$/public/index_hotel _table.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/layouts/scripts/layout.phtml" afterPath="$PROJECT_DIR$/application/layouts/scripts/layout.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/auth/login.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/auth/login.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cv_guide.iws" />
     <ignored path=".idea/workspace.xml" />
