@@ -18,6 +18,8 @@ class AuthController extends Zend_Controller_Action
 
     public function loginAction()
     {
+        $this->view->title = 'Login';
+
         if (Zend_Auth::getInstance()->hasIdentity()) {
             // если да, то делаем редирект, чтобы исключить многократную авторизацию
             $this->_helper->redirector('index', 'index');

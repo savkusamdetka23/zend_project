@@ -4,7 +4,7 @@
 
 <table class="table table-responsive table-hover">
     <thead>
-    <tr><th></th><th>Title</th><th>Address</th><th>Telephone</th></tr>
+    <tr><th></th><th>id</th><th>Title</th><th>Address</th><th>Telephone</th></tr>
     </thead>
     <tbody>
     <?php
@@ -14,7 +14,7 @@
     ?>
         <tr class="clickable success" data-toggle="collapse" id="row<?php  echo $this->escape($establishments['id']) ?>" data-target=".row<?php echo $this->escape($establishments['id'])?>">
             <td><i class="glyphicon glyphicon-plus"></i></td>
-
+            <td><?php  echo $this->escape($establishments['id']) ?></td>
             <td><?php echo $this->escape($establishments['establishment']) ?>: <?php echo $this->escape($establishments['title']) ?></td>
             <td>c. <?php echo $this->escape($establishments['town']) ?>, <?php echo $this->escape($establishments['address']) ?> st., <?php echo $this->escape($establishments['build']) ?></td>
 

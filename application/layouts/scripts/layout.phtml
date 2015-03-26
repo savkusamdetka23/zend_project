@@ -30,15 +30,23 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Travel</title>
+    <title>CV_Guide</title>
 
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- Stylesheets -->
     <?php
-    echo $this->headLink()->appendStylesheet('css/bootstrap.min.css');
-    echo $this->headLink()->appendStylesheet('css/style.css');
+    //  echo $this->headLink()->appendStylesheet('css/bootstrap.min.css');
+    //  echo $this->headLink()->appendStylesheet('css/style.css');
+
+    $this->headLink()->appendStylesheet($this->baseUrl()."css/bootstrap.css")
+        ->appendStylesheet($this->baseUrl("css/style.css"))
+        ->appendStylesheet($this->baseUrl("css/bootstrap.min.css"));
+    echo $this->headLink();
+    $this->headScript()->appendFile($this->baseUrl("js/jquery-1.10.2.min.js"))
+        ->appendFile($this->baseUrl("js/bootstrap.min.js"));
+    echo $this->headScript();
     ?>
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -221,8 +229,5 @@
 
     <!-------------------------------------------------------------------------------------------------------------------->
 
-<script src="js/jquery-1.10.2.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/carusell.js"></script>
 </body>
 </html>

@@ -16,4 +16,17 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         return $modelLoader;
 
     }
+
+    function _initViewHelpers(){
+        $this->bootstrap('layout');
+        $layout = $this->getResource(layout);
+        $view = $layout->getView();
+
+        $view->doctype('HTML4_STRICT');
+        $view->headmeta()->appendHttpEquiv('Content-type','text/html;charset=utf-8')
+                         ->appendName('description', 'Using view helpers in Zend_view');
+
+    }
+
+
 }
