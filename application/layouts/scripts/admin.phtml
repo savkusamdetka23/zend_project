@@ -1,89 +1,104 @@
 ﻿<!-- application/layouts/scripts/layout.phtml -->
 
 <?php echo $this->doctype() ?>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
+<html id="ie6" class="ie"lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7"  class="ie"lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8"  class="ie"lang="en-US">
+<![endif]-->
+<!--[if IE 9]>
+<html id="ie9"  class="ie"lang="en-US">
+<![endif]-->
+<!--[if gt IE 9]>
+<html class="ie"lang="en-US">
+<![endif]-->
+
+<!-- This doesn't work but i prefer to leave it here... maybe in the future the MS will support it... i hope... -->
+<!--[if IE 10]>
+<html id="ie10"  class="ie"lang="en-US">
+<![endif]-->
+
+
+<!--[if !IE]>
+<html lang="en-US">
+<![endif]-->
+
 <head>
     <meta charset="utf-8">
-	<title>CV_Guide</title>
+    <title>Travel</title>
 
-	<!-- Mobile Specific Meta -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-		<!-- Stylesheets -->
-		<?php
-		echo $this->headLink()->appendStylesheet('/css/bootstrap.min.css');
-		echo $this->headLink()->appendStylesheet('/css/style.css');
-		?>
+    <!-- Stylesheets -->
+    <?php
+  //  echo $this->headLink()->appendStylesheet('css/bootstrap.min.css');
+  //  echo $this->headLink()->appendStylesheet('css/style.css');
 
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-		<!-- Stylesheets -->
+    $this->headLink()->appendStylesheet($this->baseUrl("css/bootstrap.css"))
+        ->appendStylesheet($this->baseUrl("css/style.css"))
+        ->appendStylesheet($this->baseUrl("css/bootstrap.min.css"));
+    echo $this->headLink();
+    $this->headScript()->appendFile($this->baseUrl("js/jquery-1.10.2.min.js"))
+        ->appendFile($this->baseUrl("js/bootstrap.min.js"));
+    echo $this->headScript();
+    ?>
 
-
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 </head>
 <body>
-<?php
-// Применяем уже знакомый метод для проверки авторизации пользователя
-if (Zend_Auth::getInstance()->hasIdentity()) {
-    $url = $this->url(array('controller'=>'auth', 'action'=>'logout'));
-    // если пользователь авторизирован, показываем ему кнопку "Выход"
-    echo "<a href=\"{$url}\">Exit</a>";
-}
-?>
-<div id="container">
-    <!-------------------------------------------------------------------------------------------------------------------->
-    <div id="header">
+
+
 <header>
-	<nav class="navbar navbar-default  navbar-fixed" role="navigation">
-	  <div class="container-fluid">
-		<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
-		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-			<span class="sr-only">Toggle navigation</span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		  </button>
-		  <a class="navbar-brand" href="/">Chernivtsi city guide</a>
-		</div>
-<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		  <ul class="nav navbar-nav navbar-right">
-			<form><div class="btn-group form-inline">
-					<input type="text"class="btn btn-default btn-sm" class="form-control" placeholder="Search">
-					<button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-search"></span></button>
-					</div>
-						<li class="dropdown">
-						   <div class="btn-group">
-									   <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModalreg"><span class="glyphicon glyphicon-user"></span></button>
+    <nav class="navbar navbar-fixed" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header col-lg-10 col-md-8 col-sm-8 col-xs-7">
+                <a class="navbar-brand" href="/">Chernivtsi city guide</a>
+            </div>
 
-						</li></form>
-		  </ul>
-		</div><!-- /.navbar-collapse -->
-	  </div><!-- /.container-fluid -->
-	</nav>
+            <ul class="nav navbar-nav navbar-right col-lg-2 col-md-4 col-sm-4 col-xs-5">
+                <form><div class="btn-group form-inline">
+                        <input type="text"class="btn btn-default btn-sm" class="form-control" placeholder="Search">
+                        <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-search"></span></button>
+                    </div>
+                </form>
+            </ul>
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div class="row nav_menu">
+        <div class="col-lg-12" align="center">
+            <ul>
+                <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmenta'))?>">Accomodation</a></li>
+                <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentc'))?>">Culture</a></li>
+                <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentf'))?>">Free time</a></li>
+                <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentn'))?>">Nutrition</a></li>
+                <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentt'))?>">Transport</a></li>
+            </ul>
 
-	<div class="col-lg-12 nav_menu">
-			<ul class="nav nav-pills">
-
-			</ul>
-
- </div>
+        </div>
         <div id="main_div">
-          </div>
-
+            <a href="<?php echo $this->url(
+                array('controller' => 'index'),
+                'default',
+                true) ?>" title="back to homepage"></a>
+        </div>
     </div>
+    
+</header>
 
- </header>
- </div>
-
- <!-- MAIN CONTENT -->
+<!-- MAIN CONTENT -->
 <section>
 
-<div class="row">
-    <div class="col-lg-2">
-
+    <div class="row class="k">
+    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
@@ -99,92 +114,49 @@ if (Zend_Auth::getInstance()->hasIdentity()) {
                 <li>
                     <a href="<?php echo $this->url(array('controller' => 'worktime', 'action' =>'index'))?>">Work time</a>
                 </li>
-                </ul>
+
+            </ul>
         </div>
+    </div>
+    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+
+        <?php
+        echo $this->layout ()->content;
+        // echo $this->(array('controller' => 'index', 'action' => 'index'));
+        ?>
 
     </div>
-    <div class="col-lg-7">
 
-            <?php
-            echo $this->layout ()->content;
-            // echo $this->(array('controller' => 'index', 'action' => 'index'));
-            ?>
+
+
+
+
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
 
     </div>
-
-
-
-
-
-    <div class="col-lg-3">
-
-</div>
+    </div>
 
 </section>
 
 
 <!-------------------------------------------------------------------------------------------------------------------->
-   <!-- FOOTER -->
-		<footer>
+<!-- FOOTER -->
+<footer>
 
-          <div class="foot inform_foot">
+    <div class="foot inform_foot">
 		  <span> Made by BEDBOU 2015<span>
 
 
 
 
 
-          </div>
-		</footer>
-				 <!-- Modal -->
-				<div class="modal fade" id="myModalreg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				  <div class="modal-dialog">
-					<div class="modal-content">
-					  <div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-                         <h3 id="myModalLabel">Hello, friend!</h3>
-					  </div>
-					  <div class="modal-body">
-							<ul class="nav nav-tabs" id="login-or-register">
-							  <li class="active"><a href="#profile" data-toggle="tab">Authorization</a></li>
-							</ul>
-							<div class="tab-content">
+    </div>
+</footer>
+<!-- Modal -->
 
-							  <div class="tab-pane active" id="profile">
-									<form action="#">
-									<div class="row">
-											<h3>Authorize, please.</h3>
-										</div>
-										<div class="row">
-											<label for="user_login">Enter Your login</label>
-											<input id="user_login" name="login" value="" />
-										</div>
-										<div class="row">
-											<label for="user_password">Enter Your password</label>
-											<input id="user_password" name="password" value="" />
-										</div>
-										<div class="row">
-									   <input type="checkbox" id="remember-me" /><label for="remember-me">Remember me?</label>
-									   </div>
-										<div class="row">
-											<input type="submit" id="login_button" class="login_button" value="Вхід" />
-										</div>
-									</form>
-							  </div>
-							</div>
-						  </div>
+<!-------------------------------------------------------------------------------------------------------------------->
 
 
-					  </div>
-					  <div class="modal-footer">
-						 <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-					  </div>
-					</div>
-				  </div>
-    <!-------------------------------------------------------------------------------------------------------------------->
 
-<script src="js/jquery-1.10.2.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/carusell.js"></script>
 </body>
 </html>

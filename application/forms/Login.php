@@ -47,6 +47,6 @@ class Application_Form_Login extends Zend_Form
 
         // указываем метод передачи данных
         $this->setMethod('post');
-      //  $this->setAction(Zend_Controller_Front::getInstance()->getBaseUrl().'/auth/login');
+       $this->setAction(Zend_Controller_Front::getInstance()->getBaseUrl().'/auth/login');
     }
 }

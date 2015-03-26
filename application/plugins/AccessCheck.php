@@ -11,7 +11,7 @@ class Application_Plugin_AccessCheck extends Zend_Controller_Plugin_Abstract
     }
 
     public  function  preDispatch(Zend_Controller_Request_Abstract $request){
-        $resource = $request->getControllerName();
+      /*  $resource = $request->getControllerName();
         $action = $request->getActionName();
 
         $identity = $this->_auth->getStorage()->read();
@@ -20,7 +20,7 @@ class Application_Plugin_AccessCheck extends Zend_Controller_Plugin_Abstract
         if (!$this->_acl->isAllowed($role, $resource, $action)) {
             $request->setControllerName('auth')
                     ->setActionName('login');
-        }
+        }*/
 
     }
 

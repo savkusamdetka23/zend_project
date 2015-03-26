@@ -1,4 +1,4 @@
-﻿
+
 html {overflow-x:hidden;
     position: relative;
     min-height: 100%;
@@ -6,7 +6,7 @@ html {overflow-x:hidden;
 
 body{
     background-image:url(../images/page-bg-1.jpg);
-    min-width:500px;
+    min-width:600px;
     margin-bottom: 60px;
 }
 section{
@@ -19,72 +19,90 @@ footer {
     width: 100%;
     height: 10px;
 }
+#tab2, #tab3 #tab4 {position: fixed; }
+
+.menu1 > a,
+.menu1 #tab2:target ~ a:nth-of-type(1),
+.menu1 #tab3:target ~ a:nth-of-type(1),
+.menu1 #tab4:target ~ a:nth-of-type(1),
+.menu1 > div { padding: 5px; border: 1px solid #aaa; }
+
+.menu1 > a { line-height: 28px; background: #fff; text-decoration: none; }
+
+#tab2,
+#tab3,
+#tab4,
+.menu1 > div,
+.menu1 #tab2:target ~ div:nth-of-type(1),
+.menu1 #tab3:target ~ div:nth-of-type(1),
+.menu1 #tab4:target ~ div:nth-of-type(1) {display: none; }
+
+.menu1 > div:nth-of-type(1),
+.menu1 #tab2:target ~ div:nth-of-type(2),
+.menu1 #tab3:target ~ div:nth-of-type(3),
+.menu1 #tab4:target ~ div:nth-of-type(4) { display: block; }
+
+.menu1 > a:nth-of-type(1),
+.menu1 #tab2:target ~ a:nth-of-type(2),
+.menu1 #tab3:target ~ a:nth-of-type(3),
+.menu1 #tab4:target ~ a:nth-of-type(4) { border-bottom: 2px solid #fff; }
+.panorama{
+width:100%;
+}
+.panorama img{
+max-height:200px;
+width:100%;}
+.suc{
+background-color:#EFF6C2;}
 .row_1{
 margin-top:10px;}
 form .btn-default{
 margin:0px 0px 10px 10px;}
 .media-list{
 margin-top:15px;}
+.popular{
+margin-top: 20px;}
 .popular a{
 color:#fff;
 background:#836292;
 padding: 10px 16px;}
-.popular {
-margin-top: 7px;
-}
-#sidebar-wrapper{
-margin-left: 30px;
-}
-
-#sidebar-wrapper .sidebar-nav{
-list-style:none;
-background-color:#E7D6E9;
-padding: 10px 16px;
-
-}
 .k{
 border-top:2px solid;
 }
+#sidebar-wrapper .sidebar-nav{
+list-style:none;
 
+}
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: #4C365C;
+    
 	padding-top:10px;
 }
 
 .sidebar-nav li a:hover {
     text-decoration: none;
-    color: #fff;
+    color: #333;
     background: rgba(255,255,255,0.2);
 }
 
-.sidebar-nav li a:active,
-.sidebar-nav li a:focus {
-    text-decoration: none;
-}
-
-
-
-.sidebar-nav > .sidebar-brand a {
-    color: #2E064A;
-}
-
-.sidebar-nav > .sidebar-brand a:hover {
-    color: #fff;
-    background: none;
-}
 
 .thumbnail img{
 max-height:400px;
 }
-.nav_menu {
-   background:#EADDED;
-   padding:10px 0 10px 0;
-   display:flex; 
+.nav_menu{
+padding:5px 10px;
+ background: #8DBFFC;
+ margin-bottom:10px;
+}
+.nav_menu ul li  {
+   padding:10px 20px;
+   display:inline; 
  }
- .nav{
- margin:auto;}
+ .nav_menu a{
+ font-size:18px;
+ color:#fff;
+ }
  .nav-tabs_1{
  position:absolute;}
  .col-lg-1{
@@ -142,115 +160,3 @@ margin-right:10px;
 margin:5px;
 padding-right:10px;}
 
-/*------МОДАЛЬНІ ВІКНА-----*/
-
-#myModaldel .row {
-    text-align:center;}
-
-#myModalsend{
-    display: none;
-}
-#myModalsend .row {
-    margin: 3px 0;
-    width: 100%;
-    padding: 0;
-    float: none;
-    clear: both;
-    display: block;
-}
-#myModalsend .row label {
-    display: block;
-    float: left;
-    cursor: pointer;
-    width: 200px;
-}
-
-#myModalsend h3{color:#807070;}
-
-#myModalcreat{
-    display: none;
-}
-#myModalcreat .row {
-    margin: 3px 0;
-    width: 100%;
-    padding: 0;
-    float: none;
-    clear: both;
-    display: block;
-}
-#myModalcreat .row label {
-    display: block;
-    float: left;
-    cursor: pointer;
-    width: 200px;
-}
-.del{
-    text-align:center;
-}
-
-#myModalcreat h3{color:#807070;}
-#myModalreg{
-    display: none;
-}
-#myModalreg .tab-pane .row {
-    margin: 3px 0;
-    width: 100%;
-    padding: 0;
-    float: none;
-    clear: both;
-    display: block;
-}
-#myModalreg .tab-pane .row label {
-    display: block;
-    float: left;
-    cursor: pointer;
-    width: 200px;
-}
-#myModalreg h3{color:#807070;}
-
-.required{
-    color:#F00;}
-.carousel-inner .active.left { left: -25%; }
-.carousel-inner .next        { left:  25%; }
-.carousel-inner .prev		 { left: -25%; }
-
-
-.carousel-control
-{ 
-    width:  5%;
-	height:91%;
-}
-.carousel-control.left,
-.carousel-control.right 
-{
-  margin-left:15px;
-  margin-right:15px;
-}
-
-.carousel-control {
-    position: absolute;
-    
-    color: #fff;
-    text-align: center;
-    text-shadow: none;
-}
-
-.carousel-control.left:hover {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0px, transparent 100%);
-    background-repeat: repeat-x;
-	
-}
-.carousel-control.right:hover {
-    background-image: linear-gradient(to right, transparent 0px, rgba(0, 0, 0, 0.5) 100%);
-    background-repeat: repeat-x;
-	
-}
-.carousel-control.left{
-   
-    background-image: none;
-}
-.carousel-control.right{
-    background-image: none;
-}
-.suc{
-background-color:#EFF6C2;}

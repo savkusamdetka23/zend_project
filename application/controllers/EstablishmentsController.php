@@ -4,12 +4,12 @@ class EstablishmentsController extends Zend_Controller_Action
     public function init()
     {
         /* Initialize action controller here */
-        $layout = Zend_Layout::getMvcInstance();
-        $layout->setLayout('admin');
+
     }
     public function indexAction()
     {
-
+        $layout = Zend_Layout::getMvcInstance();
+        $layout->setLayout('admin');
 		$establishments = new Application_Model_DbTable_Establishments();
 		$establishmentsList = $establishments->getEstablishmentsList();
         $this->view->establishments = $establishmentsList;
@@ -18,6 +18,8 @@ class EstablishmentsController extends Zend_Controller_Action
     }
  function addAction()
     {
+        $layout = Zend_Layout::getMvcInstance();
+        $layout->setLayout('admin');
         $this->view->title = "Add new establishment";
         $this->view->headTitle($this->view->title);
         $form = new Application_Form_Establishments();
@@ -66,6 +68,8 @@ class EstablishmentsController extends Zend_Controller_Action
     }
 	public function editAction()
 	{
+        $layout = Zend_Layout::getMvcInstance();
+        $layout->setLayout('admin');
 		$form = new Application_Form_Establishments();
 		$form->submit->setLabel('Edit');
 		$this->view->form = $form;
@@ -129,6 +133,8 @@ class EstablishmentsController extends Zend_Controller_Action
 	}
     public function deleteAction()
     {
+        $layout = Zend_Layout::getMvcInstance();
+        $layout->setLayout('admin');
         $this->view->title = "Delete address";
         $this->view->headTitle($this->view->title);
         if ($this->getRequest()->isPost()) {
@@ -148,8 +154,7 @@ class EstablishmentsController extends Zend_Controller_Action
 
     public function establishmentaAction()
     {
-        $layout = Zend_Layout::getMvcInstance();
-        $layout->setLayout('layout');
+
 
         $establishments = new Application_Model_DbTable_Establishments();
         $listEstablishments = $establishments->getListEstablishments();
@@ -159,8 +164,7 @@ class EstablishmentsController extends Zend_Controller_Action
 
     public function establishmentcAction()
     {
-        $layout = Zend_Layout::getMvcInstance();
-        $layout->setLayout('layout');
+
         $establishments = new Application_Model_DbTable_Establishments();
         $establishmentsList = $establishments->getEstablishmentsList();
         $this->view->establishments = $establishmentsList;
@@ -168,8 +172,7 @@ class EstablishmentsController extends Zend_Controller_Action
     }
     public function establishmentfAction()
     {
-        $layout = Zend_Layout::getMvcInstance();
-        $layout->setLayout('layout');
+
         $establishments = new Application_Model_DbTable_Establishments();
         $establishmentsList = $establishments->getEstablishmentsList();
         $this->view->establishments = $establishmentsList;
@@ -177,8 +180,7 @@ class EstablishmentsController extends Zend_Controller_Action
     }
     public function establishmentnAction()
     {
-        $layout = Zend_Layout::getMvcInstance();
-        $layout->setLayout('layout');
+
         $establishments = new Application_Model_DbTable_Establishments();
         $establishmentsList = $establishments->getEstablishmentsList();
         $this->view->establishments = $establishmentsList;
@@ -186,8 +188,7 @@ class EstablishmentsController extends Zend_Controller_Action
     }
     public function establishmenttAction()
     {
-        $layout = Zend_Layout::getMvcInstance();
-        $layout->setLayout('layout');
+
         $establishments = new Application_Model_DbTable_Establishments();
         $establishmentsList = $establishments->getEstablishmentsList();
         $this->view->establishments = $establishmentsList;
