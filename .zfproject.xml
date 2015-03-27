@@ -28,6 +28,9 @@
         <controllerFile controllerName="Auth">
           <actionMethod actionName="index"/>
         </controllerFile>
+        <controllerFile controllerName="Establishment">
+          <actionMethod actionName="index"/>
+        </controllerFile>
       </controllersDirectory>
       <formsDirectory>
         <formFile formName="Addreses"/>
@@ -100,6 +103,9 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Index">
             <viewScriptFile forActionName="logoutauth"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Establishment">
+            <viewScriptFile forActionName="index"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>

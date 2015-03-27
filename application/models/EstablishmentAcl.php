@@ -14,6 +14,7 @@ class Application_Model_EstablishmentAcl extends Zend_Acl
 
             $this->add(new Zend_Acl_Resource('establishmenttype'));
             $this->add(new Zend_Acl_Resource('establishments'));
+          //  $this->add(new Zend_Acl_Resource('establishment'));
             $this->add(new Zend_Acl_Resource('worktime'));
             $this->add(new Zend_Acl_Resource('auth'));
 
@@ -36,13 +37,17 @@ class Application_Model_EstablishmentAcl extends Zend_Acl
 
           //  $this->allow('user', 'establishments', 'index');
            // $this->allow('user', 'index', 'index');
-            $this->allow('user', 'index');
-            $this->allow('user', 'auth');
-            $this->allow('user', 'establishments', 'establishmenta');
-            $this->allow('user', 'establishments', 'establishmentc');
-            $this->allow('user', 'establishments', 'establishmentf');
-            $this->allow('user', 'establishments', 'establishmentn');
-            $this->allow('user', 'establishments', 'establishmentt');
+
+
+            $this->allow(null, 'index');
+          //  $this->allow(null, 'establishment');
+           // $this->allow('user', 'index');
+            $this->allow(null, 'auth');
+            $this->allow(null, 'establishments', 'establishmenta');
+            $this->allow(null, 'establishments', 'establishmentc');
+            $this->allow(null, 'establishments', 'establishmentf');
+            $this->allow(null, 'establishments', 'establishmentn');
+            $this->allow(null, 'establishments', 'establishmentt');
 
             $this->allow('admin', 'addresses');
 

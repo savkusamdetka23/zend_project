@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Мар 23 2015 г., 18:34
+-- Время создания: Мар 27 2015 г., 13:56
 -- Версия сервера: 5.5.25
 -- Версия PHP: 5.3.13
 
@@ -67,9 +67,12 @@ CREATE TABLE IF NOT EXISTS `establishments` (
   `telephone` varchar(30) NOT NULL,
   `description` varchar(500) NOT NULL,
   `establishmenttype_id` int(3) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `establishments_ibfk_1` (`address_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
+
+-- --------------------------------------------------------
 
 --
 -- Структура таблицы `establishmenttype`
@@ -136,8 +139,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `role`) VALUES
-(1, 'admin', 'admin', 'admin'),
-(2, 'guest', '', 'guest');
+(1, 'admin', '123', 'admin'),
+(2, 'user', '123', 'user');
 
 -- --------------------------------------------------------
 
@@ -158,8 +161,6 @@ CREATE TABLE IF NOT EXISTS `worktime` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 
-
---
 -- Ограничения внешнего ключа таблицы `establishments`
 --
 ALTER TABLE `establishments`

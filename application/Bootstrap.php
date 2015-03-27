@@ -31,6 +31,15 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
                          ->appendName('description', 'Using view helpers in Zend_view');
 
 
+        $view->headTitle()->setSeparator(' - ')
+            ->headTitle('CV_Guide site');
+
+     /*   $navContainerConfig = new Zend_Config_Xml(APPLICATION_PATH. '/configs/navigation.xml', 'nav');
+        $navContainer =  new Zend_Navigation($navContainerConfig);
+
+        $view->navigation($navContainer)->setAcl($this->_acl)->setRole($this->_auth->getStorage()->read()->role);
+*/
+
 
     }
 

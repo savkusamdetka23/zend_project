@@ -1,0 +1,16 @@
+<?xml version="1.0" endconfig="utf-8"?>
+<config>
+    <nav>
+        <logout>
+            <label>Logout</label>
+            <controller>auth</controller>
+            <action>logout</action>
+        </logout>
+        <login>
+            <label>Login</label>
+            <controller>auth</controller>
+            <action>login</action>
+        </login>
+
+    </nav>
+</config>
