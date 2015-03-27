@@ -68,6 +68,8 @@ class Application_Form_Establishments extends Zend_Form
 
 
 
+
+
         $establishment_id = new Zend_Form_Element_Hidden('establishment_id');
         $establishment_id ->addFilter('Int');
 

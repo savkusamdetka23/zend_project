@@ -5,8 +5,7 @@ class EstablishmenttypeController extends Zend_Controller_Action
 
     public function init()
     {
-        /* Initialize action controller here */
-        $layout = Zend_Layout::getMvcInstance();
+         $layout = Zend_Layout::getMvcInstance();
         $layout->setLayout('admin');
     }
 
@@ -14,6 +13,7 @@ class EstablishmenttypeController extends Zend_Controller_Action
     {
         $this->view->title = "Establishment type";
         $this->view->headTitle($this->view->title);
+
         $establishmenttype = new Application_Model_DbTable_Establishmenttype();
         $this->view->establishmenttype = $establishmenttype->getEstablishmenttypeList();
     }
@@ -21,6 +21,7 @@ class EstablishmenttypeController extends Zend_Controller_Action
     {
         $this->view->title = "Add new establishment type";
         $this->view->headTitle($this->view->title);
+
         $form = new Application_Form_Establishmenttype();
         $form->submit->setLabel('Add');
         $this->view->form = $form;
@@ -29,6 +30,7 @@ class EstablishmenttypeController extends Zend_Controller_Action
             if ($form->isValid($formData)) {
                 $type = $form->getValue('type');
                 $establishment = $form->getValue('establishment');
+
                 $establishmenttype = new Application_Model_DbTable_Establishmenttype();
                 $establishmenttype->addEstablishmenttype($type, $establishment);
                 $this->_helper->redirector('index');
@@ -41,6 +43,7 @@ class EstablishmenttypeController extends Zend_Controller_Action
 	{
 		$form = new Application_Form_Establishmenttype();
 		$form->submit->setLabel('Edit');
+
 		$this->view->form = $form;
         if ($this->getRequest()->isPost()) {
             $formData = $this->getRequest()->getPost();
@@ -48,6 +51,7 @@ class EstablishmenttypeController extends Zend_Controller_Action
 				$id = $form->getValue('id');
 				$type = $form->getValue('type');
                 $establishment = $form->getValue('establishment');
+
                 $establishmenttype = new Application_Model_DbTable_Establishmenttype();
                 $establishmenttype->updateEstablishmenttype($id, $type, $establishment);
                 $this->_helper->redirector('index');

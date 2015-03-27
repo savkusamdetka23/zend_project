@@ -6,17 +6,17 @@ class Application_Form_Login extends Zend_Form
     {
 
         parent::__construct($option);
-        // указываем имя формы
+        // Вказуємо ім'я форми
         $this->setName('login');
 
-        // сообщение о незаполненном поле
+        // Повідомлення про незаповнену форму
         $isEmptyMessage = 'must not be empty';
 
-        // создаём текстовый элемент
+        // Створюємо текстовий елемент
         $username = new Zend_Form_Element_Text('username');
 
-        // задаём ему label и отмечаем как обязательное поле;
-        // также добавляем фильтры и валидатор с переводом
+        // Призначаємо йому label і відмічаємо як обов'язкове поле
+        // також додаємо фільри та валідатор
         $username->setLabel('Name:')
             ->setRequired(true)
             ->addFilter('StripTags')
@@ -25,11 +25,11 @@ class Application_Form_Login extends Zend_Form
                 array('messages' => array('isEmpty' => $isEmptyMessage))
             );
 
-        // создаём элемент формы для пароля
+        // Створюємо елемент форми для пароля
         $password = new Zend_Form_Element_Password('password');
 
-        // задаём ему label и отмечаем как обязательное поле;
-        // также добавляем фильтры и валидатор с переводом
+        // Призначаємо йому label і відмічаємо як обов'язкове поле
+        // також додаємо фільри та валідатор
         $password->setLabel('Password:')
             ->setRequired(true)
             ->addFilter('StripTags')
@@ -38,14 +38,14 @@ class Application_Form_Login extends Zend_Form
                 array('messages' => array('isEmpty' => $isEmptyMessage))
             );
 
-        // создаём кнопку submit
+        // Створюємо кнопку submit
         $login = new Zend_Form_Element_Submit('login');
         $login->setLabel('Login');
 
-        // добавляем элементы в форму
+        // Додаємо елементи у форму
         $this->addElements(array($username, $password, $login));
 
-        // указываем метод передачи данных
+        // Вказуємо метод передачі даних
         $this->setMethod('post');
        $this->setAction(Zend_Controller_Front::getInstance()->getBaseUrl().'/auth/login');
     }

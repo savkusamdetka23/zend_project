@@ -1,8 +1,7 @@
-<form action="<?php echo $this->url(array('controller' => 'worktime', 'action' => 'add'))?>"> <button class="btn btn-default">Add new establishment work time</button></form>
 <h3 ><span class="glyphicon glyphicon-home text-muted"></span>Establishment work time</h3>
 <table class="table table-responsive table-hover">
     <thead>
-    </th><th>Establishment</th><th>Opening</th><th>Break from</th><th>Break to</th><th>Closing</th><th>Weekend</th></tr>
+    </th><th>id</th><th>Establishment</th><th>Opening</th><th>Break from</th><th>Break to</th><th>Closing</th><th>Weekend</th></tr>
     </thead>
     <tbody>
 
@@ -11,6 +10,7 @@
     if (is_array($this->worktime) && count($this->worktime)) :
     foreach($this->worktime as $worktime) : ?>
         <tr>
+		<td><?php echo $this->escape($worktime['establishment_id']) ?></td>
 		<td><?php echo $this->escape($worktime['establishment']) ?></td>
  		<td><?php echo $this->escape($worktime['opening']) ?></td>
 		<td><?php echo $this->escape($worktime['break_from']) ?></td>
@@ -18,12 +18,7 @@
 		<td><?php echo $this->escape($worktime['closing']) ?></td>
 		<td><?php echo $this->escape($worktime['weekend']) ?></td>
 
-			<td>
-                <a href="<?php echo $this->url(array('controller' => 'worktime', 'action' => 'edit', 'id' => $worktime['id'])); ?>">edit</a>
-            </td>
-		   <td>
-               <a href="<?php echo $this->url(array('controller' => 'worktime', 'action' => 'delete',  'id' => $this->escape($worktime['id']))); ?>">delete</a>
-           </td>
+
         </tr>
     <?php endforeach; ?>
     <?php endif; ?>

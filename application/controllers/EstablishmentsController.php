@@ -10,6 +10,7 @@ class EstablishmentsController extends Zend_Controller_Action
     {
         $layout = Zend_Layout::getMvcInstance();
         $layout->setLayout('admin');
+
 		$establishments = new Application_Model_DbTable_Establishments();
 		$establishmentsList = $establishments->getEstablishmentsList();
         $this->view->establishments = $establishmentsList;
@@ -20,8 +21,10 @@ class EstablishmentsController extends Zend_Controller_Action
     {
         $layout = Zend_Layout::getMvcInstance();
         $layout->setLayout('admin');
+
         $this->view->title = "Add new establishment";
         $this->view->headTitle($this->view->title);
+
         $form = new Application_Form_Establishments();
         $form->submit->setLabel('Add');
         $this->view->form = $form;
@@ -37,39 +40,35 @@ class EstablishmentsController extends Zend_Controller_Action
                 $telephone = $form->getValue('telephone');
                 $description = $form->getValue('description');
                 $establishmenttype_id= $form->getValue('establishmenttype_id');
+
                 $establishments = new Application_Model_DbTable_Establishments();
                 $establishments->addEstablishments($title, $build, $address_id, $gps, $telephone, $description, $establishmenttype_id);
 
-
-
                 $query = $establishments->getAdapter()->select()
-                    ->from('establishments')->where('establishments.telephone = ?', $telephone);
+                                        ->from('establishments')->where('establishments.telephone = ?', $telephone);
                 $establishment_id = $establishments->getAdapter()->fetchAll($query);
-                //die($establishment_id[0]['telephone']);
-                //die(print_r($establishment_id));
 
-                //   $establishment_id = $form->getValue('id');
                 $opening = $form->getValue('opening');
                 $break_from = $form->getValue('break_from');
                 $break_to = $form->getValue('break_to');
                 $closing = $form->getValue('closing');
                 $weekend = $form->getValue('weekend');
+
                 $worktime= new Application_Model_DbTable_Worktime();
                 $worktime->addWorktime($establishment_id[0]['id'], $opening, $break_from, $break_to, $closing, $weekend);
-
 
                 $this->_helper->redirector('index');
             } else {
                 $form->populate($formData);
             }
-
-        }
+       }
 
     }
 	public function editAction()
 	{
         $layout = Zend_Layout::getMvcInstance();
         $layout->setLayout('admin');
+
 		$form = new Application_Form_Establishments();
 		$form->submit->setLabel('Edit');
 		$this->view->form = $form;
@@ -82,24 +81,21 @@ class EstablishmentsController extends Zend_Controller_Action
                 $address_id = $form->getValue('address_id');
 				$gps = $form->getValue('gps');
 				$telephone = $form->getValue('telephone');
-               $description = $form->getValue('description');
+                $description = $form->getValue('description');
                 $establishmenttype_id= $form->getValue('establishmenttype_id');
+
                 $establishments = new Application_Model_DbTable_Establishments();
                 $establishments->updateEstablishments($id, $title, $build, $address_id, $gps, $telephone, $description, $establishmenttype_id);
 
 
-               // $establishment_id = $establishments->getAdapter()->fetchAll($establishment_id);
-                //die($establishment_id[0]['telephone']);
-
-
-                // $id = $form->getValue('id');
-               $establishment_id = $form->getValue('establishment_id');
+                $establishment_id = $form->getValue('establishment_id');
                 $opening = $form->getValue('opening');
                 $break_from = $form->getValue('break_from');
                 $break_to = $form->getValue('break_to');
                 $closing = $form->getValue('closing');
                 $weekend = $form->getValue('weekend');
-               $worktime= new Application_Model_DbTable_Worktime();
+
+                $worktime= new Application_Model_DbTable_Worktime();
                 $worktime->updateWorktime($id, $establishment_id, $opening, $break_from, $break_to, $closing, $weekend);
 
 
@@ -109,21 +105,21 @@ class EstablishmentsController extends Zend_Controller_Action
 
             }
         }else {
-        // Если мы выводим форму, то получаем id фильма, который хотим обновить
+        // Отримання id потрібного елемента
         $id = $this->_getParam('id', 0);
         if ($id > 0) {
-            // Создаём объект модели
+            // Створюємо об'єкт моделі
             $establishments = new Application_Model_DbTable_Establishments();
 
-            // Заполняем форму информацией при помощи метода populate
+            // Заповнюємо форму за допомогою метода populate
             $form->populate($establishments->getEstablishment($id));
 
         }
             $establishment_id = $this->_getParam('id', 0);
             if ($establishment_id > 0) {
-                // Создаём объект модели
+                // Створюємо об'єкт моделі
                 $worktime = new Application_Model_DbTable_Worktime();
-		          // Заполняем форму информацией при помощи метода populate
+		          // Заповнюємо форму за допомогою метода populate
                 $form->populate($worktime->getWorktime($establishment_id));
 
             }
@@ -143,12 +139,16 @@ class EstablishmentsController extends Zend_Controller_Action
                 $id = $this->getRequest()->getPost('id');
                 $establishments = new Application_Model_DbTable_Establishments();
                 $establishments->deleteEstablishments($id);
+                $worktime = new Application_Model_DbTable_Worktime();
+                $worktime->deleteWorktime($id);
             }
             $this->_helper->redirector('index');
         } else {
             $id = $this->_getParam('id', 0);
             $establishments = new Application_Model_DbTable_Establishments();
             $this->view->establishments = $establishments->getEstablishmentsToDel($id);
+            $worktime= new Application_Model_DbTable_Worktime();
+            $this->view->worktime = $worktime->getWorktimeToDel($id);
         }
     }
 

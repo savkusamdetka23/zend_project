@@ -20,31 +20,31 @@ class Application_Model_DbTable_Establishments extends Zend_Db_Table_Abstract
 
     public function getListEstablishments(){
 
-      /*  $select = $this->_db->select()
+       $select = $this->_db->select()
             ->from($this->_name,
                 array('key' => 'id', 'value' => 'title'));
         $result = $this->getAdapter()->fetchAll($select);
-        return $result;*/
+        return $result;
 
-        $select = $this->getAdapter()->select()
-            ->from('establishments',
-                array(
-                    'establishments.id',
-                    'establishments.title',
-                    'establishments.build',
-                    'establishments.address_id',
-                    'establishments.gps',
-                    'establishments.telephone',
-                    'establishments.description',
-                    'establishments.establishmenttype_id'
-                ))
-            ->joinLeft(array('addresses'), 'addresses.id=establishments.address_id', array('address' => 'street', 'town' => 'city'))
-            ->joinLeft(array('worktime'), 'worktime.establishment_id=establishments.id', array('opening' =>'opening', 'break_from' =>'break_from', 'break_to' =>'break_to', 'closing' =>'closing', 'weekend' =>'weekend'))
-            ->joinLeft(array('establishmenttype'), 'establishmenttype.id=establishments.establishmenttype_id', array('establishment' => 'establishment'));
-         //      ->joinInner(array('establishmenttype'), 'establishmenttype.type[accomodation]=establishmenttype.type[accomodation]s', array('types' => 'type'));
-//print($select);
+        /*   $select = $this->getAdapter()->select()
+              ->from('establishments',
+                  array(
+                      'establishments.id',
+                      'establishments.title',
+                      'establishments.build',
+                      'establishments.address_id',
+                      'establishments.gps',
+                      'establishments.telephone',
+                      'establishments.description',
+                      'establishments.establishmenttype_id'
+                  ))
+              ->joinLeft(array('addresses'), 'addresses.id=establishments.address_id', array('address' => 'street', 'town' => 'city'))
+              ->joinLeft(array('worktime'), 'worktime.establishment_id=establishments.id', array('opening' =>'opening', 'break_from' =>'break_from', 'break_to' =>'break_to', 'closing' =>'closing', 'weekend' =>'weekend'))
+              ->joinLeft(array('establishmenttype'), 'establishmenttype.id=establishments.establishmenttype_id', array('establishment' => 'establishment'));
+           //      ->joinInner(array('establishmenttype'), 'establishmenttype.type[accomodation]=establishmenttype.type[accomodation]s', array('types' => 'type'));
+  //print($select);
 
-        return $this->getAdapter()->fetchAll($select);
+          return $this->getAdapter()->fetchAll($select);*/
     }
 
 
