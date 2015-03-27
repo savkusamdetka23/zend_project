@@ -107,22 +107,6 @@
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                 <li>
-                   <?php echo $this->navigation(); ?></li>
-
-
-                <li>
-                    <a href="<?php echo $this->url(array('controller' => 'addresses', 'action' =>'index'))?>">Addresses</a>
-                </li>
-                <li>
-                    <a href="<?php echo $this->url(array('controller' => 'establishmenttype', 'action' =>'index'))?>">Establishment type</a>
-                </li>
-                <li>
-                    <a href="<?php echo $this->url(array('controller' => 'establishments', 'action' =>'index'))?>">Establishments</a>
-                </li>
-                <li>
-                    <a href="<?php echo $this->url(array('controller' => 'worktime', 'action' =>'index'))?>">Work time</a>
-                </li>
-                <li>
                     <a href="#">Walk the city
                     </a>
                 </li>
@@ -141,6 +125,12 @@
 
                 <li>
                     <a href="#">Contacts</a>
+                </li>
+                <li>
+                    <a href="<?php echo $this->url(array('controller' => 'auth', 'action' =>'login'))?>">Login</a>
+                </li>
+                <li>
+                    <a href="<?php echo $this->url(array('controller' => 'auth', 'action' =>'logout'))?>">Logout</a>
                 </li>
             </ul>
         </div>
