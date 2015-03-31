@@ -6,7 +6,7 @@ class AuthController extends Zend_Controller_Action
     public function init()
     {
         $layout = Zend_Layout::getMvcInstance();
-        $layout->setLayout('layout');
+        $layout->setLayout('admin');
     }
 
     public function indexAction()

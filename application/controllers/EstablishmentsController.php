@@ -154,17 +154,19 @@ class EstablishmentsController extends Zend_Controller_Action
 
     public function establishmentaAction()
     {
-
+        $layout = Zend_Layout::getMvcInstance();
+        $layout->setLayout('layout');
 
         $establishments = new Application_Model_DbTable_Establishments();
-        $listEstablishments = $establishments->getListEstablishments();
-        $this->view->establishments = $listEstablishments;
+        $establishmentsList = $establishments->getEstablishmentsList();
+        $this->view->establishments = $establishmentsList;
 
     }
 
     public function establishmentcAction()
     {
-
+        $layout = Zend_Layout::getMvcInstance();
+        $layout->setLayout('layout');
         $establishments = new Application_Model_DbTable_Establishments();
         $establishmentsList = $establishments->getEstablishmentsList();
         $this->view->establishments = $establishmentsList;
@@ -172,7 +174,8 @@ class EstablishmentsController extends Zend_Controller_Action
     }
     public function establishmentfAction()
     {
-
+        $layout = Zend_Layout::getMvcInstance();
+        $layout->setLayout('layout');
         $establishments = new Application_Model_DbTable_Establishments();
         $establishmentsList = $establishments->getEstablishmentsList();
         $this->view->establishments = $establishmentsList;
@@ -180,7 +183,8 @@ class EstablishmentsController extends Zend_Controller_Action
     }
     public function establishmentnAction()
     {
-
+        $layout = Zend_Layout::getMvcInstance();
+        $layout->setLayout('layout');
         $establishments = new Application_Model_DbTable_Establishments();
         $establishmentsList = $establishments->getEstablishmentsList();
         $this->view->establishments = $establishmentsList;
@@ -188,7 +192,8 @@ class EstablishmentsController extends Zend_Controller_Action
     }
     public function establishmenttAction()
     {
-
+        $layout = Zend_Layout::getMvcInstance();
+        $layout->setLayout('layout');
         $establishments = new Application_Model_DbTable_Establishments();
         $establishmentsList = $establishments->getEstablishmentsList();
         $this->view->establishments = $establishmentsList;

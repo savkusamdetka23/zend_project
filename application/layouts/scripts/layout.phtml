@@ -68,6 +68,12 @@
                         <input type="text"class="btn btn-default btn-sm" class="form-control" placeholder="Search">
                         <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-search"></span></button>
                     </div>
+
+                        <li>Hello, <?php      $role = Zend_Registry::get('role');
+                            echo $role;
+                            ?>! Want some  <a href="<?php echo $this->url(array('controller' => 'auth', 'action' =>'login'))?>">login</a>?)
+                        </li>
+
                 </form>
             </ul>
         </div><!-- /.container-fluid -->
@@ -80,6 +86,7 @@
                 <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentf'))?>">Free time</a></li>
                 <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentn'))?>">Nutrition</a></li>
                 <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentt'))?>">Transport</a></li>
+
             </ul>
 
         </div>
@@ -89,6 +96,7 @@
                 'default',
                 true) ?>" title="back to homepage"></a>
         </div>
+
     </div>
 
 </header>
@@ -127,11 +135,25 @@
                     <a href="#">Contacts</a>
                 </li>
                 <li>
+                    <a href="<?php echo $this->url(array('controller' => 'addresses', 'action' =>'index'))?>">Addresses</a>
+                </li>
+                <li>
+                    <a href="<?php echo $this->url(array('controller' => 'establishmenttype', 'action' =>'index'))?>">Establishment type</a>
+                </li>
+                <li>
+                    <a href="<?php echo $this->url(array('controller' => 'establishments', 'action' =>'index'))?>">Establishments</a>
+                </li>
+                <li>
+                    <a href="<?php echo $this->url(array('controller' => 'worktime', 'action' =>'index'))?>">Work time</a>
+                </li>
+
+                <li>
                     <a href="<?php echo $this->url(array('controller' => 'auth', 'action' =>'login'))?>">Login</a>
                 </li>
                 <li>
                     <a href="<?php echo $this->url(array('controller' => 'auth', 'action' =>'logout'))?>">Logout</a>
                 </li>
+
             </ul>
         </div>
     </div>

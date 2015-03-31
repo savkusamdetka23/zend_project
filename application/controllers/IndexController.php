@@ -5,6 +5,8 @@ class IndexController extends Zend_Controller_Action
 
     public function init()
     {
+        $layout = Zend_Layout::getMvcInstance();
+        $layout->setLayout('layout');
         /* Initialize action controller here */
     }
 
@@ -13,15 +15,7 @@ class IndexController extends Zend_Controller_Action
         // action body
     }
 
-    public function loginauthAction()
-    {
-        // action body
-    }
 
-    public function logoutauthAction()
-    {
-        // action body
-    }
 
 
 }

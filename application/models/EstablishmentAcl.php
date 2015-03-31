@@ -11,43 +11,29 @@ class Application_Model_EstablishmentAcl extends Zend_Acl
 
 
             $this->add(new Zend_Acl_Resource('addresses'));
-
             $this->add(new Zend_Acl_Resource('establishmenttype'));
             $this->add(new Zend_Acl_Resource('establishments'));
           //  $this->add(new Zend_Acl_Resource('establishment'));
             $this->add(new Zend_Acl_Resource('worktime'));
             $this->add(new Zend_Acl_Resource('auth'));
+        //    $this->add(new Zend_Acl_Resource('auth'), 'login');
 
 
-            //$this->add(new Zend_Acl_Resource('index'), 'establishments');
-  /*          $this->add(new Zend_Acl_Resource('edit'), 'establishments');
-            $this->add(new Zend_Acl_Resource('add'), 'establishments');
-            $this->add(new Zend_Acl_Resource('delete'), 'establishments');
-            $this->add(new Zend_Acl_Resource('establishmenta'), 'establishments');
-            $this->add(new Zend_Acl_Resource('establishmentc'), 'establishments');
-            $this->add(new Zend_Acl_Resource('establishmentf'), 'establishments');
-            $this->add(new Zend_Acl_Resource('establishmentn'), 'establishments');
-            $this->add(new Zend_Acl_Resource('establishmentt'), 'establishments');
-*/
-
-
-
-            $this->addRole(new Zend_Acl_Role('user'));
+            $this->addRole(new Zend_Acl_Role('guest'));
+            $this->addRole(new Zend_Acl_Role('user'), 'guest');
             $this->addRole(new Zend_Acl_Role('admin'), 'user');
 
-          //  $this->allow('user', 'establishments', 'index');
-           // $this->allow('user', 'index', 'index');
 
+            $this->allow('guest', 'index');
+            $this->allow('guest', 'auth');
+           // $this->deny(null, 'auth', logout'');
+            $this->allow('guest', 'establishments', 'establishmenta');
+            $this->allow('guest', 'establishments', 'establishmentc');
+            $this->allow('guest', 'establishments', 'establishmentf');
+            $this->allow('guest', 'establishments', 'establishmentn');
+            $this->allow('guest', 'establishments', 'establishmentt');
 
-            $this->allow(null, 'index');
-          //  $this->allow(null, 'establishment');
-           // $this->allow('user', 'index');
-            $this->allow(null, 'auth');
-            $this->allow(null, 'establishments', 'establishmenta');
-            $this->allow(null, 'establishments', 'establishmentc');
-            $this->allow(null, 'establishments', 'establishmentf');
-            $this->allow(null, 'establishments', 'establishmentn');
-            $this->allow(null, 'establishments', 'establishmentt');
+            $this->deny('user', 'auth', 'login');
 
             $this->allow('admin', 'addresses');
 
