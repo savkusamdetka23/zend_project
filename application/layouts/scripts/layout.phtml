@@ -69,9 +69,18 @@
                         <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-search"></span></button>
                     </div>
 
-                        <li>Hello, <?php      $role = Zend_Registry::get('role');
+                        <li>Pss, <?php
+                            $role = Zend_Registry::get('role');
                             echo $role;
-                            ?>! Want some  <a href="<?php echo $this->url(array('controller' => 'auth', 'action' =>'login'))?>">login</a>?)
+
+                            ?>.. Want some  <a href="<?php
+
+                            if(($role = 'user') or ($role = 'admin')){
+                                echo $this->url(array('controller' => 'auth', 'action' =>$action = 'logout'));
+                            }else{
+                                echo $this->url(array('controller' => 'auth', 'action' =>$action = 'login'));
+                            }
+                            ?>"><?php echo $action; ?></a>?
                         </li>
 
                 </form>

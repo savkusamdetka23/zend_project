@@ -22,6 +22,12 @@ class Application_Plugin_AccessCheck extends Zend_Controller_Plugin_Abstract
             $layout = Zend_Layout::getMvcInstance();
             $layout->setLayout('admin');
         }
+
+        $role = Zend_Registry::get('role');
+        if($role = 'admin'){
+            $layout = Zend_Layout::getMvcInstance();
+            $layout->setLayout('admin');
+        }
 */
     }
 

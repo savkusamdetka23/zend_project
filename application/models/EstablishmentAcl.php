@@ -33,7 +33,7 @@ class Application_Model_EstablishmentAcl extends Zend_Acl
             $this->allow('guest', 'establishments', 'establishmentn');
             $this->allow('guest', 'establishments', 'establishmentt');
 
-            $this->deny('user', 'auth', 'login');
+            //  $this->deny('user', 'auth', 'login');
 
             $this->allow('admin', 'addresses');
 
