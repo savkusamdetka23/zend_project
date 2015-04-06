@@ -199,4 +199,44 @@ class EstablishmentsController extends Zend_Controller_Action
         $this->view->establishments = $establishmentsList;
 
     }
+    public function establishmentAction()
+    {
+        $layout = Zend_Layout::getMvcInstance();
+        $layout->setLayout('layout');
+
+        $establishment = new Application_Model_DbTable_Establishments();
+        $establishment = $establishment->getEstablishmentsList();
+        $this->view->establishment = $establishment;
+
+        $id = $this->_getParam('id', 0);
+        if ($id > 0) {
+            // Створюємо об'єкт моделі
+            $establishment = new Application_Model_DbTable_Establishments();
+
+            // Заповнюємо форму за допомогою метода populate
+            $establishment->getEstablishment($id);
+            $this->view->establishment = $establishment;
+        }
+        print_r($establishment);
+        /*
+        $establishments = new Application_Model_DbTable_Establishments();
+        $establishmentsList = $establishments->getEstablishmentsList();
+        $this->view->establishments = $establishmentsList;
+      //  $this->_helper->redirector('establishment');
+            // Отримання id потрібного елемента
+            $id = $this->_getParam('id', 0);
+            if ($id > 0) {
+                // Створюємо об'єкт моделі
+                $establishment = new Application_Model_DbTable_Establishments();
+
+                // Заповнюємо форму за допомогою метода populate
+                $establishment->getEstablishment($id);
+                $this->view->establishment = $establishment;
+            }
+        //print_r($establishment);
+     //   $this->_helper->redirector('establishments', 'establishment');
+
+    */
+    }
+
 }

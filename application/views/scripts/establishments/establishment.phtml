@@ -1,0 +1,33 @@
+<?php
+//  echo $this->headLink()->appendStylesheet('css/bootstrap.min.css');
+//  echo $this->headLink()->appendStylesheet('css/style.css');
+
+$this->headLink()->appendStylesheet($this->baseUrl("css/bootstrap.css"))
+    ->appendStylesheet($this->baseUrl("css/style.css"))
+    ->appendStylesheet($this->baseUrl("css/bootstrap.min.css"));
+echo $this->headLink();
+$this->headScript()->appendFile($this->baseUrl("js/jquery-1.10.2.min.js"))
+    ->appendFile($this->baseUrl("js/bootstrap.min.js"));
+echo $this->headScript();
+?>
+
+<table class="table table-responsive table-hover">
+    <thead>
+    <tr><th></th><th>id</th><th>Title</th><th>Address</th><th>Telephone</th></tr>
+    </thead>
+    <tbody>
+    <?php
+    if (is_array($this->establishment) && count($this->establishment)) :
+        foreach($this->establishment as $establishment) :
+              print_r($establishment);
+            ?>
+
+            <td><?php  echo $this->escape($establishment['id']) ?></td>
+            <td> <?php echo $this->escape($establishment['title']) ?></td>
+            <td> <?php echo $this->escape($establishment['address']) ?> </td>
+            <td> <?php echo $this->escape($establishment['telephone']) ?> </td>
+
+        <?php endforeach; ?>
+    <?php endif; ?>
+    </tbody>
+</table>
