@@ -34,6 +34,7 @@ class EstablishmentsController extends Zend_Controller_Action
             if ($form->isValid($formData)) {
 
                 $title = $form->getValue('title');
+                $image = $form->getValue('image');
                 $build = $form->getValue('build');
                 $address_id = $form->getValue('address_id');
                 $gps = $form->getValue('gps');
@@ -42,7 +43,7 @@ class EstablishmentsController extends Zend_Controller_Action
                 $establishmenttype_id= $form->getValue('establishmenttype_id');
 
                 $establishments = new Application_Model_DbTable_Establishments();
-                $establishments->addEstablishments($title, $build, $address_id, $gps, $telephone, $description, $establishmenttype_id);
+                $establishments->addEstablishments($title, $image, $build, $address_id, $gps, $telephone, $description, $establishmenttype_id);
 
                 $query = $establishments->getAdapter()->select()
                                         ->from('establishments')->where('establishments.telephone = ?', $telephone);
@@ -77,15 +78,37 @@ class EstablishmentsController extends Zend_Controller_Action
             if ($form->isValid($formData)) {
 				$id = $form->getValue('id');
 				$title = $form->getValue('title');
+
+
+                $upload = new Zend_File_Transfer_Adapter_Http();
+                $upload->setDestination("/images/");
+                try {
+                    // upload received file(s)
+                    $upload->receive();
+                } catch (Zend_File_Transfer_Exception $e) {
+                    $e->getMessage();
+                }
+
+                // so, Finally lets See the Data that we received on Form Submit
+                $uploadedData = $form->getValues();
+                Zend_Debug::dump($uploadedData, 'Form Data:');
+
+                // you MUST use following functions for knowing about uploaded file
+                # Returns the file name for 'doc_path' named file element
+                $image = $upload->getFileName('image');
+
+              //  $image = $form->getValue('image');
+
                 $build = $form->getValue('build');
                 $address_id = $form->getValue('address_id');
-				$gps = $form->getValue('gps');
-				$telephone = $form->getValue('telephone');
+                $gps = $form->getValue('gps');
+                $telephone = $form->getValue('telephone');
                 $description = $form->getValue('description');
                 $establishmenttype_id= $form->getValue('establishmenttype_id');
 
                 $establishments = new Application_Model_DbTable_Establishments();
-                $establishments->updateEstablishments($id, $title, $build, $address_id, $gps, $telephone, $description, $establishmenttype_id);
+                $establishments->updateEstablishments($id, $title, $image, $build, $address_id, $gps, $telephone, $description, $establishmenttype_id);
+
 
 
                 $establishment_id = $form->getValue('establishment_id');
@@ -106,6 +129,7 @@ class EstablishmentsController extends Zend_Controller_Action
             }
         }else {
         // Отримання id потрібного елемента
+
         $id = $this->_getParam('id', 0);
         if ($id > 0) {
             // Створюємо об'єкт моделі
@@ -125,7 +149,8 @@ class EstablishmentsController extends Zend_Controller_Action
             }
 
     }
-
+        
+        //die(print_r($upload));
 	}
     public function deleteAction()
     {

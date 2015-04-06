@@ -19,6 +19,20 @@ class Application_Form_Establishments extends Zend_Form
             ->addFilter('StringTrim')
             ->addValidator('NotEmpty');
 
+        $image = new Zend_Form_Element_File('image');
+        $image->setLabel('Image')
+           // ->setDestination(Zend_Registry::get('config')->paths->backend->images->profile)
+// ensure only one file
+       ->addValidator('Count', false, 1)
+// max 2MB
+       ->addValidator('Size', false, 2097152)
+           ->setMaxFileSize(2097152)
+// only JPEG, PNG, or GIF
+       ->addValidator('Extension', false, 'jpg,png,gif')
+       ->setValueDisabled(true);
+
+
+
         $build = new Zend_Form_Element_Text('build');
         $build->setLabel('Building №')
             ->setRequired(true)
@@ -100,7 +114,7 @@ class Application_Form_Establishments extends Zend_Form
 
         $submit = new Zend_Form_Element_Submit('submit');
         $submit->setAttrib('id', 'submitbutton');
-        $this->addElements(array($id, $title, $build, $address_id, $gps, $telephone, $description, $establishmenttype_id, $establishment_id, $opening, $break_from, $break_to, $closing, $weekend, $submit));
+        $this->addElements(array($id, $title, $image, $build, $address_id, $gps, $telephone, $description, $establishmenttype_id, $establishment_id, $opening, $break_from, $break_to, $closing, $weekend, $submit));
     }
 
 }

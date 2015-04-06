@@ -28,7 +28,7 @@ echo $this->headScript();
                         <li>
                             <article>
                                 <div class="media">
-                                    <a class="pull-left"><img src=<?php echo '/images/p2.jpg'; ?> alt="Image" class="media-object"><span class="glyphicon glyphicon-earphone text-muted"></span class="call">+380<?php echo $this->escape($establishments['telephone']) ?></span></span></a>
+                                    <a class="pull-left"><img src="/images/<?php echo $this->escape($establishments['image']) ?>" alt="Image" class="media-object"><span class="glyphicon glyphicon-earphone text-muted"></span class="call">+380<?php echo $this->escape($establishments['telephone']) ?></span></span></a>
 
                                     <div class="media-body">
                                         <h4 class="media-heading"><?php echo $this->escape($establishments['establishment']) ?>: <?php echo $this->escape($establishments['title']) ?></h4>

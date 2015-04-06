@@ -56,6 +56,7 @@ class Application_Model_DbTable_Establishments extends Zend_Db_Table_Abstract
                 array(
                     'establishments.id',
                     'establishments.title',
+                    'establishments.image',
                     'establishments.build',
                     'establishments.address_id',
                     'establishments.gps',
@@ -81,10 +82,11 @@ class Application_Model_DbTable_Establishments extends Zend_Db_Table_Abstract
         }
         return $row->toArray();
     }
-    public function addEstablishments($title, $build, $address_id, $gps, $telephone, $description, $establishmenttype_id)
+    public function addEstablishments($title, $image, $build, $address_id, $gps, $telephone, $description, $establishmenttype_id)
     {
         $data = array(
             'title' => $title,
+            'image' => $image,
             'build' => $build,
             'address_id' => $address_id,
             'gps' => $gps,
@@ -95,11 +97,12 @@ class Application_Model_DbTable_Establishments extends Zend_Db_Table_Abstract
         );
         $this->insert($data);
     }
-	 public function updateEstablishments($id, $title, $build, $address_id, $gps, $telephone,  $description, $establishmenttype_id)
+	 public function updateEstablishments($id, $title, $image, $build, $address_id, $gps, $telephone,  $description, $establishmenttype_id)
     {
         $data = array(
 			'id' => $id,
             'title' => $title,
+            'image' => $image,
             'build' => $build,
             'address_id' => $address_id,
             'gps' => $gps,
