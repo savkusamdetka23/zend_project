@@ -69,6 +69,25 @@
                         <input type="text"class="btn btn-default btn-sm" class="form-control" placeholder="Search">
                         <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-search"></span></button>
                     </div>
+                    <li>Pss, <?php
+                        $role = Zend_Registry::get('role');
+                        echo $role;
+
+
+                        ?>.. Want some  <a href="<?php
+
+                        $role = Zend_Registry::get('role');
+
+
+                        if(($role == 'user') or ($role == 'admin')){
+                            echo $this->url(array('controller' => 'auth', 'action' =>$action = 'logout'));
+                        }else{
+                            echo $this->url(array('controller' => 'auth', 'action' =>$action = 'login'));
+                        }
+
+                        ?>"><?php  echo $action
+                            ?></a>?
+                    </li>
                 </form>
             </ul>
         </div><!-- /.container-fluid -->
@@ -114,9 +133,7 @@
                 <li>
                     <a href="<?php echo $this->url(array('controller' => 'worktime', 'action' =>'index'))?>">Work time</a>
                 </li>
-                <li>
-                    <a href="<?php echo $this->url(array('controller' => 'auth', 'action' =>'logout'))?>">Logout</a>
-                </li>
+              
             </ul>
         </div>
     </div>

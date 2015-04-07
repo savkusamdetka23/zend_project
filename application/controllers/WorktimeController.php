@@ -5,8 +5,14 @@ class WorktimeController extends Zend_Controller_Action
 
     public function init()
     {
-        $layout = Zend_Layout::getMvcInstance();
-        $layout->setLayout('admin');
+        $role = Zend_Registry::get('role');
+        if ($role == 'admin'){
+            $layout = Zend_Layout::getMvcInstance();
+            $layout->setLayout('admin');
+        }else{
+            $layout = Zend_Layout::getMvcInstance();
+            $layout->setLayout('layout');
+        }
     }
 
    function indexAction()
