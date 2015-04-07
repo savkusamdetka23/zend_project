@@ -26,6 +26,7 @@ class Application_Form_Establishments extends Zend_Form
 // ensure only one file
        ->addValidator('Count', false, 1)
 // max 2MB
+            ->addValidator('NotEmpty')
        ->addValidator('Size', false, 2097152)
            ->setMaxFileSize(2097152)
 // only JPEG, PNG, or GIF

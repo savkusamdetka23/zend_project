@@ -84,21 +84,23 @@ class EstablishmentsController extends Zend_Controller_Action
             if ($form->isValid($formData)) {
 				$id = $form->getValue('id');
 				$title = $form->getValue('title');
+				$image = $form->getValue('image');
 
-                $image = $form->getValue('image');
+                // $form->image->receive();
 
-               // $form->image->receive();
+            /*     $upload = new Zend_File_Transfer_Adapter_Http();
+               $upload->setDestination('images/');
+               try {
+                   // upload received file(s)
+                   $upload->receive();
+               } catch (Zend_File_Transfer_Exception $e) {
+                   $e->getMessage();
+               }
 
-            /*    $upload = new Zend_File_Transfer_Adapter_Http();
-                $upload->setDestination('images/');
-                try {
-                    // upload received file(s)
-                    $upload->receive();
-                } catch (Zend_File_Transfer_Exception $e) {
-                    $e->getMessage();
-                }
+                $image = $form->getValues();
+                Zend_Debug::dump($image, 'image');
+                $image = $upload->getFileName('image');
 */
-
 
 /*
                 // so, Finally lets See the Data that we received on Form Submit
