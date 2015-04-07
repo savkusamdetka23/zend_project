@@ -75,20 +75,28 @@ class EstablishmentsController extends Zend_Controller_Action
 		$this->view->form = $form;
         if ($this->getRequest()->isPost()) {
             $formData = $this->getRequest()->getPost();
+
+
             if ($form->isValid($formData)) {
 				$id = $form->getValue('id');
 				$title = $form->getValue('title');
+              
+                $image = $form->getValue('image');
 
+               // $form->image->receive();
 
-                $upload = new Zend_File_Transfer_Adapter_Http();
-                $upload->setDestination("/images/");
+            /*    $upload = new Zend_File_Transfer_Adapter_Http();
+                $upload->setDestination('images/');
                 try {
                     // upload received file(s)
                     $upload->receive();
                 } catch (Zend_File_Transfer_Exception $e) {
                     $e->getMessage();
                 }
+*/
 
+
+/*
                 // so, Finally lets See the Data that we received on Form Submit
                 $uploadedData = $form->getValues();
                 Zend_Debug::dump($uploadedData, 'Form Data:');
@@ -96,7 +104,7 @@ class EstablishmentsController extends Zend_Controller_Action
                 // you MUST use following functions for knowing about uploaded file
                 # Returns the file name for 'doc_path' named file element
                 $image = $upload->getFileName('image');
-
+*/
               //  $image = $form->getValue('image');
 
                 $build = $form->getValue('build');
@@ -149,7 +157,8 @@ class EstablishmentsController extends Zend_Controller_Action
             }
 
     }
-        
+//        print_r($image = $form->file->getFileName('image'));
+
         //die(print_r($upload));
 	}
     public function deleteAction()

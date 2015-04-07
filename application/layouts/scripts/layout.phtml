@@ -73,14 +73,23 @@
                             $role = Zend_Registry::get('role');
                             echo $role;
 
+
                             ?>.. Want some  <a href="<?php
 
-                            if(($role = 'user') or ($role = 'admin')){
-                                echo $this->url(array('controller' => 'auth', 'action' =>$action = 'logout'));
-                            }else{
-                                echo $this->url(array('controller' => 'auth', 'action' =>$action = 'login'));
+                           $role = Zend_Registry::get('role');
+                            if ($role = 'admin'){
+                                $layout = Zend_Layout::getMvcInstance();
+                                $layout->setLayout('admin');
                             }
-                            ?>"><?php echo $action; ?></a>?
+
+ /*
+                            if(($role = 'user') or ($role = 'admin')){
+                                $this->url(array('controller' => 'auth', 'action' =>$action = 'logout'));
+                            }else{
+                                $this->url(array('controller' => 'auth', 'action' =>$action = 'login'));
+                            }
+*/
+                            ?>"><?php  echo $action; ?></a>?
                         </li>
 
                 </form>
@@ -189,8 +198,8 @@
             <li class="media">
                 <a href="" class="pull-left"><img src="/images/8.jpg" alt="Upcoming" class="media-object "></a>
                 <div class="media-body">
-                    <h5 class="media-heading">Університет ім. Ю.Федьковича</h5>
-                    <p class="text-muted"><small>Опубліковано 23.12.2014</small></p>
+                    <h5 class="media-heading">Chernivtsi National University</h5>
+                    <p ><small>This is a mini description..</small></p>
 
 
                 </div>
@@ -198,8 +207,8 @@
             <li class="media">
                 <a href="" class="pull-left"><img src="/images/9.jpg" alt="Upcoming" class="media-object "></a>
                 <div class="media-body">
-                    <h5 class="media-heading">Центральна площа</h5>
-                    <p class="text-muted"><small>Опубліковано 23.12.2014</small></p>
+                    <h5 class="media-heading">Central square</h5>
+                    <p ><small>This is a mini description..</small></p>
 
 
                 </div>
@@ -207,8 +216,8 @@
             <li class="media">
                 <a href="" class="pull-left"><img src="/images/34.jpg" alt="Upcoming" class="media-object "></a>
                 <div class="media-body">
-                    <h5 class="media-heading">Турeцька площа</h5>
-                    <p class="text-muted"><small>Опубліковано 23.12.2014</small></p>
+                    <h5 class="media-heading">Turkish square</h5>
+                    <p ><small>This is a mini description..</small></p>
 
 
                 </div>
@@ -216,8 +225,8 @@
             <li class="media">
                 <a href="" class="pull-left"><img src="/images/34.jpg" alt="Upcoming" class="media-object "></a>
                 <div class="media-body">
-                    <h5 class="media-heading">Турeцька площа</h5>
-                    <p class="text-muted"><small>Опубліковано 23.12.2014</small></p>
+                    <h5 class="media-heading">Turkish square</h5>
+                    <p ><smallThis is a mini description..</small></p>
 
 
                 </div>
@@ -225,8 +234,8 @@
             <li class="media">
                 <a href="" class="pull-left"><img src="/images/9.jpg" alt="Upcoming" class="media-object "></a>
                 <div class="media-body">
-                    <h5 class="media-heading">Центральна площа</h5>
-                    <p class="text-muted"><small>Опубліковано 23.12.2014</small></p>
+                    <h5 class="media-heading">Central square</h5>
+                    <p ><small>This is a mini description..</small></p>
 
 
                 </div>

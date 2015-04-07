@@ -13,12 +13,12 @@ class Application_Plugin_AccessCheck extends Zend_Controller_Plugin_Abstract
         $action = $request->getActionName();
 
 
-    /*    if (!$this->_acl->isAllowed(Zend_Registry::get('role'), $resource, $action)) {
+        if (!$this->_acl->isAllowed(Zend_Registry::get('role'), $resource, $action)) {
             $request->setControllerName('auth')
                     ->setActionName('login');
         }
 
-  */
+
      /*  if ($this->_acl->isAllowed(Zend_Registry::get('role', 'admin'), $resource, $action)) {
 
             $layout = Zend_Layout::getMvcInstance();

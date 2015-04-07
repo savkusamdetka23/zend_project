@@ -7,7 +7,14 @@ class IndexController extends Zend_Controller_Action
     {
         $layout = Zend_Layout::getMvcInstance();
         $layout->setLayout('layout');
-        /* Initialize action controller here */
+
+        /*  $role = Zend_Registry::get('role');
+         if ($role = 'admin'){
+             $layout = Zend_Layout::getMvcInstance();
+             $layout->setLayout('admin');
+         }
+         */
+         //Initialize action controller here
     }
 
     public function indexAction()

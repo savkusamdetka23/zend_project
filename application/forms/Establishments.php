@@ -21,7 +21,8 @@ class Application_Form_Establishments extends Zend_Form
 
         $image = new Zend_Form_Element_File('image');
         $image->setLabel('Image')
-           // ->setDestination(Zend_Registry::get('config')->paths->backend->images->profile)
+             //->setDestination(PUBLIC_PATH"/images")
+             //->setDestination('images/')
 // ensure only one file
        ->addValidator('Count', false, 1)
 // max 2MB
