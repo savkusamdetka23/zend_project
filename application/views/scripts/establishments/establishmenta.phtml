@@ -1,7 +1,4 @@
 <?php
-//  echo $this->headLink()->appendStylesheet('css/bootstrap.min.css');
-//  echo $this->headLink()->appendStylesheet('css/style.css');
-
 $this->headLink()->appendStylesheet($this->baseUrl("css/bootstrap.css"))
     ->appendStylesheet($this->baseUrl("css/style.css"))
     ->appendStylesheet($this->baseUrl("css/bootstrap.min.css"));
@@ -15,180 +12,128 @@ echo $this->headScript();
     <div class="menu1">
         <br id="tab2"/><br id="tab3"/><br id="tab4"/>
         <a href="#tab1">Hotel</a><a href="#tab2">Motel</a><a href="#tab3">Apartment</a><a href="#tab4">Hostel</a>
-        <div>	  <div>
-                <h3 ><span class="glyphicon glyphicon-home text-muted"></span>Hotels</h3>
-                <table class="table table-responsive table-hover">
-
-                    <?php
-                    if (is_array($this->establishments) && count($this->establishments)) :
-                        foreach($this->establishments as $establishments) :
-                            //  print_r($establishments);
-                            ?>
-                    <ul class="list-unstyled">
-                        <li>
-                            <article>
-                                <div class="media">
-                                    <a class="pull-left"><img src="/images/<?php echo $this->escape($establishments['image']) ?>" alt="Image" class="media-object"><span class="glyphicon glyphicon-earphone text-muted"></span class="call">+380<?php echo $this->escape($establishments['telephone']) ?></span></span></a>
-
-                                    <div class="media-body">
-                                        <h4 class="media-heading"><?php echo $this->escape($establishments['establishment']) ?>: <?php echo $this->escape($establishments['title']) ?></h4>
-
+        <div>
+            <h3 ><span class="glyphicon glyphicon-home text-muted"></span>Hotels</h3>
+            <table class="table table-responsive table-hover">
+            <?php if (is_array($this->establishments) && count($this->establishments)) :
+                  foreach($this->establishments as $establishments) :
+            ?>
+            <ul class="list-unstyled">
+                <li>
+                    <article>
+                        <div class="media">
+                            <a class="pull-left"><img src="/images/<?php echo $this->escape($establishments['image']) ?>" alt="Image" class="media-object"><span class="glyphicon glyphicon-earphone text-muted"></span class="call">+380<?php echo $this->escape($establishments['telephone']) ?></span></span></a>
+                                <div class="media-body">
+                                    <h4 class="media-heading"><?php echo $this->escape($establishments['establishment']) ?>: <?php echo $this->escape($establishments['title']) ?></h4>
                                         <ul class="list-inline">
-                                            <li><?php echo $this->escape($establishments['description']) ?> </li>
+                                        <li><?php echo $this->escape($establishments['description']) ?> </li>
                                         </ul>
                                         <ul class="list-inline pull-right">
-
                                             <li>
                                                 <a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishment',  'id' => $this->escape($establishments['id'])))?>" class="btn btn-warning">Details</a>
                                             </li>
                                         </ul>
-                                    </div> <!-- end media-body -->
-                                </div> <!-- end media -->
-                            </article>
+                                </div> <!-- end media-body -->
+                        </div> <!-- end media -->
+                    </article>
+                <hr>
+                </li>
+            <?php endforeach; ?>
+            <?php endif; ?>
+            </table>
 
-                            <hr>
-                        </li>
-
-
-                        <?php endforeach; ?>
+        </div>
+        <div>
+            <h3 ><span class="glyphicon glyphicon-home text-muted"></span>Motels</h3>
+            <table class="table table-responsive table-hover">
+                <?php if (is_array($this->establishments) && count($this->establishments)) :
+                foreach($this->establishments as $establishments) :
+                ?>
+                <ul class="list-unstyled">
+                    <li>
+                        <article>
+                            <div class="media">
+                                <a class="pull-left"><img src="/images/<?php echo $this->escape($establishments['image']) ?>" alt="Image" class="media-object"><span class="glyphicon glyphicon-earphone text-muted"></span class="call">+380<?php echo $this->escape($establishments['telephone']) ?></span></span></a>
+                                <div class="media-body">
+                                    <h4 class="media-heading"><?php echo $this->escape($establishments['establishment']) ?>: <?php echo $this->escape($establishments['title']) ?></h4>
+                                    <ul class="list-inline">
+                                        <li><?php echo $this->escape($establishments['description']) ?> </li>
+                                    </ul>
+                                    <ul class="list-inline pull-right">
+                                        <li>
+                                            <a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishment',  'id' => $this->escape($establishments['id'])))?>" class="btn btn-warning">Details</a>
+                                        </li>
+                                    </ul>
+                                </div> <!-- end media-body -->
+                            </div> <!-- end media -->
+                        </article>
+                        <hr>
+                    </li>
+                    <?php endforeach; ?>
                     <?php endif; ?>
+            </table>
+        </div>
+        <div>
+            <h3 ><span class="glyphicon glyphicon-home text-muted"></span>Apartments</h3>
+            <table class="table table-responsive table-hover">
+                <?php if (is_array($this->establishments) && count($this->establishments)) :
+                foreach($this->establishments as $establishments) :
+                ?>
+                <ul class="list-unstyled">
+                    <li>
+                        <article>
+                            <div class="media">
+                                <a class="pull-left"><img src="/images/<?php echo $this->escape($establishments['image']) ?>" alt="Image" class="media-object"><span class="glyphicon glyphicon-earphone text-muted"></span class="call">+380<?php echo $this->escape($establishments['telephone']) ?></span></span></a>
+                                <div class="media-body">
+                                    <h4 class="media-heading"><?php echo $this->escape($establishments['establishment']) ?>: <?php echo $this->escape($establishments['title']) ?></h4>
+                                    <ul class="list-inline">
+                                        <li><?php echo $this->escape($establishments['description']) ?> </li>
+                                    </ul>
+                                    <ul class="list-inline pull-right">
+                                        <li>
+                                            <a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishment',  'id' => $this->escape($establishments['id'])))?>" class="btn btn-warning">Details</a>
+                                        </li>
+                                    </ul>
+                                </div> <!-- end media-body -->
+                            </div> <!-- end media -->
+                        </article>
+                        <hr>
+                    </li>
+                    <?php endforeach; ?>
+                    <?php endif; ?>
+            </table>
 
-                </table>
-
-            </div></div>
-        <div> <div>	  <div>
-                    <h3 ><span class="glyphicon glyphicon-home text-muted"></span>Motels</h3>
-                    <table class="table table-responsive table-hover">
-                        <thead>
-                        <tr><th></th><th>Title</th><th>Address</th><th>Telephone</th></tr>
-                        </thead>
-                        <tbody>
-                        <?php
-                        if (is_array($this->establishments) && count($this->establishments)) :
-                            foreach($this->establishments as $establishments) :
-                                //  print_r($establishments);
-                                ?>
-                                <tr class="clickable success" data-toggle="collapse" id="row<?php  echo $this->escape($establishments['id']) ?>" data-target=".row<?php echo $this->escape($establishments['id'])?>">
-                                    <td><i class="glyphicon glyphicon-plus"></i></td>
-
-                                    <td><?php echo $this->escape($establishments['establishment']) ?>: <?php echo $this->escape($establishments['title']) ?></td>
-                                    <td>c. <?php echo $this->escape($establishments['town']) ?>, <?php echo $this->escape($establishments['address']) ?> st., <?php echo $this->escape($establishments['build']) ?></td>
-
-                                    <td><span class="glyphicon glyphicon-earphone text-muted"></span >+380<?php echo $this->escape($establishments['telephone']) ?></td>
-                                </tr>
-
-
-                                <tr class="collapse row<?php echo $this->escape($establishments['id']) ?>">
-                                    <td colspan="4"><b>Description:</b><?php echo $this->escape($establishments['description']) ?></td>
-                                </tr>
-                                <tr class="collapse row<?php echo $this->escape($establishments['id']) ?>">
-                                    <td class="suc"><b>GPS:</td>
-                                    <td><?php echo $this->escape($establishments['gps']) ?></td>
-
-
-
-                                </tr>
-                                <tr class="collapse row<?php echo $this->escape($establishments['id']) ?>">
-                                    <td class="suc"><b>Work time:</td>
-                                    <td><?php echo $this->escape($establishments['opening']) ?> - <?php echo $this->escape($establishments['closing']) ?></td>
-
-                                </tr>
-                                <tr class="collapse row<?php echo $this->escape($establishments['id']) ?>">
-                                    <td class="suc"><b>Break:</td>
-                                    <td><?php echo $this->escape($establishments['break_from']) ?> - <?php echo $this->escape($establishments['break_to']) ?></td>
-
-
-                                </tr>
-                                <tr class="collapse row<?php echo $this->escape($establishments['id']) ?>">
-                                    <td class="suc"><b>Weekend:</td>
-                                    <td><?php echo $this->escape($establishments['weekend']) ?></td>
-
-                                </tr>
-
-
-                            <?php endforeach; ?>
-                        <?php endif; ?>
-                        </tbody>
-                    </table>
-
-                </div></div></div>
-        <div> <div>	  <div>
-                    <h3 ><span class="glyphicon glyphicon-home text-muted"></span>Apartments</h3>
-                    <table class="table table-responsive table-hover">
-                        <thead>
-                        <tr><th></th><th>Title</th><th>Address</th><th>Telephone</th></tr>
-                        </thead>
-                        <tbody>
-                        <?php
-                        if (is_array($this->establishments) && count($this->establishments)) :
-                            foreach($this->establishments as $establishments) :
-                                //  print_r($establishments);
-                                ?>
-                                <tr class="clickable success" data-toggle="collapse" id="row<?php  echo $this->escape($establishments['id']) ?>" data-target=".row<?php echo $this->escape($establishments['id'])?>">
-                                    <td><i class="glyphicon glyphicon-plus"></i></td>
-
-                                    <td><?php echo $this->escape($establishments['establishment']) ?>: <?php echo $this->escape($establishments['title']) ?></td>
-                                    <td>c. <?php echo $this->escape($establishments['town']) ?>, <?php echo $this->escape($establishments['address']) ?> st., <?php echo $this->escape($establishments['build']) ?></td>
-
-                                    <td><span class="glyphicon glyphicon-earphone text-muted"></span >+380<?php echo $this->escape($establishments['telephone']) ?></td>
-                                </tr>
-
-
-                                <tr class="collapse row<?php echo $this->escape($establishments['id']) ?>">
-                                    <td colspan="4"><b>Description:</b><?php echo $this->escape($establishments['description']) ?></td>
-                                </tr>
-                                <tr class="collapse row<?php echo $this->escape($establishments['id']) ?>">
-                                    <td class="suc"><b>GPS:</td>
-                                    <td><?php echo $this->escape($establishments['gps']) ?></td>
-
-
-
-                                </tr>
-                                <tr class="collapse row<?php echo $this->escape($establishments['id']) ?>">
-                                    <td class="suc"><b>Work time:</td>
-                                    <td><?php echo $this->escape($establishments['opening']) ?> - <?php echo $this->escape($establishments['closing']) ?></td>
-
-                                </tr>
-                                <tr class="collapse row<?php echo $this->escape($establishments['id']) ?>">
-                                    <td class="suc"><b>Break:</td>
-                                    <td><?php echo $this->escape($establishments['break_from']) ?> - <?php echo $this->escape($establishments['break_to']) ?></td>
-
-
-                                </tr>
-                                <tr class="collapse row<?php echo $this->escape($establishments['id']) ?>">
-                                    <td class="suc"><b>Weekend:</td>
-                                    <td><?php echo $this->escape($establishments['weekend']) ?></td>
-
-                                </tr>
-
-
-                            <?php endforeach; ?>
-                        <?php endif; ?>
-                        </tbody>
-                    </table>
-
-                </div></div></div>
-        <div> <div>	  <div>
-                    <h3 ><span class="glyphicon glyphicon-home text-muted"></span>Hostels</h3>
-                    <table class="table table-responsive table-hover">
-                        <thead>
-                        <tr><th></th><th>Title</th><th>Address</th><th>Telephone</th></tr>
-                        </thead>
-                        <tbody>
-                        <?php
-                        if (is_array($this->establishments) && count($this->establishments)) :
-                            foreach($this->establishments as $establishments) :
-                                //  print_r($establishments);
-                                ?>
-
-
-
-                            <?php endforeach; ?>
-                        <?php endif; ?>
-                        </tbody>
-                    </table>
-
-                </div></div></div>
+        </div>
+        <div>
+            <h3 ><span class="glyphicon glyphicon-home text-muted"></span>Hostels</h3>
+            <table class="table table-responsive table-hover">
+                <?php if (is_array($this->establishments) && count($this->establishments)) :
+                foreach($this->establishments as $establishments) :
+                ?>
+                <ul class="list-unstyled">
+                    <li>
+                        <article>
+                            <div class="media">
+                                <a class="pull-left"><img src="/images/<?php echo $this->escape($establishments['image']) ?>" alt="Image" class="media-object"><span class="glyphicon glyphicon-earphone text-muted"></span class="call">+380<?php echo $this->escape($establishments['telephone']) ?></span></span></a>
+                                <div class="media-body">
+                                    <h4 class="media-heading"><?php echo $this->escape($establishments['establishment']) ?>: <?php echo $this->escape($establishments['title']) ?></h4>
+                                    <ul class="list-inline">
+                                        <li><?php echo $this->escape($establishments['description']) ?> </li>
+                                    </ul>
+                                    <ul class="list-inline pull-right">
+                                        <li>
+                                            <a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishment',  'id' => $this->escape($establishments['id'])))?>" class="btn btn-warning">Details</a>
+                                        </li>
+                                    </ul>
+                                </div> <!-- end media-body -->
+                            </div> <!-- end media -->
+                        </article>
+                        <hr>
+                    </li>
+                    <?php endforeach; ?>
+                    <?php endif; ?>
+            </table>
+        </div>
     </div>
 </div>
 

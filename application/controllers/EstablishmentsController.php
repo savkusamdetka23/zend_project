@@ -236,12 +236,11 @@ class EstablishmentsController extends Zend_Controller_Action
     public function establishmentAction()
     {
 
+        $establishments = new Application_Model_DbTable_Establishments();
+        $establishmentsList = $establishments->getEstablishmentsList();
+        $this->view->establishments = $establishmentsList;
 
-        $establishment = new Application_Model_DbTable_Establishments();
-        $establishment = $establishment->getEstablishmentsList();
-        $this->view->establishment = $establishment;
-
-        $id = $this->_getParam('id', 0);
+    /*    $id = $this->_getParam('id', 0);
         if ($id > 0) {
             // Створюємо об'єкт моделі
             $establishment = new Application_Model_DbTable_Establishments();
@@ -249,8 +248,8 @@ class EstablishmentsController extends Zend_Controller_Action
             // Заповнюємо форму за допомогою метода populate
             $establishment->getEstablishment($id);
             $this->view->establishment = $establishment;
-        }
-        print_r($establishment);
+        }*/
+       // print_r($establishment);
         /*
         $establishments = new Application_Model_DbTable_Establishments();
         $establishmentsList = $establishments->getEstablishmentsList();
@@ -270,6 +269,9 @@ class EstablishmentsController extends Zend_Controller_Action
      //   $this->_helper->redirector('establishments', 'establishment');
 
     */
+
+
+
     }
 
 }

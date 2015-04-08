@@ -13,19 +13,19 @@ echo $this->headScript();
 
 <table class="table table-responsive table-hover">
     <thead>
-    <tr><th></th><th>id</th><th>Title</th><th>Address</th><th>Telephone</th></tr>
+    <tr><th>id</th><th>Title</th><th>Address</th><th>Telephone</th></tr>
     </thead>
     <tbody>
     <?php
-    if (is_array($this->establishment) && count($this->establishment)) :
-        foreach($this->establishment as $establishment) :
-              print_r($establishment);
+    if (is_array($this->establishments) && count($this->establishments)) :
+        foreach($this->establishments as $establishments) :
+             // print_r($establishment);
             ?>
 
-            <td><?php  echo $this->escape($establishment['id']) ?></td>
-            <td> <?php echo $this->escape($establishment['title']) ?></td>
-            <td> <?php echo $this->escape($establishment['address']) ?> </td>
-            <td> <?php echo $this->escape($establishment['telephone']) ?> </td>
+            <td><?php  echo $this->escape($establishments['id']) ?></td>
+            <td> <?php echo $this->escape($establishments['title']) ?></td>
+            <td> <?php echo $this->escape($establishments['address']) ?> </td>
+            <td> <?php echo $this->escape($establishments['telephone']) ?> </td>
 
         <?php endforeach; ?>
     <?php endif; ?>
