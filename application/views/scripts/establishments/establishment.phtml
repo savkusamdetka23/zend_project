@@ -1,7 +1,4 @@
 <?php
-//  echo $this->headLink()->appendStylesheet('css/bootstrap.min.css');
-//  echo $this->headLink()->appendStylesheet('css/style.css');
-
 $this->headLink()->appendStylesheet($this->baseUrl("css/bootstrap.css"))
     ->appendStylesheet($this->baseUrl("css/style.css"))
     ->appendStylesheet($this->baseUrl("css/bootstrap.min.css"));
@@ -11,23 +8,36 @@ $this->headScript()->appendFile($this->baseUrl("js/jquery-1.10.2.min.js"))
 echo $this->headScript();
 ?>
 
-<table class="table table-responsive table-hover">
-    <thead>
-    <tr><th>id</th><th>Title</th><th>Address</th><th>Telephone</th></tr>
-    </thead>
-    <tbody>
-    <?php
-    if (is_array($this->establishments) && count($this->establishments)) :
-        foreach($this->establishments as $establishments) :
-             // print_r($establishment);
-            ?>
+<div class="row" >
+    <div class="menu1">
 
-            <td><?php  echo $this->escape($establishments['id']) ?></td>
-            <td> <?php echo $this->escape($establishments['title']) ?></td>
-            <td> <?php echo $this->escape($establishments['address']) ?> </td>
-            <td> <?php echo $this->escape($establishments['telephone']) ?> </td>
+        <div>
 
-        <?php endforeach; ?>
-    <?php endif; ?>
-    </tbody>
-</table>
+            <table class="table table-responsive table-hover">
+                <?php if (is_array($this->establishments) && count($this->establishments)) :
+                //foreach($this->establishments as $establishments) :
+                ?>
+                <ul class="list-unstyled">
+                    <li>
+                        <article>
+                            <div class="media">
+                                <a class="pull-left"><img src="/images/<?php echo $this->escape($establishments['image']) ?>" alt="Image" class="media-object"><span class="glyphicon glyphicon-earphone text-muted"></span class="call">+380<?php echo $this->escape($establishments['telephone']) ?></span></span></a>
+                                <div class="media-body">
+                                    <h4 class="media-heading"><?php echo $this->escape($establishments['establishment']) ?>: <?php echo $this->escape($establishments['title']) ?></h4>
+                                    <ul class="list-inline">
+                                        <li><?php echo $this->escape($establishments['description']) ?> </li>
+                                    </ul>
+
+                                </div> <!-- end media-body -->
+                            </div> <!-- end media -->
+                        </article>
+                        <hr>
+                    </li>
+                    <?php //endforeach; ?>
+                    <?php endif;
+                    ?>
+            </table>
+
+        </div>
+        </div>
+    </div>

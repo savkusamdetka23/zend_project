@@ -61,6 +61,7 @@ INSERT INTO `addresses` (`id`, `city`, `street`) VALUES
 CREATE TABLE IF NOT EXISTS `establishments` (
   `id` int(3) NOT NULL AUTO_INCREMENT,
   `title` varchar(50) NOT NULL,
+  `image` varchar(255) NOT NULL,
   `build` text,
   `address_id` int(3) NOT NULL,
   `gps` varchar(30) NOT NULL,
