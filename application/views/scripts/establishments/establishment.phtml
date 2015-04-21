@@ -4,7 +4,8 @@ $this->headLink()->appendStylesheet($this->baseUrl("css/bootstrap.css"))
     ->appendStylesheet($this->baseUrl("css/bootstrap.min.css"));
 echo $this->headLink();
 $this->headScript()->appendFile($this->baseUrl("js/jquery-1.10.2.min.js"))
-    ->appendFile($this->baseUrl("js/bootstrap.min.js"));
+   ->appendFile($this->baseUrl("js/googlemaps/googlemaps.js"))
+   ->appendFile($this->baseUrl("js/bootstrap.min.js"));
 echo $this->headScript();
 ?>
 
@@ -12,21 +13,21 @@ echo $this->headScript();
     <div class="menu1">
 
         <div>
-
             <table class="table table-responsive table-hover">
                 <?php if (is_array($this->establishments) && count($this->establishments)) :
                 //foreach($this->establishments as $establishments) :
                 ?>
-                <ul class="list-unstyled">
+                <ul class="list-unstyled detail" data-gps="<?php echo $this->escape($this->establishments['gps']) ?>" data-address="<?php echo $this->escape($this->establishments['town']), " ", $this->escape($this->establishments['address'])," ", $this->escape($this->establishments['build']); ?>">
                     <li>
                         <article>
                             <div class="media">
-                                <a class="pull-left"><img src="/images/<?php echo $this->escape($establishments['image']) ?>" alt="Image" class="media-object"><span class="glyphicon glyphicon-earphone text-muted"></span class="call">+380<?php echo $this->escape($establishments['telephone']) ?></span></span></a>
+                                <a class="pull-left"><img src="/images/<?php echo $this->escape($this->establishments['image']) ?>" alt="Image" class="media-object"><span class="glyphicon glyphicon-earphone text-muted"></span class="call">+380<?php echo $this->escape($this->establishments['telephone']) ?></span></span></a>
                                 <div class="media-body">
-                                    <h4 class="media-heading"><?php echo $this->escape($establishments['establishment']) ?>: <?php echo $this->escape($establishments['title']) ?></h4>
+                                    <h4 class="media-heading"><?php echo $this->escape($this->establishments['establishment']) ?>: <?php echo $this->escape($this->establishments['title']) ?></h4>
                                     <ul class="list-inline">
-                                        <li><?php echo $this->escape($establishments['description']) ?> </li>
+                                        <li><?php echo $this->escape($establishments['address_id']);print_r($this->establishments['address']); ?> </li>
                                     </ul>
+                                    <div id="map-canvas" style="width:600px; height:400px"></div>
 
                                 </div> <!-- end media-body -->
                             </div> <!-- end media -->

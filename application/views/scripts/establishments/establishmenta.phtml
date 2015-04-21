@@ -17,6 +17,8 @@ echo $this->headScript();
             <table class="table table-responsive table-hover">
             <?php if (is_array($this->establishments) && count($this->establishments)) :
                   foreach($this->establishments as $establishments) :
+            if($this->escape($establishments['establishment']) == 'Hotel') :
+
             ?>
             <ul class="list-unstyled">
                 <li>
@@ -39,6 +41,7 @@ echo $this->headScript();
                     </article>
                 <hr>
                 </li>
+                <?php endif; ?>
             <?php endforeach; ?>
             <?php endif; ?>
             </table>

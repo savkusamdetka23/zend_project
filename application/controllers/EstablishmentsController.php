@@ -84,8 +84,7 @@ class EstablishmentsController extends Zend_Controller_Action
             if ($form->isValid($formData)) {
 				$id = $form->getValue('id');
 				$title = $form->getValue('title');
-				//$image = $form->getValue('image');
-
+				$image = $form->getValue('image');
                 // $form->image->receive();
 
             /*     $upload = new Zend_File_Transfer_Adapter_Http();
@@ -121,7 +120,7 @@ class EstablishmentsController extends Zend_Controller_Action
                 $establishmenttype_id= $form->getValue('establishmenttype_id');
 
                 $establishments = new Application_Model_DbTable_Establishments();
-                $establishments->updateEstablishments($id, $title,  $build, $address_id, $gps, $telephone, $description, $establishmenttype_id);
+                $establishments->updateEstablishments($id, $title, $image, $build, $address_id, $gps, $telephone, $description, $establishmenttype_id);
 
 
 
@@ -163,6 +162,8 @@ class EstablishmentsController extends Zend_Controller_Action
             }
 
     }
+
+
 //        print_r($image = $form->file->getFileName('image'));
 
         //die(print_r($upload));
@@ -236,12 +237,6 @@ class EstablishmentsController extends Zend_Controller_Action
     public function establishmentAction()
     {
 
-
-
-
-        $establishments = new Application_Model_DbTable_Establishments();
-        $establishmentsList = $establishments->getEstablishmentRow();
-        $this->view->establishments = $establishmentsList;
         $id = $this->_getParam('id', 0);
         if ($id > 0) {
             // Створюємо об'єкт моделі
@@ -251,9 +246,16 @@ class EstablishmentsController extends Zend_Controller_Action
             $establishment->getEstablishment($id);
             $this->view->establishment = $establishment;
         }
+
         print_r($id);
+
+        $establishments = new Application_Model_DbTable_Establishments();
+        $establishmentsList = $establishments->getEstablishmentRow($id);
+        $this->view->establishments = $establishmentsList;
+
+        //  print_r($establishments['id']);
         print_r($establishmentsList);
-       // print_r($establishment);
+        // print_r($establishment);
         /*
         $establishments = new Application_Model_DbTable_Establishments();
         $establishmentsList = $establishments->getEstablishmentsList();

@@ -18,20 +18,21 @@ class Application_Model_DbTable_Establishments extends Zend_Db_Table_Abstract
     }
 
 
-    public function getEstablishmentRow(){
+    public function getEstablishmentRow($id){
 
         $select = $this->_db->select()
             ->from('establishments',
                 array(
                     'establishments.id',
                     'establishments.title',
+                    'establishments.image',
                     'establishments.build',
                     'establishments.address_id',
                     'establishments.gps',
                     'establishments.telephone',
                     'establishments.description',
                     'establishments.establishmenttype_id'
-                ))
+                ))->where('establishments.id = ?', $id)
             ->joinLeft(array('addresses'), 'addresses.id=establishments.address_id', array('address' => 'street', 'town' => 'city'))
             ->joinLeft(array('worktime'), 'worktime.establishment_id=establishments.id', array('opening' =>'opening', 'break_from' =>'break_from', 'break_to' =>'break_to', 'closing' =>'closing', 'weekend' =>'weekend'))
             ->joinLeft(array('establishmenttype'), 'establishmenttype.id=establishments.establishmenttype_id', array('establishment' => 'establishment'));
@@ -109,12 +110,12 @@ class Application_Model_DbTable_Establishments extends Zend_Db_Table_Abstract
         );
         $this->insert($data);
     }
-	 public function updateEstablishments($id, $title,  $build, $address_id, $gps, $telephone,  $description, $establishmenttype_id)
+	 public function updateEstablishments($id, $title, $image, $build, $address_id, $gps, $telephone,  $description, $establishmenttype_id)
     {
         $data = array(
 			'id' => $id,
             'title' => $title,
-            //'image' => $image,
+            'image' => $image,
             'build' => $build,
             'address_id' => $address_id,
             'gps' => $gps,

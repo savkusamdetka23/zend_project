@@ -33,8 +33,6 @@ class Application_Form_Establishments extends Zend_Form
        ->addValidator('Extension', false, 'jpg,png,gif')
        ->setValueDisabled(true);
 
-
-
         $build = new Zend_Form_Element_Text('build');
         $build->setLabel('Building №')
             ->setRequired(true)
@@ -52,12 +50,16 @@ class Application_Form_Establishments extends Zend_Form
 
 			$gps = new Zend_Form_Element_Text('gps');
 			$gps->setLabel('GPS')
-            ->setRequired(true)
+            ->setAttrib('readonly', 'readonly')
             ->addFilter('StripTags')
             ->addFilter('StringTrim')
             ->addValidator('NotEmpty');
 
-				$telephone = new Zend_Form_Element_Text('telephone');
+			$googlemap = new Zend_Form_Element_Text('googleMap');
+            $googlemap->setValue(" <input id='pac-input' class='controls' type='text' placeholder='Search Box'><div id='map-canvas-add' style='width:600px; height:400px'></div>")
+                ->helper = 'formNote';
+
+            $telephone = new Zend_Form_Element_Text('telephone');
 			$telephone->setLabel('Telephone')
             ->setRequired(true)
             ->addFilter('StripTags')
@@ -116,7 +118,7 @@ class Application_Form_Establishments extends Zend_Form
 
         $submit = new Zend_Form_Element_Submit('submit');
         $submit->setAttrib('id', 'submitbutton');
-        $this->addElements(array($id, $title, $image, $build, $address_id, $gps, $telephone, $description, $establishmenttype_id, $establishment_id, $opening, $break_from, $break_to, $closing, $weekend, $submit));
+        $this->addElements(array($id, $title, $image, $build, $address_id, $gps, $googlemap,  $telephone, $description, $establishmenttype_id, $establishment_id, $opening, $break_from, $break_to, $closing, $weekend, $submit));
     }
 
 }

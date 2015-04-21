@@ -3,8 +3,12 @@
     $this->title = "Edit address";
    $this->headTitle($this->title);
 
+   echo $this->headScript()->appendFile($this->baseUrl("js/jquery-1.10.2.min.js"));
+   echo $this->headScript()->appendFile($this->baseUrl("js/googlemaps/googlemaps.js"));
+
  // Выводим форму, полученную из контроллера
 
     echo $this->form ;
+
 
 ?>
