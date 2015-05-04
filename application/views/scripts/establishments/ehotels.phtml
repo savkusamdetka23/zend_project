@@ -1,0 +1,42 @@
+<?php if (!is_array($this->establishments) || !count($this->establishments)) :else :
+?>
+<div>
+    <?php if ($this->offset == '0') : ?>
+    <h3 ><span class="glyphicon glyphicon-home text-muted"></span>Hotels</h3>
+    <?php endif; ?>
+    <table class="table table-responsive table-hover">
+    <?php if (is_array($this->establishments) && count($this->establishments)) :
+          foreach($this->establishments as $establishments) :
+    if($this->escape($establishments['establishment']) == 'Hotel') :
+
+    ?>
+    <ul class="list-unstyled">
+        <li>
+            <article>
+                <div class="media">
+                    <a class="pull-left"><img src="/images/<?php echo $this->escape($establishments['image']) ?>" alt="Image" class="media-object"><span class="glyphicon glyphicon-earphone text-muted"></span class="call">+380<?php echo $this->escape($establishments['telephone']) ?></span></span></a>
+                        <div class="media-body">
+                            <h4 class="media-heading"><?php echo $this->escape($establishments['establishment']) ?>: <?php echo $this->escape($establishments['title']) ?></h4>
+                                <ul class="list-inline">
+                                <li><?php echo $this->escape($establishments['description']) ?> </li>
+                                </ul>
+                                <ul class="list-inline pull-right">
+                                    <li>
+                                        <a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishment',  'id' => $this->escape($establishments['id'])))?>" class="btn btn-warning">Details</a>
+                                    </li>
+                                </ul>
+
+                        </div> <!-- end media-body -->
+                </div> <!-- end media -->
+            </article>
+        <hr>
+        </li>
+        <?php endif; ?>
+    <?php endforeach; ?>
+    <?php endif; ?>
+    </table>
+
+</div>
+
+
+<?php endif; ?>

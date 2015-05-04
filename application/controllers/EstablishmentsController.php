@@ -202,6 +202,75 @@ class EstablishmentsController extends Zend_Controller_Action
 
     }
 
+    public function ehotelsAction()
+    {
+
+        $offset = $this->_getParam('offset', 0);
+        $establishments = new Application_Model_DbTable_Establishments();
+        if ($offset) {
+            $establishmentsList = $establishments->getEstablishmentsList('1', $offset);
+        } else {
+            $establishmentsList = $establishments->getEstablishmentsList('1');
+        }
+        $this->_helper->layout()->disableLayout();
+        $this->view->offset = $offset;
+        $this->view->establishments = $establishmentsList;
+
+    }
+
+    public function ehostelsAction()
+    {
+
+
+        $offset = $this->_getParam('offset', 0);
+        $establishments = new Application_Model_DbTable_Establishments();
+        if ($offset) {
+            $establishmentsList = $establishments->getEstablishmentsList('4', $offset);
+        } else {
+            $establishmentsList = $establishments->getEstablishmentsList('4');
+        }
+        $this->_helper->layout()->disableLayout();
+        $this->view->offset = $offset;
+        $this->view->establishments = $establishmentsList;
+
+
+    }
+
+    public function eapartmentsAction()
+    {
+
+
+        $offset = $this->_getParam('offset', 0);
+        $establishments = new Application_Model_DbTable_Establishments();
+        if ($offset) {
+            $establishmentsList = $establishments->getEstablishmentsList('3', $offset);
+        } else {
+            $establishmentsList = $establishments->getEstablishmentsList('3');
+        }
+        $this->_helper->layout()->disableLayout();
+        $this->view->offset = $offset;
+        $this->view->establishments = $establishmentsList;
+
+
+    }
+
+    public function emotelsAction()
+    {
+
+        $offset = $this->_getParam('offset', 0);
+        $establishments = new Application_Model_DbTable_Establishments();
+        if ($offset) {
+            $establishmentsList = $establishments->getEstablishmentsList('2', $offset);
+        } else {
+            $establishmentsList = $establishments->getEstablishmentsList('2');
+        }
+        $this->_helper->layout()->disableLayout();
+        $this->view->offset = $offset;
+        $this->view->establishments = $establishmentsList;
+
+
+    }
+
     public function establishmentcAction()
     {
 

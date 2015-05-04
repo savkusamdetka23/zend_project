@@ -4,141 +4,23 @@ $this->headLink()->appendStylesheet($this->baseUrl("css/bootstrap.css"))
     ->appendStylesheet($this->baseUrl("css/bootstrap.min.css"));
 echo $this->headLink();
 $this->headScript()->appendFile($this->baseUrl("js/jquery-1.10.2.min.js"))
+    ->appendFile($this->baseUrl("js/infinitescroll.js"))
     ->appendFile($this->baseUrl("js/bootstrap.min.js"));
 echo $this->headScript();
 ?>
 
 <div class="row" >
-    <div class="menu1">
+    <div class="menu1 establishmentloading">
         <br id="tab2"/><br id="tab3"/><br id="tab4"/>
-        <a href="#tab1">Hotel</a><a href="#tab2">Motel</a><a href="#tab3">Apartment</a><a href="#tab4">Hostel</a>
-        <div>
-            <h3 ><span class="glyphicon glyphicon-home text-muted"></span>Hotels</h3>
-            <table class="table table-responsive table-hover">
-            <?php if (is_array($this->establishments) && count($this->establishments)) :
-                  foreach($this->establishments as $establishments) :
-            if($this->escape($establishments['establishment']) == 'Hotel') :
-
-            ?>
-            <ul class="list-unstyled">
-                <li>
-                    <article>
-                        <div class="media">
-                            <a class="pull-left"><img src="/images/<?php echo $this->escape($establishments['image']) ?>" alt="Image" class="media-object"><span class="glyphicon glyphicon-earphone text-muted"></span class="call">+380<?php echo $this->escape($establishments['telephone']) ?></span></span></a>
-                                <div class="media-body">
-                                    <h4 class="media-heading"><?php echo $this->escape($establishments['establishment']) ?>: <?php echo $this->escape($establishments['title']) ?></h4>
-                                        <ul class="list-inline">
-                                        <li><?php echo $this->escape($establishments['description']) ?> </li>
-                                        </ul>
-                                        <ul class="list-inline pull-right">
-                                            <li>
-                                                <a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishment',  'id' => $this->escape($establishments['id'])))?>" class="btn btn-warning">Details</a>
-                                            </li>
-                                        </ul>
-
-                                </div> <!-- end media-body -->
-                        </div> <!-- end media -->
-                    </article>
-                <hr>
-                </li>
-                <?php endif; ?>
-            <?php endforeach; ?>
-            <?php endif; ?>
-            </table>
-
-        </div>
-        <div>
-            <h3 ><span class="glyphicon glyphicon-home text-muted"></span>Motels</h3>
-            <table class="table table-responsive table-hover">
-                <?php if (is_array($this->establishments) && count($this->establishments)) :
-                foreach($this->establishments as $establishments) :
-                ?>
-                <ul class="list-unstyled">
-                    <li>
-                        <article>
-                            <div class="media">
-                                <a class="pull-left"><img src="/images/<?php echo $this->escape($establishments['image']) ?>" alt="Image" class="media-object"><span class="glyphicon glyphicon-earphone text-muted"></span class="call">+380<?php echo $this->escape($establishments['telephone']) ?></span></span></a>
-                                <div class="media-body">
-                                    <h4 class="media-heading"><?php echo $this->escape($establishments['establishment']) ?>: <?php echo $this->escape($establishments['title']) ?></h4>
-                                    <ul class="list-inline">
-                                        <li><?php echo $this->escape($establishments['description']) ?> </li>
-                                    </ul>
-                                    <ul class="list-inline pull-right">
-                                        <li>
-                                            <a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishment',  'id' => $this->escape($establishments['id'])))?>" class="btn btn-warning">Details</a>
-                                        </li>
-                                    </ul>
-                                </div> <!-- end media-body -->
-                            </div> <!-- end media -->
-                        </article>
-                        <hr>
-                    </li>
-                    <?php endforeach; ?>
-                    <?php endif; ?>
-            </table>
-        </div>
-        <div>
-            <h3 ><span class="glyphicon glyphicon-home text-muted"></span>Apartments</h3>
-            <table class="table table-responsive table-hover">
-                <?php if (is_array($this->establishments) && count($this->establishments)) :
-                foreach($this->establishments as $establishments) :
-                ?>
-                <ul class="list-unstyled">
-                    <li>
-                        <article>
-                            <div class="media">
-                                <a class="pull-left"><img src="/images/<?php echo $this->escape($establishments['image']) ?>" alt="Image" class="media-object"><span class="glyphicon glyphicon-earphone text-muted"></span class="call">+380<?php echo $this->escape($establishments['telephone']) ?></span></span></a>
-                                <div class="media-body">
-                                    <h4 class="media-heading"><?php echo $this->escape($establishments['establishment']) ?>: <?php echo $this->escape($establishments['title']) ?></h4>
-                                    <ul class="list-inline">
-                                        <li><?php echo $this->escape($establishments['description']) ?> </li>
-                                    </ul>
-                                    <ul class="list-inline pull-right">
-                                        <li>
-                                            <a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishment',  'id' => $this->escape($establishments['id'])))?>" class="btn btn-warning">Details</a>
-                                        </li>
-                                    </ul>
-                                </div> <!-- end media-body -->
-                            </div> <!-- end media -->
-                        </article>
-                        <hr>
-                    </li>
-                    <?php endforeach; ?>
-                    <?php endif; ?>
-            </table>
-
-        </div>
-        <div>
-            <h3 ><span class="glyphicon glyphicon-home text-muted"></span>Hostels</h3>
-            <table class="table table-responsive table-hover">
-                <?php if (is_array($this->establishments) && count($this->establishments)) :
-                foreach($this->establishments as $establishments) :
-                ?>
-                <ul class="list-unstyled">
-                    <li>
-                        <article>
-                            <div class="media">
-                                <a class="pull-left"><img src="/images/<?php echo $this->escape($establishments['image']) ?>" alt="Image" class="media-object"><span class="glyphicon glyphicon-earphone text-muted"></span class="call">+380<?php echo $this->escape($establishments['telephone']) ?></span></span></a>
-                                <div class="media-body">
-                                    <h4 class="media-heading"><?php echo $this->escape($establishments['establishment']) ?>: <?php echo $this->escape($establishments['title']) ?></h4>
-                                    <ul class="list-inline">
-                                        <li><?php echo $this->escape($establishments['description']) ?> </li>
-                                    </ul>
-                                    <ul class="list-inline pull-right">
-                                        <li>
-                                            <a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishment',  'id' => $this->escape($establishments['id'])))?>" class="btn btn-warning">Details</a>
-                                        </li>
-                                    </ul>
-                                </div> <!-- end media-body -->
-                            </div> <!-- end media -->
-                        </article>
-                        <hr>
-                    </li>
-                    <?php endforeach; ?>
-                    <?php endif; ?>
-            </table>
-        </div>
+        <a href="ehotels">Hotel</a>
+        <a href="emotels">Motel</a>
+        <a href="eapartments">Apartment</a>
+        <a href="ehostels">Hostel</a>
     </div>
+    <div class="estcontent">
+
+    </div>
+
 </div>
 
 

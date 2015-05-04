@@ -45,7 +45,9 @@
         ->appendStylesheet($this->baseUrl("css/bootstrap.min.css"));
     echo $this->headLink();
     $this->headScript()->appendFile($this->baseUrl("js/jquery-1.10.2.min.js"))
+        ->appendFile($this->baseUrl("js/infinitescroll.js"))
         ->appendFile("http://maps.googleapis.com/maps/api/js?key=AIzaSyCUZkf_30iE3wDjCbu0AJHJfdPo4Wd4pKM&sensor=false")
+        ->appendFile($this->baseUrl("js/cv_guide.js"))
         ->appendFile($this->baseUrl("js/bootstrap.min.js"));
     echo $this->headScript();
     ?>
