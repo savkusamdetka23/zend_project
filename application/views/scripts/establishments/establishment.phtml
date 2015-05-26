@@ -10,7 +10,7 @@ echo $this->headScript();
 ?>
 
 <div class="row" >
-    <div class="menu1">
+
 
         <div>
             <table class="table table-responsive table-hover">
@@ -18,20 +18,30 @@ echo $this->headScript();
                 //foreach($this->establishments as $establishments) :
                 ?>
                 <ul class="list-unstyled detail" data-gps="<?php echo $this->escape($this->establishments['gps']) ?>" data-address="<?php echo $this->escape($this->establishments['town']), " ", $this->escape($this->establishments['address'])," ", $this->escape($this->establishments['build']); ?>">
+
+
                     <li>
                         <article>
                             <div class="media">
-                                <a class="pull-left"><img src="/images/<?php echo $this->escape($this->establishments['image']) ?>" alt="Image" class="media-object"><span class="glyphicon glyphicon-earphone text-muted"></span class="call">+380<?php echo $this->escape($this->establishments['telephone']) ?></span></span></a>
-                                <div class="media-body">
-                                    <h4 class="media-heading"><?php echo $this->escape($this->establishments['establishment']) ?>: <?php echo $this->escape($this->establishments['title']) ?></h4>
-                                    <ul class="list-inline">
-                                        <li><?php echo $this->escape($establishments['address_id']);print_r($this->establishments['address']); ?> </li>
-                                    </ul>
-                                    <div id="map-canvas" style="width:600px; height:400px"></div>
+                                <h3 class="media-heading"><?php echo $this->escape($this->establishments['establishment']) ?>: <?php echo $this->escape($this->establishments['title']) ?></h3>
+                                <a class="pull-left"><img src="/images/<?php echo $this->escape($this->establishments['image'])?>" alt="Image" class="media-object"></a>
 
+                                <div class="media-body">
+
+
+                                    <address>
+
+                                        <span>Address:</span> <?php echo $this->escape($this->establishments['build']) ?>, <?php echo $this->escape($this->establishments['address'])?> St.<br>
+                                        <span>Telephone:</span>+38 <?php echo $this->escape($this->establishments['telephone'])?><br>
+                                        <span>Work time:</span> <?php echo $this->escape($this->establishments['opening'])?> - <?php echo $this->escape($this->establishments['closing'])?><br>
+                                    </address>
                                 </div> <!-- end media-body -->
+                                <h3>Description:</h3>
+                                <p><?php echo $this->escape($this->establishments['description'])?></p>
+
                             </div> <!-- end media -->
                         </article>
+                        <div id="map-canvas" style="width:650px; height:300px"></div>
                         <hr>
                     </li>
                     <?php //endforeach; ?>
@@ -39,6 +49,6 @@ echo $this->headScript();
                     ?>
             </table>
 
-        </div>
+
         </div>
     </div>

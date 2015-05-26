@@ -22,10 +22,28 @@ $(document).ready(function(){
                     center: latlng
                 };
                 map = new google.maps.Map($("#map-canvas")[0], mapOptions);
+                var address = $(".detail").data("address");
+                var title = $(".media-heading").html();
+                var contentString = "<div><b>" +
+                    title +
+                    "</b><span>" +
+                    address +
+                    "</span></div>";
+
+                var infowindow = new google.maps.InfoWindow({
+                    content: contentString,
+                    pixelOffset: new google.maps.Size(0,35)
+                });
+
                 var marker = new google.maps.Marker({
                     map: map,
                     position: latlng
                 });
+                infowindow.open(map,marker);
+                google.maps.event.addListener(marker, 'click', function() {
+                    infowindow.open(map,marker);
+                });
+
             } else
             // try geocoding, gps is empty
             {

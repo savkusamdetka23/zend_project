@@ -1,6 +1,6 @@
 (function($) {
 
-	$.fn.scrollPagination = function(options) {
+	$.fn.scrollPagination = function(options, disabledLink) {
 
 		var settings = {
 			nop     : 10, // The number of posts per scroll to be loaded
@@ -69,6 +69,7 @@
 						// No longer busy!
 						busy = false;
 					}
+                    $settings.success();
 
 				});
 
@@ -79,7 +80,9 @@
 			// If scrolling is enabled
 			if($settings.scroll == true) {
 				// .. and the user is scrolling
-                scrollHandler = function() {
+                //scrollHandler =
+                $(window).off('scroll');
+                $(window).on("scroll",function() {
 
                     // Check the user is at the bottom of the element
                     if($(window).scrollTop() + $(window).height() > $this.height() && !busy) {
@@ -100,10 +103,7 @@
                         }, $settings.delay);
 
                     }
-                };
-                $(window).off("scroll",scrollHandler);
-
-                $(window).on("scroll", scrollHandler);
+                });
 			}
 
 			// Also content can be loaded by clicking the loading bar/

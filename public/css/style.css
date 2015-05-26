@@ -5,16 +5,14 @@ html {overflow-x:hidden;
 }
 
 body{
-    background-image:url(../images/page-bg-1.jpg);
     min-width:600px;
-    margin-bottom: 60px;
 }
 section{
    /*-- margin:0px 30px 0 30px;--*/
  
 }
 footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
     height: 10px;
@@ -124,8 +122,8 @@ padding-top:10px;}
 .dropdown {
    float: right;}
  .menu{
- background-image:url(../images/hedfoot.png);
- background-repeat: repeat-x;
+
+
  }
  .call{
  margin-left:10px;}
@@ -284,5 +282,56 @@ html, body, #map-canvas-add {
     color: #f9f9f9;
     font-size: 1.5em;
 }
+.nav-tabs>li>a:active {background-color: #ffffff !important; border-bottom:none !important;color: #000000;}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    color: #555555;
+    cursor: default;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-bottom-color: transparent;
+}
+
+#main_manu
+{	margin: 100;
+    margin-left : 500px;
+
+    padding: 0}
+
+#main_manu li
+{	float: left;
+    list-style: none;
+    font: 12px Tahoma, Arial}
+
+#main_manu li a
+{	display: block;
+    /*   background: #20548E;
+     */  padding: 5px 12px;
+    text-decoration: none;
+    /* border-right: 1px solid white;
+    */ width: 110px;
+    color: #EAFFED;
+    white-space: nowrap}
+
+#main_manu li a:hover
+{/*	background: #1A4473*/}
+
+#main_manu li ul
+{	margin: 0;
+    padding: 0;
+    position: absolute;
+    visibility: hidden;
+    z-index : 25;
+    border-top: 1px solid white}
+
+#main_manu li ul li
+{	float: none;
+    display: inline}
+
+#main_manu li ul li a
+{	width: auto;
+    background: #9F1B1B}
+
+#main_manu li ul li a:hover
+{	background: #7F1616}
 
 

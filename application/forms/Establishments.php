@@ -19,7 +19,7 @@ class Application_Form_Establishments extends Zend_Form
             ->addFilter('StringTrim')
             ->addValidator('NotEmpty');
 
-        $image = new Zend_Form_Element_File('image');
+        $image = new Zend_Form_Element_File('image2');
         $image->setLabel('Image')
              //->setDestination(PUBLIC_PATH"/images")
              //->setDestination('images/')
@@ -30,9 +30,10 @@ class Application_Form_Establishments extends Zend_Form
        ->addValidator('Size', false, 2097152)
            ->setMaxFileSize(2097152)
 // only JPEG, PNG, or GIF
-       ->addValidator('Extension', false, 'jpg,png,gif')
+       ->addValidator('Extension', false, 'jpg,png,gif,jpeg')
        ->setValueDisabled(true);
 
+        $image2 = new Zend_Form_Element_Hidden('image');
         $build = new Zend_Form_Element_Text('build');
         $build->setLabel('Building №')
             ->setRequired(true)
@@ -73,7 +74,7 @@ class Application_Form_Establishments extends Zend_Form
 			->setAttrib('cols', 50)
             ->setAttrib('rows', 4)
             ->addFilter('StripTags')
-            ->addValidator('StringLength', false, array(2, 250))
+            ->addValidator('StringLength', false, array(2, 999))
 			 ->setErrorMessages(array('Text must be between 2 and 250 characters'));
 
         $establishmenttype = new Application_Model_DbTable_Establishmenttype();
@@ -95,7 +96,6 @@ class Application_Form_Establishments extends Zend_Form
         $opening = new Zend_Form_Element_Select('opening');
         $opening->setLabel('Opening')
             ->setMultiOptions(array(''=>'','6:00'=>'6:00', '7:00'=>'7:00', '8:00'=>'8:00', '9:00'=>'9:00', '10:00'=>'10:00', '11:00'=>'11:00', '12:00'=>'12:00', '24h'=>'24h'))
-            ->setRequired(true)
             ->addValidator('NotEmpty');
 
         $break_from = new Zend_Form_Element_Select('break_from');
@@ -118,7 +118,7 @@ class Application_Form_Establishments extends Zend_Form
 
         $submit = new Zend_Form_Element_Submit('submit');
         $submit->setAttrib('id', 'submitbutton');
-        $this->addElements(array($id, $title, $image, $build, $address_id, $gps, $googlemap,  $telephone, $description, $establishmenttype_id, $establishment_id, $opening, $break_from, $break_to, $closing, $weekend, $submit));
+        $this->addElements(array($id, $title, $image, $image2, $build, $address_id, $gps, $googlemap,  $telephone, $description, $establishmenttype_id, $establishment_id, $opening, $break_from, $break_to, $closing, $weekend, $submit));
     }
 
 }

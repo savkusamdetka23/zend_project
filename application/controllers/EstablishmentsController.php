@@ -84,8 +84,17 @@ class EstablishmentsController extends Zend_Controller_Action
             if ($form->isValid($formData)) {
 				$id = $form->getValue('id');
 				$title = $form->getValue('title');
-				$image = $form->getValue('image');
+
+                if($form->getValue('image2')!= "")
+                {
+                    $image = $form->getValue('image2');
+                } else {
+                    $image = $form->getValue('image');
+                }
+
+				//$image = $form->getValue('image');
                 // $form->image->receive();
+
 
             /*     $upload = new Zend_File_Transfer_Adapter_Http();
                $upload->setDestination('images/');
@@ -218,6 +227,39 @@ class EstablishmentsController extends Zend_Controller_Action
 
     }
 
+    public function emotelsAction()
+    {
+
+        $offset = $this->_getParam('offset', 0);
+        $establishments = new Application_Model_DbTable_Establishments();
+        if ($offset) {
+            $establishmentsList = $establishments->getEstablishmentsList('2', $offset);
+        } else {
+            $establishmentsList = $establishments->getEstablishmentsList('2');
+        }
+        $this->_helper->layout()->disableLayout();
+        $this->view->offset = $offset;
+        $this->view->establishments = $establishmentsList;
+
+
+    }
+    public function eapartmentsAction()
+    {
+
+
+        $offset = $this->_getParam('offset', 0);
+        $establishments = new Application_Model_DbTable_Establishments();
+        if ($offset) {
+            $establishmentsList = $establishments->getEstablishmentsList('3', $offset);
+        } else {
+            $establishmentsList = $establishments->getEstablishmentsList('3');
+        }
+        $this->_helper->layout()->disableLayout();
+        $this->view->offset = $offset;
+        $this->view->establishments = $establishmentsList;
+
+
+    }
     public function ehostelsAction()
     {
 
@@ -236,7 +278,55 @@ class EstablishmentsController extends Zend_Controller_Action
 
     }
 
-    public function eapartmentsAction()
+
+
+
+
+
+
+    public function establishmentcAction()
+    {
+
+        $establishments = new Application_Model_DbTable_Establishments();
+        $establishmentsList = $establishments->getEstablishmentsList();
+        $this->view->establishments = $establishmentsList;
+
+    }
+    public function emonumentsAction()
+    {
+
+        $offset = $this->_getParam('offset', 0);
+        $establishments = new Application_Model_DbTable_Establishments();
+        if ($offset) {
+            $establishmentsList = $establishments->getEstablishmentsList('1', $offset);
+        } else {
+            $establishmentsList = $establishments->getEstablishmentsList('1');
+        }
+        $this->_helper->layout()->disableLayout();
+        $this->view->offset = $offset;
+        $this->view->establishments = $establishmentsList;
+
+    }
+
+    public function emuseumsAction()
+    {
+
+
+        $offset = $this->_getParam('offset', 0);
+        $establishments = new Application_Model_DbTable_Establishments();
+        if ($offset) {
+            $establishmentsList = $establishments->getEstablishmentsList('2', $offset);
+        } else {
+            $establishmentsList = $establishments->getEstablishmentsList('2');
+        }
+        $this->_helper->layout()->disableLayout();
+        $this->view->offset = $offset;
+        $this->view->establishments = $establishmentsList;
+
+
+    }
+
+    public function etheatresAction()
     {
 
 
@@ -254,8 +344,125 @@ class EstablishmentsController extends Zend_Controller_Action
 
     }
 
-    public function emotelsAction()
+    public function ephilarmonicsAction()
     {
+
+        $offset = $this->_getParam('offset', 0);
+        $establishments = new Application_Model_DbTable_Establishments();
+        if ($offset) {
+            $establishmentsList = $establishments->getEstablishmentsList('4', $offset);
+        } else {
+            $establishmentsList = $establishments->getEstablishmentsList('4');
+        }
+        $this->_helper->layout()->disableLayout();
+        $this->view->offset = $offset;
+        $this->view->establishments = $establishmentsList;
+
+
+    }
+    public function efairsAction()
+    {
+
+        $offset = $this->_getParam('offset', 0);
+        $establishments = new Application_Model_DbTable_Establishments();
+        if ($offset) {
+            $establishmentsList = $establishments->getEstablishmentsList('5', $offset);
+        } else {
+            $establishmentsList = $establishments->getEstablishmentsList('5');
+        }
+        $this->_helper->layout()->disableLayout();
+        $this->view->offset = $offset;
+        $this->view->establishments = $establishmentsList;
+
+    }
+
+    public function eexhibitionsAction()
+    {
+
+
+        $offset = $this->_getParam('offset', 0);
+        $establishments = new Application_Model_DbTable_Establishments();
+        if ($offset) {
+            $establishmentsList = $establishments->getEstablishmentsList('6', $offset);
+        } else {
+            $establishmentsList = $establishments->getEstablishmentsList('6');
+        }
+        $this->_helper->layout()->disableLayout();
+        $this->view->offset = $offset;
+        $this->view->establishments = $establishmentsList;
+
+
+    }
+
+    public function eculturalplacesAction()
+    {
+
+
+        $offset = $this->_getParam('offset', 0);
+        $establishments = new Application_Model_DbTable_Establishments();
+        if ($offset) {
+            $establishmentsList = $establishments->getEstablishmentsList('7', $offset);
+        } else {
+            $establishmentsList = $establishments->getEstablishmentsList('7');
+        }
+        $this->_helper->layout()->disableLayout();
+        $this->view->offset = $offset;
+        $this->view->establishments = $establishmentsList;
+
+
+    }
+
+    public function elibrariesAction()
+    {
+
+        $offset = $this->_getParam('offset', 0);
+        $establishments = new Application_Model_DbTable_Establishments();
+        if ($offset) {
+            $establishmentsList = $establishments->getEstablishmentsList('8', $offset);
+        } else {
+            $establishmentsList = $establishments->getEstablishmentsList('8');
+        }
+        $this->_helper->layout()->disableLayout();
+        $this->view->offset = $offset;
+        $this->view->establishments = $establishmentsList;
+
+
+    }
+
+
+
+
+
+
+
+
+    public function establishmentfAction()
+    {
+
+        $establishments = new Application_Model_DbTable_Establishments();
+        $establishmentsList = $establishments->getEstablishmentsList();
+        $this->view->establishments = $establishmentsList;
+
+    }
+    public function eclubsAction()
+    {
+
+        $offset = $this->_getParam('offset', 0);
+        $establishments = new Application_Model_DbTable_Establishments();
+        if ($offset) {
+            $establishmentsList = $establishments->getEstablishmentsList('1', $offset);
+        } else {
+            $establishmentsList = $establishments->getEstablishmentsList('1');
+        }
+        $this->_helper->layout()->disableLayout();
+        $this->view->offset = $offset;
+        $this->view->establishments = $establishmentsList;
+
+    }
+
+    public function eentertaimentcentersAction()
+    {
+
 
         $offset = $this->_getParam('offset', 0);
         $establishments = new Application_Model_DbTable_Establishments();
@@ -271,22 +478,61 @@ class EstablishmentsController extends Zend_Controller_Action
 
     }
 
-    public function establishmentcAction()
+    public function ecinemasAction()
     {
 
+
+        $offset = $this->_getParam('offset', 0);
         $establishments = new Application_Model_DbTable_Establishments();
-        $establishmentsList = $establishments->getEstablishmentsList();
+        if ($offset) {
+            $establishmentsList = $establishments->getEstablishmentsList('3', $offset);
+        } else {
+            $establishmentsList = $establishments->getEstablishmentsList('3');
+        }
+        $this->_helper->layout()->disableLayout();
+        $this->view->offset = $offset;
+        $this->view->establishments = $establishmentsList;
+
+
+    }
+
+    public function esportsAction()
+    {
+
+        $offset = $this->_getParam('offset', 0);
+        $establishments = new Application_Model_DbTable_Establishments();
+        if ($offset) {
+            $establishmentsList = $establishments->getEstablishmentsList('4', $offset);
+        } else {
+            $establishmentsList = $establishments->getEstablishmentsList('4');
+        }
+        $this->_helper->layout()->disableLayout();
+        $this->view->offset = $offset;
+        $this->view->establishments = $establishmentsList;
+
+
+    }
+    public function eshoppingsAction()
+    {
+
+        $offset = $this->_getParam('offset', 0);
+        $establishments = new Application_Model_DbTable_Establishments();
+        if ($offset) {
+            $establishmentsList = $establishments->getEstablishmentsList('5', $offset);
+        } else {
+            $establishmentsList = $establishments->getEstablishmentsList('5');
+        }
+        $this->_helper->layout()->disableLayout();
+        $this->view->offset = $offset;
         $this->view->establishments = $establishmentsList;
 
     }
-    public function establishmentfAction()
-    {
 
-        $establishments = new Application_Model_DbTable_Establishments();
-        $establishmentsList = $establishments->getEstablishmentsList();
-        $this->view->establishments = $establishmentsList;
 
-    }
+
+
+
+
     public function establishmentnAction()
     {
 
@@ -295,6 +541,133 @@ class EstablishmentsController extends Zend_Controller_Action
         $this->view->establishments = $establishmentsList;
 
     }
+    public function erestaurantsAction()
+    {
+
+        $offset = $this->_getParam('offset', 0);
+        $establishments = new Application_Model_DbTable_Establishments();
+        if ($offset) {
+            $establishmentsList = $establishments->getEstablishmentsList('1', $offset);
+        } else {
+            $establishmentsList = $establishments->getEstablishmentsList('1');
+        }
+        $this->_helper->layout()->disableLayout();
+        $this->view->offset = $offset;
+        $this->view->establishments = $establishmentsList;
+
+    }
+
+    public function ebarsAction()
+    {
+
+
+        $offset = $this->_getParam('offset', 0);
+        $establishments = new Application_Model_DbTable_Establishments();
+        if ($offset) {
+            $establishmentsList = $establishments->getEstablishmentsList('2', $offset);
+        } else {
+            $establishmentsList = $establishments->getEstablishmentsList('2');
+        }
+        $this->_helper->layout()->disableLayout();
+        $this->view->offset = $offset;
+        $this->view->establishments = $establishmentsList;
+
+
+    }
+
+    public function epubsAction()
+    {
+
+
+        $offset = $this->_getParam('offset', 0);
+        $establishments = new Application_Model_DbTable_Establishments();
+        if ($offset) {
+            $establishmentsList = $establishments->getEstablishmentsList('3', $offset);
+        } else {
+            $establishmentsList = $establishments->getEstablishmentsList('3');
+        }
+        $this->_helper->layout()->disableLayout();
+        $this->view->offset = $offset;
+        $this->view->establishments = $establishmentsList;
+
+
+    }
+
+    public function epizzeriasAction()
+    {
+
+        $offset = $this->_getParam('offset', 0);
+        $establishments = new Application_Model_DbTable_Establishments();
+        if ($offset) {
+            $establishmentsList = $establishments->getEstablishmentsList('4', $offset);
+        } else {
+            $establishmentsList = $establishments->getEstablishmentsList('4');
+        }
+        $this->_helper->layout()->disableLayout();
+        $this->view->offset = $offset;
+        $this->view->establishments = $establishmentsList;
+
+
+    }
+    public function ecafesAction()
+    {
+
+        $offset = $this->_getParam('offset', 0);
+        $establishments = new Application_Model_DbTable_Establishments();
+        if ($offset) {
+            $establishmentsList = $establishments->getEstablishmentsList('5', $offset);
+        } else {
+            $establishmentsList = $establishments->getEstablishmentsList('5');
+        }
+        $this->_helper->layout()->disableLayout();
+        $this->view->offset = $offset;
+        $this->view->establishments = $establishmentsList;
+
+    }
+
+    public function ecanteensAction()
+    {
+
+
+        $offset = $this->_getParam('offset', 0);
+        $establishments = new Application_Model_DbTable_Establishments();
+        if ($offset) {
+            $establishmentsList = $establishments->getEstablishmentsList('6', $offset);
+        } else {
+            $establishmentsList = $establishments->getEstablishmentsList('6');
+        }
+        $this->_helper->layout()->disableLayout();
+        $this->view->offset = $offset;
+        $this->view->establishments = $establishmentsList;
+
+
+    }
+
+    public function efastfoodsAction()
+    {
+
+
+        $offset = $this->_getParam('offset', 0);
+        $establishments = new Application_Model_DbTable_Establishments();
+        if ($offset) {
+            $establishmentsList = $establishments->getEstablishmentsList('7', $offset);
+        } else {
+            $establishmentsList = $establishments->getEstablishmentsList('7');
+        }
+        $this->_helper->layout()->disableLayout();
+        $this->view->offset = $offset;
+        $this->view->establishments = $establishmentsList;
+
+
+    }
+
+
+
+
+
+
+
+
     public function establishmenttAction()
     {
 
@@ -303,6 +676,90 @@ class EstablishmentsController extends Zend_Controller_Action
         $this->view->establishments = $establishmentsList;
 
     }
+    public function erailwaystationsAction()
+    {
+
+        $offset = $this->_getParam('offset', 0);
+        $establishments = new Application_Model_DbTable_Establishments();
+        if ($offset) {
+            $establishmentsList = $establishments->getEstablishmentsList('1', $offset);
+        } else {
+            $establishmentsList = $establishments->getEstablishmentsList('1');
+        }
+        $this->_helper->layout()->disableLayout();
+        $this->view->offset = $offset;
+        $this->view->establishments = $establishmentsList;
+
+    }
+
+    public function ebusstationsAction()
+    {
+
+
+        $offset = $this->_getParam('offset', 0);
+        $establishments = new Application_Model_DbTable_Establishments();
+        if ($offset) {
+            $establishmentsList = $establishments->getEstablishmentsList('2', $offset);
+        } else {
+            $establishmentsList = $establishments->getEstablishmentsList('2');
+        }
+        $this->_helper->layout()->disableLayout();
+        $this->view->offset = $offset;
+        $this->view->establishments = $establishmentsList;
+
+
+    }
+
+    public function eairportsAction()
+    {
+
+
+        $offset = $this->_getParam('offset', 0);
+        $establishments = new Application_Model_DbTable_Establishments();
+        if ($offset) {
+            $establishmentsList = $establishments->getEstablishmentsList('3', $offset);
+        } else {
+            $establishmentsList = $establishments->getEstablishmentsList('3');
+        }
+        $this->_helper->layout()->disableLayout();
+        $this->view->offset = $offset;
+        $this->view->establishments = $establishmentsList;
+
+
+    }
+
+    public function epublictransportationsAction()
+    {
+
+        $offset = $this->_getParam('offset', 0);
+        $establishments = new Application_Model_DbTable_Establishments();
+        if ($offset) {
+            $establishmentsList = $establishments->getEstablishmentsList('4', $offset);
+        } else {
+            $establishmentsList = $establishments->getEstablishmentsList('4');
+        }
+        $this->_helper->layout()->disableLayout();
+        $this->view->offset = $offset;
+        $this->view->establishments = $establishmentsList;
+
+
+    }
+    public function erentacarsAction()
+    {
+
+        $offset = $this->_getParam('offset', 0);
+        $establishments = new Application_Model_DbTable_Establishments();
+        if ($offset) {
+            $establishmentsList = $establishments->getEstablishmentsList('5', $offset);
+        } else {
+            $establishmentsList = $establishments->getEstablishmentsList('5');
+        }
+        $this->_helper->layout()->disableLayout();
+        $this->view->offset = $offset;
+        $this->view->establishments = $establishmentsList;
+
+    }
+
     public function establishmentAction()
     {
 
@@ -316,34 +773,13 @@ class EstablishmentsController extends Zend_Controller_Action
             $this->view->establishment = $establishment;
         }
 
-        print_r($id);
+
 
         $establishments = new Application_Model_DbTable_Establishments();
         $establishmentsList = $establishments->getEstablishmentRow($id);
         $this->view->establishments = $establishmentsList;
 
-        //  print_r($establishments['id']);
-        print_r($establishmentsList);
-        // print_r($establishment);
-        /*
-        $establishments = new Application_Model_DbTable_Establishments();
-        $establishmentsList = $establishments->getEstablishmentsList();
-        $this->view->establishments = $establishmentsList;
-      //  $this->_helper->redirector('establishment');
-            // Отримання id потрібного елемента
-            $id = $this->_getParam('id', 0);
-            if ($id > 0) {
-                // Створюємо об'єкт моделі
-                $establishment = new Application_Model_DbTable_Establishments();
 
-                // Заповнюємо форму за допомогою метода populate
-                $establishment->getEstablishment($id);
-                $this->view->establishment = $establishment;
-            }
-        //print_r($establishment);
-     //   $this->_helper->redirector('establishments', 'establishment');
-
-    */
 
 
 
