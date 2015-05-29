@@ -6,6 +6,7 @@ html {overflow-x:hidden;
 
 body{
     min-width:600px;
+
 }
 section{
    /*-- margin:0px 30px 0 30px;--*/
@@ -17,36 +18,7 @@ footer {
     width: 100%;
     height: 10px;
 }
-#tab2, #tab3 #tab4 {position: fixed; }
 
-.menu1 > a,
-.menu1 #tab2:target ~ a:nth-of-type(1),
-.menu1 #tab3:target ~ a:nth-of-type(1),
-.menu1 #tab4:target ~ a:nth-of-type(1),
-.menu1 > div { padding: 5px; border: 1px solid #aaa; }
-
-.menu1 > a { line-height: 28px; background: #fff; text-decoration: none; }
-
-#tab2,
-#tab3,
-#tab4,
-.menu1 > div,
-.menu1 #tab2:target ~ div:nth-of-type(1),
-.menu1 #tab3:target ~ div:nth-of-type(1),
-.menu1 #tab4:target ~ div:nth-of-type(1) {display: none; }
-
-.menu1 > div:nth-of-type(1),
-.menu1 #tab2:target ~ div:nth-of-type(2),
-.menu1 #tab3:target ~ div:nth-of-type(3),
-.menu1 #tab4:target ~ div:nth-of-type(4) { display: block; }
-
-.menu1 > a:nth-of-type(1),
-.menu1 #tab2:target ~ a:nth-of-type(2),
-.menu1 #tab3:target ~ a:nth-of-type(3),
-.menu1 #tab4:target ~ a:nth-of-type(4) { border-bottom: 2px solid #fff; }
-.panorama{
-width:100%;
-}
 .panorama img{
 max-height:200px;
 width:100%;}
@@ -64,9 +36,7 @@ margin-top: 20px;}
 color:#fff;
 background:#836292;
 padding: 10px 16px;}
-.k{
-border-top:2px solid;
-}
+
 #sidebar-wrapper .sidebar-nav{
 list-style:none;
 
@@ -84,27 +54,10 @@ list-style:none;
     background: rgba(255,255,255,0.2);
 }
 
-
-.thumbnail img{
-max-height:400px;
-}
 .nav_menu{
-padding:5px 10px;
- background: #8DBFFC;
- margin-bottom:10px;
+ background: #657AB1;
 }
-.nav_menu ul li  {
-   padding:10px 20px;
-   display:inline; 
- }
- .nav_menu a{
- font-size:18px;
- color:#fff;
- }
- .nav-tabs_1{
- position:absolute;}
- .col-lg-1{
- background:#DEC7F5;}
+
 /*-------ЗАГОЛОВКИ-----------*/
 
 .name_hotel{
@@ -113,18 +66,13 @@ padding-top:10px;}
 .navbar .btn-default {
    height:28px;
 }
-.navbar-right{
-    margin:19px auto 0px auto;
-}
+.navbar-header{padding:0;}
+.navbar-header span{color:#657AB1;font-weight: 800;padding-left: 20px; }
+.navbar-nav.navbar-right{margin-top: 35px;}
+
 .navbar{
    border-radius:0px;
-   margin-bottom:0;}
-.dropdown {
-   float: right;}
- .menu{
-
-
- }
+   margin-bottom:0 !important;}
  .call{
  margin-left:10px;}
 	
@@ -290,30 +238,20 @@ html, body, #map-canvas-add {
     border: 1px solid #dddddd;
     border-bottom-color: transparent;
 }
-
-#main_manu
-{	margin: 100;
-    margin-left : 500px;
-
-    padding: 0}
-
 #main_manu li
 {	float: left;
     list-style: none;
-    font: 12px Tahoma, Arial}
+    font: 16px;}
 
 #main_manu li a
 {	display: block;
-    /*   background: #20548E;
-     */  padding: 5px 12px;
+    padding: 10px 20px;
     text-decoration: none;
-    /* border-right: 1px solid white;
-    */ width: 110px;
-    color: #EAFFED;
-    white-space: nowrap}
-
-#main_manu li a:hover
-{/*	background: #1A4473*/}
+    color: #fff;
+   }
+#main_manu li:hover
+{	background-color: rgba(223, 86, 34, 0.74);;
+}
 
 #main_manu li ul
 {	margin: 0;
@@ -321,7 +259,7 @@ html, body, #map-canvas-add {
     position: absolute;
     visibility: hidden;
     z-index : 25;
-    border-top: 1px solid white}
+}
 
 #main_manu li ul li
 {	float: none;
@@ -329,9 +267,59 @@ html, body, #map-canvas-add {
 
 #main_manu li ul li a
 {	width: auto;
-    background: #9F1B1B}
+    background: rgba(223, 86, 34, 0.64);}
 
 #main_manu li ul li a:hover
-{	background: #7F1616}
+{	background: #DF5622}
 
 
+#namanyay-search-btn {
+    background:#657AB1;
+    color:white;
+    font: 'trebuchet ms', trebuchet;
+    padding:6px 20px;
+    border-radius:0 10px 10px 0;
+    -moz-border-radius:0 10px 10px 0;
+    -webkit-border-radius:0 10px 10px 0;
+    -o-border-radius:0 10px 10px 0;
+    border:0 none;
+    font-weight:bold;
+}
+.collapsing{display: none;}
+#namanyay-search-box {
+    background: #eee;
+    padding:6px;
+    border-radius:10px 0 0 10px;
+    -moz-border-radius:10px 0 0 10px;
+    -webkit-border-radius:10px 0 0 10px;
+    -o-border-radius:10px 0 0 10px;
+    border:0 none;
+    width:160px;
+}
+
+.navbar-toggle span {
+    width: 20px;
+    height: 2px;
+    margin-bottom: 3px;
+    background-color: #333;
+    display: block;
+}
+@media all and (max-width: 768px) {
+    .navbar-nav.navbar-right{ float:right;margin-top:-71px;}
+
+    .navbar-toggle {
+        margin-top: -28px !important;
+    }
+    #main_manu li
+    {	float: none;
+        padding-left: 40%;
+    }
+    #main_manu li ul{display: none;}
+
+    .nav_menu{
+        background: #657AB1;
+    }
+    #main_manu li:hover
+    {
+    }
+}

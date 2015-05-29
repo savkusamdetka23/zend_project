@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Мар 27 2015 г., 13:56
+-- Время создания: Май 29 2015 г., 23:03
 -- Версия сервера: 5.5.25
 -- Версия PHP: 5.3.13
 
@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `addresses` (
   `city` varchar(30) NOT NULL,
   `street` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
 
 --
 -- Дамп данных таблицы `addresses`
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `addresses` (
 INSERT INTO `addresses` (`id`, `city`, `street`) VALUES
 (1, 'Chernivtsi', 'Holovna'),
 (2, 'Chernivtsi', 'Ruska'),
-(3, 'Chernivtsi', 'Heroiv Maidany'),
+(3, 'Chernivtsi', 'Chervonoarmiiska'),
 (4, 'Chernivtsi', 'Prospekt Nezalezhnosti'),
 (5, 'Chernivtsi', 'Soborna'),
 (6, 'Chernivtsi', 'Bozhenka'),
@@ -50,7 +50,8 @@ INSERT INTO `addresses` (`id`, `city`, `street`) VALUES
 (10, 'Chernivtsi', 'Ivana Franka'),
 (11, 'Chernivtsi', 'Universytetska'),
 (12, 'Chernivtsi', 'Haharina'),
-(13, 'Chernivtsi', 'Komarova');
+(13, 'Chernivtsi', 'Komarova'),
+(14, 'Chernivtsi', 'Libavska');
 
 -- --------------------------------------------------------
 
@@ -70,8 +71,19 @@ CREATE TABLE IF NOT EXISTS `establishments` (
   `establishmenttype_id` int(3) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `establishments_ibfk_1` (`address_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
+--
+-- Дамп данных таблицы `establishments`
+--
+
+INSERT INTO `establishments` (`id`, `title`, `image`, `build`, `address_id`, `gps`, `telephone`, `description`, `establishmenttype_id`) VALUES
+(1, 'Cheremosh', '', '13A', 13, '48.25980926264088,25.941967098', '(03722) 48400', 'Welcome to the Tourist Complex "Cheremosh" - one of the biggest tourist companies of western Ukraine.\r\nThe Tourist Complex "Cheremosh" has stable contacts with many famous foreign travel companies. Each year over 20 000 gueasts from Ukraine, Germany, Austria, Israel, USA, Canada, Poland, Great Britain and other countries stay at our hotel.', 1),
+(2, 'Kyiv', '', '46', 1, '', '(0372) 52-08-56', 'Located in the old town near the Сentral square.', 1),
+(3, 'Bukovyna', '46752317.jpg', '141', 1, '', '(0372)  585-625', 'Hotel "Bukovina" is located in the center of the park zone of Chernivtsi on the edge of the old and new city.', 1),
+(4, 'Tourist', 'turist-111.jpeg', '184', 3, '48.2681549019243,25.9260947071', '(0372)  558-820', 'Located in the new district of the city.', 1),
+(5, 'Andinna', '94_big.jpg', '22-A', 14, '48.28256382264154,25.921737467', '(0372) 52 56 28', 'The hotel is located near old part of town.', 1),
+(6, 'Koral', 'koral.jpg', '23', 8, '', '65243 265', 'This is a tiny hotel, near camping.This is a tiny hotel, near camping.', 1);
 
 -- --------------------------------------------------------
 
@@ -159,9 +171,25 @@ CREATE TABLE IF NOT EXISTS `worktime` (
   `weekend` varchar(30) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `establishment_id` (`establishment_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
+--
+-- Дамп данных таблицы `worktime`
+--
 
+INSERT INTO `worktime` (`id`, `establishment_id`, `opening`, `break_from`, `break_to`, `closing`, `weekend`) VALUES
+(1, 1, '6:00', '', '', '01:00', ''),
+(2, 2, '', '', '', '', ''),
+(3, 3, '', '', '', '', ''),
+(4, 4, '', '', '', '', ''),
+(5, 5, '', '', '', '', ''),
+(6, 6, '', '', '', '', '');
+
+--
+-- Ограничения внешнего ключа сохраненных таблиц
+--
+
+--
 -- Ограничения внешнего ключа таблицы `establishments`
 --
 ALTER TABLE `establishments`

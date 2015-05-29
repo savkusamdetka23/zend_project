@@ -35,6 +35,8 @@
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+
+
     <!-- Stylesheets -->
     <?php
     //  echo $this->headLink()->appendStylesheet('css/bootstrap.min.css');
@@ -55,49 +57,35 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 </head>
+
+
 <body>
-
-
 <header>
-    <nav class="navbar navbar-fixed" role="navigation">
-        <div class="container-fluid">
+    <nav class=" navbar navbar-fixed" role="navigation">
+        <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header col-lg-10 col-md-8 col-sm-8 col-xs-7">
-                <a class="navbar-brand" href="/">Chernivtsi city guide</a>
+            <div class="navbar-header">
+                <a class="navbar-brand " href="/"><img src="/images/logo.png" ><span>Chernivtsi city guide</span></a>
             </div>
 
-            <ul class="nav navbar-nav navbar-right col-lg-2 col-md-4 col-sm-4 col-xs-5">
-                <form><div class="btn-group form-inline">
-                        <input type="text"class="btn btn-default btn-sm" class="form-control" placeholder="Search">
-                        <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-search"></span></button>
-                    </div>
-
-                        <li>Pss, <?php
-                            $role = Zend_Registry::get('role');
-                            echo $role;
-
-
-                            ?>.. Want some  <a href="<?php
-
-                           $role = Zend_Registry::get('role');
-
-
-                            if(($role == 'user') or ($role == 'admin')){
-                               echo $this->url(array('controller' => 'auth', 'action' =>$action = 'logout'));
-                            }else{
-                               echo $this->url(array('controller' => 'auth', 'action' =>$action = 'login'));
-                            }
-
-                            ?>"><?php  echo $action
-                                ?></a>?
-                        </li>
-
+            <ul class="nav navbar-nav navbar-right">
+                <form id="searchthis" action="/search" style="display:inline;" method="get">
+                    <!-- Search box for blogger by Namanyay Goel //-->
+                    <input id="namanyay-search-box" name="q" size="40" type="text" placeholder="Type search text here..."/>
+                    <input id="namanyay-search-btn" value="Search" type="submit"/>
                 </form>
+
             </ul>
+            <div class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+                <span class="bar3"></span>
+                <span class="bar4"></span>
+            </div>
         </div><!-- /.container-fluid -->
     </nav>
     <div class="row nav_menu">
-        <div class="col-lg-12" align="center">
+        <div class="col-lg-8 col-lg-offset-3 collapse navbar-collapse" id="navbar-collapse-1">
             <ul id="main_manu">
                 <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmenta'), null, true)?>">Accomodation</a>
                     <ul class="sub_menu">
@@ -251,12 +239,30 @@
 
           <div class="foot inform_foot">
 		  <span> Made by BEDBOU 2015<span>
-
-
-
-
-
           </div>
+
+
+              Pss, <?php
+                    $role = Zend_Registry::get('role');
+                    echo $role;
+
+
+                    ?>.. Want some  <a href="<?php
+
+                    $role = Zend_Registry::get('role');
+
+
+                    if(($role == 'user') or ($role == 'admin')){
+                        echo $this->url(array('controller' => 'auth', 'action' =>$action = 'logout'));
+                    }else{
+                        echo $this->url(array('controller' => 'auth', 'action' =>$action = 'login'));
+                    }
+
+                    ?>"><?php  echo $action
+                        ?></a>?
+
+
+
 		</footer>
 				 <!-- Modal -->
 
