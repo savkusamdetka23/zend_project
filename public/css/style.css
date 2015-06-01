@@ -12,12 +12,7 @@ section{
    /*-- margin:0px 30px 0 30px;--*/
  
 }
-footer {
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    height: 10px;
-}
+
 
 .panorama img{
 max-height:200px;
@@ -304,6 +299,25 @@ html, body, #map-canvas-add {
     background-color: #333;
     display: block;
 }
+.images_size img{width: 190px; height: 140px;}
+.images_size_descr img{width: 320px; height: 240px;}
+.media-heading{font-weight: 600;}
+.media-heading a{font-weight: 600; color: #000;}
+.address_str{  margin-top: 38px;}
+address{padding-left: 20px;}
+address strong {color:#555555;font-size: 0.938em; font-weight: 700;line-height: 1.733;font-weight: normal;}
+address span {padding-top:10px;color:#555555;font-size: 0.938em; font-weight: 700;line-height: 1.733;display: inline-block;width: 83px;}.ws{font-size: 0.938em;}
+.media_top:first-child{margin-top: 30px !important;}
+.line{  border-top: 1px dashed #B6B4B4;  margin-top: 20px;margin-bottom: 20px;}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background:#657AB1;
+}
+.footer_inf{color:#fff;}
+.footer_inf p{padding-top: 29px;}
 @media all and (max-width: 768px) {
     .navbar-nav.navbar-right{ float:right;margin-top:-71px;}
 

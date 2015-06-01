@@ -23,26 +23,32 @@ echo $this->headScript();
                     <li>
                         <article>
                             <div class="media">
-                                <h3 class="media-heading"><?php echo $this->escape($this->establishments['establishment']) ?>: <?php echo $this->escape($this->establishments['title']) ?></h3>
-                                <a class="pull-left"><img src="/images/<?php echo $this->escape($this->establishments['image'])?>" alt="Image" class="media-object"></a>
+                                <h3 class="media-heading media_top"><?php echo $this->escape($this->establishments['establishment']) ?> <?php echo $this->escape($this->establishments['title']) ?></h3>
+                                <div class="line"></div>
+                                <a class="pull-left images_size_descr"><img src="/images/<?php echo $this->escape($this->establishments['image'])?>" alt="Image" class="media-object"></a>
 
                                 <div class="media-body">
-
-
                                     <address>
 
-                                        <span>Address:</span> <?php echo $this->escape($this->establishments['build']) ?>, <?php echo $this->escape($this->establishments['address'])?> St.<br>
-                                        <span>Telephone:</span>+38 <?php echo $this->escape($this->establishments['telephone'])?><br>
-                                        <span>Work time:</span> <?php echo $this->escape($this->establishments['opening'])?> - <?php echo $this->escape($this->establishments['closing'])?><br>
+                                        <span>Telefone:</span>+1 800 603 6035<br>
+                                        <span>Address:</span>3 Katedralna sqr. <br>
+                                        <span> E-mail:</span> <a href="#">mail@demolink.org</a><br>
+                                        <span>Work time</span> 08:00 - 22:00<br>
                                     </address>
+<!--                                    <address>-->
+<!--                                        <span>Address:</span> --><?php //echo $this->escape($this->establishments['build']) ?><!--, --><?php //echo $this->escape($this->establishments['address'])?><!-- St.<br>-->
+<!--                                        <span>Telephone:</span>+38 --><?php //echo $this->escape($this->establishments['telephone'])?><!--<br>-->
+<!--                                        <span>Work time:</span> --><?php //echo $this->escape($this->establishments['opening'])?><!-- - --><?php //echo $this->escape($this->establishments['closing'])?><!--<br>-->
+<!--                                    </address>-->
                                 </div> <!-- end media-body -->
-                                <h3>Description:</h3>
-                                <p><?php echo $this->escape($this->establishments['description'])?></p>
 
                             </div> <!-- end media -->
+                            <div class="line"></div>
                         </article>
+                        <p><?php echo $this->escape($this->establishments['description'])?></p>
+                        <div class="line"></div>
                         <div id="map-canvas" style="width:650px; height:300px"></div>
-                        <hr>
+                        <div class="line"></div>
                     </li>
                     <?php //endforeach; ?>
                     <?php endif;

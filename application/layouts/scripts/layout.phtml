@@ -85,7 +85,7 @@
         </div><!-- /.container-fluid -->
     </nav>
     <div class="row nav_menu">
-        <div class="col-lg-8 col-lg-offset-3 collapse navbar-collapse" id="navbar-collapse-1">
+        <div class="col-lg-8 col-lg-offset-4  col-md-8 col-md-offset-3 col-sm-8 col-sm-offset-2 collapse navbar-collapse" id="navbar-collapse-1">
             <ul id="main_manu">
                 <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmenta'), null, true)?>">Accomodation</a>
                     <ul class="sub_menu">
@@ -131,7 +131,7 @@
         </div>
     </div>
 
-    <div class="row class="k">
+    <div class="row">
     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
@@ -237,29 +237,39 @@
    <!-- FOOTER -->
 		<footer>
 
-          <div class="foot inform_foot">
-		  <span> Made by BEDBOU 2015<span>
+          <div class="container">
+
+              <div class="footer_inf">
+                   <div class="col-lg-5">
+                       <div ><img src="/images/foot_logo.jpg" width="72" height="90" align="left">
+                              <p>Made by BEDBOU 2015 <br>Web master: maxeem23@gmail.com</p></div>
+
+
+                   </div>
+                       <div class="col-lg-3">
+
+                       </div>
+                   <div class="col-lg-4"><p> Designed by kmokod23</p></div>
+              </div>
           </div>
-
-
-              Pss, <?php
-                    $role = Zend_Registry::get('role');
-                    echo $role;
-
-
-                    ?>.. Want some  <a href="<?php
-
-                    $role = Zend_Registry::get('role');
-
-
-                    if(($role == 'user') or ($role == 'admin')){
-                        echo $this->url(array('controller' => 'auth', 'action' =>$action = 'logout'));
-                    }else{
-                        echo $this->url(array('controller' => 'auth', 'action' =>$action = 'login'));
-                    }
-
-                    ?>"><?php  echo $action
-                        ?></a>?
+            <!--              Pss, --><?php
+//                    $role = Zend_Registry::get('role');
+//                    echo $role;
+//
+//
+//                    ?><!--.. Want some  <a href="--><?php
+//
+//                    $role = Zend_Registry::get('role');
+//
+//
+//                    if(($role == 'user') or ($role == 'admin')){
+//                        echo $this->url(array('controller' => 'auth', 'action' =>$action = 'logout'));
+//                    }else{
+//                        echo $this->url(array('controller' => 'auth', 'action' =>$action = 'login'));
+//                    }
+//
+//                    ?><!--">--><?php // echo $action
+//                        ?><!--</a>?-->
 
 
 
