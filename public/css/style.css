@@ -10,7 +10,7 @@ body{
 }
 section{
    /*-- margin:0px 30px 0 30px;--*/
- 
+
 }
 
 
@@ -39,7 +39,7 @@ list-style:none;
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    
+
 	padding-top:10px;
 }
 
@@ -70,7 +70,7 @@ padding-top:10px;}
    margin-bottom:0 !important;}
  .call{
  margin-left:10px;}
-	
+
 /*--------КНОПКИ ТА ІКОНКИ------*/
 .glyphicon-user{
     padding-right:15px;}
@@ -93,7 +93,7 @@ padding-top:10px;}
 .bn .btn-default{
 margin-bottom:10px;
 
-}	
+}
 .glyphicon-home {
 margin-right:10px;
 }
@@ -225,6 +225,8 @@ html, body, #map-canvas-add {
     color: #f9f9f9;
     font-size: 1.5em;
 }
+.success_new{background-color:#657AB1; color: #fff;}
+.table-hover > tbody > tr:hover > td, .table-hover > tbody > tr:hover > th {background:#9CBAC3 !important;}
 .nav-tabs>li>a:active {background-color: #ffffff !important; border-bottom:none !important;color: #000000;}
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
     color: #555555;
@@ -233,6 +235,7 @@ html, body, #map-canvas-add {
     border: 1px solid #dddddd;
     border-bottom-color: transparent;
 }
+
 #main_manu li
 {	float: left;
     list-style: none;
@@ -310,14 +313,54 @@ address span {padding-top:10px;color:#555555;font-size: 0.938em; font-weight: 70
 .media_top:first-child{margin-top: 30px !important;}
 .line{  border-top: 1px dashed #B6B4B4;  margin-top: 20px;margin-bottom: 20px;}
 
+
+.tabs  ul:first-of-type {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;}
+
+
+
+.tabs  ul   li {
+      flex: 1;
+      cursor: pointer;
+      display: block;
+      float: left;
+      height: 50px;
+      background: #c1cfd9;
+      color: white;
+      font-weight: 700;
+      line-height: 50px;
+      text-align: center;
+      text-transform: uppercase;}
+
+      &:nth-child(2n) {
+        background: #333;
+      }
+
+      &.active {
+        background: white;
+        color: #333;
+      }
+
+.tabs-content {
+  background:white;
+}
+
 footer {
     position: relative;
-    bottom: 0;
+
     width: 100%;
     background:#657AB1;
 }
 .footer_inf{color:#fff;}
 .footer_inf p{padding-top: 29px;}
+
+@media all and (max-width: 991px) {
+    .popular{margin: 0 auto;}
+    .popular a{padding: 10px 47px;}
+}
 @media all and (max-width: 768px) {
     .navbar-nav.navbar-right{ float:right;margin-top:-71px;}
 

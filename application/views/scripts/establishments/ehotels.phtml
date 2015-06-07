@@ -22,7 +22,7 @@
                             <h4 class="media-heading"><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishment',  'id' => $this->escape($establishments['id'])), null, true)?>"><?php echo $this->escape($establishments['establishment']) ?>: <?php echo $this->escape($establishments['title']) ?></a></h4>
                                 <ul class="list-inline">
                                 <li><?php echo $this->escape($establishments['description']) ?> </li><br>
-                                <li class="address_str"><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishment',  'id' => $this->escape($establishments['id'])), null, true)?>">Medovoi Pechery st. 65</a></li>
+                                <li class="address_str"><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishment',  'id' => $this->escape($establishments['id'])), null, true)?>"><?php echo $this->escape($establishments['build']) ?> <?php echo $this->escape($establishments['address']) ?></a></li>
                                 </ul>
 
                         </div> <!-- end media-body -->

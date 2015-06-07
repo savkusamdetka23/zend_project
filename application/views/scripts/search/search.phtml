@@ -1,0 +1,44 @@
+<?php
+
+echo $this->headLink()->appendStylesheet('../../../../public/css/bootstrap.min.css');
+echo $this->headLink()->appendStylesheet('../../../../public/css/style.css');
+
+?>
+
+
+<?php if(empty($this->hits)) : ?>
+   <div>
+       No results were found
+   </div>
+<?php else:
+echo "<ul class='list-unstyled'>";
+foreach($this->paginator as $hit) :
+?>
+    <li>
+        <article>
+            <div class="media">
+                <a class="pull-left"><img src="/images/<?php echo $this->escape($hit->image)?>" alt="Image" class="media-object"><span class="glyphicon glyphicon-earphone text-muted"></span class="call">+380<?php echo $this->escape($hit->telephone) ?></span></span></a>
+                <div class="media-body">
+                    <h4 class="media-heading"><?php echo $this->escape($hit->title) ?>: <?php echo $this->escape($hit->title) ?></h4>
+                    <ul class="list-inline">
+                        <li><?php echo $this->escape($hit->description) ?> </li>
+                    </ul>
+                    <ul class="list-inline pull-right">
+                        <li>
+                            <a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishment',  'id' => $this->escape($hit->id)))?>" class="btn btn-warning">Details</a>
+                        </li>
+                    </ul>
+
+                </div> <!-- end media-body -->
+            </div> <!-- end media -->
+        </article>
+        <hr>
+    </li>
+<?php endforeach; ?>
+<?php endif; ?>
+
+</ul>
+<?php echo $this->paginationControl($this->paginator,
+    'Sliding',
+    'search/controls.phtml', array(
+        'query' => $this->query) );  ?>

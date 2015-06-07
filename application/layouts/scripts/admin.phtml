@@ -84,29 +84,57 @@
         </div><!-- /.container-fluid -->
     </nav>
     <div class="row nav_menu">
-        <div class="col-lg-8 col-lg-offset-3 collapse navbar-collapse" id="navbar-collapse-1">
+        <div class="col-lg-8 col-lg-offset-4  col-md-8 col-md-offset-3 col-sm-8 col-sm-offset-2 collapse navbar-collapse" id="navbar-collapse-1">
             <ul id="main_manu">
                 <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmenta'), null, true)?>">Accomodation</a>
                     <ul class="sub_menu">
                         <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmenta'), null, true)?>" data-href="ehotels">Hotels</a>
-                        <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmenta'), null, true)?>" data-href="emotels">Motel</a></li>
-                        <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmenta'), null, true)?>" data-href="eapartments">Apartment</a></li>
-                        <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmenta'), null, true)?>" data-href="ehostels">Hostel</a></li>
+                        <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmenta'), null, true)?>" data-href="eapartments">Apartments</a></li>
+                        <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmenta'), null, true)?>" data-href="ehostels">Hostels</a></li>
                     </ul>
 
 
                 </li>
                 <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentc'))?>">Culture</a>
                     <ul class="sub_menu">
-                        <li><a href="#" data-href="ehotels">Hotels</a>
-                        <li><a href="#" data-href="emotels">Motel</a></li>
-                        <li><a href="#" data-href="eapartments">Apartment</a></li>
-                        <li><a href="#" data-href="ehostels">Hostel</a></li>
+                        <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentc'), null, true)?>" data-href="emonuments">Monuments</a></li>
+                        <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentc'), null, true)?>" data-href="emuseums">Museums</a></li>
+                        <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentc'), null, true)?>" data-href="etheatres">Theatres</a></li>
+                        <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentc'), null, true)?>" data-href="ephilarmonic">Philarmonic</a></li>
+                        <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentc'), null, true)?>" data-href="efairs">Fairs</a></li>
+                        <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentc'), null, true)?>" data-href="eexhibitions">Exhibitions</a></li>
+                        <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentc'), null, true)?>" data-href="eculturalplaces">Cultural places</a></li>
+                        <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentc'), null, true)?>" data-href="elibraries">Libraries</a></li>
                     </ul>
                 </li>
-                <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentf'))?>">Free time</a></li>
-                <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentn'))?>">Nutrition</a></li>
-                <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentt'))?>">Transport</a></li>
+                <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentf'))?>">Free time</a>
+                    <ul class="sub_menu">
+                        <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentf'), null, true)?>" data-href="eclubs">Clubs</a></li>
+                        <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentf'), null, true)?>" data-href="eentertaimentcentres">Entertaiment centres</a></li>
+                        <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentf'), null, true)?>" data-href=ecinemas">Cinemas</a></li>
+                        <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentf'), null, true)?>" data-href=esport">Sport</a></li>
+                        <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentf'), null, true)?>" data-href=eshopping">Shopping</a></li>
+                    </ul>
+                </li>
+                <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentn'))?>">Nutrition</a>
+                    <ul class="sub_menu">
+                        <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentn'), null, true)?>" data-href="erestaurants">Restaurants</a></li>
+                        <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentn'), null, true)?>" data-href="ebars">Bars</a></li>
+                        <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentn'), null, true)?>" data-href="epubs">Pubs</a></li>
+                        <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentn'), null, true)?>" data-href="epizzerias">Pizzerias</a></li>
+                        <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentn'), null, true)?>" data-href="ecafes">Cafes</a></li>
+                        <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentn'), null, true)?>" data-href="ecanteens" data-toggle="tab">Canteens</a></li>
+                        <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentn'), null, true)?>" data-href="efastfood" data-toggle="tab">Fast food</a></li>
+                    </ul>
+                </li>
+                <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentt'))?>">Transport</a>
+                    <ul class="sub_menu">
+                        <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentt'), null, true)?>" data-href="epublictransportation">Public transportation</a></li>
+                        <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentt'), null, true)?>" data-href="erailbus">Rail and bus stations</a></li>
+                        <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentt'), null, true)?>" data-href="eairport">Airport</a></li>
+                        <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentt'), null, true)?>" data-href="erentacar">Rent a car</a></li>
+                    </ul>
+                </li>
             </ul>
 
 
@@ -169,31 +197,42 @@
 
 <!-------------------------------------------------------------------------------------------------------------------->
 <!-- FOOTER -->
-<footer>
+    <footer>
 
-    <div class="foot inform_foot">
-		  <span> Made by BEDBOU 2015<span>
-    </div>
+        <div class="container">
 
+            <div class="footer_inf">
+                <div class="col-lg-5">
+                    <div ><img src="/images/foot_logo.jpg" width="72" height="90" align="left">
+                        <p>Made by BEDBOU 2015  Ⓒ<br>Web master: maxeem23@gmail.com</p></div>
 
-    Pss, <?php
-    $role = Zend_Registry::get('role');
-    echo $role;
-
-
-    ?>.. Want some  <a href="<?php
-
-    $role = Zend_Registry::get('role');
+                    Pss, <?php
+                    $role = Zend_Registry::get('role');
+                    echo $role;
 
 
-    if(($role == 'user') or ($role == 'admin')){
-        echo $this->url(array('controller' => 'auth', 'action' =>$action = 'logout'));
-    }else{
-        echo $this->url(array('controller' => 'auth', 'action' =>$action = 'login'));
-    }
+                    ?>.. Want some  <a href="<?php
 
-    ?>"><?php  echo $action
-        ?></a>?
+                    $role = Zend_Registry::get('role');
+
+
+                    if(($role == 'user') or ($role == 'admin')){
+                        echo $this->url(array('controller' => 'auth', 'action' =>$action = 'logout'));
+                    }else{
+                        echo $this->url(array('controller' => 'auth', 'action' =>$action = 'login'));
+                    }
+
+                    ?>"><?php  echo $action
+                        ?></a>?
+                </div>
+
+                <div class="col-lg-3">
+
+                </div>
+                <div class="col-lg-4"><p> Designed by kmokod23</p></div>
+            </div>
+        </div>
+
 
 
 

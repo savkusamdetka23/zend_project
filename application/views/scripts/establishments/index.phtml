@@ -12,17 +12,17 @@
     foreach($this->establishments as $establishments) :
     //  print_r($establishments);
     ?>
-        <tr class="clickable success" data-toggle="collapse" id="row<?php  echo $this->escape($establishments['id']) ?>" data-target=".row<?php echo $this->escape($establishments['id'])?>">
+        <tr class="clickable success_new" data-toggle="collapse" id="row<?php  echo $this->escape($establishments['id']) ?>" data-target=".row<?php echo $this->escape($establishments['id'])?>">
             <td><i class="glyphicon glyphicon-plus"></i></td>
             <td><?php  echo $this->escape($establishments['id']) ?></td>
             <td><?php echo $this->escape($establishments['establishment']) ?>: <?php echo $this->escape($establishments['title']) ?></td>
-            <td>c. <?php echo $this->escape($establishments['town']) ?>, <?php echo $this->escape($establishments['address']) ?> st., <?php echo $this->escape($establishments['build']) ?></td>
+            <td>c. <?php echo $this->escape($establishments['town']) ?>, <?php echo $this->escape($establishments['address']) ?>, <?php echo $this->escape($establishments['build']) ?></td>
 
             <td><span class="glyphicon glyphicon-earphone text-muted"></span >+380<?php echo $this->escape($establishments['telephone']) ?></td><td>
-                <a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'edit', 'id' => $establishments['id'])); ?>">edit</a>
+                <a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'edit', 'id' => $establishments['id'])); ?>" class="footer_inf">edit</a>
             </td>
             <td>
-                <a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'delete',  'id' => $this->escape($establishments['id']))); ?>">delete</a>
+                <a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'delete',  'id' => $this->escape($establishments['id']))); ?>" class="footer_inf">delete</a>
             </td>
         </tr>
 

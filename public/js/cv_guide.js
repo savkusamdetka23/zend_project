@@ -20,6 +20,7 @@ function jsddm_canceltimer()
 
 $(document).ready(function(){
     var cv_guide = {
+
         loadMenu : function() {
 
             $('#main_manu > li').bind('mouseover', jsddm_open)

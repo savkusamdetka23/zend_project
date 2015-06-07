@@ -1,0 +1,33 @@
+<form action="<?php echo $this->url(array('controller' => 'addresses', 'action' => 'add'))?>"> <button class="btn btn-default">Add new Address</button></form>
+
+<h3 ><span class="glyphicon glyphicon-home text-muted"></span>Addresses</h3>
+
+    <table class="table table-responsive table-hover">
+        <thead>
+        </th><th>Username</th><th>Comment</th><th>Date</th></tr>
+        </thead>
+        <tbody>
+        <?php
+        if (is_array($this->comments) && count($this->comments)) :
+
+        foreach($this->comments as $comment) : ?>
+        <tr>
+            <td><?php echo $this->escape($comment['username']) ?></td>
+            <td><?php echo $this->escape($comment['comment']) ?></td>
+            <td><?php echo $this->escape($comment['date']) ?></td>
+
+
+            <td>
+
+
+                <a href="<?php echo $this->url(array('controller' => 'addresses', 'action' => 'edit', 'id' => $addresses['id'])); ?>">edit</a>
+
+            </td>
+		   <td>
+                <a href="<?php echo $this->url(array('controller' => 'addresses', 'action' => 'delete',  'id' => $this->escape($addresses['id']))); ?>">delete</a>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+    <?php endif; ?>
+        </tbody>
+</table>

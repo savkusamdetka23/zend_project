@@ -30,10 +30,11 @@ echo $this->headScript();
                                 <div class="media-body">
                                     <address>
 
-                                        <span>Telefone:</span>+1 800 603 6035<br>
-                                        <span>Address:</span>3 Katedralna sqr. <br>
-                                        <span> E-mail:</span> <a href="#">mail@demolink.org</a><br>
-                                        <span>Work time</span> 08:00 - 22:00<br>
+                                        <span>Address:</span><?php echo $this->escape($this->establishments['build']) ?> <?php echo $this->escape($this->establishments['address']) ?><br>
+                                        <span>Telefone:</span>+38 <?php echo $this->escape($this->establishments['telephone']) ?><br>
+                                        <span>E-mail:</span><a href="#"><?php //echo $this->escape($this->establishments['email']) ?></a><br>
+                                        <span>Website:</span><a href="#"><?php //echo $this->escape($this->establishments['website']) ?></a><br>
+                                        <span>Work time:</span><?php echo $this->escape($this->$establishments['opening']) ?> - <?php echo $this->escape($this->establishments['closing']) ?><br>
                                     </address>
 <!--                                    <address>-->
 <!--                                        <span>Address:</span> --><?php //echo $this->escape($this->establishments['build']) ?><!--, --><?php //echo $this->escape($this->establishments['address'])?><!-- St.<br>-->
@@ -50,7 +51,30 @@ echo $this->headScript();
                         <div id="map-canvas" style="width:650px; height:300px"></div>
                         <div class="line"></div>
                     </li>
-                    <?php //endforeach; ?>
+
+
+                        <div>
+                            <table class="table table-responsive table-hover">
+                                <thead>
+                                </th><th>Username</th><th>Comment</th></tr>
+                                </thead>
+
+                                <tbody>
+                                <?php
+                                if (is_array($this->comments) && count($this->comments)) :
+                                    foreach($this->comments as $comment) : ?>
+                                        <tr>
+                                            <td><?php echo $this->escape($comment['username']) ?></td>
+                                            <td><?php echo $this->escape($comment['comment']) ?></td>
+
+
+
+                                        </tr>
+                                    <?php endforeach; ?>
+                                <?php endif; ?>
+                                </tbody>
+                            </table>
+                            </div>
                     <?php endif;
                     ?>
             </table>

@@ -771,6 +771,7 @@ class EstablishmentsController extends Zend_Controller_Action
             // Заповнюємо форму за допомогою метода populate
             $establishment->getEstablishment($id);
             $this->view->establishment = $establishment;
+
         }
 
 
@@ -778,6 +779,12 @@ class EstablishmentsController extends Zend_Controller_Action
         $establishments = new Application_Model_DbTable_Establishments();
         $establishmentsList = $establishments->getEstablishmentRow($id);
         $this->view->establishments = $establishmentsList;
+
+
+        $comments = new Application_Model_DbTable_Comments();
+        $commentsList = $comments->getCommentsList($id);
+        $this->view->comments = $commentsList;
+
 
 
 
