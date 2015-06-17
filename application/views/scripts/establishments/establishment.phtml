@@ -3,9 +3,9 @@ $this->headLink()->appendStylesheet($this->baseUrl("css/bootstrap.css"))
     ->appendStylesheet($this->baseUrl("css/style.css"))
     ->appendStylesheet($this->baseUrl("css/bootstrap.min.css"));
 echo $this->headLink();
-$this->headScript()->appendFile($this->baseUrl("js/jquery-1.10.2.min.js"))
-   ->appendFile($this->baseUrl("js/googlemaps/googlemaps.js"))
-   ->appendFile($this->baseUrl("js/bootstrap.min.js"));
+$this->headScript() ->appendFile($this->baseUrl("js/googlemaps/googlemaps.js"))
+    ->appendFile($this->baseUrl("js/cv_guide.js"))
+    ->appendFile($this->baseUrl("js/bootstrap.min.js"));
 echo $this->headScript();
 ?>
 
@@ -19,66 +19,83 @@ echo $this->headScript();
                 ?>
                 <ul class="list-unstyled detail" data-gps="<?php echo $this->escape($this->establishments['gps']) ?>" data-address="<?php echo $this->escape($this->establishments['town']), " ", $this->escape($this->establishments['address'])," ", $this->escape($this->establishments['build']); ?>">
 
+                    <div class="row">
+                        <div class="main"></div>
+                        <div class="col-lg-8">
+                            <ul class="pgwSlider">
+                                <li>
+                                    <img src="/images/<?php
+                                    $images = explode(",",$this->escape($this->establishments['image']));
+                                    echo $images[0]; ?>">
 
+                                </li>
+                                <li>
+                                    <img src="/images/<?php
+                                    $images = explode(",",$this->escape($this->establishments['image']));
+                                    echo $images[1]; ?>">
+
+                                </li>
+                                <li>
+                                    <img src="/images/<?php
+                                    $images = explode(",",$this->escape($this->establishments['image']));
+                                    echo $images[2]; ?>">
+
+                                </li>
+                                <li>
+                                    <img src="/images/<?php
+                                    $images = explode(",",$this->escape($this->establishments['image']));
+                                    echo $images[3]; ?>">
+
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4">
+                            <address>
+
+                                <span>Address:</span><?php echo $this->escape($this->establishments['build']) ?> <?php echo $this->escape($this->establishments['address']) ?><br>
+                                <span>Telefone:</span>+38 <?php echo $this->escape($this->establishments['telephone']) ?><br>
+                                <span>E-mail:</span><a href="#"><?php //echo $this->escape($this->establishments['email']) ?></a><br>
+                                <span>Website:</span><a href="#"><?php //echo $this->escape($this->establishments['website']) ?></a><br>
+                                <span>Work time:</span><?php echo $this->escape($this->$establishments['opening']) ?> - <?php echo $this->escape($this->establishments['closing']) ?><br>
+                            </address>
+                        </div>
+                    </div>
                     <li>
-                        <article>
-                            <div class="media">
-                                <h3 class="media-heading media_top"><?php echo $this->escape($this->establishments['establishment']) ?> <?php echo $this->escape($this->establishments['title']) ?></h3>
-                                <div class="line"></div>
-                                <a class="pull-left images_size_descr"><img src="/images/<?php echo $this->escape($this->establishments['image'])?>" alt="Image" class="media-object"></a>
-
-                                <div class="media-body">
-                                    <address>
-
-                                        <span>Address:</span><?php echo $this->escape($this->establishments['build']) ?> <?php echo $this->escape($this->establishments['address']) ?><br>
-                                        <span>Telefone:</span>+38 <?php echo $this->escape($this->establishments['telephone']) ?><br>
-                                        <span>E-mail:</span><a href="#"><?php //echo $this->escape($this->establishments['email']) ?></a><br>
-                                        <span>Website:</span><a href="#"><?php //echo $this->escape($this->establishments['website']) ?></a><br>
-                                        <span>Work time:</span><?php echo $this->escape($this->$establishments['opening']) ?> - <?php echo $this->escape($this->establishments['closing']) ?><br>
-                                    </address>
-<!--                                    <address>-->
-<!--                                        <span>Address:</span> --><?php //echo $this->escape($this->establishments['build']) ?><!--, --><?php //echo $this->escape($this->establishments['address'])?><!-- St.<br>-->
-<!--                                        <span>Telephone:</span>+38 --><?php //echo $this->escape($this->establishments['telephone'])?><!--<br>-->
-<!--                                        <span>Work time:</span> --><?php //echo $this->escape($this->establishments['opening'])?><!-- - --><?php //echo $this->escape($this->establishments['closing'])?><!--<br>-->
-<!--                                    </address>-->
-                                </div> <!-- end media-body -->
-
-                            </div> <!-- end media -->
-                            <div class="line"></div>
-                        </article>
+                        <div class="line"></div>
                         <p><?php echo $this->escape($this->establishments['description'])?></p>
                         <div class="line"></div>
                         <div id="map-canvas" style="width:650px; height:300px"></div>
                         <div class="line"></div>
                     </li>
+                    <?php
+                    if (is_array($this->comments) && count($this->comments)) :
+                    foreach($this->comments as $comment) : ?>
+                    <div class="comment comments row main">
+                        <div class="col-md-1">
+                            <img src="/images/user.jpg" width="40" height="40" class="">
+                        </div>
+                        <div class="col-md-11">
 
-
-                        <div>
-                            <table class="table table-responsive table-hover">
-                                <thead>
-                                </th><th>Username</th><th>Comment</th></tr>
-                                </thead>
-
-                                <tbody>
-                                <?php
-                                if (is_array($this->comments) && count($this->comments)) :
-                                    foreach($this->comments as $comment) : ?>
-                                        <tr>
-                                            <td><?php echo $this->escape($comment['username']) ?></td>
-                                            <td><?php echo $this->escape($comment['comment']) ?></td>
-
-
-
-                                        </tr>
-                                    <?php endforeach; ?>
-                                <?php endif; ?>
-                                </tbody>
-                            </table>
+                            <div class="user"> <a href="#" class=""><?php echo $this->escape($comment['username']) ?></a>
+                                <span class="comment-time pull-right"><?php echo $this->escape($comment['date']) ?></span>
+                                <p class=""><?php echo $this->escape($comment['comment']) ?></p>
                             </div>
+
+                        </div>
+                    </div>
+                    <?php endforeach; ?>
+                    <?php endif; ?>
+
                     <?php endif;
                     ?>
             </table>
+            <div class="line"></div>
+            <div>
+            <?php
+            echo $this->form
+            ?>
 
+        </div>
 
         </div>
     </div>

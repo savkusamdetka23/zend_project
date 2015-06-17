@@ -8,12 +8,6 @@ class Application_Model_DbTable_Worktime extends Zend_Db_Table_Abstract
 	
 	public function getWorktime($establishment_id)
     {
-       /*$select = $this->getAdapter()->select()
-            ->from('worktime')->where('worktime.establishment_id = ?', $id);
-        $result = $this->getAdapter()->fetchAll($select);
-        return $result;
-		
-		*/
 
         $establishment_id = (int)$establishment_id;
         $row = $this->fetchRow('establishment_id = ' . $establishment_id);
@@ -43,13 +37,7 @@ class Application_Model_DbTable_Worktime extends Zend_Db_Table_Abstract
         return $this->getAdapter()->fetchAll($select);
     }
     public function getListWorktime(){
-        /*	$select = $this->getAdapter()->select()->from(array('establishments', 'establishments.id', 'establishments.address_id'))->join(array('addresses', 'addresses.id=establishments.address_id')->where('street');
-
-            return $this->getAdapter()->fetchAll($select);*/
-        /*$select =  $this->getAdapter()->select()->from($this)->join('addresses', 'addresses.id = establishments.address_id')->where('street = ?',$street);
-        return $this->fetchAll($select);
-    */
-        $select = $this->_db->select()
+          $select = $this->_db->select()
             ->from($this->_name,
                 array('key' => 'id', 'value' => 'establishment_id'));
         $result = $this->getAdapter()->fetchAll($select);

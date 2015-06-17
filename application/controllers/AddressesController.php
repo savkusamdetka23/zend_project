@@ -1,8 +1,6 @@
 <?php
-
 class AddressesController extends Zend_Controller_Action
 {
-
     public function init()
     {
         $role = Zend_Registry::get('role');
@@ -14,7 +12,6 @@ class AddressesController extends Zend_Controller_Action
         $layout->setLayout('layout');
         }
     }
-
     function indexAction()
     {
         $this->view->title = "Addresses";
@@ -73,8 +70,6 @@ class AddressesController extends Zend_Controller_Action
         }
         }
     }
-
-	
     public function deleteAction()
     {
         $this->view->title = "Delete address";
@@ -92,9 +87,5 @@ class AddressesController extends Zend_Controller_Action
             $addresses = new Application_Model_DbTable_Addresses();
             $this->view->addresses = $addresses->getAddressesToDel($id);
         }
-
-
-
+    }
 }
-}
-

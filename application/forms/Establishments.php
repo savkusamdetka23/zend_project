@@ -1,8 +1,6 @@
 <?php
-
 class Application_Form_Establishments extends Zend_Form
 {
-
    public function __construct($options = null)
     {
         parent::__construct($options);
@@ -21,24 +19,18 @@ class Application_Form_Establishments extends Zend_Form
 
         $image = new Zend_Form_Element_File('image2');
         $image->setLabel('Image')
-             //->setDestination(PUBLIC_PATH"/images")
-             //->setDestination('images/')
-// ensure only one file
-       ->addValidator('Count', false, 1)
-// max 2MB
+                ->setMultiFile(4)
             ->addValidator('NotEmpty')
        ->addValidator('Size', false, 2097152)
            ->setMaxFileSize(2097152)
-// only JPEG, PNG, or GIF
-       ->addValidator('Extension', false, 'jpg,png,gif,jpeg')
+       ->addValidator('Extension', false, 'jpg,png,gif,jpeg,JPG')
        ->setValueDisabled(true);
 
         $image2 = new Zend_Form_Element_Hidden('image');
         $build = new Zend_Form_Element_Text('build');
         $build->setLabel('Building №')
-            ->setRequired(true)
-            ->addValidator('NotEmpty');
 
+            ->addValidator('NotEmpty');
 
 		$addresses = new Application_Model_DbTable_Addresses();
 		$addresses_list = $addresses->getListAddresses();
@@ -47,7 +39,6 @@ class Application_Form_Establishments extends Zend_Form
 			->setMultiOptions($addresses_list)
             ->setRequired(true)
             ->addValidator('NotEmpty');
-
 
 			$gps = new Zend_Form_Element_Text('gps');
 			$gps->setLabel('GPS')
@@ -62,11 +53,9 @@ class Application_Form_Establishments extends Zend_Form
 
             $telephone = new Zend_Form_Element_Text('telephone');
 			$telephone->setLabel('Telephone')
-            ->setRequired(true)
             ->addFilter('StripTags')
             ->addFilter('StringTrim')
             ->addValidator('NotEmpty');
-
 
 			$description = new Zend_Form_Element_Textarea('description');
 			$description->setLabel('Description')
@@ -85,13 +74,8 @@ class Application_Form_Establishments extends Zend_Form
             ->setRequired(true)
             ->addValidator('NotEmpty');
 
-
-
-
-
         $establishment_id = new Zend_Form_Element_Hidden('establishment_id');
         $establishment_id ->addFilter('Int');
-
 
         $opening = new Zend_Form_Element_Select('opening');
         $opening->setLabel('Opening')
@@ -114,12 +98,9 @@ class Application_Form_Establishments extends Zend_Form
         $weekend->setLabel('Weekend')
             ->setMultiOptions(array(''=>'', 'Sunday'=>'Sunday', 'Saturday'=>'Saturday', 'Friday'=>'Friday', 'Saturday-Sunday'=>'Saturday-Sunday', 'Sunday-Monday'=>'Sunday-Monday'));
 
-
-
         $submit = new Zend_Form_Element_Submit('submit');
         $submit->setAttrib('id', 'submitbutton');
         $this->addElements(array($id, $title, $image, $image2, $build, $address_id, $gps, $googlemap,  $telephone, $description, $establishmenttype_id, $establishment_id, $opening, $break_from, $break_to, $closing, $weekend, $submit));
     }
-
 }
 

@@ -2,7 +2,6 @@
 class Application_Model_DbTable_Search extends Zend_Db_Table_Abstract {
 
     protected $_searchIndexPath;    //путь для папки с файлами поискового индекса
-   // protected $_name = 'establishments';  //имя таблицы в БД, для которой создаем поисковой индекс
     protected $db;				//database adapter
 
     public function __construct() {
@@ -49,25 +48,18 @@ class Application_Model_DbTable_Search extends Zend_Db_Table_Abstract {
                 $i++;
             }
         } catch (Zend_Search_Lucene_Exception $e) {
-            echo "<p class=\"ui-bad-message\">Ошибки индексации: {$e->getMessage()}</p>";
+            echo "<p class=\"ui-bad-message\">Errors of indexation: {$e->getMessage()}</p>";
         }
 
         //let's clean up some
         $index->optimize();
 
         echo "<p class=\"ui-good-message\">
-                Поисковой индекс слов заново создан. Слов добавлено: {$i}. <br />
-                Индекс оптимизирован.</p>";
+                Search index of words created. Words added: {$i}. <br />
+                Index has been optimised.</p>";
     }
 
-    /**
-     * recursive_remove_directory( directory to delete, empty )
-     * expects path to directory and optional TRUE / FALSE to empty
-     *
-     * @param $directory
-     * @param $empty TRUE - just empty directory
-     */
-    function recursive_remove_directory($directory, $empty=FALSE)
+      function recursive_remove_directory($directory, $empty=FALSE)
     {
         if(substr($directory,-1) == '/')
         {
@@ -104,17 +96,11 @@ class Application_Model_DbTable_Search extends Zend_Db_Table_Abstract {
         return TRUE;
     }
 
-    /**
-     * Search by query
-     *
-     * @param $query search query
-     * @return array Zend_Search_Lucene_Search_QueryHit
-     */
-    public function search($query) {
+     public function search($query) {
         try{
             $index = Zend_Search_Lucene::open($this->_searchIndexPath);
         } catch (Zend_Search_Lucene_Exception $e) {
-            echo "Ошибка:{$e->getMessage()}";
+            echo "Error:{$e->getMessage()}";
         }
 
         $userQuery = Zend_Search_Lucene_Search_QueryParser::parse($query);
@@ -126,7 +112,7 @@ class Application_Model_DbTable_Search extends Zend_Db_Table_Abstract {
         try{
             $index = Zend_Search_Lucene::open($this->_searchIndexPath);
         } catch (Zend_Search_Lucene_Exception $e) {
-            echo "Ошибка:{$e->getMessage()}";
+            echo "Error:{$e->getMessage()}";
         }
         return $index;
     }

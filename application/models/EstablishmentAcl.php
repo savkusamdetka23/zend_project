@@ -11,6 +11,7 @@ class Application_Model_EstablishmentAcl extends Zend_Acl
 
 
             $this->add(new Zend_Acl_Resource('addresses'));
+            $this->add(new Zend_Acl_Resource('comments'));
             $this->add(new Zend_Acl_Resource('establishmenttype'));
             $this->add(new Zend_Acl_Resource('establishments'));
           //  $this->add(new Zend_Acl_Resource('establishment'));
@@ -20,8 +21,7 @@ class Application_Model_EstablishmentAcl extends Zend_Acl
 
 
             $this->addRole(new Zend_Acl_Role('guest'));
-            $this->addRole(new Zend_Acl_Role('user'), 'guest');
-            $this->addRole(new Zend_Acl_Role('admin'), 'user');
+            $this->addRole(new Zend_Acl_Role('admin'), 'guest');
 
 
             $this->allow('guest', 'index');
@@ -33,8 +33,6 @@ class Application_Model_EstablishmentAcl extends Zend_Acl
             $this->allow('guest', 'establishments', 'establishmentn');
             $this->allow('guest', 'establishments', 'establishmentt');
             $this->allow('guest', 'establishments', 'establishment');
-
-            //  $this->deny('user', 'auth', 'login');
 
             $this->allow('admin', 'addresses');
 

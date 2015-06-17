@@ -4,6 +4,61 @@
 $(document).ready(function(){
     //google maps namespace
     var googleMaps = {
+        displayStreetView : function() {
+            var latlng = new google.maps.LatLng(48.2719865,25.94633239999996);
+            var mapOptions = {
+                zoom: 18,
+                center: latlng
+            };
+            var gpsInformation = $(".detail").data("gps");
+            if (gpsInformation != "") {
+                var lat = gpsInformation.split(",")[0];
+                var lng = gpsInformation.split(",")[1];
+
+                var panorama = new  google.maps.StreetViewPanorama(document.getElementById("pano"), {
+                    position: new google.maps.LatLng(lat,lng),
+                    visible: true
+                });
+                var map = new google.maps.Map(document.getElementById("map_canvas"), {
+                    center: new google.maps.LatLng(lat,lng),
+                    zoom: 14,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    streetViewControl: true,
+                    streetView: panorama
+                });
+
+                google.maps.event.addListener(panorama, "position_changed", function() {
+                    map.setCenter(panorama.getPosition());
+                });
+            }
+            else
+            {
+                geocoder = new google.maps.Geocoder();
+                var address = $(".detail").data("address");
+                map = new google.maps.Map($("#map_canvas")[0], mapOptions);
+                geocoder.geocode( { 'address': address}, function(results, status) {
+                    if (status == google.maps.GeocoderStatus.OK) {
+                        var panorama = new  google.maps.StreetViewPanorama(document.getElementById("pano"), {
+                            position: new google.maps.LatLng(results[0].geometry.location.lat(),results[0].geometry.location.lng()),
+                            visible: true
+                        });
+                        var map = new google.maps.Map(document.getElementById("map_canvas"), {
+                            center: new google.maps.LatLng(results[0].geometry.location.lat(),results[0].geometry.location.lng()),
+                            zoom: 14,
+                            mapTypeId: google.maps.MapTypeId.ROADMAP,
+                            streetViewControl: true,
+                            streetView: panorama
+                        });
+
+                        google.maps.event.addListener(panorama, "position_changed", function() {
+                            map.setCenter(panorama.getPosition());
+                        });
+                    } else {
+                        alert("Geocode was not successful for the following reason: " + status);
+                    }
+                });
+            }
+        },
         displayLocation : function() {
             var geocoder;
             var map;
@@ -162,11 +217,15 @@ $(document).ready(function(){
             });
         }
     };
+    if (typeof (google) != 'undefined') {
     if ($("#map-canvas-add").length > 0) {
         googleMaps.selectGeoLocation();
+    } else if ($("#pano").length > 0) {
+        googleMaps.displayStreetView();
     } else {
         // details page
         googleMaps.displayLocation();
+    }
     }
 
 });

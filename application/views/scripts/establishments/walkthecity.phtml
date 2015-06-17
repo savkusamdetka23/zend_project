@@ -1,0 +1,76 @@
+<?php
+$this->headLink()->appendStylesheet($this->baseUrl("css/bootstrap.css"))
+    ->appendStylesheet($this->baseUrl("css/style.css"))
+    ->appendStylesheet($this->baseUrl("css/bootstrap.min.css"));
+echo $this->headLink();
+$this->headScript() ->appendFile($this->baseUrl("js/googlemaps/googlemaps.js"))
+    ->appendFile($this->baseUrl("js/cv_guide.js"))
+    ->appendFile($this->baseUrl("js/bootstrap.min.js"));
+echo $this->headScript();
+?>
+
+<div class="row" >
+
+
+        <div>
+            <table class="table table-responsive table-hover">
+                <?php if (is_array($this->establishments) && count($this->establishments)) :
+                //foreach($this->establishments as $establishments) :
+                ?>
+                <ul class="list-unstyled detail" data-gps="<?php echo $this->escape($this->establishments['gps']) ?>" data-address="<?php echo $this->escape($this->establishments['town']), " ", $this->escape($this->establishments['address'])," ", $this->escape($this->establishments['build']); ?>">
+
+
+                    <li>
+                        <article>
+                            <div class="media">
+                                <h3 class="media-heading media_top"><?php echo $this->escape($this->establishments['establishment']) ?> <?php echo $this->escape($this->establishments['title']) ?></h3>
+                                <div class="line"></div>
+                                <div class="main"></div>
+                                <div class="col-lg-8">
+                                    <ul class="pgwSlider">
+                                        <li>
+                                            <img src="/images/<?php
+                                            $images = explode(",",$this->escape($this->establishments['image']));
+                                            echo $images[0]; ?>">
+
+                                        </li>
+                                        <li>
+                                            <img src="/images/<?php
+                                            $images = explode(",",$this->escape($this->establishments['image']));
+                                            echo $images[1]; ?>">
+
+                                        </li>
+                                        <li>
+                                            <img src="/images/<?php
+                                            $images = explode(",",$this->escape($this->establishments['image']));
+                                            echo $images[2]; ?>">
+
+                                        </li>
+                                        <li>
+                                            <img src="/images/<?php
+                                            $images = explode(",",$this->escape($this->establishments['image']));
+                                            echo $images[3]; ?>">
+
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div> <!-- end media -->
+                            <div class="line"></div>
+                        </article>
+                        <p><?php echo $this->escape($this->establishments['description'])?></p>
+                        <div class="line"></div>
+                        <div id="pano" style="z-index:0; width: 800px; height: 600px;"></div>
+                        <div id="map_canvas" style="z-index:1; position:absolute; right:0px; bottom:0px; width: 200px; height: 150px"></div>
+                        <div class="line"></div>
+                    </li>
+
+
+
+                    <?php endif;
+                    ?>
+            </table>
+
+
+        </div>
+    </div>

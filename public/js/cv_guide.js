@@ -49,6 +49,23 @@ $(document).ready(function(){
                   });
           });
       },
+      loadPanelData :function() {
+          var establishment = $(".establishmentsearch > li > a");
+          establishment.each( function( index, element ) {
+              $(this).click(function(e) {
+                  e.preventDefault();
+
+                  $.ajax(
+                      {
+                      url : $(this).attr("href"),
+                      success: function(data) {
+                        $(".media-list").html(data);
+                      }
+                      });
+
+                  });
+          });
+      },
       loadEstablishments : function() {
           var establishmentloading = $(".establishmentloading > li > a");
           var disabled = false;
@@ -86,9 +103,14 @@ $(document).ready(function(){
           });
       }
     };
+
     cv_guide.loadEstablishments();
     cv_guide.initializeSubMenu();
     cv_guide.loadMenu();
+    cv_guide.loadPanelData();
     cv_guide.loadPage();
 
+});
+$(document).ready(function() {
+    $('.pgwSlider').pgwSlider();
 });

@@ -38,27 +38,7 @@ class Application_Model_DbTable_Establishments extends Zend_Db_Table_Abstract
             ->joinLeft(array('establishmenttype'), 'establishmenttype.id=establishments.establishmenttype_id', array('establishment' => 'establishment'));
           $result = $this->getAdapter()->fetchRow($select);
         return $result;
-
-        /*   $select = $this->getAdapter()->select()
-              ->from('establishments',
-                  array(
-                      'establishments.id',
-                      'establishments.title',
-                      'establishments.build',
-                      'establishments.address_id',
-                      'establishments.gps',
-                      'establishments.telephone',
-                      'establishments.description',
-                      'establishments.establishmenttype_id'
-                  ))
-              ->joinLeft(array('addresses'), 'addresses.id=establishments.address_id', array('address' => 'street', 'town' => 'city'))
-              ->joinLeft(array('worktime'), 'worktime.establishment_id=establishments.id', array('opening' =>'opening', 'break_from' =>'break_from', 'break_to' =>'break_to', 'closing' =>'closing', 'weekend' =>'weekend'))
-              ->joinLeft(array('establishmenttype'), 'establishmenttype.id=establishments.establishmenttype_id', array('establishment' => 'establishment'));
-           //      ->joinInner(array('establishmenttype'), 'establishmenttype.type[accomodation]=establishmenttype.type[accomodation]s', array('types' => 'type'));
-  //print($select);
-
-          return $this->getAdapter()->fetchAll($select);*/
-    }
+   }
 
 
 
@@ -81,7 +61,6 @@ class Application_Model_DbTable_Establishments extends Zend_Db_Table_Abstract
             $select->joinLeft(array('addresses'), 'addresses.id=establishments.address_id', array('address' => 'street', 'town' => 'city'))
             ->joinLeft(array('worktime'), 'worktime.establishment_id=establishments.id', array('opening' =>'opening', 'break_from' =>'break_from', 'break_to' =>'break_to', 'closing' =>'closing', 'weekend' =>'weekend'))
             ->joinLeft(array('establishmenttype'), 'establishmenttype.id=establishments.establishmenttype_id', array('establishment' => 'establishment', 'type' => 'type'));
-//print($select);
 
         return $this->getAdapter()->fetchAll($select);
     }
@@ -138,35 +117,63 @@ class Application_Model_DbTable_Establishments extends Zend_Db_Table_Abstract
         return $data->query()->fetchAll();
     }
 
- /*   public function populate($data)
+    public  function getrandomList()
     {
-        foreach($data as $field => $value)
-        {
 
-            $formData = $this->getRequest()->getPost();
-
-            if ($data->isValid($formData)) {
-
-                $this->$id->setValue('id');
-                $this->$title->setValue('title');
-                $this->$build->setValue('build');
-                $this->$address_id->setValue('address_id');
-                $this->$gps->setValue('gps');
-                $this->$telephone->setValue('telephone');
-
-
-                $this->$establishment_id->setValue('establishment_id');
-                $this->$opening->setValue('opening');
-                $this->$break_from->setValue('break_from');
-                $this->$break_to->setValue('break_to');
-                $this->$closing->setValue('closing');
-                $this->$weekend->setValue('weekend');
+        $select = $this->getAdapter()->select()
+            ->from('establishments',
+                array(
+                    'establishments.id',
+                    'establishments.title',
+                    'establishments.image',
+                    'establishments.build',
+                    'establishments.address_id',
+                    'establishments.gps',
+                    'establishments.telephone',
+                    'establishments.description',
+                    'establishments.establishmenttype_id'
+                ))
+            ->joinLeft(array('addresses'), 'addresses.id=establishments.address_id', array('address' => 'street', 'town' => 'city'))
+            ->joinLeft(array('worktime'), 'worktime.establishment_id=establishments.id', array('opening' =>'opening', 'break_from' =>'break_from', 'break_to' =>'break_to', 'closing' =>'closing', 'weekend' =>'weekend'))
+            ->joinLeft(array('establishmenttype'), 'establishmenttype.id=establishments.establishmenttype_id', array('establishment' => 'establishment')) ;
 
 
-            }
-        return $this;
+
+        return $this->getAdapter()->fetchAll($select
+                ->order('RAND()')
+                ->limit(5)
+
+        );
+
+}
+
+    public  function getnewestList()
+    {
+
+        $select = $this->getAdapter()->select()
+            ->from('establishments',
+                array(
+                    'establishments.id',
+                    'establishments.title',
+                    'establishments.image',
+                    'establishments.build',
+                    'establishments.address_id',
+                    'establishments.gps',
+                    'establishments.telephone',
+                    'establishments.description',
+                    'establishments.establishmenttype_id'
+                ))
+            ->joinLeft(array('addresses'), 'addresses.id=establishments.address_id', array('address' => 'street', 'town' => 'city'))
+            ->joinLeft(array('worktime'), 'worktime.establishment_id=establishments.id', array('opening' =>'opening', 'break_from' =>'break_from', 'break_to' =>'break_to', 'closing' =>'closing', 'weekend' =>'weekend'))
+            ->joinLeft(array('establishmenttype'), 'establishmenttype.id=establishments.establishmenttype_id', array('establishment' => 'establishment')) ;
+
+
+
+        return $this->getAdapter()->fetchAll($select
+                ->order('establishments.id DESC')
+                ->limit(5)
+
+        );
     }
 
-
-}*/
-}
+  }

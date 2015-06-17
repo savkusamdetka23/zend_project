@@ -1,0 +1,38 @@
+<?php
+$this->headLink()->appendStylesheet($this->baseUrl("css/bootstrap.css"))
+    ->appendStylesheet($this->baseUrl("css/style.css"))
+    ->appendStylesheet($this->baseUrl("css/bootstrap.min.css"));
+echo $this->headLink();
+$this->headScript()->appendFile($this->baseUrl("js/jquery-1.10.2.min.js"))
+    ->appendFile($this->baseUrl("js/infinitescroll.js"))
+    ->appendFile($this->baseUrl("js/bootstrap.min.js"));
+echo $this->headScript();
+?>
+<?php if (is_array($this->establishments) && count($this->establishments)) :
+    foreach($this->establishments as $establishments) :
+?>
+
+    <div class=" estcontent">
+        <div class="media">
+            <div class="pull-left">
+                <a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishment',  'id' => $this->escape($establishments['id'])), null, true)?>" class="pull-left "><img  src="/images/<?php
+                    $images = explode(",",$this->escape($establishments['image']));
+                    echo $images[0]; ?>" alt="Image" class="images_random"></a>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading"><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishment',  'id' => $this->escape($establishments['id'])), null, true)?>"><?php echo $this->escape($establishments['establishment']) ?>: <?php echo $this->escape($establishments['title']) ?></a></h4>
+                <p><?php echo $this->escape($establishments['description']) ?></p>
+            </div>
+        </div>
+
+    </div>
+<?php endforeach; ?>
+        <?php endif; ?>
+
+
+
+
+
+
+
+

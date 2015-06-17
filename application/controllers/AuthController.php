@@ -2,7 +2,6 @@
 
 class AuthController extends Zend_Controller_Action
 {
-
     public function init()
     {
         $role = Zend_Registry::get('role');
@@ -14,12 +13,10 @@ class AuthController extends Zend_Controller_Action
             $layout->setLayout('layout');
         }
     }
-
     public function indexAction()
     {
         $this->_helper->redirector('login');
    }
-
     public function loginAction()
     {
         $this->view->title = 'Login';
@@ -54,7 +51,6 @@ class AuthController extends Zend_Controller_Action
         }
         $this->view->form = $form;
     }
-
     public function logoutAction()
     {
         // знищуємо інформацію про авторизацію користувача
@@ -62,7 +58,6 @@ class AuthController extends Zend_Controller_Action
         // направляємо його на головну
         $this->_helper->redirector('index', 'index');
     }
-
     private function getAuthAdapter(){
 
         $authApadter = new Zend_Auth_Adapter_DbTable(Zend_Db_Table::getDefaultAdapter());
@@ -71,6 +66,5 @@ class AuthController extends Zend_Controller_Action
                       ->setCredentialColumn('password');
         return $authApadter;
     }
-
 }
 

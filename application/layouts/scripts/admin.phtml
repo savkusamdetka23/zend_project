@@ -42,11 +42,14 @@
 
     $this->headLink()->appendStylesheet($this->baseUrl()."css/bootstrap.css")
         ->appendStylesheet($this->baseUrl("css/style.css"))
+        ->appendStylesheet($this->baseUrl("css/pgwslider.css"))
         ->appendStylesheet($this->baseUrl("css/bootstrap.min.css"));
     echo $this->headLink();
     $this->headScript()->appendFile($this->baseUrl("js/jquery-1.10.2.min.js"))
         ->appendFile($this->baseUrl("js/infinitescroll.js"))
         ->appendFile("http://maps.googleapis.com/maps/api/js?key=AIzaSyCUZkf_30iE3wDjCbu0AJHJfdPo4Wd4pKM&sensor=false&libraries=places")
+        ->appendFile($this->baseUrl("js/pgwslider.js"))
+        ->appendFile($this->baseUrl("js/v.js"))
         ->appendFile($this->baseUrl("js/cv_guide.js"))
         ->appendFile($this->baseUrl("js/bootstrap.min.js"));
     echo $this->headScript();
@@ -169,6 +172,9 @@
                 </li>
                 <li>
                     <a href="<?php echo $this->url(array('controller' => 'worktime', 'action' =>'index'))?>">Work time</a>
+                </li>
+                <li>
+                    <a href="<?php echo $this->url(array('controller' => 'comments', 'action' =>'index'))?>">Comments</a>
                 </li>
 
             </ul>

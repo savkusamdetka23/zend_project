@@ -15,16 +15,21 @@ class Application_Form_Comments extends Zend_Form
             ->setRequired(true)
             ->addFilter('StripTags')
             ->addFilter('StringTrim')
-            ->addValidator('NotEmpty');
+            ->addValidator('NotEmpty')
+            ->setErrorMessages(array('Please, enter your name'));
        
-        $comment = new Zend_Form_Element_Text('comment');
-        $comment->setLabel('Comments')
+        $comment = new Zend_Form_Element_Textarea('comment');
+        $comment->setLabel('Comment')
             ->setRequired(true)
-            ->addValidator('NotEmpty');
+            ->setAttrib('cols', 50)
+            ->setAttrib('rows', 4)
+            ->addFilter('StripTags')
+            ->addValidator('StringLength', false, array(2, 999))
+            ->setErrorMessages(array('Text must be between 2 and 250 characters'));
 
         // Add a captcha
         $this->addElement('captcha', 'captcha', array(
-            'label'      => 'Введите 5 цифр, которвые вы видите снизу:',
+            'label'      => 'To post a comment, enter 5 characters, that you see below:',
             'required'   => true,
             'captcha'    => array(
                 'captcha' => 'Figlet',

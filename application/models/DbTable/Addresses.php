@@ -29,12 +29,6 @@ class Application_Model_DbTable_Addresses extends Zend_Db_Table_Abstract
         return $this->getAdapter()->fetchAll($select);
     }
     public function getListAddresses(){
-        /*	$select = $this->getAdapter()->select()->from(array('establishments', 'establishments.id', 'establishments.address_id'))->join(array('addresses', 'addresses.id=establishments.address_id')->where('street');
-
-            return $this->getAdapter()->fetchAll($select);*/
-        /*$select =  $this->getAdapter()->select()->from($this)->join('addresses', 'addresses.id = establishments.address_id')->where('street = ?',$street);
-        return $this->fetchAll($select);
-    */
         $select = $this->_db->select()
             ->from($this->_name,
                 array('key' => 'id', 'value' => 'street'));

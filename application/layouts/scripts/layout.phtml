@@ -44,11 +44,14 @@
 
     $this->headLink()->appendStylesheet($this->baseUrl()."css/bootstrap.css")
         ->appendStylesheet($this->baseUrl("css/style.css"))
+        ->appendStylesheet($this->baseUrl("css/pgwslider.css"))
         ->appendStylesheet($this->baseUrl("css/bootstrap.min.css"));
     echo $this->headLink();
     $this->headScript()->appendFile($this->baseUrl("js/jquery-1.10.2.min.js"))
         ->appendFile($this->baseUrl("js/infinitescroll.js"))
         ->appendFile("http://maps.googleapis.com/maps/api/js?key=AIzaSyCUZkf_30iE3wDjCbu0AJHJfdPo4Wd4pKM&sensor=false")
+        ->appendFile($this->baseUrl("js/pgwslider.js"))
+        ->appendFile($this->baseUrl("js/v.js"))
         ->appendFile($this->baseUrl("js/cv_guide.js"))
         ->appendFile($this->baseUrl("js/bootstrap.min.js"));
     echo $this->headScript();
@@ -159,102 +162,52 @@
         </div>
     </div>
 
-    <div class="row">
-    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                <li>
-                    <a href="#">Walk the city
-                    </a>
-                </li>
-                <li>
-                    <a href="#">City map</a>
-                </li>
-                <li>
-                    <a href="#">Routes</a>
-                </li>
-                <li>
-                    <a href="#">Popular places</a>
-                </li>
-                <li>
-                    <a href="#">Useful information</a>
-                </li>
-
-                <li>
-                    <a href="#">Contacts</a>
-                </li>
-
-
-            </ul>
-        </div>
-    </div>
-     <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
-
+    <div class="container">
+     <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
             <?php
             echo $this->layout ()->content;
-
             ?>
-
     </div>
 
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="tabbable">
+                    <ul class="nav tab-group establishmentsearch"><!--nav-tabs nav-justified-->
+                        <li ><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'random')) ?>" data-toggle="tab">Random</a></li>
+                        <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'newest')) ?>" data-toggle="tab">Newest</a></li>
 
+                    </ul>
+                    <div class="media-list">
+                    </div>
 
-
-
-    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-        <div class="popular">
-            <a href="#">POPULAR </a>
-            <a href="#"> RECENT </a>
-            <a href="#"> RANDOM</a>
+        <div id="SinoptikInformer" style="width:240px;" class="SinoptikInformer type1c1">
+            <div class="siHeader">
+                <div class="siLh">
+                    <div class="siMh"><a onmousedown="siClickCount();" href="https://ua.sinoptik.ua/" target="_blank">Weather</a>
+                        <a onmousedown="siClickCount();" class="siLogo" href="https://ua.sinoptik.ua/" target="_blank"> </a>
+                        <span id="siHeader"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="siBody"><div class="siCity">
+                    <div class="siCityName">
+                        <a onmousedown="siClickCount();" href="https://ua.sinoptik.ua/погода-чернівці" target="_blank">Weather in
+                            <span>Chernivtsi</span></a></div>
+                    <div id="siCont0" class="siBodyContent">
+                        <div class="siLeft"><div class="siTerm"></div>
+                            <div class="siT" id="siT0"></div><div id="weatherIco0"></div>
+                        </div>
+                        <div class="siInf"><p>humidity:
+                                <span id="vl0"></span></p>
+                            <p>тиск: <span id="dav0"></span
+                                    ></p><p>wind:
+                                <span id="wind0"></span></p></div>
+                    </div></div>
+                </div>
+            <div class="siFooter"><div class="siLf"><div class="siMf"></div></div></div>
         </div>
-        <ul class="media-list">
-            <li class="media">
-                <a href="" class="pull-left"><img src="/images/8.jpg" alt="Upcoming" class="media-object "></a>
-                <div class="media-body">
-                    <h5 class="media-heading">Chernivtsi National University</h5>
-                    <p ><small>This is a mini description..</small></p>
+        <script type="text/javascript" charset="UTF-8" src="//sinoptik.ua/informers_js.php?title=4&amp;wind=3&amp;cities=303028948&amp;lang=ua"></script>
 
-
-                </div>
-            </li>
-            <li class="media">
-                <a href="" class="pull-left"><img src="/images/9.jpg" alt="Upcoming" class="media-object "></a>
-                <div class="media-body">
-                    <h5 class="media-heading">Central square</h5>
-                    <p ><small>This is a mini description..</small></p>
-
-
-                </div>
-            </li>
-            <li class="media">
-                <a href="" class="pull-left"><img src="/images/34.jpg" alt="Upcoming" class="media-object "></a>
-                <div class="media-body">
-                    <h5 class="media-heading">Turkish square</h5>
-                    <p ><small>This is a mini description..</small></p>
-
-
-                </div>
-            </li>
-            <li class="media">
-                <a href="" class="pull-left"><img src="/images/34.jpg" alt="Upcoming" class="media-object "></a>
-                <div class="media-body">
-                    <h5 class="media-heading">Turkish square</h5>
-                    <p ><smallThis is a mini description..</small></p>
-
-
-                </div>
-            </li>
-            <li class="media">
-                <a href="" class="pull-left"><img src="/images/9.jpg" alt="Upcoming" class="media-object "></a>
-                <div class="media-body">
-                    <h5 class="media-heading">Central square</h5>
-                    <p ><small>This is a mini description..</small></p>
-
-
-                </div>
-            </li>
-        </ul>
+    </div>
     </div>
     </div>
 
