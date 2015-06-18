@@ -1,36 +1,38 @@
 <?php if (!is_array($this->establishments) || !count($this->establishments)) :else :
-?>
-<div><?php if ($this->offset == '0') :
-        ?>
- <?php endif; ?>
-    <table class="table table-responsive table-hover">
-    <?php if (is_array($this->establishments) && count($this->establishments)) :
-          foreach($this->establishments as $establishments) :
-    if($this->escape($establishments['establishment']) == 'Hotel') :
     ?>
-    <ul class="list-unstyled">
-        <li>
-            <article>
-                <div class="media media_top">
-                    <a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishment',  'id' => $this->escape($establishments['id'])), null, true)?>" class="pull-left images_size"><img src="/images/<?php
-                        $images = explode(",",$this->escape($establishments['image']));
-                        echo $images[0]; ?>" alt="Image" class="media-object"></a>
-                        <div class="media-body">
-                            <h4 class="media-heading"><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishment',  'id' => $this->escape($establishments['id'])), null, true)?>"><?php echo $this->escape($establishments['establishment']) ?>: <?php echo $this->escape($establishments['title']) ?></a></h4>
-                                <ul class="list-inline description">
-                                <li><?php echo $this->escape($establishments['description']) ?> </li><br>
-                                <li class="address_str"><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishment',  'id' => $this->escape($establishments['id'])), null, true)?>"><?php echo $this->escape($establishments['build']) ?> <?php echo $this->escape($establishments['address']) ?></a></li>
-                                </ul>
-
-                        </div> <!-- end media-body -->
-                </div> <!-- end media -->
-            </article>
-    <div class="line"></div>
-        </li>
-        </ul>
+    <div><?php if ($this->offset == '0') :
+            ?>
         <?php endif; ?>
-    <?php endforeach; ?>
-    <?php endif; ?>
-    </table>
-</div>
+        <table class="table table-responsive table-hover">
+            <?php if (is_array($this->establishments) && count($this->establishments)) :
+                foreach($this->establishments as $establishments) :
+                    if($this->escape($establishments['establishment']) == 'Cinema') :
+                        ?>
+                        <ul class="list-unstyled">
+                            <li>
+                                <article>
+                                    <div class="media media_top">
+                                        <a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishment',  'id' => $this->escape($establishments['id'])), null, true)?>" class="pull-left images_size"><img src="/images/<?php
+                                            $images = explode(",",$this->escape($establishments['image']));
+                                            echo $images[0]; ?>" alt="Image" class="media-object"></a>
+                                        <div class="media-body">
+                                            <h4 class="media-heading"><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishment',  'id' => $this->escape($establishments['id'])), null, true)?>"><?php echo $this->escape($establishments['establishment']) ?>: <?php echo $this->escape($establishments['title']) ?></a></h4>
+                                            <ul class="list-inline description">
+                                                <li><?php echo $this->escape($establishments['description']) ?> </li><br>
+                                                <li class="address_str"><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishment',  'id' => $this->escape($establishments['id'])), null, true)?>"><?php echo $this->escape($establishments['build']) ?> <?php echo $this->escape($establishments['address']) ?></a></li>
+                                            </ul>
+
+                                        </div> <!-- end media-body -->
+                                    </div> <!-- end media -->
+                                </article>
+                                <div class="line"></div>
+                            </li>
+                        </ul>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            <?php endif; ?>
+        </table>
+    </div>
+
+
 <?php endif; ?>
