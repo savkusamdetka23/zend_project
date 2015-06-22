@@ -77,8 +77,28 @@
                     <input id="namanyay-search-box" name="query" size="40" type="text" placeholder="Type search text here..."/>
                     <input id="namanyay-search-btn" value="Search" type="submit"/>
                 </form>
+<div class="pull-right">
+                    Hello, <?php
+                    $role = Zend_Registry::get('role');
+                    echo $role;
 
+
+                    ?>. You can  <a href="<?php
+
+                    $role = Zend_Registry::get('role');
+
+
+                    if(($role == 'user') or ($role == 'admin')){
+                        echo $this->url(array('controller' => 'auth', 'action' =>$action = 'logout'));
+                    }else{
+                        echo $this->url(array('controller' => 'auth', 'action' =>$action = 'login'));
+                    }
+
+                    ?>"><?php  echo $action
+                        ?></a>?
+                </div>
             </ul>
+			 
             <div class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
                 <span class="bar1"></span>
                 <span class="bar2"></span>
@@ -87,17 +107,19 @@
             </div>
         </div><!-- /.container-fluid -->
     </nav>
+	
     <div class="row nav_menu">
         <div class="col-lg-8 col-lg-offset-4  col-md-8 col-md-offset-3 col-sm-8 col-sm-offset-2 collapse navbar-collapse" id="navbar-collapse-1">
             <ul id="main_manu">
+<li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentw'), null, true)?>">Walk the city</a>
+                    
+                </li>
                 <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmenta'), null, true)?>">Accomodation</a>
                     <ul class="sub_menu">
                         <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmenta'), null, true)?>" data-href="ehotels">Hotels</a>
                         <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmenta'), null, true)?>" data-href="eapartments">Apartments</a></li>
                         <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmenta'), null, true)?>" data-href="ehostels">Hostels</a></li>
                     </ul>
-
-
                 </li>
                 <li><a href="<?php echo $this->url(array('controller' => 'establishments', 'action' => 'establishmentc'))?>">Culture</a>
                     <ul class="sub_menu">

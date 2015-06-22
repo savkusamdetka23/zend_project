@@ -364,6 +364,13 @@ class EstablishmentsController extends Zend_Controller_Action
         $this->view->establishments = $establishmentsList;
 
     }
+    public function establishmentwAction()
+    {
+        $establishments = new Application_Model_DbTable_Establishments();
+        $establishmentsList = $establishments->getEstablishmentsList();
+        $this->view->establishments = $establishmentsList;
+
+    }
     public function eclubsAction()
     {
 

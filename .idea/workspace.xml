@@ -7,36 +7,10 @@
       <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\data\search-index\segments_2" afterPath="" />
       <change type="DELETED" beforePath="C:\webserver\home\cv_guide\application\views\scripts\establishments\emotels.phtml" afterPath="" />
       <change type="DELETED" beforePath="C:\webserver\home\cv_guide\public\index_hotel _table.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cv_guide.sql" afterPath="$PROJECT_DIR$/cv_guide.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/establishments/eairport.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/eairport.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/establishments/eapartments.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/eapartments.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/establishments/ebars.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/ebars.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/establishments/ecafes.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/ecafes.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/establishments/ecanteens.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/ecanteens.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/establishments/ecinemas.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/ecinemas.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/establishments/eclubs.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/eclubs.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/establishments/eculturalplaces.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/eculturalplaces.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/establishments/eentertaimentcentres.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/eentertaimentcentres.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/establishments/eexhibitions.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/eexhibitions.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/establishments/efairs.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/efairs.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/establishments/efastfood.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/efastfood.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/establishments/ehostels.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/ehostels.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/establishments/ehotels.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/ehotels.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/establishments/elibraries.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/elibraries.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/establishments/emonuments.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/emonuments.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/establishments/emuseums.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/emuseums.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/establishments/ephilarmonic.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/ephilarmonic.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/establishments/epizzerias.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/epizzerias.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/establishments/epublictransportation.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/epublictransportation.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/establishments/epubs.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/epubs.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/establishments/erailbus.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/erailbus.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/establishments/erentacar.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/erentacar.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/establishments/erestaurants.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/erestaurants.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/establishments/eshopping.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/eshopping.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/establishments/esport.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/esport.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/establishments/etheatres.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/establishments/etheatres.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/EstablishmentsController.php" afterPath="$PROJECT_DIR$/application/controllers/EstablishmentsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/layouts/scripts/admin.phtml" afterPath="$PROJECT_DIR$/application/layouts/scripts/admin.phtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scripts/index/index.phtml" afterPath="$PROJECT_DIR$/application/views/scripts/index/index.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/layouts/scripts/layout.phtml" afterPath="$PROJECT_DIR$/application/layouts/scripts/layout.phtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cv_guide.iws" />
@@ -60,100 +34,7 @@
     <favorites_list name="cv_guide" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="EstablishmentsController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/EstablishmentsController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="46" selection-start="2714" selection-end="2714" vertical-scroll-proportion="-12.384615" vertical-offset="732" max-vertical-offset="12172">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Worktime.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/models/DbTable/Worktime.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="29" selection-start="1992" selection-end="1992" vertical-scroll-proportion="0.7713787" vertical-offset="663" max-vertical-offset="1700">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Comments.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/DbTable/Comments.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="20" selection-start="1251" selection-end="1251" vertical-scroll-proportion="-7.8461537" vertical-offset="510" max-vertical-offset="1581">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/layouts/scripts/layout.phtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="76" selection-start="3277" selection-end="3277" vertical-scroll-proportion="-11.769231" vertical-offset="1224" max-vertical-offset="4318">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Establishments.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/DbTable/Establishments.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="14" selection-start="1369" selection-end="1369" vertical-scroll-proportion="-16.346153" vertical-offset="204" max-vertical-offset="3145">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Addresses.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/forms/Addresses.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="646">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Establishmenttype.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/forms/Establishmenttype.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="646">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Establishments.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/forms/Establishments.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="52" selection-start="58" selection-end="58" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="1904">
-              <folding>
-                <marker date="1434499129148" expanded="false" signature="1811:1836" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.ini" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/configs/application.ini">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="22" selection-start="439" selection-end="439" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddressesController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/AddressesController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1649">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -166,7 +47,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/views/scripts/comments/edit.phtml" />
         <option value="$PROJECT_DIR$/application/models/DbTable/Comments.php" />
         <option value="$PROJECT_DIR$/application/views/scripts/comments/index.phtml" />
         <option value="$PROJECT_DIR$/application/models/DbTable/Establishments.php" />
@@ -177,16 +57,13 @@
         <option value="$PROJECT_DIR$/public/js/pgwslider.js" />
         <option value="$PROJECT_DIR$/public/js/v.js" />
         <option value="$PROJECT_DIR$/public/js/cv_guide.js" />
-        <option value="$PROJECT_DIR$/application/layouts/scripts/admin.phtml" />
         <option value="$PROJECT_DIR$/public/css/pgwslider.css" />
-        <option value="$PROJECT_DIR$/application/controllers/EstablishmentsController.php" />
         <option value="$PROJECT_DIR$/application/views/scripts/establishments/establishment.phtml" />
         <option value="$PROJECT_DIR$/application/forms/Comments.php" />
         <option value="$PROJECT_DIR$/application/models/EstablishmentAcl.php" />
         <option value="$PROJECT_DIR$/application/plugins/AccessCheck.php" />
         <option value="$PROJECT_DIR$/application/controllers/CommentsController.php" />
         <option value="$PROJECT_DIR$/application/views/scripts/establishments/walkthecity.phtml" />
-        <option value="$PROJECT_DIR$/application/layouts/scripts/layout.phtml" />
         <option value="$PROJECT_DIR$/application/views/scripts/establishments/ehotels.phtml" />
         <option value="$PROJECT_DIR$/application/views/scripts/establishments/eairport.phtml" />
         <option value="$PROJECT_DIR$/application/views/scripts/establishments/eapartments.phtml" />
@@ -217,6 +94,10 @@
         <option value="$PROJECT_DIR$/application/views/scripts/establishments/epubs.phtml" />
         <option value="$PROJECT_DIR$/application/views/scripts/establishments/ecafes.phtml" />
         <option value="$PROJECT_DIR$/application/views/scripts/establishments/ebars.phtml" />
+        <option value="$PROJECT_DIR$/application/layouts/scripts/layout.phtml" />
+        <option value="$PROJECT_DIR$/application/layouts/scripts/admin.phtml" />
+        <option value="$PROJECT_DIR$/application/controllers/EstablishmentsController.php" />
+        <option value="$PROJECT_DIR$/application/views/scripts/establishments/establishmentw.phtml" />
       </list>
     </option>
   </component>
@@ -275,6 +156,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -777,7 +659,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -840,15 +721,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972136" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2284041" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2284041" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -856,12 +737,12 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32972136" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -891,16 +772,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/Bootstrap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/worktime/index.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="599" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/infinitescroll.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.5096774" vertical-offset="1556" max-vertical-offset="2176" />
@@ -1068,9 +939,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="421" column="19" selection-start="8893" selection-end="8893" vertical-scroll-proportion="0.29896906" vertical-offset="6983" max-vertical-offset="7565">
-          <folding />
-        </state>
+        <state line="421" column="19" selection-start="8893" selection-end="8893" vertical-scroll-proportion="0.29896906" vertical-offset="6983" max-vertical-offset="7565" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/pgwslider.css">
@@ -1080,49 +949,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/establishments/ebars.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="78" selection-start="468" selection-end="468" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="731">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/establishments/ehotels.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="32" selection-start="0" selection-end="2637" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="731">
-          <folding />
-        </state>
+        <state line="8" column="78" selection-start="468" selection-end="468" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="731" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/establishments/ecafes.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="251" selection-start="944" selection-end="944" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="731">
-          <folding />
-        </state>
+        <state line="14" column="251" selection-start="944" selection-end="944" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="731" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scripts/index/index.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="34" selection-start="776" selection-end="776" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="867">
-          <folding />
-        </state>
+        <state line="15" column="34" selection-start="776" selection-end="776" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="867" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/DbTable/Comments.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="20" selection-start="1251" selection-end="1251" vertical-scroll-proportion="-7.8461537" vertical-offset="510" max-vertical-offset="1581">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/layouts/scripts/layout.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="76" selection-start="3277" selection-end="3277" vertical-scroll-proportion="-11.769231" vertical-offset="1224" max-vertical-offset="4318">
+        <state line="42" column="20" selection-start="1251" selection-end="1251" vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1581">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/DbTable/Establishments.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="14" selection-start="1369" selection-end="1369" vertical-scroll-proportion="-16.346153" vertical-offset="204" max-vertical-offset="3145">
+        <state line="37" column="14" selection-start="1369" selection-end="1369" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="3145">
           <folding />
         </state>
       </provider>
@@ -1130,6 +979,36 @@
     <entry file="file://$PROJECT_DIR$/application/forms/Addresses.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/establishments/ehotels.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="32" selection-start="0" selection-end="2637" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="731">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/layouts/scripts/admin.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="115" column="97" selection-start="4541" selection-end="4541" vertical-scroll-proportion="0.5834768" vertical-offset="1616" max-vertical-offset="4760">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/layouts/scripts/layout.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="113" column="0" selection-start="4059" selection-end="4240" vertical-scroll-proportion="0.08777969" vertical-offset="1870" max-vertical-offset="4692">
+          <folding>
+            <element signature="n#style#0;n#form#0;n#ul#0;n#div#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/DbTable/Worktime.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="29" selection-start="1992" selection-end="1992" vertical-scroll-proportion="0.42929292" vertical-offset="850" max-vertical-offset="1700">
           <folding />
         </state>
       </provider>
@@ -1143,16 +1022,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/forms/Establishments.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="52" selection-start="58" selection-end="58" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="1904">
+        <state line="1" column="52" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1904">
           <folding>
-            <marker date="1434499129148" expanded="false" signature="1811:1836" placeholder="..." />
+            <marker date="1434499129148" expanded="false" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/configs/application.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="22" selection-start="439" selection-end="439" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
+        <state line="11" column="22" selection-start="439" selection-end="439" vertical-scroll-proportion="0.23225807" vertical-offset="43" max-vertical-offset="663">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/establishments/establishmentw.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="93" selection-start="1123" selection-end="1123" vertical-scroll-proportion="0.22547331" vertical-offset="260" max-vertical-offset="1037">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/EstablishmentsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="366" column="34" selection-start="13990" selection-end="13990" vertical-scroll-proportion="-1.3184165" vertical-offset="6988" max-vertical-offset="12291">
           <folding />
         </state>
       </provider>
@@ -1160,20 +1053,6 @@
     <entry file="file://$PROJECT_DIR$/application/controllers/AddressesController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1649">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/EstablishmentsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="46" selection-start="2714" selection-end="2714" vertical-scroll-proportion="-12.384615" vertical-offset="732" max-vertical-offset="12172">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/DbTable/Worktime.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="29" selection-start="1992" selection-end="1992" vertical-scroll-proportion="0.7713787" vertical-offset="663" max-vertical-offset="1700">
           <folding />
         </state>
       </provider>
